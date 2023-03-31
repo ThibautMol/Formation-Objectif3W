@@ -1,0 +1,67 @@
+Cour du 30/03/2023 
+
+Les menus peuvent se faire en UL LI, 
+car on peut également les mettre en horizontal.
+
+La Nav juste avec les <a> est plus légère. 
+Mais si on veut plus de complexité avec des containers 
+on peut passer par des listes. 
+
+UL est un conteneur qui contient tous les éléments de liste. LI pour Liste Item permet de rajouter un élément à la liste. 
+
+Technique qui n'est plus utilisée pour modifier la forme de la puce des listes uniquement en html :
+attribut ID et CLASS permet de cibler les éléments pour leur appliquer une mise en forme CSS
+<ul type="square/circle"> remplace les puces en carré. Mais plus propre de le faire en CSS.
+
+UL et LI sont indisociable. UL est un containeur de LI
+Les deux n'existent pas l'un sans l'autre.
+
+Liste de <ol> : liste ordonnées. Au lieu qu'il y ait des puces, il y aura des chiffres ou des lettres.
+Ce sera toujours un container de LI. type="1" passe en chiffre. Si on change 1 par A, a, i ou I ça refait la liste.
+
+Chaque fois qu'on a une balise ouvrante et fermante c'est un container.
+On peut faire un UL qui a un LI puis dans un LI refaire une liste avec des UL
+Ca permet de faire des sommaires/tables des matières
+
+Pour faire une structure, on va démarrer du global au spécifique.
+Par exemple dans les listes on va d'abords faire les éléments qui viennent en premier puis on subdivisera les listes.
+Vision globale et on rentre dans le détail au fur et à mesure.
+Le design vient en dernier. 
+
+emmet est un plugin de VSCODE qui permet d'aller plus vite dans l'écriture du code.
+Tous les raccourcis sont sur https://la-cascade.io/articles/une-liste-de-raccourcis-emmet
+exemple ul>li*3 cela donnera un ul avec 3 li
+
+raccourcis vscode : https://coopernet.fr/formation/visual-studio-code
+Alt+Clic permet de choisir plusieurs endroits ou écrire en simultanée
+
+Si notre code n'est pas indenté proprement, on aura de l'aide qu'après que l'on ait bien indenté le code. 
+
+layout c'est les couches/sections et organisations de la page.
+
+<span> balise inline
+<div> balise block
+ces deux balises n'influencent pas le référencement.
+
+Table = tableau
+tr= table row qui sert ed la ligne
+td = table data
+on peut fusionner plusieurs cellules entre elles.
+thead = entête du tableau
+Si on est dans un thead pour chaque données on utilisera th
+tfoot = fin du tabeau
+tbody = tableau entre le thead et tfoot
+colspan en tant qu'attribut permet de fusionner deux colones (horizontal). 
+rowspan en tant qu'attribut permet de fusionner deux lignes (vertical).
+cellpadding marge interne du tableau
+cellspacing marge externe entre les cellules.
+
+lorsqu'on inspecte les éléments le cellpadding est vert. Le cellspacing est orange.
+
+margin/border/padding sont des blocs layout.
+
+mozilla firefox html permet d'accéder à la base de donnée de firefox qui possède beaucoup d'éléments sur html, css, js
+Si on a une question sur une balise, tout est expliqué dessus. 
+
+
+

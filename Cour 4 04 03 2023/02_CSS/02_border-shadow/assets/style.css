@@ -1,0 +1,16 @@
+
+div{
+    border-width: 20px ;
+    border-style: solid;
+    border-color: red;
+    border-top-color: blue;
+    border-right-style: dashed ;
+    border-left-color :green;
+    border-left-style: double;
+    border-bottom-color: yellow;
+    border-radius: 30px;
+    box-shadow: 2px 4px 10px gray;
+
+    text-shadow: 2px 4px 10px gray;
+
+}

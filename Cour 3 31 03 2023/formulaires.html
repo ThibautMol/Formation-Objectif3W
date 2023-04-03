@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les formulaires</title>
+</head>
+<body>
+    
+    <h1>Formulaire</h1>
+
+    <form action="send.php" method="POST">
+
+        <fieldset> <!--Contiendra tout notre formulaire-->
+            <legend>Formulaire</legend>
+
+            <div>
+                <label for="name">Nom :</label>
+                <input type="text" value="tata" id="name" name="name" placeholder="Veuillez écrire votre Nom">
+            </div>
+            <br>
+            <div>
+                <label for="first-name">Prénom :</label>
+                <input type="text" value="toto" id="first-name" name="first-name" placeholder="Veuillez écrire votre Prénom">
+            </div>
+            <br>            
+            <div>
+                <label for="email">email</label>
+                <input type="email" id="email" name="email" placeholder="example@example.com" required>
+            </div>
+            <br>
+            <div>
+                <label for="passeword">Mot de passe</label>
+                <input type="password" id="passeword" name="passeword" required minlength="8" maxlength="30">
+            </div>
+            <br>
+            <p>Compétences :</p>
+
+            <div>
+                <input type="checkbox" id="html" name="html" checked>
+                <label for="html">HTML</label>
+                <input type="checkbox" id="CSS" name="CSS">
+                <label for="CSS">CSS</label>
+            </div>
+            <br>
+            <p>Genre :</p>
+
+            <div>
+                <input type="radio" id="woman" name="sex">
+                <label for="woman">Women</label>
+                <input type="radio" id="man" name="sex">
+                <label for="man">Man</label>
+                <input type="radio" id="other" name="sex">
+                <label for="other">Autre</label>
+            </div>
+            <br>
+            <div>
+                <label for="birthday">Dated de naissance</label>
+                <input type="date" id="birthday" name="birthday">
+            </div>
+            <br>
+            <div>
+                <input type="file" id="resume" name="resume" accept="application/pdf">
+            </div>
+            <br>
+            <div>
+                <input type="range" name="price" min="0" max="500">
+            </div>
+            <br>
+            <div>
+                <input type="range" name="price" min="0" max="500" step="100">
+            </div>
+            <br>
+            <div>
+                <label for="Message">Message</label><br>
+                <textarea id="message" name="message" cols="30" rows="10" placeholder="500 caractères Maximum" maxlength="500"></textarea>
+            </div>
+            <br>
+            <div>
+                <label for="country">Nationalités</label><br>
+                <select name="country" id="country">
+                    <option value="France">France</option>
+                    <option value="Espagne">Espagne</option>
+                    <option value="Allemagne">Allemagne</option>
+                    <option value="Italie">Italie</option>
+                </select>
+            </div>
+            <br>
+            <div>
+                <label for="job">Métiers</label><br>
+                <select name="job" id="job">
+                    <optgroup label="dev">
+                        <option value="devback">Développeur Backend</option>
+                        <option value="devfront">Développeur Frontend</option>
+                        <option value="devfull">Développeur Fullstack</option>
+                    </optgroup>
+                    <optgroup label="design">
+                        <option value="desnui">Designer UI</option>
+                        <option value="desweb">Designer Web</option>
+                        <option value="desux">Designer UX</option>
+                    </optgroup>
+                </select>
+            </div>
+            <br>
+
+            <div>
+                <input type="reset">
+            </div>
+            <br>
+
+            <div>
+                <input type="submit" value="Ajouter un utilisateur">
+            </div>
+
+
+        </fieldset>
+        <br>
+
+        <form action="traitement.php" method="get">
+            <input type="search" name="query">
+            <input type="submit" value="Rechercher">
+        </form>
+
+    </form>
+
+</body>
+</html>

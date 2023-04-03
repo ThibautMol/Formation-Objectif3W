@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription</title>
+</head>
+<body>
+    <h1>Formulaire d'inscription</h1>
+    
+    <Form>
+
+        <div>
+            <label for="name">Nom :</label>
+            <input type="text" id="name" name="name" placeholder="Veuillez écrire votre Nom" required>
+        </div>
+        <br>
+        <div>
+            <label for="first-name">Prénom :</label>
+            <input type="text" id="first-name" name="first-name" placeholder="Veuillez écrire votre Prénom" required>
+        </div>
+        <br>            
+        <div>
+            <label for="email">email</label>
+            <input type="email" id="email" name="email" placeholder="example@example.com" required>
+        </div>
+        <br>            
+        <div>
+            <label for="user_passeword">Mot de passe</label>
+            <input type="password" id="user_passeword" name="user_passeword" placeholder="Mot de passe 4-30 caractères" min="4" maxlength="30" required>
+        </div>
+        <br>
+        <div>
+            <input type="radio" id="woman" name="sex">
+            <label for="woman">Women</label>
+            <input type="radio" id="man" name="sex">
+            <label for="man">Man</label>
+            <input type="radio" id="other" name="sex">
+            <label for="other">Autre</label>
+        </div>
+        <br>
+        <div>
+            <label for="number-adress">Numéro de rue :</label>
+            <input type="number" id="number-adress" name="number-adress" maxlength="7" required>
+            <br>
+            <label for="street-name">Nom de rue :</label>
+            <input type="text" id="street-name" name="street-name" maxlength="100" required>
+            <br>
+            <label for="postal-code">Code postal :</label>
+            <input type="number" id="postal-code" name="postal-code" maxlength="5" required>
+            <br>
+            <label for="city">Ville :</label>
+            <input type="text" id="city" name="city" maxlength="20" required>
+            <br>
+            <label for="country">Pays :</label>
+            <input type="text" id="city" name="city" maxlength="50" required>
+        </div>
+        <br>
+        <div>
+            <label for="phone">Téléphone</label>
+            <input type="tel" id="phone" name="phone" placeholder="00-00-00-00-00" required>
+        </div>
+        <br>
+        
+        <a href="/Login.html">S'inscrire</a>
+        
+    </Form>
+
+
+</body>
+</html>

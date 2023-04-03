@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+</head>
+<body>
+    <h1>Formulaire de contact</h1>
+    
+    <Form>
+
+        <div>
+            <label for="name">Nom :</label>
+            <input type="text" id="name" name="name" placeholder="Veuillez écrire votre Nom" required>
+        </div>
+        <br>
+        <div>
+            <label for="first-name">Prénom :</label>
+            <input type="text" id="first-name" name="first-name" placeholder="Veuillez écrire votre Prénom" required>
+        </div>
+        <br>            
+        <div>
+            <label for="email">email</label>
+            <input type="email" id="email" name="email" placeholder="example@example.com" required>
+        </div>
+        <br>
+        <div>
+            <label for="phone">Téléphone</label>
+            <input type="tel" id="phone" name="phone" placeholder="00-00-00-00-00" required>
+        </div>
+        <br>
+        <div>
+            <label for="message_request_contact">Message</label><br>
+            <div>
+                <label for="object-request">Objet</label><br>
+                <select name="object-request" id="object-request">
+                    <option value="SAV">SAV</option>
+                    <option value="Candidature">Candidature</option>
+                    <option value="ideas">Idées</option>
+                    <option value="callback">Se faire contacter</option>
+                </select><br>
+            <textarea id="message_request_contact" name="message_request_contact" cols="30" rows="10" placeholder="Votre message en 500 caractères" maxlength="500" required></textarea>
+        </div>
+        <br>
+        <div>
+            <input type="file" id="attachement-file" name="attachement-file" accept="application/pdf">
+        </div>
+        <br>
+        <div>
+            <input type="submit" value="Envoyer">
+        </div>
+        
+    </Form>
+
+
+</body>
+</html>

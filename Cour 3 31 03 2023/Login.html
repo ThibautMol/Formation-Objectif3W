@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+
+<body>
+    
+    <h2>Login</h2>
+
+    <form action="user_login.php" method="post">
+
+        <div>
+            <label for="user_email">Identifiant :</label>
+            <input type="email" id="user_email" name="user_mail" placeholder="example@example.com" >
+        </div>
+
+        <div>
+            <label for="user_passeword">Mot de passe :</label>
+            <input type="password" id="user_passeword" name="user_passeword" placeholder="Password 8-30 characters" minlength="8", maxlength="30">
+        </div>
+
+        <div class="div-form">
+            <input type="checkbox" id="stay-online" name="stay-online" checked>
+            <label for="stay-online">Rester connecté</label>
+        </div>
+        
+        <div>
+            <input type="submit" value="Connexion">
+        </div>
+
+    </form>
+
+    <div>
+        <a href="/Inscription.html">Pas de compte ? S'inscrire</a>
+    </div>
+    
+</body>
+</html>

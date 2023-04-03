@@ -1,0 +1,76 @@
+Les formulaires : 
+
+query=une requête
+En PHP on déclare toujours une variable avec un $ devant. 
+
+De base lorsqu'on génère la balise form, cela nous met action qui va permettre de choisir un envoie de donnée ou autre. 
+il est important de toujours préciser la méthode du form. C'est un attribut HTML
+
+Action : sert à dire ou envoyer ou a qui transmettre les données que l'on a saisit dans le formulaire
+Dialog : c'est utilisé pour du tchat. La donnée persiste sur la boite de dialogue et quand on ferme elle disparait. 
+Post : pour transmettre des données sensibles et protégée.
+Get : c'est pour transmettre de la donnée via url. c'est souvent utilisé pour les recherches sur un site. 
+novalidate : permet de désactiver les pop-up avec des messages pré établis lorsqu'on rempli mal le formulaire. du coup on peut personnaliser sois même les messages.
+
+Fieldset : permet de générer l'encadré du formulaire
+Legend : permet d'avoir le titre du formulaire. On s'en servira jamais. 
+
+Formules que l'on retrouve dans les formulaires : 
+
+    Label : Est rattaché à l'input, on peut utiliser le label pour changer le design de l'input. (ces balises ne sont pas des containers). Le for dans le label permet de rattacher l'input au label. pour cela on utilise un id pour identifiant0. lorsqu'on clique sur le label ça nous met en surbrillance et nous oriente dans le champ. Penser à bien contenir le label et le champs dans une div afin de l'éditer, et la mettre en forme. Le label peut permettre de cacher l'input et avoir un truc plus sexy. 
+
+    Input : permet de définir tous les champs, on changera le type en fonction des données que l'on voudra faire écrire à l'utilisateur. (ces balises ne sont pas des containers).
+        Dans l'input on peut utiliser placeholder qui permet de rentrer un texte "email" etc. qui s'éfface lorsqu'on écrit.
+        L'attribut ID permet d'identifier l'input. 
+        L'attribut Name va permettre de lier la donnée au champs renseignée (comme un dictionnaire en python). Donc si on met name="name" lorsqu'on rentre un nom dans ce champs on aura un résultat "name":"toto".
+        Value : permet d'afficher une valeur par défaut. C'est utile pour une page de modification de profil utilisateur. Comme ça on renvoit ce qui a déjà été rempli. La value peut être issue d'une récupération de donnée dans une BDD. ça permet un allé-retour. Quand c'est un formulaire on est pas obligé de la renseigner.
+        type=submit : permet de faire un bouton de soumission de formulaire.  
+        Type Number : ne prends que des chiffres
+        Type tel : ne prends que des num de téléphone
+        type url : ne prends que des url
+        type file : permet de rajouter un fichier. le label n'est pas forcément utile car c'est un bouton qui se suffit à lui-même. 
+        La méthode accept permet de faire faire une préselection du type de fichier attendu. Mais ça ne bloque pas. C'est le PHP et JS qui s'occupera de bloquer ça.
+        Type Range : on peut faire un curseur modifiable. On peut lui donner un step pour que ça saute de tant en tant. Si on veut afficher la valeur du curseur faut du JS pour afficher la value. Si on met une value de base, ça placera le curseur dessus de base quand on ouvre la page.
+
+
+
+Div : balise n'ayant aucune valeur sémantique et aucun rôle particulier, cela permet d'avoir un containeur. Permet de sectoriser les éléments. 
+
+
+En base de donnée un table=un profil par exemple la table user comprends le nom, prénom, adresse, email etc.
+
+Faire attention quand on nomme un élément, ça doit toujours être cohérent pour avoir un suivie derrière. 
+
+Span : c'est une div mais inline. 
+
+la méthode : required permet de définir la tête du contenue de l'input. (minlength="", maxlength="", size="")
+
+required : définit que le champs est obligatoire. Cela génèrera seul sans avoir à le coder, le message d'erreur comme quoi ce champs n'est pas remplis. 
+
+checked : si on met la méthode checked sur une checkbox, car va cocher de base la case. 
+
+
+On peut mettre ce qu'on veut dans le formulaire(un paragraphe, un a, etc.)
+
+checkbox on peut en cocher plusieurs. Les radio par contre on peut en cocher qu'une seule par groupe de radio-button (exemple une notion acquise/non acquise l'une excluant l'autre.)
+
+Pour un radiobutton lorsqu'on a un groupe de button, on doit mettre le même name afin de ne renvoyer qu'une info parmi celles proposées. 
+
+Quand on a plus de 5 choix on fera une liste déroulante. 
+
+Select permet de faire une liste déroulante : ensuite il faut entrer entre les balises select les "options" une option permet de renseigner un choix possible. 
+    On peut utiliser des notions de groupe. Avec optgroup. en définisssant le label de l'optgroup on définit le titre du groupe. C'est considéré comme que du texte.
+
+pour faire un formulaire de recherche avec le type search. 
+
+type button permet de faire un bouton simple, il faudra aller en JS pour lui donner un rôle. 
+
+exercices : 
+
+faire un formulaire de contact
+un formulaire de connexion
+un formulaire d'inscription
+
+dans 3 pages différentes
+
+sortir d'un dossier c'est ../ pour les liens href

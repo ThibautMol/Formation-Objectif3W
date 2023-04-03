@@ -1,0 +1,20 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Delicious+Handrawn&family=Poppins&display=swap');
+
+p {
+    color: red;
+    font-family: 'Poppins', sans-serif;
+}
+
+.police-serif {
+    font-family: 'Delicious Handrawn', cursive;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 2px;
+    text-align: justify;
+    text-decoration: line-through;
+}
+
+
+

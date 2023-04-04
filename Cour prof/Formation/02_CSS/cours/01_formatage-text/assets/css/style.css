@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Poppins:wght@400;700&display=swap');
+
+
+html{
+    font-size: 62.5%;
+}
+
+
+h1{
+    letter-spacing: 0.4rem;
+    text-transform: uppercase;
+}
+
+.police-serif{
+    font-family: 'Inter', serif;
+    font-size: 4rem;
+    font-weight: 900;
+    /* font-style: italic; */
+    text-decoration: line-through;
+}
+
+
+p{
+    /* color: red; */
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    /* word-spacing: 40px; */
+    text-align: justify;
+    text-indent: 20px;
+}
+
+a{
+    text-decoration: none;
+    user-select: none;
+}

@@ -1,0 +1,17 @@
+.box-1 {background-color: grey;}
+
+.box-2 {height: 150px;
+    width: 150px;
+    background-color: yellow;
+    margin-top: 15px;}
+
+.box-3 {background-color: orange;
+    padding: 30px;}
+
+.box-4 {background-color: red;
+    border: 15px solid black;}
+    
+.box-5 {background-color: pink; 
+    margin: 50px;}
+
+

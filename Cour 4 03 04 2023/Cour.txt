@@ -1,0 +1,48 @@
+Cour :
+
+l'ordre des liens avec les fichiers css déterminent leurs priorités d'applications. 
+Le dernier domine en terme de style et écrase les choses situés au dessus. 
+
+3 moyen de cibler un élément en CSS : 
+
+- par un id
+- par une balise
+- par une classe
+
+l'id peut être utilisé pour cibler un article spécifique de journal, etc.
+pour cibler un id il faut mettre # en css. L'id est unique par page. On peut avoir le même selon les pages.
+
+on peut attribuer plusieurs classes à un élément. 
+classe : en css c'est . et le nom de la classe. dans le nom de la classe on ne met pas d'espace juste un tiret ou underscore.
+La classe vaut pour n'importe quel élément, il suffit de la mettre dessus. 
+
+font monospace : c'est une font avec le même espace entre les lettres. 
+
+on met des guillemets pour le nom complet des typo quand il y a des espaces dans son nom.
+
+pour une nouvelle font, il est mieux de le charger dans le css. donc éviter de mettre le link dans le head et plutôt le mettre dans le css. 
+on doit mettre le link de la font sur toutes les pages si on passe parle html
+
+si on link sur html, il faut mettre la police avant le style css. 
+
+on passe par le @import, il suffit de copier le @import url etc. que tu met dans le css tel quel. En enlevant la balise style. Car google le propose en version html avec les balises style. 
+dans un lien d'import avec le & on peut mettre deux font. Google Font se souvient généralement quand on rajoute des font les unes après les autres et les ajoutent dans son lien. 
+
+line-height : permet de rajouter un ratio sur la taille de ta ligne. Le ratio qui marche bien c'est 1.5. c'est l'espacement entre les lignes.
+le ratio agréable à lire c'est 1.5. il vaut mieux le mettre en ratio.  
+letter spacing : permet de gérer l'espace entre les lettres. 
+word spacing : espacement entre les mots. 
+text-align : permet de gérer le texte (par exemple le justifier). le justify n'est utilisé que pour les magasines plus que pour le web. Le web on aligne classiquement. 
+text-transform : permet de mettre le texte en majuscule, etc. permet de gérer la forme de la police d'un titre sans avoir à l'écrire en majuscule etc dans le fichier HTML.
+text-decoration : permet de souligne, etc le texte.
+text-indent : permet de faire une identitation/alinéa au début. 
+user-select : si on met none interdit de sélectionner le text via une sélection.
+
+dans le html mettre 62.5% en font size (c'est ce qui permet de remettre la taille des fonts à 10px par lettre). 
+cela permet ensuite de travailler en rem permet d'augmenter ou de diminuer la taille les fonts en gardant le même ratio partout. 
+de base 10pixels=1rem. du coup en mettant le pourcentage ça créé quelque chose qui va s'adapter aux écrans etc. 
+
+concernant border on peut modifier également chaque côté du border avec une propriété spécifique il suffit de faire border-right-color/style etc. 
+on peut faire une super propriété par exemple border : 2px solid red (donc une bordure de 2px, style solid, de couleur rouge)
+on peut également l'utilisé pour font.
+box shadow : décallage horizontal, décallage vertical, le blur (floue), la couleur

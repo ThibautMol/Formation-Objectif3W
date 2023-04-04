@@ -1,0 +1,43 @@
+
+
+# 00 00 00 noir
+# ff ff ff blanc
+
+le premier couple c'est rouge. le second couple c'est vert. le 3ieme couple est bleu. 
+
+plus on descend en chiffre moins il y a de couleurs, plus on monte en f, plus on a de couleurs.
+on compte de 0 à 9 puis de a à f.
+
+
+rgb : valeurs vont de 0 à 255 par valeur rgb(000 000 000 000)
+rgba : rajoute une valeur à la fin du rgb afin de diminuer ou pas l'opacité de la couleur
+
+Rgba permet de faire de meilleurs box shadow.
+
+Background image permet d'écrire du texte par dessus. Ici c'est pas mal utilisé pour que ce soit jolie.
+On met directement l'image dans le CSS. 
+si on met une image en HTML on veut que l'image soit référencée.
+
+La fonction Background-repeat permet de choisir la façon dont l'image va se répéter et même de préciser qu'elle ne se répète pas.
+
+
+background-size : cover permet de couvrir toute la box. contain fait rentrer toute l'image dans le container
+background-position : si on veut le centrer haut et bas on met center center.
+
+lorsqu'on touche au "flux" on fait bouger les éléments. lorsqu'on génère des blocs ils sont normaux.
+les div sont mises l'une en dessous de l'autre alors que les span sont inline. les span ne prennent que la place dont ils ont besoin. 
+
+Les positions aident à sortir du flux. Cela permet de leur faire adopter une position particulière.
+il existe 3 positions :
+relatives : ça permet de dire que par défaut il est à la position 0 0. on peut ensuite le décaler par rapport au top, bottom, left et right. 0 0 se situe en haut à gauche par rapport à lui même. et en général on utilise que deux valeurs car le reste peut s'annuler entre eux. 
+absolues : il a besoin d'un parent pour exister. ce sera le containeur supérieur. Il est vital de renseigner le parent supérieur en relative. si rien n'est précisé en relative, tout monte au body.
+fixes : 
+
+l'utilisation de ces positions permettent de par exemple avoir un fond/bannière fixe et un effet de passage par dessus en descendant le long de la page surtout si on met une shadowbox
+
+z-index : permet de donner un ordre dans le flux. (la profondeur de champ) permet de définir de 100 en 100 la position. 
+
+float : on fait sortir les éléments du flux mais pas comme les relatives ou absolute. 
+lorsqu'on ajoute la valeur "float", il ne se comporte plus comme un bloc. si on veut éviter le conflit entre deux blocs en les alignant d'un côté, il faut mettre une valeur float à tous les éléments (right, left)
+clear : both permet de nettoyer de gauche à droite, on met ça pour que les blocs ne se chevauchent plus l'un sur l'autre. à chaque fois qu'on veut créer une ligne, il faudra re faire un clear. Ca permet le passage à la ligne.
+

@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+        <title>Le formatage de texte en CSS</title>
+
+        <!-- // highlight.js : Coloration syntaxique du code -->
+        <link rel="stylesheet" type="text/css" href="../../../_assets/plugins/highlight/styles/monokai_sublime.css">
+        <script type="text/javascript" src="../../../_assets/plugins/highlight/highlight.pack.js"></script>
+        <script type="text/javascript">
+            hljs.initHighlightingOnLoad();
+        </script>
+        <!-- // -->
+
+        <link rel="stylesheet" type="text/css" href="../../../_assets/css/style.css">
+    </head>
+    <body>
+        <h1>Le formatage de texte en CSS</h1>
+        <p class="block alert"><em>Il faut savoir que par défaut, certaines instructions concernant le formatage de texte font partie des instructions concernées par l'héritage. Les enfants de l'élément sur lequel est appliqué l'instruction seront donc eux aussi impactés par cette dernière.</em></p>
+        <hr>
+        <h2>Les polices d'écriture</h2>
+        <h3>Polices d'écriture existantes dans le système</h3>
+        <p><em>Les polices d'écritures compatibles pour tous les sytèmes d'exploitation ne sont pas nombreuses. Ci-dessous une liste non-hexaustive :</em></p>
+        <ul style="display:inline-block;font-style:italic;list-style:none;vertical-align:top;">
+            <li><strong>Serif</strong>
+                <ul>
+                    <li>Georgia, serif</li>
+                    <li>"Palatino Linotype", "Book Antiqua", Palatino, serif</li>
+                    <li>"Times New Roman", Times, serif</li>
+                </ul>
+            </li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li><strong>Monospace</strong>
+                <ul>
+                    <li>"Courier New", Courier, monospace</li>
+                    <li>"Lucida Console", Monaco, monospace</li>
+                </ul>
+            </li>
+        </ul>
+        <ul style="display:inline-block;font-style:italic;list-style:none;vertical-align:top;">
+            <li><strong>Sans-Serif</strong>
+                <ul>
+                    <li>Arial, Helvetica, sans-serif</li>
+                    <li>"Arial Black", Gadget, sans-serif</li>
+                    <li>"Comic Sans MS", cursive, sans-serif</li>
+                    <li>Impact, Charcoal, sans-serif</li>
+                    <li>"Lucida Sans Unicode", "Lucida Grande", sans-serif</li>
+                    <li>Tahoma, Geneva, sans-serif</li>
+                    <li>"Trebuchet MS", Helvetica, sans-serif</li>
+                    <li>Verdana, Geneva, sans-serif</li>
+                </ul>
+            </li>
+        </ul>
+        <style type="text/css">
+            <!--
+            #font-system p {font-family:Impact, Charcoal, sans-serif;}
+            -->
+        </style>
+        <div id="font-system">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris egestas nibh vehicula dui egestas, in tempus velit semper. Pellentesque nec condimentum mi, sit amet aliquam neque. Duis urna augue, hendrerit vitae imperdiet vitae, pretium sit amet enim. Mauris luctus efficitur sem vel congue. In in sagittis nibh. Aliquam tincidunt rhoncus felis sed consectetur. Nunc lacinia arcu vitae erat ultrices, vitae sagittis mauris ultricies. Mauris vulputate, diam vel dictum mollis, leo quam ultricies arcu, sit amet volutpat ex est sit amet ante. Maecenas accumsan aliquet molestie. Cras viverra sit amet libero vel condimentum. Ut sollicitudin, urna at finibus suscipit, lectus nisi euismod quam, at euismod metus ante nec dui. Morbi auctor ante in facilisis aliquam.</p>
+        </div>
+        <pre><code class="css">
+p {
+    font-family:Impact, Charcoal, sans-serif;
+}</code>
+<code class="html">
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris egestas nibh vehicula dui egestas, in tempus velit semper. Pellentesque nec condimentum mi, sit amet aliquam neque. Duis urna augue, hendrerit vitae imperdiet vitae, pretium sit amet enim. Mauris luctus efficitur sem vel congue. In in sagittis nibh. Aliquam tincidunt rhoncus felis sed consectetur. Nunc lacinia arcu vitae erat ultrices, vitae sagittis mauris ultricies. Mauris vulputate, diam vel dictum mollis, leo quam ultricies arcu, sit amet volutpat ex est sit amet ante. Maecenas accumsan aliquet molestie. Cras viverra sit amet libero vel condimentum. Ut sollicitudin, urna at finibus suscipit, lectus nisi euismod quam, at euismod metus ante nec dui. Morbi auctor ante in facilisis aliquam.&lt;/p&gt;</code></pre>
+        <h3>Polices d'écriture hébergées</h3>
+        <p><em>Il existe plusieurs sites vous proposant un cloud qui héberge des polices d'écriture compatibles pour le web.<br>Ces polices sont alors linkées sur votre site et conservées dans la mémoire cache du navigateur pour être interprétées sur tous les systèmes.<br>La référence la plus connue est <strong>Google Fonts</strong> : <a href="https://www.google.com/fonts" target="_blank" title="">https://www.google.com/fonts</a></em></p>
+        <h4>Inclusion avec la balise &lt;link&gt;</h4>
+        <link href="https://fonts.googleapis.com/css?family=Exo:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic" rel="stylesheet" type="text/css">
+        <style type="text/css">
+            <!--
+            #font-google-link p {font-family:'Exo', sans-serif;}
+            -->
+        </style>
+        <div id="font-google-link">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris egestas nibh vehicula dui egestas, in tempus velit semper. Pellentesque nec condimentum mi, sit amet aliquam neque. Duis urna augue, hendrerit vitae imperdiet vitae, pretium sit amet enim. Mauris luctus efficitur sem vel congue. In in sagittis nibh. Aliquam tincidunt rhoncus felis sed consectetur. Nunc lacinia arcu vitae erat ultrices, vitae sagittis mauris ultricies. Mauris vulputate, diam vel dictum mollis, leo quam ultricies arcu, sit amet volutpat ex est sit amet ante. Maecenas accumsan aliquet molestie. Cras viverra sit amet libero vel condimentum. Ut sollicitudin, urna at finibus suscipit, lectus nisi euismod quam, at euismod metus ante nec dui. Morbi auctor ante in facilisis aliquam.</p>
+        </div>
+        <pre><code class="html">
+&lt;link href="https://fonts.googleapis.com/css?family=Exo:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic" rel="stylesheet" type="text/css"&gt;</code>
+<code class="css">
+p {
+    font-family:'Exo', sans-serif;
+}</code>
+<code class="html">
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris egestas nibh vehicula dui egestas, in tempus velit semper. Pellentesque nec condimentum mi, sit amet aliquam neque. Duis urna augue, hendrerit vitae imperdiet vitae, pretium sit amet enim. Mauris luctus efficitur sem vel congue. In in sagittis nibh. Aliquam tincidunt rhoncus felis sed consectetur. Nunc lacinia arcu vitae erat ultrices, vitae sagittis mauris ultricies. Mauris vulputate, diam vel dictum mollis, leo quam ultricies arcu, sit amet volutpat ex est sit amet ante. Maecenas accumsan aliquet molestie. Cras viverra sit amet libero vel condimentum. Ut sollicitudin, urna at finibus suscipit, lectus nisi euismod quam, at euismod metus ante nec dui. Morbi auctor ante in facilisis aliquam.&lt;/p&gt;</code></pre>
+        <h4>Inclusion avec l'instruction CSS "import"</h4>
+        <style type="text/css">
+            <!--
+            @import url(https://fonts.googleapis.com/css?family=Exo:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+            #font-google-import p {font-family:'Exo', sans-serif;}
+            -->
+        </style>
+        <div id="font-google-import">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris egestas nibh vehicula dui egestas, in tempus velit semper. Pellentesque nec condimentum mi, sit amet aliquam neque. Duis urna augue, hendrerit vitae imperdiet vitae, pretium sit amet enim. Mauris luctus efficitur sem vel congue. In in sagittis nibh. Aliquam tincidunt rhoncus felis sed consectetur. Nunc lacinia arcu vitae erat ultrices, vitae sagittis mauris ultricies. Mauris vulputate, diam vel dictum mollis, leo quam ultricies arcu, sit amet volutpat ex est sit amet ante. Maecenas accumsan aliquet molestie. Cras viverra sit amet libero vel condimentum. Ut sollicitudin, urna at finibus suscipit, lectus nisi euismod quam, at euismod metus ante nec dui. Morbi auctor ante in facilisis aliquam.</p>
+        </div>
+        <pre><code class="css">
+@import url(https://fonts.googleapis.com/css?family=Exo:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+p {
+    font-family:'Exo', sans-serif;
+}</code>
+<code class="html">
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris egestas nibh vehicula dui egestas, in tempus velit semper. Pellentesque nec condimentum mi, sit amet aliquam neque. Duis urna augue, hendrerit vitae imperdiet vitae, pretium sit amet enim. Mauris luctus efficitur sem vel congue. In in sagittis nibh. Aliquam tincidunt rhoncus felis sed consectetur. Nunc lacinia arcu vitae erat ultrices, vitae sagittis mauris ultricies. Mauris vulputate, diam vel dictum mollis, leo quam ultricies arcu, sit amet volutpat ex est sit amet ante. Maecenas accumsan aliquet molestie. Cras viverra sit amet libero vel condimentum. Ut sollicitudin, urna at finibus suscipit, lectus nisi euismod quam, at euismod metus ante nec dui. Morbi auctor ante in facilisis aliquam.&lt;/p&gt;</code></pre>
+        <p class="block alert"><em>Il est possible avec cette instruction de charger plusieurs polices d'écriture en même temps.<br>Pour cela, vous devez ajouter vos polices à votre collection avant de récupérer le code d'import.</em></p>
+        <h3>Polices d'écriture embarquées : la règle CSS font-face</h3>
+        <p><em>Permet à l'auteur de spécifier des polices en ligne afin d'afficher le texte sur leur pages web. En permettant aux auteurs d'utiliser leurs propres polices, @font-face élimine la nécessité de dépendre du nombre limité de polices que l'utilisateur a installé sur son ordinateur.</em></p>
+        <p><em>Les seuls formats de polices d'écriture compatibles pour le web sont les suivants :</em></p>
+        <ul style="font-style:italic;">
+            <li><strong>.ttf</strong> : True Type Font (compatible avec IE 9 et + et avec les autres navigateurs)</li>
+            <li><strong>.eot</strong> : Embedded Open Type (créé par Microsoft et donc propriétaire. De ce fait, uniquement compatible avec IE)</li>
+            <li><strong>.otf</strong> : OpenType Font (non compatible avec IE)</li>
+            <li><strong>.svg</strong> : Scalable Vector Graphics (compatible uniquement avec Safari pour iOS)</li>
+            <li><strong>.woff</strong> : Web Open Font Format (le dernier né et le plus compatible)</li>
+        </ul>
+        <style type="text/css">
+            <!--
+            @font-face {
+                font-family:'the_constellation_of_heraclIt';
+                src:url('assets/css/02_-_Le_formatage_du_texte_en_CSS/the_constellation_of_heracles-webfont.eot');
+                src:url('assets/css/02_-_Le_formatage_du_texte_en_CSS/the_constellation_of_heracles-webfont.eot?#iefix') format('embedded-opentype'),
+                     url('assets/css/02_-_Le_formatage_du_texte_en_CSS/the_constellation_of_heracles-webfont.woff2') format('woff2'),
+                     url('assets/css/02_-_Le_formatage_du_texte_en_CSS/the_constellation_of_heracles-webfont.woff') format('woff'),
+                     url('assets/css/02_-_Le_formatage_du_texte_en_CSS/the_constellation_of_heracles-webfont.ttf') format('truetype'),
+                     url('assets/css/02_-_Le_formatage_du_texte_en_CSS/the_constellation_of_heracles-webfont.svg#the_constellation_of_heraclIt') format('svg');
+                font-weight:normal;
+                font-style:normal;
+            }
+            #font-fontface p {
+                font-family:'the_constellation_of_heraclIt', sans-serif;
+                font-size:55px;
+            }
+            -->
+        </style>
+        <div id="font-fontface">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris egestas nibh vehicula dui egestas, in tempus velit semper. Pellentesque nec condimentum mi, sit amet aliquam neque. Duis urna augue, hendrerit vitae imperdiet vitae, pretium sit amet enim. Mauris luctus efficitur sem vel congue. In in sagittis nibh. Aliquam tincidunt rhoncus felis sed consectetur. Nunc lacinia arcu vitae erat ultrices, vitae sagittis mauris ultricies. Mauris vulputate, diam vel dictum mollis, leo quam ultricies arcu, sit amet volutpat ex est sit amet ante. Maecenas accumsan aliquet molestie. Cras viverra sit amet libero vel condimentum. Ut sollicitudin, urna at finibus suscipit, lectus nisi euismod quam, at euismod metus ante nec dui. Morbi auctor ante in facilisis aliquam.</p>
+        </div>
+        <pre><code class="css">
+@font-face {
+    font-family:'the_constellation_of_heraclIt';
+    src:url('assets/css/02_-_Le_formatage_du_texte_en_CSS/the_constellation_of_heracles-webfont.eot'); /* IE 9 et + */
+    src:url('assets/css/02_-_Le_formatage_du_texte_en_CSS/the_constellation_of_heracles-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('assets/css/02_-_Le_formatage_du_texte_en_CSS/the_constellation_of_heracles-webfont.woff2') format('woff2'),
+        url('assets/css/02_-_Le_formatage_du_texte_en_CSS/the_constellation_of_heracles-webfont.woff') format('woff'),
+        url('assets/css/02_-_Le_formatage_du_texte_en_CSS/the_constellation_of_heracles-webfont.ttf') format('truetype'), /* Safari, Android, iOS */
+        url('assets/css/02_-_Le_formatage_du_texte_en_CSS/the_constellation_of_heracles-webfont.svg#the_constellation_of_heraclIt') format('svg'); /* iOS */
+    font-weight:normal;
+    font-style:normal;
+}
+p {
+    font-family:'the_constellation_of_heraclIt', sans-serif;
+}</code>
+<code class="html">
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris egestas nibh vehicula dui egestas, in tempus velit semper. Pellentesque nec condimentum mi, sit amet aliquam neque. Duis urna augue, hendrerit vitae imperdiet vitae, pretium sit amet enim. Mauris luctus efficitur sem vel congue. In in sagittis nibh. Aliquam tincidunt rhoncus felis sed consectetur. Nunc lacinia arcu vitae erat ultrices, vitae sagittis mauris ultricies. Mauris vulputate, diam vel dictum mollis, leo quam ultricies arcu, sit amet volutpat ex est sit amet ante. Maecenas accumsan aliquet molestie. Cras viverra sit amet libero vel condimentum. Ut sollicitudin, urna at finibus suscipit, lectus nisi euismod quam, at euismod metus ante nec dui. Morbi auctor ante in facilisis aliquam.&lt;/p&gt;</code></pre>
+        <hr>
+        <h2>Taille, graisse & style de police</h2>
+        <style type="text/css">
+            <!--
+            @import url(https://fonts.googleapis.com/css?family=Exo:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+            #font-sizeweight p {
+                font-family:'Exo', sans-serif;
+                font-size:14px;
+                font-weight:100;
+            }
+                #font-sizeweight p > strong {font-weight:700;}
+                #font-sizeweight p > span {
+                    font-weight:bolder;
+                    font-style:italic;
+                }
+            -->
+        </style>
+        <div id="font-sizeweight">
+            <p><strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</strong> <span>Mauris egestas nibh vehicula dui egestas, in tempus velit semper.</span> Pellentesque nec condimentum mi, sit amet aliquam neque. Duis urna augue, hendrerit vitae imperdiet vitae, pretium sit amet enim. Mauris luctus efficitur sem vel congue. In in sagittis nibh. Aliquam tincidunt rhoncus felis sed consectetur. Nunc lacinia arcu vitae erat ultrices, vitae sagittis mauris ultricies. Mauris vulputate, diam vel dictum mollis, leo quam ultricies arcu, sit amet volutpat ex est sit amet ante. Maecenas accumsan aliquet molestie. Cras viverra sit amet libero vel condimentum. Ut sollicitudin, urna at finibus suscipit, lectus nisi euismod quam, at euismod metus ante nec dui. Morbi auctor ante in facilisis aliquam.</p>
+        </div>
+        <pre><code class="css">
+@import url(https://fonts.googleapis.com/css?family=Exo:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+p {
+    font-family:'Exo', sans-serif;
+    font-size:14px;
+    font-weight:100; /* normal (par défaut, équivalent à 400) | bold (équivalent à 700) | bolder | lighter | 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900 : si la police possède la graisse */
+}
+    p > strong {
+        font-weight:700; /* Equivalent au mot-clé "bold". */
+    }
+    p > span {
+        font-weight:bolder; /* Permet d'indiquer que l'élément ciblé prendra la graisse supérieure à celle de l'élément parent. */
+        font-style:italic; /* normal (par défaut) | italic | oblique */
+    }</code>
+<code class="html">
+&lt;p&gt;&lt;strong&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/strong&gt; &lt;span&gt;Mauris egestas nibh vehicula dui egestas, in tempus velit semper.&lt;/span&gt; Pellentesque nec condimentum mi, sit amet aliquam neque. Duis urna augue, hendrerit vitae imperdiet vitae, pretium sit amet enim. Mauris luctus efficitur sem vel congue. In in sagittis nibh. Aliquam tincidunt rhoncus felis sed consectetur. Nunc lacinia arcu vitae erat ultrices, vitae sagittis mauris ultricies. Mauris vulputate, diam vel dictum mollis, leo quam ultricies arcu, sit amet volutpat ex est sit amet ante. Maecenas accumsan aliquet molestie. Cras viverra sit amet libero vel condimentum. Ut sollicitudin, urna at finibus suscipit, lectus nisi euismod quam, at euismod metus ante nec dui. Morbi auctor ante in facilisis aliquam.&lt;/p&gt;</code></pre>
+        <hr>
+        <h2>L'interlignage, l'inter-lettrage et l'espacement entre les mots</h2>
+        <style type="text/css">
+            <!--
+            #font-lineheight p {
+                font-size:14px;
+                line-height:35px;
+                letter-spacing:12px;
+                word-spacing:50px;
+            }
+            -->
+        </style>
+        <div id="font-lineheight">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris egestas nibh vehicula dui egestas, in tempus velit semper. Pellentesque nec condimentum mi, sit amet aliquam neque. Duis urna augue, hendrerit vitae imperdiet vitae, pretium sit amet enim. Mauris luctus efficitur sem vel congue. In in sagittis nibh. Aliquam tincidunt rhoncus felis sed consectetur. Nunc lacinia arcu vitae erat ultrices, vitae sagittis mauris ultricies. Mauris vulputate, diam vel dictum mollis, leo quam ultricies arcu, sit amet volutpat ex est sit amet ante. Maecenas accumsan aliquet molestie. Cras viverra sit amet libero vel condimentum. Ut sollicitudin, urna at finibus suscipit, lectus nisi euismod quam, at euismod metus ante nec dui. Morbi auctor ante in facilisis aliquam.</p>
+        </div>
+        <pre><code class="css">
+p {
+    font-size:14px;
+    line-height:35px;
+    letter-spacing:12px;
+    word-spacing:50px;
+}</code>
+<code class="html">
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris egestas nibh vehicula dui egestas, in tempus velit semper. Pellentesque nec condimentum mi, sit amet aliquam neque. Duis urna augue, hendrerit vitae imperdiet vitae, pretium sit amet enim. Mauris luctus efficitur sem vel congue. In in sagittis nibh. Aliquam tincidunt rhoncus felis sed consectetur. Nunc lacinia arcu vitae erat ultrices, vitae sagittis mauris ultricies. Mauris vulputate, diam vel dictum mollis, leo quam ultricies arcu, sit amet volutpat ex est sit amet ante. Maecenas accumsan aliquet molestie. Cras viverra sit amet libero vel condimentum. Ut sollicitudin, urna at finibus suscipit, lectus nisi euismod quam, at euismod metus ante nec dui. Morbi auctor ante in facilisis aliquam.&lt;/p&gt;</code></pre>
+        <hr>
+        <h2>L'alignement du texte</h2>
+        <style type="text/css">
+            <!--
+            #font-textalign p {text-align:justify;}
+            -->
+        </style>
+        <div id="font-textalign">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris egestas nibh vehicula dui egestas, in tempus velit semper. Pellentesque nec condimentum mi, sit amet aliquam neque. Duis urna augue, hendrerit vitae imperdiet vitae, pretium sit amet enim. Mauris luctus efficitur sem vel congue. In in sagittis nibh. Aliquam tincidunt rhoncus felis sed consectetur. Nunc lacinia arcu vitae erat ultrices, vitae sagittis mauris ultricies. Mauris vulputate, diam vel dictum mollis, leo quam ultricies arcu, sit amet volutpat ex est sit amet ante. Maecenas accumsan aliquet molestie. Cras viverra sit amet libero vel condimentum. Ut sollicitudin, urna at finibus suscipit, lectus nisi euismod quam, at euismod metus ante nec dui. Morbi auctor ante in facilisis aliquam.</p>
+        </div>
+        <pre><code class="css">
+p {
+    text-align:justify; /* left | center | right | justify | inherit */
+}</code>
+<code class="html">
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris egestas nibh vehicula dui egestas, in tempus velit semper. Pellentesque nec condimentum mi, sit amet aliquam neque. Duis urna augue, hendrerit vitae imperdiet vitae, pretium sit amet enim. Mauris luctus efficitur sem vel congue. In in sagittis nibh. Aliquam tincidunt rhoncus felis sed consectetur. Nunc lacinia arcu vitae erat ultrices, vitae sagittis mauris ultricies. Mauris vulputate, diam vel dictum mollis, leo quam ultricies arcu, sit amet volutpat ex est sit amet ante. Maecenas accumsan aliquet molestie. Cras viverra sit amet libero vel condimentum. Ut sollicitudin, urna at finibus suscipit, lectus nisi euismod quam, at euismod metus ante nec dui. Morbi auctor ante in facilisis aliquam.&lt;/p&gt;</code></pre>
+        <hr>
+        <h2>La casse du texte</h2>
+        <p><em>Il est ainsi possible d'afficher un texte tout en lettres capitales, tout en minuscules ou tous les mots avec leur première lettre capitale.</em></p>
+        <style type="text/css">
+            <!--
+            #font-texttransform p {text-transform:uppercase;}
+            -->
+        </style>
+        <div id="font-texttransform">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris egestas nibh vehicula dui egestas, in tempus velit semper. Pellentesque nec condimentum mi, sit amet aliquam neque. Duis urna augue, hendrerit vitae imperdiet vitae, pretium sit amet enim. Mauris luctus efficitur sem vel congue. In in sagittis nibh. Aliquam tincidunt rhoncus felis sed consectetur. Nunc lacinia arcu vitae erat ultrices, vitae sagittis mauris ultricies. Mauris vulputate, diam vel dictum mollis, leo quam ultricies arcu, sit amet volutpat ex est sit amet ante. Maecenas accumsan aliquet molestie. Cras viverra sit amet libero vel condimentum. Ut sollicitudin, urna at finibus suscipit, lectus nisi euismod quam, at euismod metus ante nec dui. Morbi auctor ante in facilisis aliquam.</p>
+        </div>
+        <pre><code class="css">
+p {
+    text-transform:uppercase; /* capitalize | uppercase | lowercase | none | inherit */
+}</code>
+<code class="html">
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris egestas nibh vehicula dui egestas, in tempus velit semper. Pellentesque nec condimentum mi, sit amet aliquam neque. Duis urna augue, hendrerit vitae imperdiet vitae, pretium sit amet enim. Mauris luctus efficitur sem vel congue. In in sagittis nibh. Aliquam tincidunt rhoncus felis sed consectetur. Nunc lacinia arcu vitae erat ultrices, vitae sagittis mauris ultricies. Mauris vulputate, diam vel dictum mollis, leo quam ultricies arcu, sit amet volutpat ex est sit amet ante. Maecenas accumsan aliquet molestie. Cras viverra sit amet libero vel condimentum. Ut sollicitudin, urna at finibus suscipit, lectus nisi euismod quam, at euismod metus ante nec dui. Morbi auctor ante in facilisis aliquam.&lt;/p&gt;</code></pre>
+        <hr>
+        <h2>La décoration du texte</h2>
+        <p><em>Utilisée pour définir la décoration du texte (formatage), telle que souligné, clignotant, barré, etc.</em></p>
+        <style type="text/css">
+            <!--
+            #font-textdecoration p {text-decoration:line-through;}
+            #font-textdecoration a {text-decoration:none;}
+            -->
+        </style>
+        <div id="font-textdecoration">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris egestas nibh vehicula dui egestas, in tempus velit semper. Pellentesque nec condimentum mi, sit amet aliquam neque. Duis urna augue, hendrerit vitae imperdiet vitae, pretium sit amet enim. Mauris luctus efficitur sem vel congue. In in sagittis nibh. Aliquam tincidunt rhoncus felis sed consectetur. Nunc lacinia arcu vitae erat ultrices, vitae sagittis mauris ultricies. Mauris vulputate, diam vel dictum mollis, leo quam ultricies arcu, sit amet volutpat ex est sit amet ante. Maecenas accumsan aliquet molestie. Cras viverra sit amet libero vel condimentum. Ut sollicitudin, urna at finibus suscipit, lectus nisi euismod quam, at euismod metus ante nec dui. Morbi auctor ante in facilisis aliquam.</p>
+            <a href="#" target="_blank" title="">Lien</a>
+        </div>
+        <pre><code class="css">
+p {
+    text-decoration:line-through; /* none | underline | overline | line-through | blink | inherit */
+}
+a {
+    text-decoration:none; /* none | underline | overline | line-through | blink | inherit */
+}</code>
+<code class="html">
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris egestas nibh vehicula dui egestas, in tempus velit semper. Pellentesque nec condimentum mi, sit amet aliquam neque. Duis urna augue, hendrerit vitae imperdiet vitae, pretium sit amet enim. Mauris luctus efficitur sem vel congue. In in sagittis nibh. Aliquam tincidunt rhoncus felis sed consectetur. Nunc lacinia arcu vitae erat ultrices, vitae sagittis mauris ultricies. Mauris vulputate, diam vel dictum mollis, leo quam ultricies arcu, sit amet volutpat ex est sit amet ante. Maecenas accumsan aliquet molestie. Cras viverra sit amet libero vel condimentum. Ut sollicitudin, urna at finibus suscipit, lectus nisi euismod quam, at euismod metus ante nec dui. Morbi auctor ante in facilisis aliquam.&lt;/p&gt;
+&lt;a href="#" target="_blank" title=""&gt;Lien&lt;/a&gt;</code></pre>
+        <hr>
+        <h2>L'indentation du texte</h2>
+        <p><em>Permet d'appliquer un retrait positif ou négatif à la première ligne d'un texte.</em></p>
+        <style type="text/css">
+            <!--
+            #font-textindent p {text-indent:50px;}
+            -->
+        </style>
+        <div id="font-textindent">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris egestas nibh vehicula dui egestas, in tempus velit semper. Pellentesque nec condimentum mi, sit amet aliquam neque. Duis urna augue, hendrerit vitae imperdiet vitae, pretium sit amet enim. Mauris luctus efficitur sem vel congue. In in sagittis nibh. Aliquam tincidunt rhoncus felis sed consectetur. Nunc lacinia arcu vitae erat ultrices, vitae sagittis mauris ultricies. Mauris vulputate, diam vel dictum mollis, leo quam ultricies arcu, sit amet volutpat ex est sit amet ante. Maecenas accumsan aliquet molestie. Cras viverra sit amet libero vel condimentum. Ut sollicitudin, urna at finibus suscipit, lectus nisi euismod quam, at euismod metus ante nec dui. Morbi auctor ante in facilisis aliquam.</p>
+        </div>
+        <pre><code class="css">
+p {
+    text-indent:50px;
+}</code>
+<code class="html">
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris egestas nibh vehicula dui egestas, in tempus velit semper. Pellentesque nec condimentum mi, sit amet aliquam neque. Duis urna augue, hendrerit vitae imperdiet vitae, pretium sit amet enim. Mauris luctus efficitur sem vel congue. In in sagittis nibh. Aliquam tincidunt rhoncus felis sed consectetur. Nunc lacinia arcu vitae erat ultrices, vitae sagittis mauris ultricies. Mauris vulputate, diam vel dictum mollis, leo quam ultricies arcu, sit amet volutpat ex est sit amet ante. Maecenas accumsan aliquet molestie. Cras viverra sit amet libero vel condimentum. Ut sollicitudin, urna at finibus suscipit, lectus nisi euismod quam, at euismod metus ante nec dui. Morbi auctor ante in facilisis aliquam.&lt;/p&gt;</code></pre>
+        <hr>
+        <h2>Le débordement du texte</h2>
+        <p><em>Détermine comme le dépassement de contenu est signalé aux utilisateurs. Il peut être rogné, afficher des points de suspension ou une chaîne définie par l'auteur de la page.</em></p>
+        <style type="text/css">
+            <!--
+            #font-textoverflow p {
+                overflow:hidden;
+                text-overflow:ellipsis;
+                white-space:nowrap;
+            }
+            -->
+        </style>
+        <div id="font-textoverflow">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris egestas nibh vehicula dui egestas, in tempus velit semper. Pellentesque nec condimentum mi, sit amet aliquam neque. Duis urna augue, hendrerit vitae imperdiet vitae, pretium sit amet enim. Mauris luctus efficitur sem vel congue. In in sagittis nibh. Aliquam tincidunt rhoncus felis sed consectetur. Nunc lacinia arcu vitae erat ultrices, vitae sagittis mauris ultricies. Mauris vulputate, diam vel dictum mollis, leo quam ultricies arcu, sit amet volutpat ex est sit amet ante. Maecenas accumsan aliquet molestie. Cras viverra sit amet libero vel condimentum. Ut sollicitudin, urna at finibus suscipit, lectus nisi euismod quam, at euismod metus ante nec dui. Morbi auctor ante in facilisis aliquam.</p>
+        </div>
+        <pre><code class="css">
+p {
+    overflow:hidden; /* permet de cacher le texte en débordement */
+    white-space:nowrap; /* permet d'empêcher le retour à la ligne du texte pour lui forcer le débordement */
+
+    text-overflow:ellipsis; /* visible | clip | ellipsis | chaine_de_caractere_personnalisee | inherit */
+}</code>
+<code class="html">
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris egestas nibh vehicula dui egestas, in tempus velit semper. Pellentesque nec condimentum mi, sit amet aliquam neque. Duis urna augue, hendrerit vitae imperdiet vitae, pretium sit amet enim. Mauris luctus efficitur sem vel congue. In in sagittis nibh. Aliquam tincidunt rhoncus felis sed consectetur. Nunc lacinia arcu vitae erat ultrices, vitae sagittis mauris ultricies. Mauris vulputate, diam vel dictum mollis, leo quam ultricies arcu, sit amet volutpat ex est sit amet ante. Maecenas accumsan aliquet molestie. Cras viverra sit amet libero vel condimentum. Ut sollicitudin, urna at finibus suscipit, lectus nisi euismod quam, at euismod metus ante nec dui. Morbi auctor ante in facilisis aliquam.&lt;/p&gt;</code></pre>
+        <hr>
+        <h2>La césure du texte</h2>
+        <style type="text/css">
+            <!--
+            #font-hyphens p {
+                -webkit-hyphens:auto;
+                -ms-hyphens:auto;
+                -o-hyphens:auto;
+                hyphens:auto;
+                -moz-hyphens:auto;
+            }
+            -->
+        </style>
+        <div id="font-hyphens">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris egestas nibh vehicula dui egestas, in tempus velit semper. Pellentesque nec condimentum mi, sit amet aliquam neque. Duis urna augue, hendrerit vitae imperdiet vitae, pretium sit amet enim. Mauris luctus efficitur sem vel congue. In in sagittis nibh. Aliquam tincidunt rhoncus felis sed consectetur. Nunc lacinia arcu vitae erat ultrices, vitae sagittis mauris ultricies. Mauris vulputate, diam vel dictum mollis, leo quam ultricies arcu, sit amet volutpat ex est sit amet ante. Maecenas accumsan aliquet molestie. Cras viverra sit amet libero vel condimentum. Ut sollicitudin, urna at finibus suscipit, lectus nisi euismod quam, at euismod metus ante nec dui. Morbi auctor ante in facilisis aliquam.</p>
+        </div>
+        <pre><code class="css">
+p {
+    -webkit-hyphens:auto;
+    -moz-hyphens:auto;
+    -ms-hyphens:auto;
+    -o-hyphens:auto;
+    hyphens:auto; /* none | manual | auto */
+}</code>
+<code class="html">
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris egestas nibh vehicula dui egestas, in tempus velit semper. Pellentesque nec condimentum mi, sit amet aliquam neque. Duis urna augue, hendrerit vitae imperdiet vitae, pretium sit amet enim. Mauris luctus efficitur sem vel congue. In in sagittis nibh. Aliquam tincidunt rhoncus felis sed consectetur. Nunc lacinia arcu vitae erat ultrices, vitae sagittis mauris ultricies. Mauris vulputate, diam vel dictum mollis, leo quam ultricies arcu, sit amet volutpat ex est sit amet ante. Maecenas accumsan aliquet molestie. Cras viverra sit amet libero vel condimentum. Ut sollicitudin, urna at finibus suscipit, lectus nisi euismod quam, at euismod metus ante nec dui. Morbi auctor ante in facilisis aliquam.&lt;/p&gt;</code></pre>
+        <hr>
+        <h2>La sélection du texte</h2>
+        <p><em>Empêche la sélection vsuel du texte par le biais de la souris.</em></p>
+        <p class="block alert"><em>Cette instruction n'empêche pas de faire un copier/coller du texte si la sélection est plus large ou est faite via le clavier.</em></p>
+        <style type="text/css">
+            <!--
+            #font-select p {
+                -webkit-user-select:none;
+                -moz-user-select:none;
+                -ms-user-select:none;
+                -o-user-select:none;
+                user-select:none;
+            }
+            -->
+        </style>
+        <div id="font-select">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris egestas nibh vehicula dui egestas, in tempus velit semper. Pellentesque nec condimentum mi, sit amet aliquam neque. Duis urna augue, hendrerit vitae imperdiet vitae, pretium sit amet enim. Mauris luctus efficitur sem vel congue. In in sagittis nibh. Aliquam tincidunt rhoncus felis sed consectetur. Nunc lacinia arcu vitae erat ultrices, vitae sagittis mauris ultricies. Mauris vulputate, diam vel dictum mollis, leo quam ultricies arcu, sit amet volutpat ex est sit amet ante. Maecenas accumsan aliquet molestie. Cras viverra sit amet libero vel condimentum. Ut sollicitudin, urna at finibus suscipit, lectus nisi euismod quam, at euismod metus ante nec dui. Morbi auctor ante in facilisis aliquam.</p>
+        </div>
+        <pre><code class="css">
+p {
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    -o-user-select:none;
+    user-select:none;
+}</code>
+<code class="html">
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris egestas nibh vehicula dui egestas, in tempus velit semper. Pellentesque nec condimentum mi, sit amet aliquam neque. Duis urna augue, hendrerit vitae imperdiet vitae, pretium sit amet enim. Mauris luctus efficitur sem vel congue. In in sagittis nibh. Aliquam tincidunt rhoncus felis sed consectetur. Nunc lacinia arcu vitae erat ultrices, vitae sagittis mauris ultricies. Mauris vulputate, diam vel dictum mollis, leo quam ultricies arcu, sit amet volutpat ex est sit amet ante. Maecenas accumsan aliquet molestie. Cras viverra sit amet libero vel condimentum. Ut sollicitudin, urna at finibus suscipit, lectus nisi euismod quam, at euismod metus ante nec dui. Morbi auctor ante in facilisis aliquam.&lt;/p&gt;</code></pre>
+        <hr>
+        <h2>Les unités de dimensions</h2>
+        <p><em>CSS offre différentes unités pour exprimer les dimensions. Certaines proviennent de la typographie, comme le point (pt) et le pica (pc), d'autres sont connues pour leur usage quotidien, comme le centimètre (cm) et le pouce (in). Et il y a également une unité inventée spécifiquement pour CSS : le pixel (px). Les unités n'ont rien à voir avec les propriétés, mais avec le média de sortie: écran ou papier.</em></p>
+        <p><em>Les unités "cm", "mm", "in", "pt", et "pc" sont appelées unités absolues.<br>Les unités dites ne seront pas modifiées en fonction des possibilités d’affichage, ce qui est précisément ce que l’on souhaite à l’impression d’un document.</em></p>
+        <p><em>Il existe aussi des unités dites relatives comme le cadratin (em), le pourcentage (%) et "ex" qui dépendent de la police de caractères et peuvent être différentes pour chaque élément du document en fonction de l'élément parent.<br>L'unité "em" est simplement la taille de la police de caractères. Pour un élément dont la police est de taille 2px, 1em signifie donc 2px.<br>L' unité "ex" est rarement utilisée.</em></p>
+        <h3>L'alternative "root em" (rem)</h3>
+        <p><em>Contrairement à l'unité "em", l'unité "rem" n'est pas proportionnelle à son parent mais à la taille spécifiée pour la balise html.</em></p>
+        <style type="text/css">
+            <!--
+            #font-rem p {font-size:14px;}
+            -->
+        </style>
+        <div id="font-rem">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris egestas nibh vehicula dui egestas, in tempus velit semper. Pellentesque nec condimentum mi, sit amet aliquam neque. Duis urna augue, hendrerit vitae imperdiet vitae, pretium sit amet enim. Mauris luctus efficitur sem vel congue. In in sagittis nibh. Aliquam tincidunt rhoncus felis sed consectetur. Nunc lacinia arcu vitae erat ultrices, vitae sagittis mauris ultricies. Mauris vulputate, diam vel dictum mollis, leo quam ultricies arcu, sit amet volutpat ex est sit amet ante. Maecenas accumsan aliquet molestie. Cras viverra sit amet libero vel condimentum. Ut sollicitudin, urna at finibus suscipit, lectus nisi euismod quam, at euismod metus ante nec dui. Morbi auctor ante in facilisis aliquam.</p>
+        </div>
+        <pre><code class="css">
+html {
+    font-size:62.5%; /* Cette réinitialisation du font-size permet d'obtenir l'équivalence 10px = 1rem */
+}
+p {
+    font-size:14px; /* Assure la compatibilité avec les versions antérieures à IE 9 */
+    font-size:1.4rem;
+}</code>
+<code class="html">
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris egestas nibh vehicula dui egestas, in tempus velit semper. Pellentesque nec condimentum mi, sit amet aliquam neque. Duis urna augue, hendrerit vitae imperdiet vitae, pretium sit amet enim. Mauris luctus efficitur sem vel congue. In in sagittis nibh. Aliquam tincidunt rhoncus felis sed consectetur. Nunc lacinia arcu vitae erat ultrices, vitae sagittis mauris ultricies. Mauris vulputate, diam vel dictum mollis, leo quam ultricies arcu, sit amet volutpat ex est sit amet ante. Maecenas accumsan aliquet molestie. Cras viverra sit amet libero vel condimentum. Ut sollicitudin, urna at finibus suscipit, lectus nisi euismod quam, at euismod metus ante nec dui. Morbi auctor ante in facilisis aliquam.&lt;/p&gt;</code></pre>
+    </body>
+</html>

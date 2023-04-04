@@ -1,0 +1,13 @@
+div{
+    border-width: 2px;
+    border-style: solid;
+    border-color: red;
+    border: 2px solid red;
+    border-top-color: blue;
+    border-right-style: dotted;
+
+    border-radius: 10px;
+
+    box-shadow: 2px 4px 10px gray;
+    text-shadow: 2px 4px 10px gray;
+}

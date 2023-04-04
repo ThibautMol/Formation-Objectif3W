@@ -1,0 +1,27 @@
+/*
+ Theme Name:   Objectif 3W - Dark Theme
+ Theme URI:    http://www.objectif3w.com/
+ Description:  Designed for Objectif 3W company as part of a training project
+ Author:       Designed by Objectif 3W
+ Author URI:   http://www.objectif3w.com/
+ Version:      1.0.0
+ License:      Copyright ©2016 Objectif 3W - All rights reserved
+ License URI:  http://www.objectif3w.com/mentions-legales/
+ Tags:         training, dark
+ Text Domain:  o3w
+*/
+
+@charset "utf-8";
+/* CSS Document */
+
+
+
+/**
+ * --------------------------------------------------
+ * CLASSES
+ * --------------------------------------------------
+**/
+/* THEMES */
+/* dark */
+blockquote:before, q:before { content:url('../images/light/quote-opening.png'); }
+blockquote:after, q:after { content:url('../images/light/quote-closing.png'); }

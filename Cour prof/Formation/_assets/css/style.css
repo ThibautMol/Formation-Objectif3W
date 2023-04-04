@@ -1,0 +1,161 @@
+/*
+ Theme Name:   Objectif 3W
+ Theme URI:    http://www.objectif3w.com/
+ Description:  Designed for Objectif 3W company as part of a training project
+ Author:       Designed by Objectif 3W
+ Author URI:   http://www.objectif3w.com/
+ Version:      1.0.0
+ License:      Copyright ©2016 Objectif 3W - All rights reserved
+ License URI:  http://www.objectif3w.com/mentions-legales/
+ Tags:         training, light
+ Text Domain:  o3w
+*/
+
+@charset "utf-8";
+/* CSS Document */
+/*@import url('//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i');*/
+/*font-family:'Open Sans', sans-serif;*/
+
+
+
+/**
+ * --------------------------------------------------
+ * GENERALS
+ * --------------------------------------------------
+**/
+*,::before,::after {
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -ms-box-sizing:border-box;
+    -o-box-sizing:border-box;
+    box-sizing:border-box;
+    
+    -webkit-background-clip:padding-box;
+    -moz-background-clip:padding-box;
+    -ms-background-clip:padding-box;
+    background-clip:padding-box;
+}
+*,:hover,:focus,:active { outline:none !important; }
+
+
+
+/**
+ * --------------------------------------------------
+ * TAGS
+ * --------------------------------------------------
+**/
+/*html,body {
+    margin:0;
+    padding:0;
+}*/
+html {
+    font-size:62.5%;
+    min-height:100vh;
+}
+body {
+    cursor:default;
+    /*font-family:'Open Sans', sans-serif;*/
+    font-size:15px;font-size:1.5rem;
+    line-height:1.2;
+}
+p { margin:0 0 10px 0;margin:0 0 1rem 0; }
+blockquote,q {
+    clear:both;
+    display:inline-block;
+    margin:0;
+    min-height:12px;min-height:1.2rem;
+    overflow:auto;
+    padding:0 10px;padding:0 1rem;
+    quotes:none;
+}
+blockquote:before,q:before {
+    content:url('../images/dark/deco/quote-opening.png');
+    float:left;
+    margin:0 10px 0 0;margin:0 1rem 0 0;
+}
+blockquote:after,q:after {
+    content:url('../images/dark/deco/quote-closing.png');
+    float:right;
+    margin:0 0 0 10px;margin:0 0 0 1rem;
+}
+strong,b { font-weight:700; }
+em,i { font-style:italic; }
+small,sup,sub { font-size:smaller; }
+a {
+    display:inline-block;
+
+    /* transition */
+    -webkit-transition:all .2s ease-in-out 0s;
+    -moz-transition:all .2s ease-in-out 0s;
+    -ms-transition:all .2s ease-in-out 0s;
+    transition:all .2s ease-in-out 0s;
+}
+pre {
+    clear:both;
+    white-space:pre-wrap;
+}
+    pre code { position:relative; }
+    pre code.algo,pre code.algo * { color:#ffffff; }
+    pre code::before {
+        content:'Code source';
+        display:inline-block;
+        font-size:25px;font-size:2.5rem;
+        margin-bottom:15px;margin-bottom:1.5rem;
+        text-transform:uppercase;
+    }
+    pre code.html::before { content:'Code source HTML'; }
+    pre code.css::before { content:'Code source CSS'; }
+    pre code.php::before { content:'Code source PHP'; }
+    pre code.sql::before { content:'Code source SQL'; }
+    pre code.js::before { content:'Code source Javascript'; }
+    /*pre code.xml::before { content:'Code source XML'; }*/
+    pre code.json::before { content:'Code source JSON'; }
+    pre code.algo::before { content:'Algorithmique'; }
+table {
+    display:inline-table;
+    vertical-align:top;
+}
+
+
+
+/**
+ * --------------------------------------------------
+ * CLASSES
+ * --------------------------------------------------
+**/
+/* BLOCKS */
+.block {
+    display:block;
+    margin:5px 0;margin:.5rem 0;
+    padding:15px 15px 15px 40px;padding:1.5rem 1.5rem 1.5rem 4rem;
+    position:relative;
+}
+.block.alert {
+    background-color:#ed7f10; /* orange */
+    color:#ffffff; /* blanc */
+}
+.block.alert::before {
+    content:"/!\\";
+    left:15px;left:1.5rem;
+    position:absolute;
+    top:15px;top:1.5rem;
+    vertical-align:top;
+}
+    .block.alert > p:first-child { margin-top:0; }
+    .block.alert > ul { padding-left:15px;padding-left:1.5rem; }
+    .block.alert a { color:#ffffff; /* blanc */ }
+
+
+/**
+ * --------------------------------------------------
+ * COMPONENTS
+ * --------------------------------------------------
+**/
+
+
+
+/**
+ * --------------------------------------------------
+ * ID
+ * --------------------------------------------------
+**/

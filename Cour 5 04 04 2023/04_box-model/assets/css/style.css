@@ -1,0 +1,10 @@
+.box-1 {
+    width: 400px;
+    height: 400px;
+    background-color: lightblue;
+    /* padding: 20px; */
+    box-sizing: content-box;
+    padding: 15px 10px 20px 16px;
+    margin: auto;
+
+}

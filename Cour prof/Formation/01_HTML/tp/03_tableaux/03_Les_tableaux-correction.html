@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+        <title>Les tableaux - Mise en pratique HTML</title>
+
+        <link rel="stylesheet" type="text/css" href="../../../_assets/">
+
+        <!-- // highlight.js : Coloration syntaxique du code -->
+        <link rel="stylesheet" type="text/css" href="../../../_assets/plugins/highlight/styles/monokai_sublime.css">
+        <script type="text/javascript" src="../../../_assets/plugins/highlight/highlight.pack.js"></script>
+        <script type="text/javascript">
+            hljs.initHighlightingOnLoad();
+        </script>
+        <!-- // -->
+    </head>
+
+    <body>
+        <h1>Les tableaux - Mise en pratique HTML</h1>
+        <blockquote>Suite au <a href="../../cours/04_les_tableaux.html" target="_blank" title="">cours sur les tableaux HTML</a>, nous allons mettre en pratique les différentes balises HTML et leurs attributs correspondant à cette structure.<br>Vous allez trouver ci-dessous différentes images représentant des structures de tableaux HTML que vous devez reproduire.</blockquote>
+        <hr>
+        <h2>Ex. 1 : colspan & rowspan (fusion de cellules)</h2>
+        <img alt="Exercice 1 - Les tableaux" src="img/01_-_Les_tableaux.jpg">
+        <table border="1">
+            <tr>
+                <td rowspan="3">1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td colspan="3">5</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+            </tr>
+        </table>
+        <pre><code class="html">
+&lt;table border="1"&gt;
+    &lt;tr&gt;
+        &lt;td rowspan="3"&gt;1&lt;/td&gt;
+        &lt;td&gt;2&lt;/td&gt;
+        &lt;td&gt;3&lt;/td&gt;
+        &lt;td&gt;4&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td colspan="3"&gt;5&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;6&lt;/td&gt;
+        &lt;td&gt;7&lt;/td&gt;
+        &lt;td&gt;8&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+        <hr>
+        <h2>Ex. 2 : cellspacing (espacement entre les cellules)</h2>
+        <img alt="Exercice 2 - Les tableaux" src="img/02_-_Les_tableaux.jpg">
+        <table border="1" cellspacing="10">
+            <tr>
+                <td rowspan="3">1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td colspan="3">5</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+            </tr>
+        </table>
+        <pre><code class="html">
+&lt;table border="1" cellspacing="10"&gt;
+    &lt;tr&gt;
+        &lt;td rowspan="3"&gt;1&lt;/td&gt;
+        &lt;td&gt;2&lt;/td&gt;
+        &lt;td&gt;3&lt;/td&gt;
+        &lt;td&gt;4&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td colspan="3"&gt;5&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;6&lt;/td&gt;
+        &lt;td&gt;7&lt;/td&gt;
+        &lt;td&gt;8&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+        <hr>
+        <h2>Ex. 3 : cellpadding (espacement interne aux cellules)</h2>
+        <img alt="Exercice 3 - Les tableaux" src="img/03_-_Les_tableaux.jpg">
+        <table border="1" cellpadding="10">
+            <tr>
+                <td rowspan="3">1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td colspan="3">5</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+            </tr>
+        </table>
+        <pre><code class="html">
+&lt;table border="1" cellpadding="10"&gt;
+    &lt;tr&gt;
+        &lt;td rowspan="3"&gt;1&lt;/td&gt;
+        &lt;td&gt;2&lt;/td&gt;
+        &lt;td&gt;3&lt;/td&gt;
+        &lt;td&gt;4&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td colspan="3"&gt;5&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;6&lt;/td&gt;
+        &lt;td&gt;7&lt;/td&gt;
+        &lt;td&gt;8&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+        <hr>
+        <h2>Ex. 4 : annulation de cellpadding & cellspacing</h2>
+        <img alt="Exercice 4 - Les tableaux" src="img/04_-_Les_tableaux.jpg">
+        <table border="1" cellspacing="0" cellpadding="0">
+            <tr>
+                <td rowspan="3">1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td colspan="3">5</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+            </tr>
+        </table>
+        <pre><code class="html">
+&lt;table border="1" cellspacing="0" cellpadding="0"&gt;
+    &lt;tr&gt;
+        &lt;td rowspan="3"&gt;1&lt;/td&gt;
+        &lt;td&gt;2&lt;/td&gt;
+        &lt;td&gt;3&lt;/td&gt;
+        &lt;td&gt;4&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td colspan="3"&gt;5&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;6&lt;/td&gt;
+        &lt;td&gt;7&lt;/td&gt;
+        &lt;td&gt;8&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+        <hr>
+        <h2>Ex. 5 : border-collapse (fusion des bordures entre les cellules)</h2>
+        <img alt="Exercice 5 - Les tableaux" src="img/05_-_Les_tableaux.jpg">
+        <table border="1" style="border-collapse:collapse;">
+            <tr>
+                <td rowspan="3">1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td colspan="3">5</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+            </tr>
+        </table>
+        <pre><code class="html">
+&lt;table border="1" style="border-collapse:collapse;"&gt;
+    &lt;tr&gt;
+        &lt;td rowspan="3"&gt;1&lt;/td&gt;
+        &lt;td&gt;2&lt;/td&gt;
+        &lt;td&gt;3&lt;/td&gt;
+        &lt;td&gt;4&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td colspan="3"&gt;5&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;6&lt;/td&gt;
+        &lt;td&gt;7&lt;/td&gt;
+        &lt;td&gt;8&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+        <hr>
+        <h2>Exercice 6</h2>
+        <img alt="Exercice 6 - Les tableaux" src="img/06_-_Les_tableaux.jpg">
+        <table border="1">
+            <tr>
+                <td colspan="4">1</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>4</td>
+                <td rowspan="2">5</td>
+                <td>6</td>
+                <td>7</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>9</td>
+                <td>10</td>
+                <td>11</td>
+            </tr>
+        </table>
+        <pre><code class="html">
+&lt;table border="1"&gt;
+    &lt;tr&gt;
+        &lt;td colspan="4"&gt;1&lt;/td&gt;
+        &lt;td&gt;2&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;3&lt;/td&gt;
+        &lt;td&gt;4&lt;/td&gt;
+        &lt;td rowspan="2"&gt;5&lt;/td&gt;
+        &lt;td&gt;6&lt;/td&gt;
+        &lt;td&gt;7&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;8&lt;/td&gt;
+        &lt;td&gt;9&lt;/td&gt;
+        &lt;td&gt;10&lt;/td&gt;
+        &lt;td&gt;11&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+        <hr>
+        <h2>Exercice 7</h2>
+        <img alt="Exercice 7 - Les tableaux" src="img/07_-_Les_tableaux.jpg">
+        <table border="1" cellspacing="0" cellpadding="0" style="border-collapse:collapse;">
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td colspan="2">4</td>
+            </tr>
+            <tr>
+                <td colspan="3">5</td>
+                <td>6</td>
+                <td>7</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>9</td>
+                <td colspan="3">10</td>
+            </tr>
+        </table>
+        <pre><code class="html">
+&lt;table border="1" cellspacing="0" cellpadding="0" style="border-collapse:collapse;"&gt;
+    &lt;tr&gt;
+        &lt;td&gt;1&lt;/td&gt;
+        &lt;td&gt;2&lt;/td&gt;
+        &lt;td&gt;3&lt;/td&gt;
+        &lt;td colspan="2"&gt;4&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td colspan="3"&gt;5&lt;/td&gt;
+        &lt;td&gt;6&lt;/td&gt;
+        &lt;td&gt;7&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;8&lt;/td&gt;
+        &lt;td&gt;9&lt;/td&gt;
+        &lt;td colspan="3"&gt;10&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+        <hr>
+        <h2>Exercice 8</h2>
+        <img alt="Exercice 8 - Les tableaux" src="img/08_-_Les_tableaux.jpg">
+        <table border="1" cellspacing="0" cellpadding="0" style="border-collapse:collapse;">
+            <tr>
+                <td colspan="3">1</td>
+                <td>2</td>
+                <td>3</td>
+                <td colspan="2" rowspan="2">4</td>
+                <td colspan="3">5</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+                <td colspan="2">9</td>
+                <td>10</td>
+                <td>11</td>
+                <td rowspan="3">12</td>
+            </tr>
+            <tr>
+                <td colspan="4">13</td>
+                <td rowspan="3">14</td>
+                <td>15</td>
+                <td colspan="3">16</td>
+            </tr>
+            <tr>
+                <td>17</td>
+                <td>18</td>
+                <td>19</td>
+                <td>20</td>
+                <td>21</td>
+                <td colspan="3">22</td>
+            </tr>
+            <tr>
+                <td>23</td>
+                <td>24</td>
+                <td>25</td>
+                <td>26</td>
+                <td>27</td>
+                <td>28</td>
+                <td>29</td>
+                <td>30</td>
+                <td>31</td>
+            </tr>
+        </table>
+        <pre><code class="html">
+&lt;table border="1" cellspacing="0" cellpadding="0" style="border-collapse:collapse;"&gt;
+    &lt;tr&gt;
+        &lt;td colspan="3"&gt;1&lt;/td&gt;
+        &lt;td&gt;2&lt;/td&gt;
+        &lt;td&gt;3&lt;/td&gt;
+        &lt;td colspan="2" rowspan="2"&gt;4&lt;/td&gt;
+        &lt;td colspan="3"&gt;5&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;6&lt;/td&gt;
+        &lt;td&gt;7&lt;/td&gt;
+        &lt;td&gt;8&lt;/td&gt;
+        &lt;td colspan="2"&gt;9&lt;/td&gt;
+        &lt;td&gt;10&lt;/td&gt;
+        &lt;td&gt;11&lt;/td&gt;
+        &lt;td rowspan="3"&gt;12&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td colspan="4"&gt;13&lt;/td&gt;
+        &lt;td rowspan="3"&gt;14&lt;/td&gt;
+        &lt;td&gt;15&lt;/td&gt;
+        &lt;td colspan="3"&gt;16&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;17&lt;/td&gt;
+        &lt;td&gt;18&lt;/td&gt;
+        &lt;td&gt;19&lt;/td&gt;
+        &lt;td&gt;20&lt;/td&gt;
+        &lt;td&gt;21&lt;/td&gt;
+        &lt;td colspan="3"&gt;22&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;23&lt;/td&gt;
+        &lt;td&gt;24&lt;/td&gt;
+        &lt;td&gt;25&lt;/td&gt;
+        &lt;td&gt;26&lt;/td&gt;
+        &lt;td&gt;27&lt;/td&gt;
+        &lt;td&gt;28&lt;/td&gt;
+        &lt;td&gt;29&lt;/td&gt;
+        &lt;td&gt;30&lt;/td&gt;
+        &lt;td&gt;31&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+        <hr>
+        <h2>Exercice 9</h2>
+        <img alt="Exercice 9 - Les tableaux" src="img/09_-_Les_tableaux.jpg">
+        <table border="1" cellspacing="0" cellpadding="0" style="border-collapse:collapse;">
+            <tr>
+                <td rowspan="3">1</td>
+                <td>2</td>
+                <td colspan="3">3</td>
+                <td>4</td>
+                <td rowspan="4">5</td>
+                <td>6</td>
+                <td>7</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td colspan="2">9</td>
+                <td colspan="2" rowspan="2">10</td>
+                <td rowspan="2">11</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td colspan="2">13</td>
+                <td>14</td>
+                <td rowspan="2">15</td>
+            </tr>
+            <tr>
+                <td>16</td>
+                <td rowspan="2">17</td>
+                <td>18</td>
+                <td colspan="3">19</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td rowspan="2">21</td>
+                <td colspan="2" rowspan="2">22</td>
+                <td>23</td>
+                <td colspan="2">24</td>
+                <td colspan="2" rowspan="2">25</td>
+            </tr>
+            <tr>
+                <td>26</td>
+                <td colspan="2">27</td>
+                <td>28</td>
+            </tr>
+        </table>
+        <pre><code class="html">
+&lt;table border="1" cellspacing="0" cellpadding="0" style="border-collapse:collapse;"&gt;
+    &lt;tr&gt;
+        &lt;td rowspan="3"&gt;1&lt;/td&gt;
+        &lt;td&gt;2&lt;/td&gt;
+        &lt;td colspan="3"&gt;3&lt;/td&gt;
+        &lt;td&gt;4&lt;/td&gt;
+        &lt;td rowspan="4"&gt;5&lt;/td&gt;
+        &lt;td&gt;6&lt;/td&gt;
+        &lt;td&gt;7&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;8&lt;/td&gt;
+        &lt;td colspan="2"&gt;9&lt;/td&gt;
+        &lt;td colspan="2" rowspan="2"&gt;10&lt;/td&gt;
+        &lt;td rowspan="2"&gt;11&lt;/td&gt;
+        &lt;td&gt;12&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td colspan="2"&gt;13&lt;/td&gt;
+        &lt;td&gt;14&lt;/td&gt;
+        &lt;td rowspan="2"&gt;15&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;16&lt;/td&gt;
+        &lt;td rowspan="2"&gt;17&lt;/td&gt;
+        &lt;td&gt;18&lt;/td&gt;
+        &lt;td colspan="3"&gt;19&lt;/td&gt;
+        &lt;td&gt;20&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td rowspan="2"&gt;21&lt;/td&gt;
+        &lt;td colspan="2" rowspan="2"&gt;22&lt;/td&gt;
+        &lt;td&gt;23&lt;/td&gt;
+        &lt;td colspan="2"&gt;24&lt;/td&gt;
+        &lt;td colspan="2" rowspan="2"&gt;25&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;26&lt;/td&gt;
+        &lt;td colspan="2"&gt;27&lt;/td&gt;
+        &lt;td&gt;28&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+    </body>
+</html>

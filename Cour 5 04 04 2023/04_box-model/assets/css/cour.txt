@@ -1,0 +1,13 @@
+
+Margin concerne la marge extérieur
+Padding c'est la marge intérieure
+
+
+Une boite est le parent d'une boite enfant quand cette dernière est à l'intérieur.
+
+si on a une div de 400px, et qu'on met un padding de 20px par côté cela nous fait une box de 440*440
+il faut utiliser un box sizing. 
+
+pour le padding on peut définir les 4 valeurs (en haut, a droite, en bas et a gauche) sous la forme : padding : haut droite bas gauche. Sens des aiguilles d'une montre.
+si on met padding : 10px 20px, il mettra 10px en haut et en bas et 20px à gauche et à droite. 
+

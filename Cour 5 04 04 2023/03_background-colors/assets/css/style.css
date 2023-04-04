@@ -1,0 +1,26 @@
+
+p {
+    color: #ea08f1;
+    text-align: center;
+    font-size: 3em;
+    text-shadow: black 0.1em 0.2em 0.2em;
+    -webkit-text-stroke: 0.03em yellow;
+}
+
+div {
+    background-color: rgba(195, 118, 211, 0.808);
+    border: rgba(252, 94, 155, 0.8) groove 0.8em;
+    border-radius: 5em;
+    box-shadow: 0.4em 0.8em rgba(228, 99, 228, 0.705);
+    width: 30em;
+
+}
+
+.bkg-img {
+
+    background-image: url(/assets/img/back-in-time.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 30em;
+    background-size: cover;
+}

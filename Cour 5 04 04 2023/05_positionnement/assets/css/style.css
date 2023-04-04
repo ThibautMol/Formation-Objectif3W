@@ -1,0 +1,49 @@
+
+.c_1 {
+    background-color: lightblue;
+    height: 150px;
+    width: 150px;
+}
+
+.c_2 {
+
+    background-color: lightgreen;
+    height: 150px;
+    width: 150px;
+    
+}
+
+.s_1 {
+    background-color: lightblue;
+}
+
+.s_2 {
+    background-color: lightgreen;
+}
+
+.ps-1 {
+    position: relative;
+    left: 10px;
+    bottom: 5px;
+
+}
+
+
+
+.a_1 {
+    background-color: lightblue;
+    height: 500px;
+    width: 500px;
+    margin: 50px;
+    position: relative;
+}
+
+.a_2 {
+    background-color: lightgreen;
+    position: absolute;
+    height: 250px;
+    width: 250px;
+    top:50px;
+    left:50px;
+
+}

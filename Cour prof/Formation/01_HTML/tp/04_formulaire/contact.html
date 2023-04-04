@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+</head>
+<body>
+    
+    <form action="send.php" method="post">
+
+        <div>
+            <label for="name">Nom</label><br>
+            <input type="text" id="name" name="name" placeholder="Votre nom" required>
+        </div>
+
+        <div>
+            <label for="firstname">Prénom</label><br>
+            <input type="text" id="firstname" name="firstname" placeholder="Votre prénom" required>
+        </div>
+
+        <div>
+            <label for="email">Email</label><br>
+            <input type="email" id="email" name="email" placeholder="Votre email" required>
+        </div>
+
+        <div>
+            <label for="phone">Téléphone</label><br>
+            <input type="tel" id="phone" name="phone" placeholder="Votre téléphone" required>
+        </div>
+
+        <div>
+            <label for="object">Objet</label><br>
+            <select name="object" id="object">
+                <option value="">-- Sélectionner --</option>
+                <option value="devis">Demande de devis</option>
+                <option value="rdv">Demande de rendez-vous</option>
+                <option value="partner">Demande de partenariat</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="message">Message (falcultatif)</label><br>
+            <textarea name="message" id="message" cols="30" rows="10" maxlength="150"></textarea>
+        </div>
+
+        <input type="submit" value="Envoyer">
+
+    </form>
+
+
+</body>
+</html>

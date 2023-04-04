@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+        <title>Les bordures & les ombres en CSS</title>
+
+        <!-- // highlight.js : Coloration syntaxique du code -->
+        <link rel="stylesheet" type="text/css" href="../../../_assets/plugins/highlight/styles/monokai_sublime.css">
+        <script type="text/javascript" src="../../../_assets/plugins/highlight/highlight.pack.js"></script>
+        <script type="text/javascript">
+            hljs.initHighlightingOnLoad();
+        </script>
+        <!-- // -->
+
+        <link rel="stylesheet" type="text/css" href="../../../_assets/css/style.css">
+    </head>
+    <body>
+        <h1>Les bordures & les ombres en CSS</h1>
+        <hr>
+        <h2>Les bordures</h2>
+        <p><em>Il existe 4 bordures sur chaque élément. Chacune de ces bordures peut être gérée indépendamment des autres.</em></p>
+        <style type="text/css">
+            <!--
+            #border p {
+                border-color:rgb(0,165,245);
+                border-width:2px;
+                border-style:solid;
+                border-top-color:gray;
+                border-bottom-width:4px;
+                border-right-style:dotted;
+
+                padding:15px;
+            }
+            -->
+        </style>
+        <div id="border">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris egestas nibh vehicula dui egestas, in tempus velit semper. Pellentesque nec condimentum mi, sit amet aliquam neque. Duis urna augue, hendrerit vitae imperdiet vitae, pretium sit amet enim. Mauris luctus efficitur sem vel congue. In in sagittis nibh. Aliquam tincidunt rhoncus felis sed consectetur. Nunc lacinia arcu vitae erat ultrices, vitae sagittis mauris ultricies. Mauris vulputate, diam vel dictum mollis, leo quam ultricies arcu, sit amet volutpat ex est sit amet ante. Maecenas accumsan aliquet molestie. Cras viverra sit amet libero vel condimentum. Ut sollicitudin, urna at finibus suscipit, lectus nisi euismod quam, at euismod metus ante nec dui. Morbi auctor ante in facilisis aliquam.</p>
+        </div>
+        <pre><code class="css">
+p {
+    border-color:rgb(0,165,245);
+    border-width:2px;
+    border-style:solid; /* solid (par défaut) | dotted | dashed | double | groove | ridge | inset | outset */
+    border-top-color:gray;
+    border-bottom-width:4px;
+    border-right-style:dotted;
+}</code>
+<code class="html">
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris egestas nibh vehicula dui egestas, in tempus velit semper. Pellentesque nec condimentum mi, sit amet aliquam neque. Duis urna augue, hendrerit vitae imperdiet vitae, pretium sit amet enim. Mauris luctus efficitur sem vel congue. In in sagittis nibh. Aliquam tincidunt rhoncus felis sed consectetur. Nunc lacinia arcu vitae erat ultrices, vitae sagittis mauris ultricies. Mauris vulputate, diam vel dictum mollis, leo quam ultricies arcu, sit amet volutpat ex est sit amet ante. Maecenas accumsan aliquet molestie. Cras viverra sit amet libero vel condimentum. Ut sollicitudin, urna at finibus suscipit, lectus nisi euismod quam, at euismod metus ante nec dui. Morbi auctor ante in facilisis aliquam.&lt;/p&gt;</code></pre>
+        <h3>Les angles</h3>
+        <p><em>Par défaut les angles d'un élément étant basés sur le pixel, ils sont carrés. De ce fait, les bordures suivent le même schéma.<br>Il nous est possible de casser ce comportement et d'arrondir les angles d'un élément.</em></p>
+        <p><em>Chaque angle peut être piloté indépendamment des autres.</em></p>
+        <style type="text/css">
+            <!--
+            #border-radius p {
+                border-color:rgb(0,165,245);
+                border-width:2px;
+                border-style:solid;
+
+                -webkit-border-radius:10px;
+                -moz-border-radius:10px;
+                -ms-border-radius:10px;
+                -o-border-radius:10px;
+                border-radius:10px;
+
+                -webkit-border-top-left-radius:0;
+                -moz-border-radius-topleft:0;
+                -ms-border-radius-topleft:0;
+                -o-border-top-left-radius:0;
+                border-top-left-radius:0;
+
+                padding:15px;
+            }
+            -->
+        </style>
+        <div id="border-radius">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris egestas nibh vehicula dui egestas, in tempus velit semper. Pellentesque nec condimentum mi, sit amet aliquam neque. Duis urna augue, hendrerit vitae imperdiet vitae, pretium sit amet enim. Mauris luctus efficitur sem vel congue. In in sagittis nibh. Aliquam tincidunt rhoncus felis sed consectetur. Nunc lacinia arcu vitae erat ultrices, vitae sagittis mauris ultricies. Mauris vulputate, diam vel dictum mollis, leo quam ultricies arcu, sit amet volutpat ex est sit amet ante. Maecenas accumsan aliquet molestie. Cras viverra sit amet libero vel condimentum. Ut sollicitudin, urna at finibus suscipit, lectus nisi euismod quam, at euismod metus ante nec dui. Morbi auctor ante in facilisis aliquam.</p>
+        </div>
+        <pre><code class="css">
+p {
+    border-color:rgb(0,165,245);
+    border-width:2px;
+    border-style:solid;
+
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    -ms-border-radius:10px;
+    -o-border-radius:10px;
+    border-radius:10px;
+
+    -webkit-border-top-left-radius:0;
+    -moz-border-radius-topleft:0;
+    -ms-border-radius-topleft:0;
+    -o-border-top-left-radius:0;
+    border-top-left-radius:0;
+}</code>
+<code class="html">
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris egestas nibh vehicula dui egestas, in tempus velit semper. Pellentesque nec condimentum mi, sit amet aliquam neque. Duis urna augue, hendrerit vitae imperdiet vitae, pretium sit amet enim. Mauris luctus efficitur sem vel congue. In in sagittis nibh. Aliquam tincidunt rhoncus felis sed consectetur. Nunc lacinia arcu vitae erat ultrices, vitae sagittis mauris ultricies. Mauris vulputate, diam vel dictum mollis, leo quam ultricies arcu, sit amet volutpat ex est sit amet ante. Maecenas accumsan aliquet molestie. Cras viverra sit amet libero vel condimentum. Ut sollicitudin, urna at finibus suscipit, lectus nisi euismod quam, at euismod metus ante nec dui. Morbi auctor ante in facilisis aliquam.&lt;/p&gt;</code></pre>
+        <p class="block alert"><em>Attention à la syntaxe qui varie selon le préfix utilisé pour les différents navigateurs.</em></p>
+        <h3>Des angles elliptiques</h3>
+        <p><em>Comme un angle concerne deux bordures, il est possible d'agir de manière non uniforme sur ces dernières.</em></p>
+        <style type="text/css">
+            <!--
+            #border-ellipse p {
+                border-color:rgb(0,165,245);
+                border-width:2px;
+                border-style:solid;
+
+                -webkit-border-radius:50%/100%;
+                -moz-border-radius:50%/100%;
+                -ms-border-radius:50%/100%;
+                -o-border-radius:50%/100%;
+                border-radius:50%/100%;
+
+                padding:15px;
+            }
+            -->
+        </style>
+        <div id="border-ellipse">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris egestas nibh vehicula dui egestas, in tempus velit semper. Pellentesque nec condimentum mi, sit amet aliquam neque. Duis urna augue, hendrerit vitae imperdiet vitae, pretium sit amet enim. Mauris luctus efficitur sem vel congue. In in sagittis nibh. Aliquam tincidunt rhoncus felis sed consectetur. Nunc lacinia arcu vitae erat ultrices, vitae sagittis mauris ultricies. Mauris vulputate, diam vel dictum mollis, leo quam ultricies arcu, sit amet volutpat ex est sit amet ante. Maecenas accumsan aliquet molestie. Cras viverra sit amet libero vel condimentum. Ut sollicitudin, urna at finibus suscipit, lectus nisi euismod quam, at euismod metus ante nec dui. Morbi auctor ante in facilisis aliquam.</p>
+        </div>
+        <pre><code class="css">
+p {
+    border-color:rgb(0,165,245);
+    border-width:2px;
+    border-style:solid;
+
+    -webkit-border-radius:50%/100%;
+    -moz-border-radius:50%/100%;
+    -ms-border-radius:50%/100%;
+    -o-border-radius:50%/100%;
+    border-radius:50%/100%;
+}</code>
+<code class="html">
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris egestas nibh vehicula dui egestas, in tempus velit semper. Pellentesque nec condimentum mi, sit amet aliquam neque. Duis urna augue, hendrerit vitae imperdiet vitae, pretium sit amet enim. Mauris luctus efficitur sem vel congue. In in sagittis nibh. Aliquam tincidunt rhoncus felis sed consectetur. Nunc lacinia arcu vitae erat ultrices, vitae sagittis mauris ultricies. Mauris vulputate, diam vel dictum mollis, leo quam ultricies arcu, sit amet volutpat ex est sit amet ante. Maecenas accumsan aliquet molestie. Cras viverra sit amet libero vel condimentum. Ut sollicitudin, urna at finibus suscipit, lectus nisi euismod quam, at euismod metus ante nec dui. Morbi auctor ante in facilisis aliquam.&lt;/p&gt;</code></pre>
+        <p class="block alert"><em>Attention, on voit bien dans l'exemple ci-dessus qu'il existe un débordement du contenu.</em></p>
+        <hr>
+        <h2>Les ombres</h2>
+        <h3>Sur un élément de type bloc</h3>
+        <style type="text/css">
+            <!--
+            #border-boxshadow p {
+                -webkit-box-shadow:20px 20px 20px #000;
+                -moz-box-shadow:20px 20px 20px #000;
+                -ms-box-shadow:20px 20px 20px #000;
+                -o-box-shadow:20px 20px 20px #000;
+                box-shadow:20px 20px 20px #000;
+
+                margin:0 35px 35px 0;
+                padding:0 15px 15px 0;
+            }
+            -->
+        </style>
+        <div id="border-boxshadow">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris egestas nibh vehicula dui egestas, in tempus velit semper. Pellentesque nec condimentum mi, sit amet aliquam neque. Duis urna augue, hendrerit vitae imperdiet vitae, pretium sit amet enim. Mauris luctus efficitur sem vel congue. In in sagittis nibh. Aliquam tincidunt rhoncus felis sed consectetur. Nunc lacinia arcu vitae erat ultrices, vitae sagittis mauris ultricies. Mauris vulputate, diam vel dictum mollis, leo quam ultricies arcu, sit amet volutpat ex est sit amet ante. Maecenas accumsan aliquet molestie. Cras viverra sit amet libero vel condimentum. Ut sollicitudin, urna at finibus suscipit, lectus nisi euismod quam, at euismod metus ante nec dui. Morbi auctor ante in facilisis aliquam.</p>
+        </div>
+        <pre><code class="css">
+p {
+    -webkit-box-shadow:20px 20px 20px #000;
+    -moz-box-shadow:20px 20px 20px #000;
+    -ms-box-shadow:20px 20px 20px #000;
+    -o-box-shadow:20px 20px 20px #000;
+    box-shadow:20px 20px 20px #000; /* decalage_horizontal decalage_vertical propagation couleur */
+}</code>
+<code class="html">
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris egestas nibh vehicula dui egestas, in tempus velit semper. Pellentesque nec condimentum mi, sit amet aliquam neque. Duis urna augue, hendrerit vitae imperdiet vitae, pretium sit amet enim. Mauris luctus efficitur sem vel congue. In in sagittis nibh. Aliquam tincidunt rhoncus felis sed consectetur. Nunc lacinia arcu vitae erat ultrices, vitae sagittis mauris ultricies. Mauris vulputate, diam vel dictum mollis, leo quam ultricies arcu, sit amet volutpat ex est sit amet ante. Maecenas accumsan aliquet molestie. Cras viverra sit amet libero vel condimentum. Ut sollicitudin, urna at finibus suscipit, lectus nisi euismod quam, at euismod metus ante nec dui. Morbi auctor ante in facilisis aliquam.&lt;/p&gt;</code></pre>
+        <h4>Ombre interne</h4>
+        <style type="text/css">
+            <!--
+            #border-boxshadow-inset p {
+                -webkit-box-shadow:20px 20px 20px #000 inset;
+                -moz-box-shadow:20px 20px 20px #000 inset;
+                -ms-box-shadow:20px 20px 20px #000 inset;
+                -o-box-shadow:20px 20px 20px #000 inset;
+                box-shadow:20px 20px 20px #000 inset;
+
+                padding:35px 0 0 35px;
+            }
+            -->
+        </style>
+        <div id="border-boxshadow-inset">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris egestas nibh vehicula dui egestas, in tempus velit semper. Pellentesque nec condimentum mi, sit amet aliquam neque. Duis urna augue, hendrerit vitae imperdiet vitae, pretium sit amet enim. Mauris luctus efficitur sem vel congue. In in sagittis nibh. Aliquam tincidunt rhoncus felis sed consectetur. Nunc lacinia arcu vitae erat ultrices, vitae sagittis mauris ultricies. Mauris vulputate, diam vel dictum mollis, leo quam ultricies arcu, sit amet volutpat ex est sit amet ante. Maecenas accumsan aliquet molestie. Cras viverra sit amet libero vel condimentum. Ut sollicitudin, urna at finibus suscipit, lectus nisi euismod quam, at euismod metus ante nec dui. Morbi auctor ante in facilisis aliquam.</p>
+        </div>
+        <pre><code class="css">
+p {
+    -webkit-box-shadow:20px 20px 20px #000 inset;
+    -moz-box-shadow:20px 20px 20px #000 inset;
+    -ms-box-shadow:20px 20px 20px #000 inset;
+    -o-box-shadow:20px 20px 20px #000 inset;
+    box-shadow:20px 20px 20px #000 inset; /* decalage_horizontal decalage_vertical propagation couleur inset */
+}</code>
+<code class="html">
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris egestas nibh vehicula dui egestas, in tempus velit semper. Pellentesque nec condimentum mi, sit amet aliquam neque. Duis urna augue, hendrerit vitae imperdiet vitae, pretium sit amet enim. Mauris luctus efficitur sem vel congue. In in sagittis nibh. Aliquam tincidunt rhoncus felis sed consectetur. Nunc lacinia arcu vitae erat ultrices, vitae sagittis mauris ultricies. Mauris vulputate, diam vel dictum mollis, leo quam ultricies arcu, sit amet volutpat ex est sit amet ante. Maecenas accumsan aliquet molestie. Cras viverra sit amet libero vel condimentum. Ut sollicitudin, urna at finibus suscipit, lectus nisi euismod quam, at euismod metus ante nec dui. Morbi auctor ante in facilisis aliquam.&lt;/p&gt;</code></pre>
+        <h3>Sur du texte</h3>
+        <style type="text/css">
+            <!--
+            #border-textshadow p {
+                text-shadow:2px 2px 4px rgb(0,165,245);
+            }
+            -->
+        </style>
+        <div id="border-textshadow">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris egestas nibh vehicula dui egestas, in tempus velit semper. Pellentesque nec condimentum mi, sit amet aliquam neque. Duis urna augue, hendrerit vitae imperdiet vitae, pretium sit amet enim. Mauris luctus efficitur sem vel congue. In in sagittis nibh. Aliquam tincidunt rhoncus felis sed consectetur. Nunc lacinia arcu vitae erat ultrices, vitae sagittis mauris ultricies. Mauris vulputate, diam vel dictum mollis, leo quam ultricies arcu, sit amet volutpat ex est sit amet ante. Maecenas accumsan aliquet molestie. Cras viverra sit amet libero vel condimentum. Ut sollicitudin, urna at finibus suscipit, lectus nisi euismod quam, at euismod metus ante nec dui. Morbi auctor ante in facilisis aliquam.</p>
+        </div>
+        <pre><code class="css">
+p {
+    text-shadow:2px 2px 4px rgb(0,165,245); /* decalage_horizontal decalage_vertical propagation couleur */
+}</code>
+<code class="html">
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris egestas nibh vehicula dui egestas, in tempus velit semper. Pellentesque nec condimentum mi, sit amet aliquam neque. Duis urna augue, hendrerit vitae imperdiet vitae, pretium sit amet enim. Mauris luctus efficitur sem vel congue. In in sagittis nibh. Aliquam tincidunt rhoncus felis sed consectetur. Nunc lacinia arcu vitae erat ultrices, vitae sagittis mauris ultricies. Mauris vulputate, diam vel dictum mollis, leo quam ultricies arcu, sit amet volutpat ex est sit amet ante. Maecenas accumsan aliquet molestie. Cras viverra sit amet libero vel condimentum. Ut sollicitudin, urna at finibus suscipit, lectus nisi euismod quam, at euismod metus ante nec dui. Morbi auctor ante in facilisis aliquam.&lt;/p&gt;</code></pre>
+    </body>
+</html>

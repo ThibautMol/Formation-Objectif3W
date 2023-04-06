@@ -1,0 +1,23 @@
+body{
+    background-color: #eee;
+}
+
+.container{
+    width: 400px;
+    margin: 4% auto;
+}
+
+.txt-center{
+    text-align: center;
+}
+
+label{
+    display: block;
+}
+
+.card{
+    background-color: #fff;
+    padding: 24px;
+    border-radius: 6px;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Delicious+Handrawn&family=Poppins&display=swap');
+
+html, body {
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px;
+  height: calc(100vh - 30px);
+  padding: 10px;
+}
+
+.container > div {
+  color: white;
+  text-shadow: black 1px 1px;
+  font: 3em poppins;
+  text-align: center;
+  line-height: calc((100vh - 30px) / 2);
+}
+
+.container > div:nth-child(1) { background-color: #ff6164; }
+.container > div:nth-child(2) { background-color: #00b4c3; }
+.container > div:nth-child(3) { background-color: #fac240; }
+.container > div:nth-child(4) { background-color: #00ce7b; }
+.container > div:nth-child(5) { background-color: #a357b1; }
+.container > div:nth-child(6) { background-color: #2e4a5c; }
+.container > div:nth-child(7) { background-color: #f57835; }
+.container > div:nth-child(8) { background-color: #7c8c8d; }

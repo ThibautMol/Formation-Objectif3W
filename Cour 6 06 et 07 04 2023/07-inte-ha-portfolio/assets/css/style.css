@@ -23,6 +23,15 @@ nav {
 
 }
 
+header {
+    display: flex;
+    width: 100%;
+    background-image: url(/assets/img/hfoe-motif.jpg);
+    background-repeat: repeat;
+    background-size: 23em;
+    height: 150px;
+}
+
 a {
     display: flex; 
     font-size:0.6em;

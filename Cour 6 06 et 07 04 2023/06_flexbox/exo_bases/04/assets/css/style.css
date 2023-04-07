@@ -1,61 +1,87 @@
 @import url('https://fonts.googleapis.com/css2?family=Delicious+Handrawn&family=Poppins&display=swap');
 
+/* @media screen and (max-width:631px) {
+
+    modifier l'order des éléments
+    
+} */
+
+@media all and (min-width:914px) {
+
+    body {
+        background-color : blue;
+    }
+
+    .container {
+        flex-direction: row;
+        
+    }
+    div {
+        width: 50%;
+       
+    }
+    .div5 {
+        width: ;
+    }
+}
+
+@media all and (min-width: 1375px) {
+    body {
+        background-color : red;
+    }
+}
     html, body {
-        height: 100vh;
         margin: 0;
     }
 
     .text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         color: white;
         text-shadow: rgba(0, 0, 0, 0.226) 1px 1px;
         font: 4em poppins;
-        text-align: center;
-        line-height: calc((100vh - 1.5em) / 2);
+        /* text-align: center;
+        line-height: calc((100vh - 1.5em) / 2); */
     }
 
-    .display {
+    .container {
         display: flex;
-        flex-direction: row;
-        height: 50%;  
-    }
-
-    .padding-2-3-4 {
-        margin: 0.2em 0.2em 0.2em 0em;
-    }
-
-    .padding-6-7-8 {
-        margin: 0em 0.2em 0.2em 0em;
+        flex-direction: column;
+        
     }
 
     div {
-        width: 100%;
+        margin: 0.2em;
     }
     
     .div1 {
         background-color: rgb(255, 97, 100);
-        margin: 0.2em; 
+        
     }
 
     .div2 {
-        background-color: rgb(0, 180, 195); 
+        background-color: rgb(0, 180, 195);
+        
     }
 
     .div3 {
         background-color: rgb(250, 194, 64);
+        
     }
 
     .div4 {
-        background-color: rgb(0, 206, 123);  
+        background-color: rgb(0, 206, 123); 
+        
     }
 
     .div5 {
-        background-color: rgb(163, 87, 177); 
-        margin: 0em 0.2em 0.2em 0.2em;
+        background-color: rgb(163, 87, 177);
+                 
     }
 
     .div6 {
         background-color: rgb(46, 74, 92);     
-        margin: 0em 0.2em 0.2em 0.2em;
     }
 
     .div7 {

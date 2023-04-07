@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Delicious+Handrawn&family=Poppins&display=swap');
+
+    /* @media all and (min-width: 914px) and (max-width: 1375px) 
+    {
+        .wrap-section1 {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            background-color: aqua;
+        }
+
+        .div {
+            width: 50%;
+        }
+    }
+
+    @media all and (min-width: 632px) and (max-width: 913px) 
+    {
+        body {
+            flex-direction: column;
+        }
+    }
+
+    @media all and (min-width: 491px) and (max-width: 631px) 
+    {} */
+
+    html, body {
+        margin: 0;
+    }
+
+    .wrap-section1 {
+        display: flex;
+        flex-wrap:wrap;
+        
+    }
+    
+
+    .text {
+        color: white;
+        text-shadow: rgba(0, 0, 0, 0.226) 1px 1px;
+        font: 4em poppins;
+        text-align: center;
+        line-height: calc((100vh - 1.5em) / 2);
+    }
+
+    .display {
+        height: 300px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .display>* {
+        flex: 1 1 100px;
+    }
+
+
+    .padding-2-3-4 {
+        margin: 0.2em 0.2em 0.2em 0em;
+    }
+
+    .padding-6-7-8 {
+        margin: 0em 0.2em 0.2em 0em;
+    }
+
+    div {
+        flex-basis: 25%;
+        /* width: 25%; */
+        /* height: 33.3%; */
+    }
+    
+    .div1 {
+        background-color: rgb(255, 97, 100);
+        margin: 0.2em; 
+    }
+
+    .div2 {
+        background-color: rgb(0, 180, 195); 
+    }
+
+    .div3 {
+        background-color: rgb(250, 194, 64);
+    }
+
+    .div4 {
+        background-color: rgb(0, 206, 123);  
+    }
+
+    .div5 {
+        background-color: rgb(163, 87, 177); 
+        margin: 0em 0.2em 0.2em 0.2em;
+        width: 100%;
+        
+    }
+
+    .div6 {
+        background-color: rgb(46, 74, 92);     
+        margin: 0em 0.2em 0.2em 0.2em;
+    }
+
+    .div7 {
+        background-color: rgb(245, 120, 53);   
+    }
+
+    .div8 {
+        background-color: rgb(124, 140, 141);  
+    }
+
+    .div9 {
+        background-color: rgb(0, 190, 158);
+    }

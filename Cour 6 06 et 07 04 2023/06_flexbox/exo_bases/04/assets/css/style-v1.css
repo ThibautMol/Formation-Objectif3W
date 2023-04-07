@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Delicious+Handrawn&family=Poppins&display=swap');
 
-    /* @media all and (min-width: 914px) and (max-width: 1375px) 
+    @media all and (min-width: 914px) and (max-width: 1375px) 
     {
         .wrap-section1 {
             display: flex;
@@ -22,7 +22,7 @@
     }
 
     @media all and (min-width: 491px) and (max-width: 631px) 
-    {} */
+    {}
 
     html, body {
         margin: 0;

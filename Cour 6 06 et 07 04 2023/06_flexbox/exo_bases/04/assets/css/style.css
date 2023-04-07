@@ -1,37 +1,30 @@
-@import url('https://fonts.googleapis.com/css2?family=Delicious+Handrawn&family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
-/* @media screen and (max-width:631px) {
+@media screen and (max-width:911px) {
 
-    modifier l'order des éléments
-    
-} */
-
-@media all and (min-width:914px) {
+    html{
+        margin:0;
+    }
 
     body {
-        background-color : blue;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-evenly;
+        margin-left: 0.8em;
+    }
+
+    .taille{
+        width: 100%; 
+    }
+
+    .margin {
+        margin-right: 0.1em;
+        margin-bottom: 0.1em;
     }
 
     .container {
-        flex-direction: row;
-        
-    }
-    div {
-        width: 50%;
-       
-    }
-    .div5 {
-        width: ;
-    }
-}
-
-@media all and (min-width: 1375px) {
-    body {
-        background-color : red;
-    }
-}
-    html, body {
-        margin: 0;
+        flex-direction: row;    
     }
 
     .text {
@@ -39,59 +32,289 @@
         justify-content: center;
         align-items: center;
         color: white;
-        text-shadow: rgba(0, 0, 0, 0.226) 1px 1px;
-        font: 4em poppins;
-        /* text-align: center;
-        line-height: calc((100vh - 1.5em) / 2); */
-    }
-
-    .container {
-        display: flex;
-        flex-direction: column;
-        
+        text-shadow: rgba(0, 0, 0, 0.226) 2px 2px;
+        font: 4em 'montserrat';
     }
 
     div {
-        margin: 0.2em;
+        height: 100px;
     }
-    
+
     .div1 {
         background-color: rgb(255, 97, 100);
-        
+        order: 4;
     }
 
     .div2 {
         background-color: rgb(0, 180, 195);
-        
+        order : 5;
     }
 
     .div3 {
         background-color: rgb(250, 194, 64);
-        
+        order: 6;
     }
 
     .div4 {
         background-color: rgb(0, 206, 123); 
-        
+        order:2;
     }
 
     .div5 {
         background-color: rgb(163, 87, 177);
-                 
+        width: 100%;
+        order:1;
     }
 
     .div6 {
-        background-color: rgb(46, 74, 92);     
+        background-color: rgb(46, 74, 92); 
+        order:3;
     }
 
     .div7 {
-        background-color: rgb(245, 120, 53);   
+        background-color: rgb(245, 120, 53);
+        order:9;
     }
 
     .div8 {
-        background-color: rgb(124, 140, 141);  
+        background-color: rgb(124, 140, 141);
+        order:7;
+    }
+
+    .div9 {
+        background-color: rgb(0, 190, 158);
+        order:7;
+    }
+}
+
+@media all and (min-width:912px) and (max-width:1279px) {
+        
+        html{
+            margin:0;
+        }
+    
+        body {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+    
+        .taille{
+            width: 100%; 
+        }
+    
+        .margin {
+            margin-left: 0.2em;
+            margin-right: 0.2em;
+            margin-bottom: 0.2em;
+        }
+    
+        .container {
+            flex-direction: row;    
+        }
+    
+        .text {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-shadow: rgba(0, 0, 0, 0.226) 2px 2px;
+            font: 4em 'montserrat';
+        }
+    
+        div {
+            height: 200px;
+        }
+    
+        .div1 {
+            background-color: rgb(255, 97, 100);
+        }
+    
+        .div2 {
+            background-color: rgb(0, 180, 195);
+        }
+    
+        .div3 {
+            background-color: rgb(250, 194, 64);
+        }
+    
+        .div4 {
+            background-color: rgb(0, 206, 123); 
+        }
+    
+        .div5 {
+            background-color: rgb(163, 87, 177);
+            width: 100%;
+        }
+    
+        .div6 {
+            background-color: rgb(46, 74, 92);
+        }
+    
+        .div7 {
+            background-color: rgb(245, 120, 53);
+        }
+    
+        .div8 {
+            background-color: rgb(124, 140, 141); 
+        }
+    
+        .div9 {
+            background-color: rgb(0, 190, 158);
+        }
+    }
+
+@media all and (min-width: 1280px) and (max-width:1919px) {
+   
+    html{
+        margin:0;
+    }
+
+    body {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .taille{
+        width: calc(50% - 0.2em); 
+    }
+
+    .margin {
+        margin-left: 0.1em;
+        margin-right: 0.1em;
+        margin-bottom: 0.2em;
+    }
+
+    .container {
+        flex-direction: row;    
+    }
+
+    .text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        text-shadow: rgba(0, 0, 0, 0.226) 2px 2px;
+        font: 4em 'montserrat';
+    }
+
+    div {
+        height: 200px;
+    }
+
+    .div1 {
+        background-color: rgb(255, 97, 100);
+    }
+
+    .div2 {
+        background-color: rgb(0, 180, 195);
+    }
+
+    .div3 {
+        background-color: rgb(250, 194, 64);
+    }
+
+    .div4 {
+        background-color: rgb(0, 206, 123); 
+    }
+
+    .div5 {
+        background-color: rgb(163, 87, 177);
+        width: 100%;
+    }
+
+    .div6 {
+        background-color: rgb(46, 74, 92); 
+    }
+
+    .div7 {
+        background-color: rgb(245, 120, 53);
+    }
+
+    .div8 {
+        background-color: rgb(124, 140, 141); 
     }
 
     .div9 {
         background-color: rgb(0, 190, 158);
     }
+}
+
+
+@media all and (min-width: 1920px) {
+    html{
+        margin:0;
+    }
+
+    body {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        
+    }
+
+    .taille{
+        width: calc(25% - 0.2em); 
+    }
+
+    .margin {
+        margin-left: 0.1em;
+        margin-right: 0.1em;
+        margin-bottom: 0.2em;
+    }
+
+    .container {
+        flex-direction: row;    
+    }
+
+    .text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        text-shadow: rgba(0, 0, 0, 0.226) 2px 2px;
+        font: 4em 'montserrat';
+    }
+
+    div {
+        height: 200px;
+    }
+
+    .div1 {
+        background-color: rgb(255, 97, 100);
+    }
+
+    .div2 {
+        background-color: rgb(0, 180, 195);
+    }
+
+    .div3 {
+        background-color: rgb(250, 194, 64);
+    }
+
+    .div4 {
+        background-color: rgb(0, 206, 123);        
+    }
+
+    .div5 {
+        background-color: rgb(163, 87, 177);
+        width: 100%;
+    }
+
+    .div6 {
+        background-color: rgb(46, 74, 92);  
+    }
+
+    .div7 {
+        background-color: rgb(245, 120, 53);
+    }
+
+    .div8 {
+        background-color: rgb(124, 140, 141); 
+    }
+
+    .div9 {
+        background-color: rgb(0, 190, 158);
+    }
+}

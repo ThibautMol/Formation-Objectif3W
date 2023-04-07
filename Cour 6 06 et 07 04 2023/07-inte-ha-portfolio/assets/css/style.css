@@ -2,6 +2,7 @@
 
 html,body {
     margin:0;
+    height: 100%;
     font-family: 'poppins';
 }
 
@@ -12,7 +13,7 @@ html,body {
     background-color: aqua;
 }
 
-div {
+.div-nav {
     display: flex;
     justify-content: space-around;
 }
@@ -20,16 +21,30 @@ div {
 nav {
     display: flex;
     margin: 0.5em;
+    font-weight: 700;
 
 }
 
 header {
     display: flex;
+    flex-direction: column;
     width: 100%;
     background-image: url(/assets/img/hfoe-motif.jpg);
     background-repeat: repeat;
     background-size: 23em;
-    height: 150px;
+    height: 120px;
+    padding-top: 1.7em;
+    align-items: center;
+}
+.text-header {
+    color: white;
+    font-size: 2em;
+    font-weight: 700;
+    margin-bottom: 0.2em ;
+}
+.small-text-header {
+    font-size: 0.9em;
+    color: white;
 }
 
 a {
@@ -38,4 +53,112 @@ a {
     padding: 1em;
     text-decoration: none;
     align-items: center;
+}
+
+h1 {
+    display: flex;
+    font-size: 2.25em;
+    color: rgb(112,112,112);
+    margin-bottom: 0;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+}
+
+.chest {
+    display: flex;
+    height: 400px;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.img-chest {
+    width:300px;
+    height:254px;
+}
+
+.p-chest-text {
+    width: 34em;
+}
+
+.spacing {
+    display: flex;
+    flex-direction: column;
+    margin-left: 12em;
+
+}
+.text-chest {
+    display: flex;
+    flex-direction: column;
+    margin-right: 3em;
+   
+}
+
+.input-get-course {
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    border-radius: 0.2em;
+    background-color: white;
+    border: 0.17em solid rgb(112, 112, 112);
+    color: rgb(112, 112, 112);
+    font-weight: 500;
+    padding: 1.3em 2em;
+    font-size: 0.7em;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    background-color: rgb(255, 166, 50) ;
+    height: 170px;
+    align-items: center;
+    margin-top: auto;
+}
+
+
+h3 {
+    margin: 0;
+    margin-top: 1em;
+    font-weight: 300;
+}
+
+.p-footer {
+    font-size: 0.5em;
+}
+
+form {
+    display: flex;
+    margin-bottom: 0.5em;
+    padding: 0.5em;
+    width: 16.4em ;
+    justify-content: space-between;
+}
+
+.input-email {
+    display: flex;
+    border: 0;
+    height: 1.5em;
+    width: 10em;
+    padding: 0.5em;
+    border-radius: 0.2em;
+}
+
+.input-sub {
+    display: flex;
+    border: 0.1em solid;
+    font-size: 0.6em;
+    border-radius: 0.2em ;
+    border-color: white;
+    width: 11em;
+    justify-content: space-around;    
+    color: white;
+    background-color: rgb(255, 166, 50) 
+}
+
+.input-email::placeholder {
+    font-size: 0.7em;
 }

@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap');
+
+
+/* NAV */
+
+.div-nav {
+    display: flex;
+    background-color: rgb(0, 0, 0);
+}
+
+nav {
+    display: flex;
+    color: rgb(112, 112, 112);
+}
+
+
+/* HEADER */
+
+header {
+    display: flex;
+    color: rgb(253, 253, 253);
+    background-image: url(/assets/img/backdrop.jpg);
+    background-repeat: no-repeat;
+}
+
+input {
+    color: rgb(253, 253, 253);
+    background-color: rgba(255, 255, 255, 0.418);
+}
+
+.text-header {
+    display: flex;
+    font-family: 'Oswald';
+    font-size: 5em;
+    text-shadow: 10px 10px 50px rgba(0, 0, 0, 0.623);
+}
+
+.small-text-header {
+    display: flex;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0);
+}
+
+
+/* SECTION */
+
+section {
+    display: flex;
+    background-color: rgb(102, 112, 127);
+}
+
+/* FOOTER */
+
+footer {
+    display: flex;
+    background-color: rgb(25, 25, 25);
+}
+
+.head-list {
+    color: rgb(102, 102, 102);
+}
+
+a {
+    text-decoration: none;
+    color: rgb(153, 153, 153);
+}
+
+.div-footer-li {
+    display: flex;
+}

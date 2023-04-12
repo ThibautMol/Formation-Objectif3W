@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap');
+
+
+* {
+    margin: 0;
+    
+    font-family: 'Open Sans';
+}
+
+main {
+    width: 100%;
+    height: 800px;
+}
+
+/* NAV */
+
+.div-nav {
+    display: flex;
+    background-color: rgb(0, 0, 0);
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+}
+
+nav {
+    display: flex;
+    color: rgb(112, 112, 112);
+    margin-left: 16em;
+    margin-right: 4em;
+}
+
+.nav-a {
+    display: flex;
+    text-decoration: none;
+    color: rgb(153, 153, 153);
+    margin: 0em 1em;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 21px;
+    align-items: center;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: #606060;
+}
+
+.nav-logo {
+    width: 204px;
+    height: 36px;
+}
+
+
+/* HEADER */
+
+header {
+    display: flex;
+    color: rgb(253, 253, 253);
+    background-image: url(/08-inte-bioware/assets/img/backdrop.png);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.align-content {
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+}
+
+input {
+    margin-top: 1em;
+    display: flex;
+    color: rgb(253, 253, 253);
+    background-color: rgba(255, 255, 255, 0.218);
+    border: 0em;
+    justify-content: center;
+    width: 242px;
+    font-size: 0.7em;
+    height: 66px;
+    font-weight: 600;
+    
+}
+
+.text-header {
+    display: flex;
+    font-family: 'Oswald';
+    font-style: normal;
+    font-size: 120px;
+    font-weight: 700;
+    text-shadow:  0px 4px 40px rgba(0, 0, 0, 0.85);
+    line-height: 132px;
+    width: 1139px;
+    height: 264px;
+}
+
+.small-text-header {
+    display: flex;
+    margin-top: 2em;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    height: 22px;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.75);
+}
+
+
+/* SECTION */
+
+section {
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(41, 45, 51);
+    width: 100%;
+    height: 194px;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+}
+
+.img-section {
+    height: 40px;
+    margin-left: 2.5em; 
+}
+
+.anthem {
+    height: 15px;
+}
+
+.mass-effect-andromeda {
+    height: 60px;
+}
+
+/* FOOTER */
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding-top: 2em;
+    height: 220px;
+    background-color: rgb(25, 25, 25);
+}
+
+.logos-footer {
+    display: flex;
+    align-items: center;
+    margin-top: 1.5em;
+    
+}
+.head-list {
+    color: rgb(102, 102, 102);
+}
+
+a {
+    color: rgb(153, 153, 153);
+    text-decoration: none;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+  }
+
+li {
+    line-height: 1.4em;
+  }
+
+.space-between {
+    margin-left: 10em;
+    margin-right: 4em;
+}
+
+.div-footer-li {
+    display: flex;
+}

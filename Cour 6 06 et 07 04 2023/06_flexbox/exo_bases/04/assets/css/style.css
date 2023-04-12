@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
-@media screen and (max-width:911px) {
+@media all and (max-width:911px) {
 
     html{
         margin:0;
@@ -12,6 +12,7 @@
         align-items: center;
         justify-content: space-evenly;
         margin-left: 0.8em;
+        height: 100vh;
     }
 
     .taille{
@@ -37,7 +38,8 @@
     }
 
     div {
-        height: 100px;
+
+        height: 11.11%;
     }
 
     .div1 {
@@ -62,8 +64,8 @@
 
     .div5 {
         background-color: rgb(163, 87, 177);
-        width: 100%;
         order:1;
+        width: 100%;
     }
 
     .div6 {
@@ -97,6 +99,7 @@
             display: flex;
             flex-wrap: wrap;
             align-items: center;
+            /* height: 100vh; */
         }
     
         .taille{
@@ -120,10 +123,6 @@
             color: white;
             text-shadow: rgba(0, 0, 0, 0.226) 2px 2px;
             font: 4em 'montserrat';
-        }
-    
-        div {
-            height: 200px;
         }
     
         .div1 {
@@ -174,6 +173,7 @@
         display: flex;
         flex-wrap: wrap;
         align-items: center;
+        height: 100vh;
     }
 
     .taille{
@@ -200,7 +200,7 @@
     }
 
     div {
-        height: 200px;
+        height: 20%;
     }
 
     .div1 {
@@ -251,6 +251,7 @@
         display: flex;
         flex-wrap: wrap;
         align-items: center;
+        height: 100vh;
         
     }
 
@@ -278,7 +279,7 @@
     }
 
     div {
-        height: 200px;
+        height: 33%;
     }
 
     .div1 {

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>Flexbox</title>
+</head>
+
+<body>
+  <header>
+    <h1>Flexbox</h1>
+  </header>
+
+  <main>
+
+    <h2>Propriètés pour les enfants (Flex-items)</h2>
+
+    <section>
+      <h3>order</h3>
+      <p>Permet de définir l'odre dans lequel vous souhaitez que chaque enfant apparaisse.</p>
+      <div class="example">
+        <h4>order: par défault dans l'ordre des éléments HTML</h4>
+        <div class="container display-inline-flex">
+          <div class="item">1</div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+          <div class="item">4</div>
+          <div class="item">5</div>
+          <div class="item">6</div>
+        </div>
+      </div>
+      <div class="example">
+        <h4>order: inline-flex</h4>
+        <div class="container display-inline-flex">
+          <div class="item order-5">1</div>
+          <div class="item order-3">2</div>
+          <div class="item order-2">3</div>
+          <div class="item order-6">4</div>
+          <div class="item order-4">5</div>
+          <div class="item order-1">6</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h3>flex-grow</h3>
+      <p>Permet de déterminer comment chaque enfant est autorisé à grandir dans l'espace restant</p>
+      <div class="example">
+        <h4>flex-grow: 0 (par défault)</h4>
+        <div class="container display-flex">
+          <div class="item flex-grow-0">1</div>
+          <div class="item flex-grow-0">2</div>
+          <div class="item flex-grow-0">3</div>
+        </div>
+      </div>
+
+      <div class="example">
+        <h4>flex-grow: 1 (pour les 3 items)</h4>
+        <div class="container display-flex">
+          <div class="item flex-grow-1">1</div>
+          <div class="item flex-grow-1">2</div>
+          <div class="item flex-grow-1">3</div>
+        </div>
+      </div>
+      <div class="example">
+        <h4>flex-grow: 1 (élément 1) | flex-grow: 2 (élément 2) | flex-grow: 3 (élément 3)</h4>
+        <div class="container display-flex">
+          <div class="item flex-grow-1">1</div>
+          <div class="item flex-grow-2">2</div>
+          <div class="item flex-grow-3">3</div>
+        </div>
+      </div>
+     
+    </section>
+
+    <section>
+      <h3>flex-shrink</h3>
+      <p>Permet à un élément de se réduire si nécessaire. Seulement vraiment utile si on a défini une taille ou un flexbasis
+      </p>
+      <div class="example">
+        <h4>flex-shrink: 1 (par défault)</h4>
+        <div class="container display-flex">
+          <div class="item flex-shrink">1</div>
+          <div class="item flex-shrink">2</div>
+        </div>
+      </div>
+    
+      <div class="example">
+        <h4>flex-shrink : 1 (élément 1) | flex-shrink : 2 (élément 2) | flex-basis:100% (les 2 éléments)</h4>
+        <div class="container display-flex">
+          <div class="item flex-shrink flex-basis-100">1</div>
+          <div class="item flex-shrink-2 flex-basis-100">2</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h3>flex-basis</h3>
+      <p>Définir la taille d'un avant que l'espace restant ne soit distribué</p>
+      <div class="example">
+        <h4>flex-basis: auto (par défault)</h4>
+        <div class="container display-flex">
+          <div class="item flex-basis">1</div>
+          <div class="item flex-basis">2</div>
+          <div class="item flex-basis">3</div>
+        </div>
+      </div>
+
+      <div class="example">
+        <h4>flex-basis: 10% (élément 1) | flex-basis: 60% (élément 2) | flex-basis: 30% (élément 3)</h4>
+        <div class="container display-flex">
+          <div class="item flex-basis-10">1</div>
+          <div class="item flex-basis-60">2</div>
+          <div class="item flex-basis-30">3</div>
+        </div>
+      </div>
+     
+    </section>
+
+    <section>
+      <h3>flex</h3>
+      <p>Super propriété qui réuni le flex-grow, le flex-shrink et le flex-basis</p>
+      <div class="example">
+        <h4>flex: 0 1 auto (par défault)</h4>
+        <div class="container display-flex">
+          <div class="item">1</div>
+          <div class="item">2</div>
+        </div>
+      </div>
+  
+    </section>
+
+
+    <section>
+      <h3>align-self</h3>
+      <p>Définit l'alignement de façon individuel.</p>
+      <div class="example">
+        <h4>align-self: stretch (élément 2) par défault</h4>
+        <div class="container display-flex ai-flex-start">
+          <div class="item">1</div>
+          <div class="item as-stretch">2</div>
+          <div class="item">3</div>
+          <div class="item">4</div>
+          <div class="item">5</div>
+          <div class="item">6</div>
+        </div>
+      </div>
+
+      <div class="example">
+        <h4>align-self: flex-start (élément 4)</h4>
+        <div class="container display-flex ai-flex-end">
+          <div class="item">1</div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+          <div class="item as-flex-start">4</div>
+          <div class="item">5</div>
+          <div class="item">6</div>
+        </div>
+      </div>
+
+      <div class="example">
+        <h4>align-self: flex-end (élément 5)</h4>
+        <div class="container display-flex ai-flex-start">
+          <div class="item">1</div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+          <div class="item">4</div>
+          <div class="item as-flex-end">5</div>
+          <div class="item">6</div>
+        </div>
+      </div>
+
+      <div class="example">
+        <h4>align-self: center (élément 1)</h4>
+        <div class="container display-flex ai-flex-start">
+          <div class="item as-center">1</div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+          <div class="item">4</div>
+          <div class="item">5</div>
+          <div class="item">6</div>
+        </div>
+      </div>
+      
+      <div class="example">
+        <h4>align-self: baseline (élément 3)</h4>
+        <div class="container display-flex ai-center">
+          <div class="item">1</div>
+          <div class="item">2</div>
+          <div class="item f-s-50 as-baseline">3</div>
+          <div class="item">4</div>
+          <div class="item">5</div>
+          <div class="item">6</div>
+        </div>
+      </div>
+
+    </section>
+
+
+
+  </main>
+</body>
+
+</html>

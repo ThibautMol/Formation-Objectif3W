@@ -1,16 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap');
 
 html,body {
     margin:0;
     height: 100%;
-    font-family: 'poppins';
+    font-family: 'inter';
 }
 
 .logo {
     display: flex;
     height: 80px ;
     margin: 0.5em;
-    background-color: aqua;
 }
 
 .div-nav {
@@ -26,11 +25,13 @@ nav {
 
 }
 
+
+
 header {
     display: flex;
     flex-direction: column;
     width: 100%;
-    background-image: url(/assets/img/hfoe-motif.jpg);
+    background-image: url(/07-inte-ha-portfolio/assets/img/hfoe-motif.jpg);
     background-repeat: repeat;
     background-size: 23em;
     height: 120px;
@@ -54,6 +55,13 @@ a {
     padding: 1em;
     text-decoration: none;
     align-items: center;
+    text-transform: uppercase;
+    color: #707070;
+}
+
+a:hover {
+    color : #506AFD;
+    cursor: pointer;
 }
 
 h1 {
@@ -84,12 +92,7 @@ section {
     width: 34em;
 }
 
-.spacing {
-    display: flex;
-    flex-direction: column;
-    margin-left: 12em;
 
-}
 .text-chest {
     display: flex;
     flex-direction: column;
@@ -108,6 +111,13 @@ section {
     font-weight: 500;
     padding: 1.3em 2em;
     font-size: 0.7em;
+    text-transform: uppercase;
+}
+
+.input-get-course:hover {
+    background-color: #707070;
+    color: white;
+    cursor: pointer;
 }
 
 footer {
@@ -157,9 +167,62 @@ form {
     width: 11em;
     justify-content: space-around;    
     color: white;
-    background-color: rgb(255, 166, 50) 
+    background-color: rgb(255, 166, 50);
+    text-transform: uppercase;
+}
+
+.input-sub:hover {
+    background-color: white;
+    color: #707070;
+    cursor: pointer;
 }
 
 .input-email::placeholder {
     font-size: 0.7em;
+}
+
+@media all and (max-width : 1085px) {
+    
+    section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .responsive {
+        display: flex;
+        flex-direction: column;
+        font-size: 70%;
+    
+    }
+}
+
+@media all and (max-width : 605px) {
+    
+    section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-left: 5%;
+    }
+
+    .responsive {
+        display: flex;
+        flex-direction: column;
+        font-size: 60%;
+        margin: auto;
+    }
+
+    .p-chest-text {
+        width: auto;
+    }
+}
+
+@media all and (max-width : 345px) {
+
+    .logo {
+    visibility: hidden;
+    
+}
+
 }

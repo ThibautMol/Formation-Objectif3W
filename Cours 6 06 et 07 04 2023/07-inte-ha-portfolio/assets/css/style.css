@@ -193,7 +193,7 @@ form {
 
 .input-sub:hover {
     background-color: white;
-    color: #707070;
+    color: rgb(255, 166, 50);
     cursor: pointer;
 }
 

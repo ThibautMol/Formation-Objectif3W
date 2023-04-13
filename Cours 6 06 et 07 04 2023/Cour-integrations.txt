@@ -9,3 +9,5 @@ lorsqu'on est sur une page on peut définir que l'onglet de la nav bar la désig
 Cette classe mettra automatiquement la couleur active sur le nom de la page.
 
 le # permet de cibler un ID dans le html
+
+input [email] {} va cibler uniquement les input de type emails.

@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 * {
     font-family: 'Open Sans';
     margin: 0;
@@ -9,8 +12,9 @@
 main {
     width: 1920px;
     height: 800px;
+    background-image: url(/08-inte-bioware/assets/img/backdrop-big.png) ;
+    background-repeat: no-repeat;
 }
-
 
 /* NAV */
 
@@ -30,6 +34,7 @@ nav {
 .logo-bioware {
     width: 204px;
     height: 36px;
+    cursor: pointer;
 }
 
 .a-nav {
@@ -57,27 +62,34 @@ nav {
 header {
     display: flex;
     flex-direction: column;
-    background-image: url(/08-inte-bioware/assets/img/backdrop-big.png) ;
     color:#FFFFFF;
-    background-repeat: no-repeat;
-    height: 100%;
+    height: 100%;    
+}
+
+.test {
+    display: flex;
+    margin-top: 104px;
+    justify-content:space-around;
 }
 
 h1 {
-    font-family: 'Osvald';
+    font-family: 'Oswald';
     font-size: 120px;
+    font-weight: 700;
     line-height: 132px;
     text-transform: uppercase;
     text-shadow: 0px 4px 40px rgba(0, 0, 0, 0.85);
-
+    width: 1139px;
+    height: 264px;
 }
 
 p {
+    display: flex;
     text-transform: uppercase;
 }
 
-input {
-    background-color: rgba(255, 255, 255, 0.2);
+header a{
+    background-color: rgba(255, 255, 255, 0.3);
     color: white;
     border: none;
     font-weight: 600;
@@ -85,11 +97,15 @@ input {
     font-size: 14px;
     line-height: 18px;
     letter-spacing: 0.1em;
+    padding: 2em;
+    margin-top: 32px;
     text-transform: uppercase;
+    width: fit-content;
+    
 }
 
-input:hover {
-    background-color: rgba(255, 255, 255, 0.4);
+header a:hover {
+    background-color: rgba(255, 255, 255, 0.5);
     cursor: pointer;
 }
 
@@ -100,6 +116,7 @@ section {
     justify-content: space-evenly;
     align-items: center;
     height: 194px;
+    width: 1920px;
     background-color: #292D33;
     
 }
@@ -112,6 +129,7 @@ footer {
     justify-content: space-around;
     align-items: center;
     height: 220px;
+    width: 1920px;
     background-color: #191919;
 }
 
@@ -142,7 +160,7 @@ a {
     align-items: center; 
 }
 
-a:hover {
+footer a:hover {
     color: #576B8C;
     text-decoration: underline;
     cursor: pointer;

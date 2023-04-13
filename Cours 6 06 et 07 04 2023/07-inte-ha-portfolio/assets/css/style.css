@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
 html,body {
     margin:0;
@@ -25,27 +25,29 @@ nav {
 
 }
 
-
-
 header {
     display: flex;
     flex-direction: column;
     width: 100%;
-    background-image: url(/07-inte-ha-portfolio/assets/img/hfoe-motif.jpg);
-    background-repeat: repeat;
-    background-size: 23em;
-    height: 120px;
+    background-image: url(/assets/img/hfoe-motif.jpg);
+    height: 231px;
     padding-top: 1.7em;
     align-items: center;
 }
 .text-header {
     color: white;
-    font-size: 2em;
+    font-style: normal;
     font-weight: 700;
-    margin-bottom: 0.2em ;
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 1em;
 }
+
 .small-text-header {
-    font-size: 0.9em;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
     color: white;
 }
 
@@ -66,9 +68,11 @@ a:hover {
 
 h1 {
     display: flex;
-    font-size: 2.25em;
-    color: rgb(112,112,112);
-    margin-bottom: 0;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 1.2;
+    color: #707070;
 }
 
 section {
@@ -90,6 +94,11 @@ section {
 
 .p-chest-text {
     width: 34em;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: #707070;
 }
 
 
@@ -107,11 +116,15 @@ section {
     border-radius: 0.2em;
     background-color: white;
     border: 0.17em solid rgb(112, 112, 112);
-    color: rgb(112, 112, 112);
-    font-weight: 500;
     padding: 1.3em 2em;
-    font-size: 0.7em;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 0.02em;
     text-transform: uppercase;
+    color: #707070;
 }
 
 .input-get-course:hover {
@@ -125,7 +138,7 @@ footer {
     flex-direction: column;
     color: white;
     background-color: rgb(255, 166, 50) ;
-    height: 170px;
+    height: 234px;
     align-items: center;
     margin-top: auto;
 }
@@ -134,11 +147,17 @@ footer {
 h3 {
     margin: 0;
     margin-top: 1em;
-    font-weight: 300;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 1.2;
 }
 
 .p-footer {
-    font-size: 0.5em;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
 }
 
 form {
@@ -153,9 +172,10 @@ form {
     display: flex;
     border: 0;
     height: 1.5em;
-    width: 10em;
+    width: 15em;
     padding: 0.5em;
     border-radius: 0.2em;
+    margin-right: 5%;
 }
 
 .input-sub {

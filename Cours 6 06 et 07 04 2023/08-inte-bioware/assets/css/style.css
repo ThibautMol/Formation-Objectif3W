@@ -15,7 +15,7 @@ html {
 .wrapper {
     width: 114rem;
     margin: 0 auto;
-    justify-content: center;
+    padding : 0 2rem;
 }
 
 
@@ -71,7 +71,11 @@ header {
     color:#FFFFFF;
     height: 100%;
     background-image: url(/08-inte-bioware/assets/img/backdrop-big.png) ;
-    background-repeat: no-repeat;    
+    background-repeat: no-repeat;  
+    /* position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;   */
 }
 
 .test {

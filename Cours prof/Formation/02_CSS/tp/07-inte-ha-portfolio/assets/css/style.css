@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+/* RESET */
+*,*::before, *::after{
+  box-sizing: border-box;
+}
+
+*{
+  margin: 0;
+}
+
+html, body{
+  height: 100%;
+}
+
+body{
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Inter', sans-serif;
+  color: #707070;
+}
+
+
+img,picture,video,canvas,svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,button, textarea, select{
+  font: inherit;
+}
+
+p, h1,h2,h3,h4,h5,h6{
+  overflow-wrap: break-word;
+}
+
+ul{
+  padding: 0;
+  list-style-type: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+/* UTILITIES */
+html{
+  font-size: 62.5%;
+}
+
+.wrapper{
+  max-width: 140rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* ---- HEADER ---- */
+header nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  gap: 4.8rem
+}
+
+.menu li a{
+  display: block;
+  color: #707070;
+  line-height: 12rem;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+ .menu li a.active, .menu li a:hover{
+  color: #506afd;
+}
+
+/* équivalent a la ligne du dessus */
+ /* .menu li a.active{
+  color: #506afd;
+}
+
+.menu li a:hover{
+  color: #506afd;
+} */
+
+
+/* HERO BANNER */
+.hero-banner{
+  padding: 6rem 2rem;
+  color: #fff;
+  text-align: center;
+  background-image: url("../img/hfoe-motif.jpg");
+}
+
+.hero-banner h1{
+  font-size: 4.8rem;
+  line-height: 1.2;
+  margin-bottom: 2.4rem;
+}
+
+.hero-banner h2{
+  font-size: 2.4rem;
+  line-height: 1.2;
+  font-weight: 400;
+}
+
+/* CONTENT */
+.content{
+  padding: 6rem 2rem;
+}
+
+.content .wrapper{
+  display: flex;
+  justify-content: space-between;
+  gap: 5.9rem;
+}
+
+.content-text h3{
+  font-size: 4.8rem;
+  line-height: 1.2;
+  margin-bottom: 2.4rem;
+}
+
+.content-text p{
+  font-size: 2rem;
+  margin-bottom: 4rem;
+}
+
+.cta{
+  display: inline-block;
+  color: #707070;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 2px solid #707070;
+  border-radius: 4px;
+  font-weight: 700;
+  padding: 0 4rem;
+  line-height: 6.5rem;
+} 
+
+.cta:hover{
+  color: #fff;
+  background-color: #707070;
+}
+
+
+/* FOOTER */
+footer{
+  background-color: #FFA632;
+  color: #fff;
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+footer h4{
+  font-size: 3.2rem;
+  line-height: 1.2;
+  margin-bottom: 1.6rem;
+}
+
+footer p{
+  font-size: 1.4rem;
+  margin-bottom: 3.2rem;
+}
+
+footer #email{
+  width: 24.5rem;
+  line-height: 4.6rem;
+  font-size: 1.4rem;
+  border: 2px solid #fff;
+  border-radius: 4px;
+  padding: 0 1.6rem;
+  margin-right: 2rem;
+}
+
+.submit-news{
+  width: 15.5rem;
+  line-height: 4.6rem;
+  border: 2px solid #fff;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  border-radius: 4px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: transparent;
+  color: #fff;
+  padding: 0;
+}
+
+
+.submit-news:hover{
+  color: #FFA632;
+  background-color: #fff;
+}
+
+
+/* ECRAN NORMAL */
+@media (max-width: 1200px ){
+  .wrapper{
+    flex-direction: column;
+  }
+}
+
+/* ECRAN SMARTPHONE */
+@media (max-width: 680px ){
+  .menu{
+    display: none;
+  }
+}
+
+
+
+
+
+
+
+

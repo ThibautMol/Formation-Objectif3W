@@ -1,0 +1,51 @@
+h1{
+    text-align: center;
+    color: #fff;
+    padding: 5%;
+    display: none;
+}
+
+
+/* GRAND ECRAN */
+@media (min-width: 1201px) {
+    body{
+        background-color: #000;
+    }
+
+    .sec1 h1{
+        display: block;
+    }
+}
+
+/* NORMAL */
+@media (min-width: 769px) and (max-width: 1200px){
+    body{
+        background-color: green;
+    }
+
+    .sec2 h1{
+        display: block;
+    }
+}
+
+/* TABLET */
+@media (min-width: 501px) and (max-width: 768px){
+    body{
+        background-color: blue;
+    }
+
+    .sec3 h1{
+        display: block;
+    }
+}
+
+/* SMARTPHONE */
+@media (max-width: 500px){
+    body{
+        background-color: pink;
+    }
+
+    .sec3 h1{
+        display: block;
+    }
+}

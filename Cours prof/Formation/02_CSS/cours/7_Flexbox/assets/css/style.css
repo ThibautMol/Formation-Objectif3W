@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700,800,900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #222;
+  font-family: 'Inter', sans-serif;
+}
+
+ul{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+html{
+  font-size: 62.5%;
+}
+
+body{
+  background-color: #eee;
+}
+
+header{
+  background-color: #fff;
+  border-bottom: 1px solid rgba(0, 0, 0, .1);
+}
+
+h1{
+  font-size: 4.8rem;
+  line-height: 8rem;
+  text-align: center;
+}
+
+
+main{
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+h2{
+  font-size: 3.2rem;
+  font-weight: bold;
+  margin: 3.2rem;
+}
+
+section {
+  background-color: #fff;
+  margin: 3.2rem;
+  padding: 2.4rem;
+  border: 1px solid rgba(0, 0, 0, .1);
+}
+
+h3{
+  font-size: 2.4rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 1rem;
+}
+
+p{
+  font-size: 2rem;
+  font-weight: 400;
+  margin: 1rem;
+}
+
+.example{
+  margin: 4rem 1rem;
+}
+
+h4{
+  font-size: 2.4rem;
+  font-weight: 500;
+  margin: .8rem;
+}
+
+.container{
+  padding: 1.6rem;
+  background-color: #eee;
+}
+
+.item{
+  font-size: 100px;
+  text-shadow: 3px 3px 0 rgba(0, 0, 0, .2);
+  background-color: #33C3F0;
+  color: #fff;
+  padding: .8rem;
+  margin: .5rem;
+  text-align: center;
+  border-radius: 4px;
+}
+
+
+/* DISPLAY */
+.display-flex{
+  display: flex;
+}
+
+.display-inline-flex{
+  display: inline-flex;
+}
+
+/* FLEX-DIRECTION */
+.fd-row-reverse{
+  flex-direction: row-reverse;
+}
+
+.fd-column{
+  flex-direction: column;
+}
+.fd-column-reverse{
+  flex-direction: column-reverse;
+}
+
+/* FLEX-WRAP */
+.fw-nowrap{
+  flex-wrap: nowrap;
+  width:25%;
+}
+
+.fw-wrap{
+  flex-wrap: wrap;
+  width:25%;
+}
+
+.fw-wrap-reverse{
+  flex-wrap: wrap-reverse;
+  width:25%;
+}
+
+/* JUSTIFY-CONTENT */
+.jc-flex-start{
+  justify-content: flex-start;
+}
+
+.jc-flex-end{
+  justify-content: flex-end;
+}
+
+.jc-center{
+  justify-content: center;
+}
+
+.jc-space-between{
+  justify-content: space-between;
+}
+
+.jc-space-around{
+  justify-content: space-around;
+}
+
+.jc-space-evenly{
+  justify-content: space-evenly;
+}
+
+/* ALIGN-ITEMS */
+.ai-stretch{
+  align-items: stretch;
+  height: 40rem;
+}
+
+.ai-flex-start{
+  align-items: flex-start;
+  height: 40rem;
+}
+
+.ai-flex-end{
+  align-items: flex-end;
+  height: 40rem;
+}
+
+.ai-center{
+  align-items: center;
+  /* justify-content: center; */
+  height: 40rem;
+}
+
+.ai-baseline{
+  align-items: baseline;
+  height: 40rem;
+}
+
+.f-s-50{
+  font-size: 5rem;
+}
+
+/* ALIGN-CONTENT */
+.ac-stretch{
+  align-content: stretch;
+  height: 40rem;
+  width: 40%;
+}
+
+.ac-flex-start{
+  align-content: flex-start;
+  height: 40rem;
+  width: 40%;
+}
+
+.ac-flex-end{
+  align-content: flex-end;
+  height: 40rem;
+  width: 40%;
+}
+
+.ac-center{
+  align-content: center;
+  height: 40rem;
+  width: 40%;
+}
+
+.ac-space-between{
+  align-content: space-between;
+  height: 60rem;
+  width: 40%;
+}
+
+.ac-space-around{
+  align-content: space-around;
+  height: 60rem;
+  width: 40%;
+}
+
+.ac-space-evenly{
+  align-content: space-evenly;
+  height: 60rem;
+  width: 40%;
+}
+
+
+
+/* PROPRIETES ENFANTS */
+
+/* ORDER */
+.order-1{
+  order:1;
+}
+
+.order-2{
+  order:2;
+}
+
+.order-3{
+  order:3;
+}
+
+.order-4{
+  order:4;
+}
+
+.order-5{
+  order:5;
+}
+
+.order-6{
+  order:6;
+}
+
+/* FLEX-GROW */
+
+.flex-grow-0{
+  flex-grow: 0;
+}
+
+.flex-grow-1{
+  flex-grow: 1;
+}
+
+.flex-grow-2{
+  flex-grow: 2;
+}
+
+.flex-grow-3{
+  flex-grow: 3;
+}
+
+/* FLEX-BASIS */
+
+.flex-basis{
+  flex-basis: auto;
+}
+
+.flex-basis-10{
+  flex-basis: 10%;
+}
+
+.flex-basis-60{
+  flex-basis: 60%;
+}
+
+.flex-basis-30{
+  flex-basis: 30%;
+}
+
+/* FLEX-SHRINK */
+
+.flex-shrink{
+  flex-shrink: 1;
+}
+
+.flex-shrink-2{
+  flex-shrink: 2;
+}
+
+.flex-basis-100{
+  flex-basis: 100%;
+}
+
+
+/* ALIGN-STRETCH */
+.as-stretch{
+  align-self: stretch;
+}
+
+.as-flex-start{
+  align-self: flex-start;
+}
+
+.as-flex-end{
+  align-self: flex-end;
+}
+
+.as-center{
+  align-self: center;
+}
+
+.as-baseline{
+  align-self: baseline;
+}

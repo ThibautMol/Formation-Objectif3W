@@ -1,0 +1,17 @@
+html{
+    font-size: 62.5%;
+}
+
+.box-1{
+
+    width: 400px;
+    height: 400px;
+    background-color: lightblue;
+    padding: 20px;
+    /* haut droit bas gauche */
+    /* padding: 10px 15px 10px 15px; 
+    padding: 10px 20px; */
+
+    margin: 50px;
+    
+}

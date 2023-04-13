@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #f1f1f1;
+  font-family: 'Monserrat', sans-serif;
+}
+
+.box1{background-color: rgb(250, 106, 97);}
+
+.box2{background-color: rgb(0, 177 , 197);}
+
+.box3{background-color: rgb(241, 196, 15);}
+
+.box4{background-color: rgb(46, 204, 113);}
+
+.box5{background-color: rgb(155, 89, 182);}
+
+.box6{background-color: rgb(52, 73, 94);}
+
+.box7{background-color: rgb(230, 126, 34);}
+
+.box8{background-color: rgb(127, 140, 141);}
+
+.container{
+  display: flex;
+  height: 100vh;
+  flex-wrap: wrap;
+}
+
+.box{
+  font-size: 100px;
+  color: rgb(255, 250, 228);
+  text-align: center;
+  padding: 10px;
+  text-shadow: 3px 3px 0 rgba(0, 0, 0, .2);
+  box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, .2);
+
+  flex: 1 1 25%;
+  /* flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto; */
+
+}

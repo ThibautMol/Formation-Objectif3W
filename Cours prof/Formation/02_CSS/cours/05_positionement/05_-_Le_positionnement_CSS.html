@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+        <title>Le positionnement CSS</title>
+
+        <!-- // highlight.js : Coloration syntaxique du code -->
+        <link rel="stylesheet" type="text/css" href="../../../_assets/plugins/highlight/styles/monokai_sublime.css">
+        <script type="text/javascript" src="../../../_assets/plugins/highlight/highlight.pack.js"></script>
+        <script type="text/javascript">
+            hljs.initHighlightingOnLoad();
+        </script>
+        <!-- // -->
+
+        <link rel="stylesheet" type="text/css" href="../../../_assets/css/style.css">
+    </head>
+
+    <body>
+        <h1>Le positionnement CSS</h1>
+        <hr>
+        <h2>Flux normal</h2>
+        <h3>Boîte de type bloc</h3>
+        <p><em>Par défaut, les boîtes de type bloc seront affichées dans une succession verticale identique à l'ordre des balises dans le code HTML.</em></p>
+        <style type="text/css">
+            <!--
+            #flux-bloc .c_1{
+                background-color:lightblue;
+                height:150px;
+                width:150px;
+            }
+            #flux-bloc .c_2{
+                background-color:lightgreen;
+                height:150px;
+                width:150px;
+            }
+            -->
+        </style>
+        <div id="flux-bloc">
+            <div class="c_1">Boite de type bloc 1</div>
+            <div class="c_2">Boite de type bloc 2</div>
+        </div>
+        <pre><code class="css">
+.c_1{
+    background-color:lightblue;
+    height:150px;
+    width:150px;
+}
+.c_2{
+    background-color:lightgreen;
+    height:150px;
+    width:150px;
+}</code>
+<code class="html">
+&lt;div class="c_1"&gt;Boite de type bloc 1&lt;/div&gt;
+&lt;div class="c_2"&gt;Boite de type bloc 2&lt;/div&gt;</code></pre>
+        <h3>Boîte de type en-ligne</h3>
+        <p><em>Par défaut, les boîtes de type en-ligne sont affichées dans une succession horizontale identique à l'ordre des balises dans le code HTML.</em></p>
+        <style type="text/css">
+            <!--
+            #flux-inline .s_1{background-color:lightblue;}
+            #flux-inline .s_2{background-color:lightgreen;}
+            -->
+        </style>
+        <div id="flux-inline">
+            <span class="s_1">Boite de type en-ligne 1</span>
+            <span class="s_2">Boite de type en-ligne 2</span>
+        </div>
+        <pre><code class="css">
+.s_1{background-color:lightblue;}
+.s_2{background-color:lightgreen;}</code>
+<code class="html">
+&lt;span class="s_1"&gt;Boite de type en-ligne 1&lt;/span&gt;
+&lt;span class="s_2"&gt;Boite de type en-ligne 2&lt;/span&gt;</code></pre>
+        <hr>
+        <h2>La propriété position</h2>
+        <h3>La position relative</h3>
+        <p><em>Par défaut, les navigateurs affichent les boîtes issues du document html dans l’ordre du flux normal. Le positionnement relatif permet d'inscrire un contenu en flux normal, puis de le décaler horizontalement et/ou verticalement. Le contenu suivant n'est pas affecté par ce déplacement, qui peut donc entraîner des chevauchements</em>.</p>
+        <style type="text/css">
+            <!--
+            #position-relative .s_1{
+                background-color:lightblue;
+                position:relative;
+                bottom:5px;
+                left:10px;
+            }
+            -->
+        </style>
+        <div id="position-relative">
+            <p>Lorem <span class="s_1">Boite de type en-ligne en position relative</span> ipsum dolor.</p>
+        </div>
+        <pre><code class="css">
+.s_1{
+    background-color:lightblue;
+    position:relative;
+    bottom:5px;
+    left:10px;
+}</code>
+<code class="html">
+&lt;p&gt;Lorem &lt;span class="s_1"&gt;Boite de type en-ligne en position relative&lt;/span&gt; ipsum dolor.&lt;/p&gt;</code></pre>
+        <h3>La position absolue</h3>
+        <p><em>La position absolue (position:absolute) permet de ne pas dépendre de l'ordre dans lequel les éléments HTML sont déclarés dans le code, contrairement aux flottants que nous verrons plus tard.</em></p>
+        <p class="block alert"><em><strong>Rappelons un point important concernant ce mode de positionnement : un élément positionné en absolu se réfère non pas à son parent direct, mais au premier ancêtre positionné qu'il rencontre.</strong></em></p>
+        <style type="text/css">
+            <!--
+            #position-absolute-bloc .c_1{
+                background-color:lightblue;
+                height:500px;
+                width:500px;
+                position:relative;
+            }
+            #position-absolute-bloc .c_2{
+                background-color:lightgreen;
+                height:250px;
+                width:250px;
+                position:absolute;
+                top:50px;
+                left:50px;
+            }
+
+            #position-absolute-inline{width:50%;}
+                #position-absolute-inline .p_1{
+                    padding-right:120px;
+                    position:relative;
+                    text-align:right;
+                }
+                    #position-absolute-inline .p_1 .i_1{
+                        position:absolute;
+                        right:0;
+                    }
+            -->
+        </style>
+        <div id="position-absolute-bloc">
+            <div class="c_1">
+                <div class="c_2">Boite de type bloc en position absolue</div>
+            </div>
+        </div>
+        <pre><code class="css">
+.c_1{
+    background-color:lightblue;
+    height:500px;
+    width:500px;
+    position:relative;
+}
+.c_2{
+    background-color:lightgreen;
+    height:250px;
+    width:250px;
+    position:absolute;
+    top:50px;
+    left:50px;
+}</code>
+<code class="html">
+&lt;div class="c_1"&gt;
+    &lt;div class="c_2"&gt;Boite de type bloc en position absolue&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        <div id="position-absolute-inline">
+            <p class="p_1"><img alt="" class="i_1" src="assets/images/objectif_3w_logo.png" width="100">  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        </div>
+        <pre><code class="css">
+.p_1{
+    padding-right:120px;
+    position:relative;
+    text-align:right;
+}
+    .p_1 .i_1{
+        position:absolute;
+        right:0;
+    }</code>
+<code class="html">
+&lt;p class="p_1"&gt;&lt;img alt="" class="i_1" src="assets/images/objectif_3w_logo.png" width="100" /&gt;  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.&lt;/p&gt;</code></pre>
+        <h3>La position fixe</h3>
+        <p><em>Le positionnement fixe s'apparente au positionnement absolu, à l'exception des points suivants:</em></p>
+        <ul>
+            <li>Lorsque le positionnement est précisé (top, right, …), l'élément est toujours positionné par rapport à la fenêtre du navigateur</li>
+            <li>L'élément est fixé à un endroit et ne pourra se mouvoir, même lors de la présence d'une barre de défilement. En d'autres termes, la position intiale est fixée au chargement de la page, le fait qu'une éventuelle scrollbar puisse être utilisée n'a aucune influence sur le positionnement de l'élément: il ne bouge plus de la position initialement définie.</li>
+        </ul>
+        <style type="text/css">
+            <!--
+            #position-fixed-bloc .c_1{
+                background-color:lightblue;
+                position:fixed;
+                bottom:10px;
+                right:0;
+            }
+            -->
+        </style>
+        <div id="position-fixed-bloc">
+            <div class="c_1">Boite de type bloc en position fixe</div>
+        </div>
+        <pre><code class="css">
+.c_1{
+    background-color:lightblue;
+    position:fixed;
+    bottom:10px;
+    right:0;
+}</code>
+<code class="html">
+&lt;div class="c_1"&gt;Boite de type bloc en position fixe&lt;/div&gt;</code></pre>
+        <hr>
+        <h2>La propriété flottante</h2>
+        <h3>Rôle & détournement des flottants</h3>
+        <p><em>Une boîte flottante est retirée du flux normal, et placée le plus à droite (float: right) ou le plus à gauche (float: left) possible dans son conteneur. Le contenu suivant cette boîte flottante s'écoule le long de celle-ci, dans l'espace laissé libre.</em></p>
+        <style type="text/css">
+            <!--
+            #float-bloc{
+                overflow:hidden;
+                width:50%;
+            }
+                #float-bloc .c_1{
+                    background-color:lightblue;
+                    float:left;
+                    height:150px;
+                    width:50%;
+                }
+                #float-bloc .c_2{
+                    background-color:lightgreen;
+                    float:right;
+                    height:150px;
+                    width:50%;
+                }
+
+            #float-inline{width:50%;}
+                    #float-inline .p_2 .i_2{
+                        float:left;
+                        margin:0 10px 10px 0;
+                    }
+                #float-inline .p_3{text-align:right;}
+                    #float-inline .p_3 .i_3{
+                        float:right;
+                        margin:0 0 10px 10px;
+                    }
+            -->
+        </style>
+        <div id="float-bloc">
+            <div class="c_1">Boite de type bloc en float left</div>
+            <div class="c_2">Boite de type bloc en float right</div>
+        </div>
+        <pre><code class="css">
+.c_1{
+    background-color:lightblue;
+    float:left;
+    height:150px;
+    width:50%;
+}
+.c_2{
+    background-color:lightgreen;
+    float:right;
+    height:150px;
+    width:50%;
+}</code>
+<code class="html">
+&lt;div class="c_1"&gt;Boite de type bloc en float left&lt;/div&gt;
+&lt;div class="c_2"&gt;Boite de type bloc en float right&lt;/div&gt;</code></pre>
+        <div id="float-inline">
+            <h4>Boite de type en-ligne sans positionnement flottant</h4>
+            <p><img alt="" src="assets/images/objectif_3w_logo.png" width="100"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            <h4>Boite de type en-ligne avec positionnement flottant à gauche</h4>
+            <p class="p_2"><img alt="" class="i_2" src="assets/images/objectif_3w_logo.png" width="100">  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            <h4>Boite de type en-ligne avec positionnement flottant à droite</h4>
+            <p class="p_3"><img alt="" class="i_3" src="assets/images/objectif_3w_logo.png" width="100">  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        </div>
+        <pre><code class="css">
+.p_2{text-align:left;}
+    .p_2 .i_2{
+        float:left;
+        margin:0 10px 10px 0;
+    }
+.p_3{text-align:right;}
+    .p_3 .i_3{
+        float:right;
+        margin:0 0 10px 10px;
+    }</code>
+<code class="html">
+&lt;h4&gt;Boite de type en-ligne sans positionnement flottant&lt;/h4&gt;
+&lt;p&gt;&lt;img alt="" src="assets/images/objectif_3w_logo.png" width="100" /&gt; Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.&lt;/p&gt;
+&lt;h4&gt;Boite de type en-ligne avec positionnement flottant à gauche&lt;/h4&gt;
+&lt;p class="p_2"&gt;&lt;img alt="" class="i_2" src="assets/images/objectif_3w_logo.png" width="100" /&gt;  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.&lt;/p&gt;
+&lt;h4&gt;Boite de type en-ligne avec positionnement flottant à droite&lt;/h4&gt;
+&lt;p class="p_3"&gt;&lt;img alt="" class="i_3" src="assets/images/objectif_3w_logo.png" width="100" /&gt;  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.&lt;/p&gt;</code></pre>
+        <h3>Nettoyer les flottants</h3>
+        <p><em>La propriété clear s'utilise conjoitement aux float et permet à un élément (qui peut être d'ailleurs lui-même flottant) de ne plus subir le comportement d'habillage dicté par un objet flottant qui le précède directement et, par conséquent, de se caler en-dessous de ce dernier. Le clear autorise un nettoyage des flottants exclusivement à gauche (clear:left), à droite (clear:right) ou les deux simultanément (clear:both).</em></p>
+        <style type="text/css">
+            <!--
+            #clear-bloc{
+                overflow:hidden;
+                width:50%;
+            }
+                #clear-bloc .c_1{
+                    background-color:lightblue;
+                    float:left;
+                    height:150px;
+                    width:33.3333333333%;
+                }
+                #clear-bloc .c_2{
+                    background-color:lightgreen;
+                    clear:left;
+                    float:left;
+                    height:150px;
+                    width:33.3333333333%;
+                }
+                #clear-bloc .c_3{
+                    background-color:magenta;
+                    float:left;
+                    height:150px;
+                    width:33.3333333333%;
+                }
+            -->
+        </style>
+        <div id="clear-bloc">
+            <div class="c_1">Boite de type bloc en float left</div>
+            <div class="c_2">Boite de type bloc en float left & clear</div>
+            <div class="c_3">Boite de type bloc en float left</div>
+        </div>
+        <pre><code class="css">
+.c_1{
+    background-color:lightblue;
+    float:left;
+    height:150px;
+    width:33.3333333333%;
+}
+.c_2{
+    background-color:lightgreen;
+    clear:left;
+    float:left;
+    height:150px;
+    width:33.3333333333%;
+}
+.c_3{
+    background-color:magenta;
+    float:left;
+    height:150px;
+    width:33.3333333333%;
+}</code>
+<code class="html">
+&lt;div class="c_1"&gt;Boite de type bloc en float left&lt;/div&gt;
+&lt;div class="c_2"&gt;Boite de type bloc en float left & clear&lt;/div&gt;
+&lt;div class="c_3"&gt;Boite de type bloc en float left&lt;/div&gt;</code></pre>
+    </body>
+</html>

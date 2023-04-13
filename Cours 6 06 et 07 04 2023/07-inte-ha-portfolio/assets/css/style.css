@@ -61,7 +61,7 @@ a {
     color: #707070;
 }
 
-a:hover {
+nav .active, a:hover {
     color : #506AFD;
     cursor: pointer;
 }

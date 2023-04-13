@@ -1,0 +1,11 @@
+
+
+On met généralement les boutons en inline block afin de pouvoir les modifier plus facilement et pouvoir utiliser les propriétés des blocs.
+Pour les boutons on peut utiliser en astuce les line height pour caler le texte au centre.
+pour la taille d'un bloc, il faut prendre en compte la taille du border. et soustraire cette taille au reste pour avoir la bonne taille. 
+
+
+lorsqu'on est sur une page on peut définir que l'onglet de la nav bar la désignant soit en "active".
+Cette classe mettra automatiquement la couleur active sur le nom de la page.
+
+le # permet de cibler un ID dans le html

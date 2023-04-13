@@ -4,6 +4,13 @@
     box-sizing:border-box;
 }
 
+/* MAIN */
+
+main {
+    width: 1920px;
+    height: 800px;
+}
+
 /* NAV */
 
 nav {
@@ -11,6 +18,12 @@ nav {
     background-color: #000000;
     align-items: center;
     justify-content: space-evenly;
+    height: 100px;
+}
+
+.nav-bar {
+    display: flex;
+    width: fit-content;
 }
 
 .logo-bioware {
@@ -19,7 +32,7 @@ nav {
 }
 
 .a-nav {
-    margin: 2%;
+    margin: 24px;
     color : #606060;
     text-decoration: none;
     text-transform: uppercase;
@@ -29,18 +42,24 @@ nav {
     line-height: 21px;
     align-items: center;
     letter-spacing: 0.02em;
+    width: fit-content;
+    height: 21px;
 }
 
 .a-nav:hover {
     color: #576B8C;
+    cursor: pointer;
 }
 
 /* HEADER */
 
 header {
-    background-image: url(/08-inte-bioware/assets/img/backdrop.jpg) ;
+    display: flex;
+    flex-direction: column;
+    background-image: url(/08-inte-bioware/assets/img/backdrop-big.png) ;
     color:#FFFFFF;
     background-repeat: no-repeat;
+    height: 100%;
 }
 
 h1 {
@@ -66,6 +85,11 @@ input {
     line-height: 18px;
     letter-spacing: 0.1em;
     text-transform: uppercase;
+}
+
+input:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
 }
 
 /* SECTION */
@@ -96,6 +120,8 @@ footer {
 
 .title-li {
     text-transform: uppercase;
+    color: #666666;
+
 }
 
 li {
@@ -115,3 +141,8 @@ a {
     align-items: center; 
 }
 
+a:hover {
+    color: #576B8C;
+    text-decoration: underline;
+    cursor: pointer;
+}

@@ -100,6 +100,12 @@ p {
 
 /* SECTION 2 */
 
+
+.section2 {
+
+    margin: 12rem 0rem;
+}
+
 .center-content {
     display: flex;
     flex-direction: column;
@@ -130,6 +136,9 @@ section.section2 h2 {
 
 section.section2 p {
     color: rgb(102, 107, 127);
+    font-size: 1.8rem;
+    line-height: 2.7rem;
+    margin-bottom: 8rem;
     text-transform: capitalize;
 }
 
@@ -180,21 +189,19 @@ i {
     text-transform: capitalize;
 }
 
-.section3 a {
-    color: #FFFFFF;
-    background-color: rgb(37, 219, 135);
-    line-height: 3rem;
-    font-size: 2rem;
-    width: max-content;
-    letter-spacing: 0.02rem;
-    text-decoration: none;
+section.section3 p {
+    color: rgb(102, 107, 127);
+    font-size: 1.8rem;
+    line-height: 2.7rem;
+    text-transform: capitalize;
 }
+
 
 .section3 a {
         background-color: rgba(37, 219, 135, 1);
         color: rgba(255, 255, 255, 1);
         font-size: 2rem;
-        width: 20.4rem;
+        width: 18rem;
         line-height: 3rem;
         font-weight: 700;
         padding: 1.5rem 3.2rem;
@@ -207,5 +214,52 @@ i {
 .section3 a:hover {
         background-color: rgba(65, 255, 110, 1);
         cursor: pointer;
-        width : 18rem;
     }
+
+
+/* SECTION 4 */
+
+.section4 {
+
+    margin:12em 0em;
+}
+section.section4 h1 {
+    font-size: 4.8rem;
+    line-height: 5.8rem;
+    font-weight: 700;
+    margin: 0;
+    text-transform: capitalize;
+}
+
+section.section4 p {
+    color: rgb(102, 107, 127);
+    font-size: 1.8rem;
+    line-height: 2.7rem;
+    text-transform: capitalize;
+}
+
+.btc {
+    display: flex;
+    margin-top: 8rem;
+    gap: 14.7rem;
+}
+
+/* FORM */
+
+
+/* FOOTER */
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 8, 41);
+    height: 9rem;
+}
+
+footer p {
+    color: rgba(255, 255, 255, 1);
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+}

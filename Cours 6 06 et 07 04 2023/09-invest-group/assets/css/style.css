@@ -48,18 +48,32 @@ li .active, a:hover {
 
 .section1 {
     background-image: url(/assets/img/hero-bkg.png);
-    background-size: 100% 100%;
+    /* background-size: cover;
+    width: fit-content; */
+    height: 108rem;
+    width: 192rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    
+}
+
+article {
+    
 }
 
 h1 {
     font-size: 6.4rem;
     line-height: 7.6rem;
     font-weight: 700;
+    margin: 0;
     text-transform: capitalize;
 }
 
 p {
-    size: 2rem;
+    font-size: 2rem;
     line-height: 3rem;
     text-transform: capitalize;
 }

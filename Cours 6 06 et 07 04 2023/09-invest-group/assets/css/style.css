@@ -1,8 +1,15 @@
+
+
+@font-face {
+    font-family: 'Satoshi';
+    src: url(/assets/Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Regular.woff);
+}
+
 html {
     margin: 0;
     box-sizing: border-box;
     font-size: 62.5%;
-    font-family: ;
+    font-family: 'Satoshi';
 }
 
 header {

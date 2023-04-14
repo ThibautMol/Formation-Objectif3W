@@ -11,3 +11,23 @@ Cette classe mettra automatiquement la couleur active sur le nom de la page.
 le # permet de cibler un ID dans le html
 
 input [email] {} va cibler uniquement les input de type emails.
+
+avec le css header nav.container on va cibler les éléments nav dans le header possédant la classe container.
+
+wrapper/container : c'est la même chose, il s'agit de délimiter la zone de travail. Sur certains sites, cette zone est limitée, et se retrouvera sur tout le site.
+Cet élément sera appliqué séparément à chaque catégories (header, body, section etc.)
+
+jpg image avec fond. 
+
+background est une super propriété dans laquelle on peut mettre l'image de background, l'aspect repeat ou norepeat, et la valeur de position haut et bas puis gauche et droite (center center par exemple) et le cover enfin.
+background-size permet de dire en cover que l'image va s'étendre. 
+
+possibilité de créer un paramétrage en root en css. ça créé une fonction en css. 
+pour l'appeler ensuite il suffit de faire var(--nom-variable) les deux traits -- sont des symboles de variables.
+
+dans un élément flex, le gap permet de créer un espace entre les élémnents.
+
+si on veut qu'un élément en display fixe prenne toute la place du conteneur d'un coté, il suffit de gérer sa position par exemple un header si on met left, right, top à 0, ça va s'étendre sur toute la longueur.
+
+pour créer un faux paralaxe, on fait un background attachement fixe sur l'image de background pour que ce soit plus jolie.
+

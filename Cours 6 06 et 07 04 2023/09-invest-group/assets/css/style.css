@@ -4,7 +4,6 @@
     font-family: 'Satoshi';
     src: url(/assets/Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Regular.woff);
 }
-
 html {
     margin: 0;
     box-sizing: border-box;
@@ -64,7 +63,7 @@ article {
     
 }
 
-h1 {
+section.section1 h1 {
     font-size: 6.4rem;
     line-height: 7.6rem;
     font-weight: 700;
@@ -98,3 +97,102 @@ p {
     background-color: rgba(65, 255, 110, 1);
     cursor: pointer;
 }
+
+/* SECTION 2 */
+
+.center-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+section.section2 h1 {
+    font-size: 4.8rem;
+    line-height: 5.8rem;
+    font-weight: 700;
+    margin: 0;
+    text-transform: capitalize;
+}
+
+section.section2 p {
+    font-size: 1.8rem;
+    line-height: 2.7rem;
+    text-transform: capitalize;
+}
+
+
+section.section2 h2 {
+    text-align: center;
+    text-transform: capitalize;
+}
+
+section.section2 p {
+    color: rgb(102, 107, 127);
+    text-transform: capitalize;
+}
+
+.circle {
+    background-color: rgba(211, 248, 231, 1);
+    border-radius: 10rem;
+}
+
+/* SECTION 3 */
+
+.align-services {
+    display: flex;
+}
+
+.wrapper-about-us {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 55.6rem;
+    padding-left: 4.8rem;
+    background-color: rgba(246, 246, 246, 1);
+
+    
+}
+
+.section3 {
+    display: flex;
+}
+
+.section3 h1 {
+    font-size: 4.8rem;
+    line-height: 5.8rem;
+    font-weight: 700;
+    margin: 0;
+    text-transform: capitalize;
+}
+
+.section3 a {
+    color: #FFFFFF;
+    background-color: rgb(37, 219, 135);
+    line-height: 3rem;
+    font-size: 2rem;
+    width: max-content;
+    letter-spacing: 0.02rem;
+    text-decoration: none;
+}
+
+.section3 a {
+        background-color: rgba(37, 219, 135, 1);
+        color: rgba(255, 255, 255, 1);
+        font-size: 2rem;
+        width: 20.4rem;
+        line-height: 3rem;
+        font-weight: 700;
+        padding: 1.5rem 3.2rem;
+        letter-spacing: 0.02rem;
+        text-decoration: none;
+        text-align: center;
+        border-radius: 0.3rem;
+    }
+    
+.section3 a:hover {
+        background-color: rgba(65, 255, 110, 1);
+        cursor: pointer;
+        width : 18rem;
+    }

@@ -9,8 +9,8 @@ html {
     box-sizing: border-box;
     font-size: 62.5%;
     font-family: 'Satoshi';
-    /* width: 100%;
-    height: 100%; */
+    max-width: 192rem;
+
 }
 
 /* HEADER */
@@ -20,7 +20,8 @@ nav {
     justify-content: space-between;
     align-items: center;
     background-color: #FFFFFF;
-    box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.04);
+    padding: 0 4.7rem;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.04);
 }
 
 ul {
@@ -47,21 +48,15 @@ li .active, a:hover {
 
 .section1 {
     background-image: url(/assets/img/hero-bkg.png);
-    /* background-size: cover;
-    width: fit-content; */
+    background-repeat: no-repeat;
     height: 108rem;
     width: 192rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-left: 13.54%;
-
-    
+    padding-left: 13.54%;   
 }
 
-article {
-    
-}
 
 section.section1 h1 {
     font-size: 6.4rem;
@@ -91,6 +86,7 @@ p {
     letter-spacing: 0.02rem;
     text-decoration: none;
     border-radius: 0.3rem;
+    /* Rajouter un padding de 4rem */
 }
 
 .section1 a:hover {
@@ -102,7 +98,6 @@ p {
 
 
 .section2 {
-
     margin: 12rem 0rem;
 }
 
@@ -111,7 +106,6 @@ p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
 }
 
 section.section2 h1 {
@@ -148,7 +142,6 @@ section.section2 p {
     align-items: center;
     text-align: center;
     width: 44rem;
-
 }
 
 i {
@@ -198,23 +191,23 @@ section.section3 p {
 
 
 .section3 a {
-        background-color: rgba(37, 219, 135, 1);
-        color: rgba(255, 255, 255, 1);
-        font-size: 2rem;
-        width: 18rem;
-        line-height: 3rem;
-        font-weight: 700;
-        padding: 1.5rem 3.2rem;
-        letter-spacing: 0.02rem;
-        text-decoration: none;
-        text-align: center;
-        border-radius: 0.3rem;
-    }
+    background-color: rgba(37, 219, 135, 1);
+    color: rgba(255, 255, 255, 1);
+    font-size: 2rem;
+    width: 18rem;
+    line-height: 3rem;
+    font-weight: 700;
+    padding: 1.5rem 3.2rem;
+    letter-spacing: 0.02rem;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 0.3rem;
+}
     
 .section3 a:hover {
-        background-color: rgba(65, 255, 110, 1);
-        cursor: pointer;
-    }
+    background-color: rgba(65, 255, 110, 1);
+    cursor: pointer;
+}
 
 
 /* SECTION 4 */
@@ -298,7 +291,7 @@ textarea {
     height: 18.4rem;
 }
 
-form div input [submit] {
+form div input[type="submit"] {
     background-color: rgba(37, 219, 135, 1);
     color: rgba(255, 255, 255, 1);
     line-height: 3rem;

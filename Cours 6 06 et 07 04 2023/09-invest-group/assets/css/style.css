@@ -2,6 +2,11 @@ html {
     margin: 0;
     box-sizing: border-box;
     font-size: 62.5%;
+    font-family: ;
+}
+
+header {
+
 }
 
 nav {
@@ -17,6 +22,9 @@ li a {
     text-transform: capitalize;
     text-decoration: none;
     color: rgba(102, 107, 127, 1);
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    font-weight: 500;
 }
 
 li a:hover {

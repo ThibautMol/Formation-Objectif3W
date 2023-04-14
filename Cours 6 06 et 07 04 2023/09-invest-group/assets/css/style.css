@@ -246,6 +246,64 @@ section.section4 p {
 
 /* FORM */
 
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 8rem;
+    background-color: rgb(246, 246, 246);
+}
+
+form div {
+    margin-bottom: 3.2rem;
+}
+
+form h1 {
+    font-size: 4.8rem;
+    line-height: 5.8rem;
+    font-weight: 700;
+    margin-top: 12rem;
+    color:rgba(0, 8, 41, 1);
+    text-transform: capitalize;
+}
+
+.wrapper-form {
+    width: 72.2rem;
+}
+
+form p {
+    color: rgb(102, 107, 127);
+    font-size: 1.8rem;
+    line-height: 2.7rem;
+    margin-bottom: 8rem;
+    text-transform: capitalize;
+}
+
+form div label {
+    display: flex;
+    font-size: 2rem;
+    line-height: 3rem;
+    color: rgba(102, 107, 127, 1);
+    flex-direction: column;
+}
+
+input, textarea {
+    width: 100%;
+    height: 5.4rem;
+    background-color: rgb(217, 217, 217);
+    border: none;
+} 
+
+textarea {
+    height: 18.4rem;
+}
+
+form div input [submit] {
+    background-color: rgba(37, 219, 135, 1);
+    color: rgba(255, 255, 255, 1);
+    line-height: 3rem;
+    font-size: 2rem;
+}
 
 /* FOOTER */
 

@@ -34,7 +34,7 @@ li a {
     font-weight: 500;
 }
 
-li a:hover {
+li .active, a:hover {
     cursor: pointer;
     color: rgba(0, 8, 41, 1);
 }

@@ -12,8 +12,7 @@ html {
     font-family: 'Satoshi';
 }
 
-header {
-}
+/* HEADER */
 
 nav {
     display: flex;
@@ -41,4 +40,26 @@ li a {
 li .active, a:hover {
     cursor: pointer;
     color: rgba(0, 8, 41, 1);
+}
+
+/* SECTION 1 */
+
+.section1 {
+    background-image: url(/assets/img/hero-bkg.png);
+    background-size: 100vw;
+}
+
+.section1 article {
+    width: 67.8rem;
+}
+
+.section1 a {
+    background-color: rgba(37, 219, 135, 1);
+    color: rgba(255, 255, 255, 1);
+    font-size: ;
+}
+
+.section1 a:hover {
+    background-color: rgba(65, 255, 110, 1);
+    cursor: pointer;
 }

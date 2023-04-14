@@ -31,3 +31,4 @@ si on veut qu'un élément en display fixe prenne toute la place du conteneur d'
 
 pour créer un faux paralaxe, on fait un background attachement fixe sur l'image de background pour que ce soit plus jolie.
 
+cdn content data network

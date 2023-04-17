@@ -29,6 +29,7 @@ body {
 p {
     color: rgb(102, 107, 127);
     font-size: 1.8rem;
+    line-height: 1.2;
     text-transform: capitalize;
 }
 
@@ -110,6 +111,7 @@ section.section1 h1 {
     font-size: 6.4rem;
     font-weight: 700;
     margin: 0;
+    line-height: 1.2;
     text-transform: capitalize;
 }
 

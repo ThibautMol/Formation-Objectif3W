@@ -7,14 +7,20 @@
 
 * {
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 
 html {
-    font-size: 62.5%;
-    font-family: 'Satoshi';
+    font-size: 62.5%; /* il faut bien mettre le font site dans le html */
     max-width: 192rem;
+}
+
+body {
+    background-color: #FFFFFF;
+    /* color: ; on peut mettre une couleur la plus répdandue puis changer ensuite au cas par cas */
+    font-family: 'Satoshi', sans-serif;
 }
 
 /* GENERAL */
@@ -62,7 +68,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     background-color: #FFFFFF;
-    /* padding: 0 4.7rem; */
+    /* padding: 0 4.8rem; */
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.04);
 }
 
@@ -93,7 +99,6 @@ li .active, a:hover {
     background-repeat: no-repeat;
     background-size: cover;
     height: 100rem;
-    background-color: aqua;
     display: flex;
     flex-direction: column;
     justify-content: center;

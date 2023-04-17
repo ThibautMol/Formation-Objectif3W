@@ -4,6 +4,7 @@
     font-family: 'Satoshi';
     src: url(/assets/Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Regular.woff);
 }
+
 html {
     margin: 0;
     box-sizing: border-box;
@@ -104,11 +105,6 @@ section.section1 h1 {
     width: 67.8rem;
 }
 
-.section1 a {
-  
-    /* Rajouter un padding de 4rem */
-}
-
 .section1 a:hover {
     background-color: rgba(65, 255, 110, 1);
     cursor: pointer;
@@ -146,7 +142,7 @@ section.section2 p {
 }
 
 i {
-    margin: 4rem 0rem;
+    line-height: 13rem!important;
 }
 
 .circle {
@@ -162,8 +158,14 @@ i {
     display: flex;
 }
 
+.section3 div {
+    display: flex;
+    flex-basis: 50%;
+}
+
 .wrapper-about-us {
     display: flex;
+    flex-basis: 50%;
     flex-direction: column;
     justify-content: center;
     height: 55.6rem;
@@ -273,3 +275,32 @@ footer p {
     line-height: 2.4rem;
 }
 
+
+/* RESPONSIVE */
+
+@media all and (max-width:2988px) {
+
+    .section1, .section2, .section3 {
+        display: flex;
+        flex-wrap: wrap;
+        flex-basis: 100%;
+    }
+
+    .align-services {
+        flex-wrap: wrap;
+    }
+   
+    .wrapper-about-us {
+        width: 100vw;
+        padding: 0;
+        flex-basis: 0;
+    }
+
+    .btc {
+        flex-wrap: wrap;
+    }
+
+    .btc img{
+        flex-basis: 48%;
+    }
+}

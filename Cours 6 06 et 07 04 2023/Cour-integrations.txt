@@ -37,3 +37,5 @@ quand on a un pixel en plus en haut et en bas dans un bouton, il faut utiliser l
 Ca permet d'avoir des boutons équilibrés et jolie. 
 
 pour bootstrap on mettra toujours bootstrap en premier puis notre css en second en terme de lien. 
+
+la mise en display block permet de faire en sorte qu'un élément s'étire sur toute sa longueur sans avoir à passer la width à 100%.

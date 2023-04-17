@@ -21,6 +21,7 @@ body {
     background-color: #FFFFFF;
     /* color: ; on peut mettre une couleur la plus répdandue puis changer ensuite au cas par cas */
     font-family: 'Satoshi', sans-serif;
+    line-height: 1.5; /* ici on défini le ratio qui va s'appliquer en fonction de chaque grandeur de font*/
 }
 
 /* GENERAL */
@@ -28,13 +29,11 @@ body {
 p {
     color: rgb(102, 107, 127);
     font-size: 1.8rem;
-    line-height: 2.7rem;
     text-transform: capitalize;
 }
 
 h2 {
     font-size: 4.8rem;
-    line-height: 5.8rem;
     font-weight: 700;
     margin: 0;
     text-transform: capitalize;
@@ -46,7 +45,6 @@ h2 {
     color: rgba(255, 255, 255, 1);
     font-size: 2rem;
     width: 22rem;
-    line-height: 3rem;
     font-weight: 700;
     padding: 1.5rem 3.2rem;
     letter-spacing: 0.02rem;
@@ -61,7 +59,7 @@ h2 {
 
 nav {
     display: flex;
-    position: absolute;
+    position: fixed;
     left : 0;
     top:0;
     right: 0;
@@ -95,10 +93,8 @@ li .active, a:hover {
 /* SECTION 1 */
 
 .section1 {
-    background-image: url(/assets/img/hero-bkg.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100rem;
+    background: url(/assets/img/hero-bkg.png) no-repeat center center / cover;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -112,15 +108,11 @@ article {
 
 section.section1 h1 {
     font-size: 6.4rem;
-    line-height: 7.6rem;
     font-weight: 700;
     margin: 0;
     text-transform: capitalize;
 }
 
-.section1 p {
-    line-height: 3rem;
-}
 
 .section1 article {
     width: 67.8rem;
@@ -248,7 +240,6 @@ form p {
 form div label {
     display: flex;
     font-size: 2rem;
-    line-height: 3rem;
     color: rgba(102, 107, 127, 1);
     flex-direction: column;
 }
@@ -267,7 +258,6 @@ textarea {
 form div input[type="submit"] {
     background-color: rgba(37, 219, 135, 1);
     color: rgba(255, 255, 255, 1);
-    line-height: 3rem;
     font-size: 2rem;
     font-weight: 700;
 }
@@ -292,7 +282,6 @@ footer p {
     color: rgba(255, 255, 255, 1);
     font-weight: 500;
     font-size: 1.6rem;
-    line-height: 2.4rem;
 }
 
 
@@ -303,7 +292,14 @@ footer p {
     .section1, .section2, .section3 {
         display: flex;
         flex-wrap: wrap;
-        width: 100%;
+        /* width: 100%; */
+    }
+
+    article {
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+        
     }
 
     .align-services {

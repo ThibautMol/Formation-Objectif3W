@@ -80,6 +80,7 @@ img {
 
 header {
     position: fixed;
+    z-index: 999;
     left: 0;
     top: 0;
     right: 0;
@@ -138,6 +139,10 @@ header nav div ul li a {
     align-items: center;
 }
 
+article {
+    max-width: 40%;
+}
+
 
 .hero-banner article {
     background-color: rgba(255, 255, 255, 0.6);
@@ -172,15 +177,13 @@ header nav div ul li a {
 
 .trips {
     display: flex;
-    flex-wrap: wrap;
-    gap:6rem;
+    padding: 0%;
+    gap: 6rem;
 }
 
 .trip {
     position: relative;
-    max-width: 46%;
-    flex-shrink: 1;
-    flex-grow: 1;
+    width: 47%;
 }
 
 .our-trips h3 {
@@ -204,7 +207,7 @@ header nav div ul li a {
 .our-trips .trips {
     display: flex;
     flex-wrap: wrap;
-    flex-basis: 50%;
+    /* flex-basis: 50%; */
 }
 
 .our-trips .trips h3 {
@@ -323,4 +326,45 @@ footer {
     padding :3.3rem 0;
 }
 
+/* RESPONSIVE IPHONE XR */
+@media all and (max-width:415px) {
 
+ * {
+    margin:0 auto;
+    padding: 0 auto;
+ }
+
+.menu {
+    
+    display: hidden;
+}
+
+ body {
+    font-size:;
+ }
+
+.wrapper {
+    margin: 0 auto;
+    width: 0%;
+    padding: 0;
+}
+
+.trip .wrapper {
+    margin: 0 auto;
+    width: 0%;
+    padding: 0;
+}
+
+.trip {
+    flex-wrap: wrap;
+    flex-direction: column;
+    max-width: 0;
+}
+
+.our-trips .trips {
+   
+    flex-basis: 0;
+}
+
+
+}

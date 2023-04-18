@@ -1,17 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;700&display=swap');
-@import url('https://fonts.cdnfonts.com/css/satoshi');
+
+/* RESET */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     border: 0;
-    font-family: sans-serif;
-    font-size: 1em;
     font-weight: normal;
     font-style: normal;
     text-decoration: none; 
 }
 
+/* GENERAL */
 html {
     font-size: 62.5%;     
     scroll-behavior: smooth;
@@ -20,15 +20,117 @@ html {
 body{
     background-color: white;
     color: black;
-    font-family: 'Barlow', sans-serif;
+    font-family: 'Barlow';
     line-height: 1.5;
+    text-transform: capitalize;
 }
 
-footer, a {
-    font-family: 'Satoshi';
+a {
+    cursor: pointer;
 }
+
+ul, li {
+    list-style-type: none;
+}
+
+p {
+    font-size: 2rem;
+}
+
+.wrapper {
+    width: 140rem;
+    padding:0 26rem;
+
+}
+
+/* HEADER */
+
+header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+header nav p {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: rgba(0,8,41,1);
+}
+header nav p span {
+    font-weight: 700;
+    color: rgba(232,63,67,1);
+}
+
+header nav .menu {
+    display: flex;
+    font-size: 1.8rem;
+    gap: 3.2rem;
+    color : rgba(33,52,66,1)
+}
+
+.menu li a {
+    font-weight: 700;
+}
+
+.active, .menu li a:hover {
+    color: rgba(232,63,67,1);
+}
+
+
+/* HERO BANNER */
+
+.hero-banner {
+    display: flex;
+    background:url(/assets/img/hero-bkg.png) no-repeat center center / cover;
+    /* height: 108rem; */
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-banner article {
+    background-color: rgba(255, 255, 255, 0.7);
+
+}
+
+.hero-banner article h1 {
+    font-size: 6.4rem;
+    font-weight: 700;
+    color:rgba(33, 52, 66, 1);
+    margin: 5rem 3.2rem 0 3.2rem;
+}
+
+.hero-banner article p {
+    font-size: 2.4rem;
+    margin: 2rem 3.2rem 4rem 3.2rem;
+}
+
+.hero-banner article a {
+    color:rgba(255, 255, 255, 1);
+    background-color: rgba(232, 63, 67, 1);
+    font-size: 2rem;
+    font-weight: 700;
+}
+
 
 /* Sur les photos pour mettre les boutons et légendes, 
 utiliser le système de relative et absolute. */
 
 
+/* FOOTER */
+
+footer {
+    background-color: rgba(33, 52, 66, 1);
+    color: rgba(255, 255, 255, 1);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    
+}

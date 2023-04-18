@@ -12,6 +12,7 @@
 }
 
 /* GENERAL */
+
 html {
     font-size: 62.5%;     
     scroll-behavior: smooth;
@@ -28,14 +29,14 @@ body{
 a {
     color:rgba(255, 255, 255, 1);
     background-color: rgba(232, 63, 67, 1);
+    ;
     height: 6rem;
     width: 15.9rem;
     font-size: 2rem;
     font-weight: 700;
     cursor: pointer;
     text-align: center;
-    
-    
+    border-radius: 0.2rem;
 }
 
 ul, li {
@@ -54,6 +55,7 @@ h2 {
     line-height: 5.8rem;
     text-align: center;
     margin-bottom: 2rem;
+    margin-top: 10rem;
 }
 
 h5 {
@@ -64,10 +66,14 @@ h5 {
     margin-bottom: 2rem;
 }
 
+img {
+    margin: 0 auto;
+}
+
 .wrapper {
+    margin: 0 13.54%;
     width: 140rem;
     padding:0 26rem;
-
 }
 
 /* HEADER */
@@ -78,16 +84,17 @@ header {
     top: 0;
     right: 0;
     background-color: rgb(255, 255, 255);
+    
 }
 
 header nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
 }
 
 header nav p {
+    margin: 0;
     font-size: 2.4rem;
     font-weight: 700;
     color: rgba(0,8,41,1);
@@ -104,8 +111,15 @@ header nav .menu {
     color : rgba(33,52,66,1)
 }
 
-.menu li a {
+header nav div ul li a {
+    background-color: white;
+    color: black;
+    height: 6rem;
+    width: 15.9rem;
+    font-size: 2rem;
     font-weight: 700;
+    cursor: pointer;
+    text-align: center;   
 }
 
 .active, .menu li a:hover {
@@ -123,8 +137,12 @@ header nav .menu {
     align-items: center;
 }
 
+
 .hero-banner article {
     background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 0.5rem;
+    margin: 0 30.21%;
+    height: 33.2rem;
 
 }
 
@@ -144,17 +162,28 @@ header nav .menu {
     color:rgba(255, 255, 255, 1);
     background-color: rgba(232, 63, 67, 1);
     font-size: 2rem;
+    padding: 1.5rem 3.2rem;
     font-weight: 700;
+    margin: 3.2rem;
+}
+
+.hero-banner article a:hover {
+    background-color: rgba(197, 49, 53, 1);
 }
 
 /* SECTION OUR TRIPS */
 
 .trips {
     display: flex;
+    flex-wrap: wrap;
+    gap:6rem;
 }
 
 .trip {
     position: relative;
+    max-width: 46%;
+    flex-shrink: 1;
+    flex-grow: 1;
 }
 
 .our-trips h3 {
@@ -165,14 +194,20 @@ header nav .menu {
 
 .our-trips a {
     position: absolute;
+    padding: 1.5rem 3.2rem;
     bottom: 3.2rem;
     left: 45.7rem;
 }
 
+.our-trips .trips .trip a:hover {
+    background-color: rgba(197, 49, 53, 1);
+}
+
+
 .our-trips .trips {
-    /* display: flex;
+    display: flex;
     flex-wrap: wrap;
-    flex-basis: 50%; */
+    flex-basis: 50%;
 }
 
 .our-trips .trips h3 {
@@ -192,10 +227,13 @@ header nav .menu {
 
 .destinations {
     display: flex;
+    flex-wrap: wrap;
 }
 .like-to-go .destination {
     position: relative;
     text-align: center;
+    max-width: 25%;
+
 }
 
 .like-to-go .destination .destination-info {
@@ -206,12 +244,20 @@ header nav .menu {
     bottom: 0;
     left: 0;
     right: 0;
+    height: 7.6rem;
 }
 
-.our-trips a {
-    position: absolute;
-    bottom: 3.2rem;
-    left: 45.7rem;
+section.like-to-go a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 9rem;
+    padding: 1.5rem 3.2rem;
+}
+
+section.like-to-go  a:hover {
+    background-color: rgba(197, 49, 53, 1);
 }
 
 
@@ -236,8 +282,6 @@ header nav .menu {
     color: rgba(232, 63, 67, 1);
 }
 
-
-
 /* SECTION WIN A FREE TRIP */
 
 .win-trip {
@@ -260,6 +304,15 @@ input {
     font-size: 2rem;
     padding-left: 1rem;
 }
+
+section.win-trip form a {
+    padding: 1.5rem 3.2rem;
+}
+
+section.win-trip form a:hover {
+    background-color: rgba(197, 49, 53, 1);
+}
+
 
 /* FOOTER */
 

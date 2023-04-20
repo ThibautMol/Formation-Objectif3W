@@ -1,0 +1,34 @@
+html {
+    color: rgb(214, 211, 211);
+}
+
+body {
+    background-color: rgb(23, 23, 23);
+    font-family: sans-serif;
+}
+
+h1 {
+    font-weight: 700;
+    text-align: center;
+}
+
+main {
+    padding: 0.2em 10%;
+}
+
+section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0.6em;
+}
+
+div {
+    background-color: rgb(51, 51, 51);
+    text-align: center;   
+    font-size: 0.7em;
+}
+
+img {
+    margin-top: 1em;
+    width: 30%;
+}

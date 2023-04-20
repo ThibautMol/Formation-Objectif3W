@@ -29,7 +29,6 @@ body{
 a {
     color:rgba(255, 255, 255, 1);
     background-color: rgba(232, 63, 67, 1);
-    ;
     height: 6rem;
     width: 15.9rem;
     font-size: 2rem;
@@ -72,7 +71,7 @@ img {
 
 .wrapper {
     margin: 0 13.54%;
-    width: 140rem;
+    max-width: 140rem;
     padding:0 26rem;
 }
 
@@ -132,7 +131,7 @@ header nav div ul li a {
 
 .hero-banner {
     display: flex;
-    background:url(/assets/img/hero-bkg.png) no-repeat center center / cover;
+    background:url(assets/img/hero-bkg.png) no-repeat center center / cover;
     background-image: cover;
     height: 100vh;
     justify-content: center;
@@ -347,10 +346,8 @@ footer {
     text-align: left;
  }
 
-.wrapper {
-    width: 100%;
-}
-.trips .wrapper {
+
+.trips {
     margin: 0 auto;
     padding: 0 auto;
 }

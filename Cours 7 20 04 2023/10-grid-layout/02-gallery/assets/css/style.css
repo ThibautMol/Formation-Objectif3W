@@ -1,10 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 html {
-    color: rgb(214, 211, 211);
+
 }
 
 body {
-    background-color: rgb(23, 23, 23);
     font-family: sans-serif;
+   
 }
 
 h1 {
@@ -12,23 +18,70 @@ h1 {
     text-align: center;
 }
 
-main {
-    padding: 0.2em 10%;
-}
 
 section {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    grid-template-rows: 300px 300px 300px 300px;
     gap: 0.6em;
+    
 }
 
-div {
-    background-color: rgb(51, 51, 51);
-    text-align: center;   
-    font-size: 0.7em;
+p {
+    background-color: rgb(144, 238, 144);
+    font-size: 2em;
 }
 
 img {
-    margin-top: 1em;
-    width: 30%;
+    width: 100%;
+    height: 100%;
+}
+
+div {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.mountain-large {
+   grid-column: 1 / 3;
+   grid-row: 1 / 1;
+   background-image: url(/assets/img/unsplash-1.jpg);
+ 
+}
+
+.camera-new {
+    grid-row: 2 / 4;
+    background-image: url(/assets/img/unsplash-3.jpg);
+}
+
+.mountain-fog {
+    grid-column: 2 / 4;
+    grid: 2 / 2;
+    background-image: url(/assets/img/unsplash-4.jpg);
+}
+
+.jungle-plant {
+    background-image: url(/assets/img/unsplash-5.jpg);
+}
+
+.pine {
+    background-image: url(/assets/img/unsplash-6.jpg);
+}
+
+.forest {
+    background-image: url(/assets/img/unsplash-7.jpg);
+}
+
+.jungle-leaf {
+    background-image: url(/assets/img/unsplash-8.jpg);
+}
+
+.water-drop-color {
+    grid-column: 2 / 4;
+    background-image: url(/assets/img/unsplash-9.jpg);
+}
+
+.snow-mountain-small {
+    background-image: url(/assets/img/unsplash-1.jpg);
 }

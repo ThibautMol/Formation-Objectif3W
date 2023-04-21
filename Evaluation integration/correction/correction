@@ -34,5 +34,11 @@ on peut également changé la couleur des liens une fois visités.
 avec ./ tu donne le chemin absolue (le chemin racine) en partant de la base du coup du dossier.
 avec ./ tu donne tout le chemin dans le serveur.
 
+en général on met les border radius en pixels car s'ils sont en rem, ils vont évoluer en fonction du zoom ou pas. 
+
+flex : 0 1 xx% donc le 0 on interdit de grossir à la case. le 1 indique qu'il peut rétrécir en dessous de la taille précisé ensuite en flex basis. 
+flex basis, shrink et grow se met dans le containeur parent mais s'applique aux enfants.
+
+gap s'applique aux lignes et colonnes. Row gap uniquement aux lignes, column gap qu'aux colones. 
 
 

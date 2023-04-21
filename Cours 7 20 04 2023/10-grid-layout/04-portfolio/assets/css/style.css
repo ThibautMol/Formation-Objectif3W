@@ -4,15 +4,74 @@
     box-sizing: border-box;
 }
 
-header {
-    background-color: rgb(9, 11, 25);
-    color: white;   
+html {
+    font-size: 62.5%;
 }
 
 h1 {
     text-transform: capitalize;
 }
 
+h2 {
+    text-transform: capitalize;
+}
+
+h3 {
+    text-transform: capitalize;
+}
+
+a {
+    background-color: rgb(255, 23, 50);
+    color: white;
+}
+
 i {
     color: white;
+}
+
+/* HEADER */
+
+header {
+    background-color: rgb(9, 11, 25);
+    color: white; 
+}
+
+.inactive-btn {
+    background-color: rgb(27, 46, 57);
+}
+
+/* SECTION BROWN AND RED DIVIDE */
+
+.divide-section-brown-red div {
+    background-color: rgb(61, 49, 57);
+    color: white;
+}
+
+.divide-sectop-brown-red .box {
+    border: 1px solid white;
+    border-radius: 0.3rem;
+    gap:2rem;
+}
+
+.box p {
+    text-transform: capitalize;
+}
+
+.red-box {
+    background-color: rgb(141, 56, 56);
+}
+
+/* SECTION WHITE AND RED DIVIDE */
+
+
+
+/* SECTION AVATAR DESCRIPTION */
+
+.avatar {
+    background-color: rgb(214, 218, 233);
+}
+
+.avatar-description div p {
+    font-style: italic;
+    line-height: 3rem;
 }

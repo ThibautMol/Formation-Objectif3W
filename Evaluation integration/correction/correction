@@ -1,2 +1,23 @@
 padding c'est pour faire respirer les choses dans une section.
 le margin c'est plutôt pour faire respirer les choses entre elles. 
+
+le logo est toujours un lien qui renvoie au home. 
+
+en back on utilise de l'inter, du roboto, open sans et source sans pro en font. 
+On aura une seule font pour le back. alors qu'on a généralement 3 font pour le front.
+
+overflow-wrap : break-word : permet de définir un retour à la ligne.
+
+Le wrapper va venir bloquer le contenue dans une taille. le mieux c'est de lui mettre une max-width si on est sur la taille la plus grande de travail.
+Si on a besoin de padding/margin on va l'appliquer directement aux sections.
+on évite de donner un padding/margin au wrapper. 
+
+la partie contenant les éléments généraux du css peut être appelée "utilities"
+
+margin 0 auto permet de centrer les éléments dans le containeur.
+Comme le margin 0 auto permet d'aligner les éléments, il peut être appliqué au wrapper.
+
+le pourcentage se calcule toujours en fonction de la hauteur de l'élément.
+
+pour garder un centrage avec un padding de chaque côté sur une grande plage de taille on peut tester : 
+wrapper avec max-width et margin 0 auto sur le sections. et padding en pourcentage sur le containeur des sections.

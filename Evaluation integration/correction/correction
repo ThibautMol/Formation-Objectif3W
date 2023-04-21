@@ -21,3 +21,18 @@ le pourcentage se calcule toujours en fonction de la hauteur de l'élément.
 
 pour garder un centrage avec un padding de chaque côté sur une grande plage de taille on peut tester : 
 wrapper avec max-width et margin 0 auto sur le sections. et padding en pourcentage sur le containeur des sections.
+
+le line-height permet de créer par exemple la taille de la nav. 
+on le définit par exemple à 7rem pour avoir une nav de 70px.
+
+l'idéal pour la nav bar c'est de mettre un gap entre chaque mots. 
+
+pour clean la couleur des liens on peut faire a{color:inherit;}.
+on peut également changé la couleur des liens une fois visités.
+
+../ tu sors du dossier dans lequel tu es.
+avec ./ tu donne le chemin absolue (le chemin racine) en partant de la base du coup du dossier.
+avec ./ tu donne tout le chemin dans le serveur.
+
+
+

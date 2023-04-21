@@ -22,6 +22,8 @@ h3 {
 
 a {
     background-color: rgb(255, 23, 50);
+    line-height: 5rem;
+    padding: 2rem;
     color: white;
 }
 
@@ -82,9 +84,24 @@ header {
 
 .black-box {
     display: grid;
+    grid-template-columns: repeat (3, 1fr);
     gap : 1rem;
 }
 
 .black-box div {
     background-color: black;
+}
+
+/* SECTION COMMERCE */
+
+
+
+/* FOOTER */
+
+footer {
+    background-color: rgb(37, 50, 60);
+}
+
+.social-networks {
+    gap:7rem;
 }

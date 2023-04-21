@@ -75,3 +75,16 @@ header {
     font-style: italic;
     line-height: 3rem;
 }
+
+/* SECTION BLACK BOX */
+
+/* 3 colones 4 lignes */
+
+.black-box {
+    display: grid;
+    gap : 1rem;
+}
+
+.black-box div {
+    background-color: black;
+}

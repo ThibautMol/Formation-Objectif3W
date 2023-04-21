@@ -8,6 +8,8 @@ html {
     font-size: 62.5%;
 }
 
+/* UTILITIES */
+
 h1 {
     text-transform: capitalize;
 }
@@ -25,10 +27,16 @@ a {
     line-height: 5rem;
     padding: 2rem;
     color: white;
+    border-radius: 3rem;
 }
 
 i {
     color: white;
+}
+
+.wrapper {
+    max-width: 98rem;
+    margin: 0 auto;
 }
 
 /* HEADER */
@@ -38,13 +46,42 @@ header {
     color: white; 
 }
 
+body header div.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .inactive-btn {
     background-color: rgb(27, 46, 57);
 }
 
+header nav div.card div.wrapper i {
+    align-items: baseline;
+}
+
+
+/* SECTION ARTICLES */
+
+body section.articles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+
+
 /* SECTION BROWN AND RED DIVIDE */
 
-.divide-section-brown-red div {
+section.divide-section-brown-red div {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+section.divide-section-brown-red div {
     background-color: rgb(61, 49, 57);
     color: white;
 }
@@ -65,6 +102,14 @@ header {
 
 /* SECTION WHITE AND RED DIVIDE */
 
+.remember {
+    text-align: center;
+}
+
+
+section.divide-section-white-red .remember p {
+    margin-top: 2rem;
+}
 
 
 /* SECTION AVATAR DESCRIPTION */

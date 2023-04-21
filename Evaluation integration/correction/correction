@@ -41,4 +41,6 @@ flex basis, shrink et grow se met dans le containeur parent mais s'applique aux 
 
 gap s'applique aux lignes et colonnes. Row gap uniquement aux lignes, column gap qu'aux colones. 
 
+la modification du curseur par pour passer de flèche à main c'est surtout sur les bouton de type submit.
+
 

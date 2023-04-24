@@ -71,8 +71,6 @@ body section.articles {
     gap: 3rem;
 }
 
-
-
 /* SECTION BROWN AND RED DIVIDE */
 
 section.divide-section-brown-red div {
@@ -89,7 +87,7 @@ section.divide-section-brown-red div {
 .divide-sectop-brown-red .box {
     border: 1px solid white;
     border-radius: 0.3rem;
-    gap:2rem;
+    gap: 2rem;
 }
 
 .box p {
@@ -106,11 +104,9 @@ section.divide-section-brown-red div {
     text-align: center;
 }
 
-
 section.divide-section-white-red .remember p {
     margin-top: 2rem;
 }
-
 
 /* SECTION AVATAR DESCRIPTION */
 
@@ -125,6 +121,11 @@ section.divide-section-white-red .remember p {
 
 /* SECTION BLACK BOX */
 
+.black-box {
+    margin: 0 auto;
+}
+
+
 /* 3 colones 4 lignes */
 
 .black-box {
@@ -137,16 +138,31 @@ section.divide-section-white-red .remember p {
     background-color: black;
 }
 
+/* SECTION LOGOS */
+
+.logos {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    row-gap: 5.5rem;
+}
+
 /* SECTION COMMERCE */
 
+.commerce {
+    margin: 0 auto;
+    align-items: center;
+}
 
 
 /* FOOTER */
 
 footer {
     background-color: rgb(37, 50, 60);
+    align-items: center;
+    line-height: 5.6rem;
 }
 
 .social-networks {
-    gap:7rem;
+    row-gap:2.5rem;
 }

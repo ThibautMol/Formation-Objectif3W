@@ -1,0 +1,34 @@
+les MAJ de XAMP nécessitent de tout réinstaller à chaque fois.
+
+appuyer sur next dans tous les éléments. 
+
+cliquer sur start lance le serveur apache. C'est le serveur local. 
+
+pour le gérer chez nous : dans le dossier d'installation de XAMP, il y a un dossier HTDOCS, c'est notre dossier serveur. 
+on va devoir mettre tout nos fichiers dedans. Pour cela il faudra créer un nouveau dossier pour mettre nos documents dedans "Formation-Objectif3W"
+
+Tous nos documents, du moment qu'ils ont une ligne de php dedans doivent être en .php
+
+exemple de code PHP : 
+
+echo permet de print quelque chose. 
+
+readline est l'équivalent de l'input de python. 
+
+<?php 
+
+echo 'bonjour tout le monde';?>
+
+pour lancer le serveur local c'est "localhost/Formation-Objectif3W" 
+
+cmd c'est pour accéder à l'invit de commande de windows. 
+
+php est une variable d'environnement.XAMP installe PHP de base. 
+Il faut aller dans le dossier xamp, dans le dossier php, on copie le chemin,  on cherche variable d'environnement dans l'outil de recherche window, 
+dans la fenêtre on clique sur le bouton variable d'environnement
+dans la nouvelle fenêtre on double click sur path on clique sur nouveau, on colle le chemin, on valide tout et normalement c'est bon. 
+
+invit de commande : clear (nettoie la fenêtre du terminal)
+
+
+

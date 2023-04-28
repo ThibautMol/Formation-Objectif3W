@@ -25,13 +25,15 @@ h3 {
 a {
     background-color: rgb(255, 23, 50);
     line-height: 5rem;
-    padding: 2rem;
+    padding: 0.5rem 2rem;
     color: white;
     border-radius: 3rem;
+    text-decoration: none;
 }
 
 i {
     color: white;
+    font-size: 2rem;
 }
 
 .wrapper {
@@ -44,54 +46,136 @@ i {
 header {
     background-color: rgb(9, 11, 25);
     color: white; 
+    height: 96.8rem;
 }
 
-body header div.card {
+.big {
+    font-size: 3em;
+    font-weight: 900;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+header nav a {
+    text-decoration: none;
+    background-color:rgba(255, 23, 50, 0);
+}
+
+body header div.centrage div.card {
     display: flex;
     flex-direction: column;
+    width: 23rem;
+    align-items: center; 
+    margin-top: 31%;
+    text-align: center;
+}
+
+.centrage {
+    display: flex;
     justify-content: center;
-    align-items: center;
+}
+
+.card-button {
+    margin-top: 3rem;
+}
+
+.card-button a {
+    margin: 0 0.5rem;  
+    
 }
 
 .inactive-btn {
     background-color: rgb(27, 46, 57);
 }
 
-header nav div.card div.wrapper i {
-    align-items: baseline;
+header .centrage .card i {
+    margin-top: 33rem;
+    font-size: 5rem;
 }
 
 
 /* SECTION ARTICLES */
 
 body section.articles {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 3rem;
+    padding: 5rem 0; 
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2.5rem;
+    line-height: 1.5;
+    text-align: center;
+   
+}
+
+article h3, p {
+    margin-top: 2rem;
+}
+
+article i {
+    color: black;
 }
 
 /* SECTION BROWN AND RED DIVIDE */
 
-section.divide-section-brown-red div {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
-
-section.divide-section-brown-red div {
+section.divide-section-brown-red {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: end;
     background-color: rgb(61, 49, 57);
     color: white;
 }
 
-.divide-sectop-brown-red .box {
-    border: 1px solid white;
-    border-radius: 0.3rem;
-    gap: 2rem;
+section.divide-section-brown-red  div article {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    text-align: left;
+    line-height: 2;
 }
 
-.box p {
+section.divide-section-brown-red  div article h3 {
+width: 12rem;
+}
+
+section.divide-section-brown-red  div article p {
+    width: 25rem;
+}
+    /* mettre des max ou min widhts 
+    pour maintenir la taille des éléments
+    retravailler les tailles en dur */
+
+.test {
+    display: flex;
+    justify-content: flex-end;  
+}
+
+section.divide-section-brown-red div.box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 0 3rem 0;  
+    justify-content: center    
+}
+
+.divide-section-brown-red .box1-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2.5rem;
+    border: 1px solid white;
+    width: 9rem;
+    height: 7rem;
+    margin-top: 2rem;
+}
+
+.box .box1-2 p {
+    
     text-transform: capitalize;
+    margin: 0 auto;
+    
+    
 }
 
 .red-box {
@@ -111,7 +195,9 @@ section.divide-section-white-red .remember p {
 /* SECTION AVATAR DESCRIPTION */
 
 .avatar {
+    
     background-color: rgb(214, 218, 233);
+    align-content: flex-end;
 }
 
 .avatar-description div p {

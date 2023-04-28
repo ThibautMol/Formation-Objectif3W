@@ -1,0 +1,46 @@
+padding c'est pour faire respirer les choses dans une section.
+le margin c'est plutôt pour faire respirer les choses entre elles. 
+
+le logo est toujours un lien qui renvoie au home. 
+
+en back on utilise de l'inter, du roboto, open sans et source sans pro en font. 
+On aura une seule font pour le back. alors qu'on a généralement 3 font pour le front.
+
+overflow-wrap : break-word : permet de définir un retour à la ligne.
+
+Le wrapper va venir bloquer le contenue dans une taille. le mieux c'est de lui mettre une max-width si on est sur la taille la plus grande de travail.
+Si on a besoin de padding/margin on va l'appliquer directement aux sections.
+on évite de donner un padding/margin au wrapper. 
+
+la partie contenant les éléments généraux du css peut être appelée "utilities"
+
+margin 0 auto permet de centrer les éléments dans le containeur.
+Comme le margin 0 auto permet d'aligner les éléments, il peut être appliqué au wrapper.
+
+le pourcentage se calcule toujours en fonction de la hauteur de l'élément.
+
+pour garder un centrage avec un padding de chaque côté sur une grande plage de taille on peut tester : 
+wrapper avec max-width et margin 0 auto sur le sections. et padding en pourcentage sur le containeur des sections.
+
+le line-height permet de créer par exemple la taille de la nav. 
+on le définit par exemple à 7rem pour avoir une nav de 70px.
+
+l'idéal pour la nav bar c'est de mettre un gap entre chaque mots. 
+
+pour clean la couleur des liens on peut faire a{color:inherit;}.
+on peut également changé la couleur des liens une fois visités.
+
+../ tu sors du dossier dans lequel tu es.
+avec ./ tu donne le chemin absolue (le chemin racine) en partant de la base du coup du dossier.
+avec ./ tu donne tout le chemin dans le serveur.
+
+en général on met les border radius en pixels car s'ils sont en rem, ils vont évoluer en fonction du zoom ou pas. 
+
+flex : 0 1 xx% donc le 0 on interdit de grossir à la case. le 1 indique qu'il peut rétrécir en dessous de la taille précisé ensuite en flex basis. 
+flex basis, shrink et grow se met dans le containeur parent mais s'applique aux enfants.
+
+gap s'applique aux lignes et colonnes. Row gap uniquement aux lignes, column gap qu'aux colones. 
+
+la modification du curseur par pour passer de flèche à main c'est surtout sur les bouton de type submit.
+
+

@@ -4,15 +4,165 @@
     box-sizing: border-box;
 }
 
-header {
-    background-color: rgb(9, 11, 25);
-    color: white;   
+html {
+    font-size: 62.5%;
 }
+
+/* UTILITIES */
 
 h1 {
     text-transform: capitalize;
 }
 
+h2 {
+    text-transform: capitalize;
+}
+
+h3 {
+    text-transform: capitalize;
+}
+
+a {
+    background-color: rgb(255, 23, 50);
+    line-height: 5rem;
+    padding: 2rem;
+    color: white;
+    border-radius: 3rem;
+}
+
 i {
     color: white;
+}
+
+.wrapper {
+    max-width: 98rem;
+    margin: 0 auto;
+}
+
+/* HEADER */
+
+header {
+    background-color: rgb(9, 11, 25);
+    color: white; 
+}
+
+body header div.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.inactive-btn {
+    background-color: rgb(27, 46, 57);
+}
+
+header nav div.card div.wrapper i {
+    align-items: baseline;
+}
+
+
+/* SECTION ARTICLES */
+
+body section.articles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+/* SECTION BROWN AND RED DIVIDE */
+
+section.divide-section-brown-red div {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+section.divide-section-brown-red div {
+    background-color: rgb(61, 49, 57);
+    color: white;
+}
+
+.divide-sectop-brown-red .box {
+    border: 1px solid white;
+    border-radius: 0.3rem;
+    gap: 2rem;
+}
+
+.box p {
+    text-transform: capitalize;
+}
+
+.red-box {
+    background-color: rgb(141, 56, 56);
+}
+
+/* SECTION WHITE AND RED DIVIDE */
+
+.remember {
+    text-align: center;
+}
+
+section.divide-section-white-red .remember p {
+    margin-top: 2rem;
+}
+
+/* SECTION AVATAR DESCRIPTION */
+
+.avatar {
+    background-color: rgb(214, 218, 233);
+}
+
+.avatar-description div p {
+    font-style: italic;
+    line-height: 3rem;
+}
+
+/* SECTION BLACK BOX */
+
+.black-box {
+    margin: 0 auto;
+}
+
+
+/* 3 colones 4 lignes */
+
+.black-box {
+    display: grid;
+    grid-template-columns: repeat (3, 1fr);
+    gap : 1rem;
+}
+
+.black-box div {
+    background-color: black;
+}
+
+/* SECTION LOGOS */
+
+.logos {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    row-gap: 5.5rem;
+}
+
+/* SECTION COMMERCE */
+
+.commerce {
+    margin: 0 auto;
+    align-items: center;
+}
+
+
+/* FOOTER */
+
+footer {
+    background-color: rgb(37, 50, 60);
+    align-items: center;
+    line-height: 5.6rem;
+}
+
+.social-networks {
+    row-gap:2.5rem;
 }

@@ -1,34 +1,160 @@
 html {
-    color: rgb(214, 211, 211);
+    font-size: 62.5%;
 }
 
-body {
-    background-color: rgb(23, 23, 23);
-    font-family: sans-serif;
+a {
+    text-decoration: none;
+    color: black;
 }
 
-h1 {
-    font-weight: 700;
-    text-align: center;
-}
-
-main {
-    padding: 0.2em 10%;
-}
-
-section {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 0.6em;
+.wrapper {
+    max-width: 82.2rem;
+    margin : 0 auto;
 }
 
 div {
-    background-color: rgb(51, 51, 51);
-    text-align: center;   
-    font-size: 0.7em;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* HEADER */
+
+.header-organisation {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+header {
+    border-bottom: solid 1px rgba(0, 0, 0, 0.507);
+}
+
+ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 2rem;
+    list-style: none;
+}
+
+nav ul li a {
+    color: rgba(0, 0, 0, 0.582);
+}
+
+.big {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+/* MAIN */
+
+.air-pods {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.test {
+
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.smaller {
+    /* max-width: 16rem; */
 }
 
 img {
-    margin-top: 1em;
-    width: 30%;
+    max-width: 50rem;
+    margin-bottom :1rem;
+     
+}
+
+h1 {
+    font-size: 4rem;
+    font-weight: 550;
+}
+
+.bottom-line {
+    border-bottom: solid 1px rgba(0, 0, 0, 0.507);
+}
+.menu {
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.582);
+}
+
+main {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.582);
+}
+
+.box-img {
+    grid-template-columns: repeat (3, 1fr);
+}
+
+.box1 {
+    grid-column: 1 / 4;
+    grid-row: 1 / 1;
+    background-image: url("/assets/img/airpods-1.png");
+}
+.box2 {
+    grid-row: 2 / 2;
+    background-image: url("/assets/img/airpods-2.png");
+}
+.box3 {
+    background-image: url("/assets/img/airpods-3.png");
+}
+.box4 {
+    background-image: url("/assets/img/airpods-4.png");
+}
+
+
+main .btn {
+    background-color: black;
+    text-transform: uppercase;
+    text-align: center;
+    max-width: 15rem;
+}
+
+main .btn a {
+    color: white;
+    line-height: 3rem;
+    font-size: 1rem;
+    
+    
+}
+
+/* SECTION OTHER PRODUCTS */
+
+.other-products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 15rem 7rem;
+    column-gap: 1.5rem;
+}
+
+
+h2 {
+    font-size: 2rem;
+}
+
+.casque {
+    background-image: url("/assets/img/casque.png");
+}
+
+.enceinte {
+    background-image: url("/assets/img/enceinte.png");
+}
+
+.montre {
+    background-image: url("/assets/img/montre.png");
+  
+}
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    text-transform: capitalize;
+    background-color: rgb(34, 34, 34);
+    line-height: 5rem;
+    color:rgba(255, 255, 255, 0.514);
 }

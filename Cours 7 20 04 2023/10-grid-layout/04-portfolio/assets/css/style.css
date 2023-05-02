@@ -67,7 +67,7 @@ header nav a {
 body header div.centrage div.card {
     display: flex;
     flex-direction: column;
-    width: 23rem;
+    max-width: 23rem;
     align-items: center; 
     margin-top: 31%;
     text-align: center;
@@ -121,7 +121,7 @@ article i {
 
 section.divide-section-brown-red {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 45% 55%;
     text-align: end;
     background-color: rgb(61, 49, 57);
     color: white;
@@ -130,23 +130,20 @@ section.divide-section-brown-red {
 section.divide-section-brown-red  div article {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    max-width: 50%;
     text-align: left;
     line-height: 2;
 }
 
 section.divide-section-brown-red  div article h3 {
-width: 12rem;
+    max-width: 12rem;
 }
 
 section.divide-section-brown-red  div article p {
-    width: 25rem;
+    max-width: 25rem;
 }
-    /* mettre des max ou min widhts 
-    pour maintenir la taille des éléments
-    retravailler les tailles en dur */
 
-.test {
+.flex-end {
     display: flex;
     justify-content: flex-end;  
 }
@@ -165,7 +162,7 @@ section.divide-section-brown-red div.box {
     align-items: center;
     padding: 2.5rem;
     border: 1px solid white;
-    width: 9rem;
+    max-width: 9rem;
     height: 7rem;
     margin-top: 2rem;
 }
@@ -184,25 +181,62 @@ section.divide-section-brown-red div.box {
 
 /* SECTION WHITE AND RED DIVIDE */
 
-.remember {
-    text-align: center;
+.divide-section-white-red {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    margin: 5rem 25%;
+    line-height: 1.5;
 }
 
-section.divide-section-white-red .remember p {
-    margin-top: 2rem;
+section.divide-section-white-red a i {
+    color: white;
+    font-size: small;
+    text-align: center;   
 }
+
 
 /* SECTION AVATAR DESCRIPTION */
 
+
+section.avatar-description {
+    display: grid;
+    grid-template-columns: 45% 55%;
+}
+
 .avatar {
-    
+    display: flex;
     background-color: rgb(214, 218, 233);
-    align-content: flex-end;
+    justify-content: flex-end;
+    padding-right: 10rem;
+}
+
+.avatar-description .description {
+    padding: 5rem;
+    color: white;
+    background-color: rgb(77, 92, 103) ;
 }
 
 .avatar-description div p {
     font-style: italic;
-    line-height: 3rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    text-align: left;
+}
+
+.avatar-description .description h4 {
+    font-size: 2.2rem;
+    font-weight: 500;
+    margin-top: 4rem;
+}
+
+.avatar-description .description h5 {
+    line-height: 4;
+    font-weight: 400;
+}
+
+.avatar-description .description h6 {
+    line-height: 2;
+    font-weight: 400;
 }
 
 /* SECTION BLACK BOX */
@@ -227,28 +261,62 @@ section.divide-section-white-red .remember p {
 /* SECTION LOGOS */
 
 .logos {
-    display: flex;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     margin: 0 auto;
-    row-gap: 5.5rem;
+    align-items: center;
+    justify-items: center;
+    height: 20rem;
+    
+    
 }
 
 /* SECTION COMMERCE */
 
 .commerce {
     margin: 0 auto;
+    background-color: rgb(9, 11, 25);
+    color: white;
     align-items: center;
+    padding: 7rem 0;
+    line-height: 2;
 }
 
+section.commerce h2 {
+    font-size: 3rem;
+    text-transform: none;
+    max-width: 50rem;
+}
+
+section.commerce .wrapper {
+    max-width: 55rem;
+} 
 
 /* FOOTER */
 
 footer {
     background-color: rgb(37, 50, 60);
-    align-items: center;
-    line-height: 5.6rem;
+    height: 10rem;
+}
+
+footer a {
+    text-decoration: none;
+    background-color: rgb(37, 50, 60);
+    
+    
 }
 
 .social-networks {
-    row-gap:2.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    column-gap:2.5rem;
+}
+
+.footer-template{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 2rem 0;
 }

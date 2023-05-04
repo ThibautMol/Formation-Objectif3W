@@ -1,0 +1,13 @@
+Dans le terminal
+
+
+cd permet de rentrer du dossier
+
+cd .. permet de sortir du dossier
+
+
+ls permet de voir le contenue du dossier dans lequel on est
+
+avec tabulation lorsqu'on écrit cd on peut passer de dossier en dossiers.
+
+cd ../.. permet de retourner au dossier racine

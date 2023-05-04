@@ -58,7 +58,7 @@ echo 'Exercice 1 V3' . PHP_EOL;
 $a=(int)readline('entrez votre a :');
 $b=(int)readline('entrez votre b :');
 
-    if ((($a>=0) and ($b>=0)) or (($a<=0) and ($b<=0))) {
+    if (($a>=0 && $b>=0) || ($a<=0 && $b<=0)) {
         echo 'le résultat est positif' . PHP_EOL;
     }
 

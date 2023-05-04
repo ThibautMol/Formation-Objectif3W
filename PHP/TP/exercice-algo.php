@@ -2,6 +2,7 @@
 
 // EXERCICE 0
 
+echo 'Exercice 0 v1' . PHP_EOL;
 $a=2;
 $b=5;
 $c=0;
@@ -11,18 +12,29 @@ $c=$a;
 $a=$b;
 $b=$c;
 
-// $b=$a;
-// $a=($b*5)/2;
+echo 'a = ' . $a . ' ' . 'b = ' . $b . PHP_EOL;
+
+echo 'Exercice 0 v2' . PHP_EOL;
+
+$a=2;
+$b=5;
+
+$b=$a;
+$a=($b*5)/2;
+
+echo 'a = ' . $a . ' ' . 'b = ' . $b . PHP_EOL;
 
 
-echo $a . ' ' . $b . PHP_EOL;
+echo 'Exercice 0 v3' . PHP_EOL;
 
+$a=2;
+$b=5;
 
-// if $a==2 and $b==5;
-//     $a=5;
-//     $b=2;
-
-// echo $a . ' ' . $b;
+if ($a==2 and $b==5){
+    $a=5;
+    $b=2;
+}
+echo 'a = ' . $a . ' ' . 'b = ' . $b . PHP_EOL;
 
 // EXERCICE 1
 
@@ -70,7 +82,7 @@ $b=(int)readline('entrez votre b :');
 
 $nbr=0;
 
-while (($nbr>20) or ($nbr<10)) {
+while ($nbr>20 || $nbr<10) {
 
     $nbr=(int)readline('entrez votre nombre :');
 

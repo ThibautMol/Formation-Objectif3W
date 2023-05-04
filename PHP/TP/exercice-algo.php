@@ -32,7 +32,7 @@ echo 'Exercice 1 V1' . PHP_EOL;
 $a=(int)readline('entrez votre a :');
 $b=(int)readline('entrez votre b :');
 
-    if ($a*$b>0) {
+    if ($a*$b>=0) {
         echo 'le résultat est positif' . PHP_EOL;
     }
 
@@ -45,7 +45,7 @@ echo 'Exercice 1 V2' . PHP_EOL;
 $a=(int)readline('entrez votre a :');
 $b=(int)readline('entrez votre b :');
 
-    if ($a*$b>0) {
+    if ($a*$b>=0) {
         echo 'le résultat est positif' . PHP_EOL;
     }
 
@@ -58,7 +58,7 @@ echo 'Exercice 1 V3' . PHP_EOL;
 $a=(int)readline('entrez votre a :');
 $b=(int)readline('entrez votre b :');
 
-    if ((($a>0) and ($b>0)) or (($a<0) and ($b<0))) {
+    if ((($a>=0) and ($b>=0)) or (($a<=0) and ($b<=0))) {
         echo 'le résultat est positif' . PHP_EOL;
     }
 
@@ -68,7 +68,7 @@ $b=(int)readline('entrez votre b :');
 
 // EXERCICE 2 
 
-
+$nbr=0;
 
 while (($nbr>20) or ($nbr<10)) {
 
@@ -78,12 +78,11 @@ while (($nbr>20) or ($nbr<10)) {
         echo 'Plus petit !' . PHP_EOL;
     }
 
-    if ($nbr<10) {
+    elseif ($nbr<10) {
         echo 'Plus grand !' . PHP_EOL;
     }
 
-    elseif {
+    else {
         echo 'C\'est gagné !' . PHP_EOL;
     }
-
 }

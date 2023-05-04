@@ -1,0 +1,104 @@
+page de connexion :
+    modifier message d'erreur
+    modifier design
+    centrer éléments
+    modifier text shadow
+
+page admin : 
+
+    absences : y'a pas de recherche par nom possible dans la liste des élèves.
+    Page nom de l'élève : 
+    Quand on met le nom en recherche on peut juste mettre présent ou en retard.
+    Absence/retards sont deux éléments séparés.
+
+    Consultation du tableau : tous les élèves sont là. Rajouter du filtre?
+
+    export excel ou csv (à vérifier)
+
+    application seulement pour les formateurs. 
+
+    trop d'absence ou de retard => génère un mail.
+
+    prof font l'appel.  ils ne peuvent pas changer si l'élève arrive en retard.
+    Ils ne peuvent pas cocher retard ils ont qu'absence. Ils doivent avoir accès au retard et le modifier.
+    Formateurs doivent pouvoir mettre "présent, absents, retard" et le modifier.
+    Il faut vérifier s'il y a un temps limité pour donner les présences.
+
+    quand le récap des absences est fait, les weekends et jours fériers sont comptés.
+    Donc faut le changer. voir pour un API basé sur un calendrier?
+    ajouter la possibilité de rajouter à la main les vacances (modification du planning).
+    Jours fériers et weekend utilisé automatiquement, régler cours du lundi au vendredi.
+    Offrir la possibilité de rajouter des exceptions pour les vacances.
+
+    Si le formateur ne remplis rien, tout le monde est compté absent. 
+    tant que le formateur n'a pas inscrit un retour présent de l'élève, il est absent.
+
+    Les profs n'ont accès qu'a leur liste d'élève. 
+    Cette liste est fait à la main. Il faudrait pouvoir faire appartenir une élève à deux classes même temporairement.
+    on a une classe générale et des options (sous classes, avec une durée?) élément d'exclusion entre les classes.
+
+    Voir pour afficher/calculer le nombre de demi journées d'absences/présences. (pas en journée) 
+
+    augmenter le temps de connexion pour rester en ligne (le virer)
+
+
+2 classes de prépa
+3 classe de bachelor cinéma (1er,2iem,3iem) 
+3 classe de game (1er,2iem,3iem)
+3 classe de programmation (1er,2iem,3iem)
+
+liste des absences : 
+    rajouter une recherche
+    rajouter des filtres (classe, absence) (ou faire un onglet par classe)
+    maintenir le filtre par dates
+    quand on clique sur une ligne on passe sur l'absence du jour pour l'éditer.
+    voir pour faire ressortir le nombre d'absences de l'élève dans la liste. on fait deux totaux absences justifiés et non justifiés
+    simplifier l'interface, synthétiser les données, rajouter l'historique totale dans la fiche de l'élève
+    rajouter num des parents et email.
+
+Retards :
+    organiser par classe
+
+Paramètres : 
+    Sert à envoyer le log
+
+Calendrier des fériers : 
+    à réutiliser et vérifier s'il est à jour.
+    voir pour l'exploiter
+
+récapitulatif des absences : 
+    n'est pas utilisé par classe
+    par contre il fautle faire par élève pour le générer.
+
+Classes définies dans la base : 
+    il faut cliquer sur le + à coté du nom pour en ajouter une
+    on a une liste de classe
+    chaque classe on a le détail des élèves dedans, et c'est facile d'en supprimer ou rajouter un
+    Détail des élèves et de leurs avertissements (virer le téléchargement des avis retards)
+    dans cette zone là on a le détail pour les élèves avec le listing individuel et leur historique donc à réexploiter.
+
+Formulaire de création de page d'élève : 
+    ne manque pas d'info
+    Voir pour l'export des éléments sous excel. 
+    on ne peut pas créer un élève sans leur donner d'affectation.
+    Donc l'élément affectation d'élève ne sert à rien en dehors de la page de création de l'élève.
+
+Appel du jour : 
+    Donne le nom du professeur et s'il a fait l'appel.
+    
+Modifier la classe d'un élève alors qu'il en a une : 
+    on doit aller sur la fiche de chaque élève.
+
+quand on clique sur la fiche classe on n'a pas le détail des élèves,
+il n'y a pas de possibilité d'ajouter une classe
+le nom de la classe est modifiable donc faut sécuriser ça.
+
+Créer un bouton qui permet de faire passer une classe dans une autre (upgrade).
+quand un élève fini une année, avec une date de sortie ça les fait monter dans la classe supérieure.
+Si pas de classe supérieure, l'élève disparait tout cour. 
+
+contact@objectif3d.com
+
+organigrame des classes sera transmis par mail à Damien.
+
+

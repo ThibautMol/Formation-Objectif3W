@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300i,400,600,700,800|Oswald:300,400,500,600,700&display=swap');
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans',Arial, Helvetica, sans-serif;
+}
+
+html{
+  font-size: 62.5%;
+}
+
+ul{
+  list-style-type: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+
+.container{
+  max-width: 114rem;
+  margin: 0 auto;
+}
+
+
+/* ---- HEADER ---- */
+
+header{
+  background-color: #000;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  padding: 3.2rem 2rem;
+}
+
+header nav.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img{
+  display: block;
+}
+
+header nav .menu{
+  display: flex;
+  gap: 4.8rem;
+}
+
+.menu li a{
+  display: block;
+  line-height: 10rem;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  color: #606060;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+.menu li a:hover{
+  color: #576b8c;
+}
+
+/* HERO BANNER */
+.hero-banner{
+  background: url('../img/backdrop.jpg') no-repeat center center/cover;
+  /* background-size: cover; */
+  background-attachment: fixed;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 20rem 2rem;
+
+}
+
+.hero-banner h1{
+  font-family: "Oswald", Arial, Helvetica, sans-serif;
+  font-size: 12rem;
+  line-height: 1.2;
+  margin-bottom: .8rem;
+  text-shadow: 0 4px 40px rgba(0, 0, 0, 0.85);
+}
+
+.hero-banner p{
+  font-size: 1.6rem;
+  letter-spacing: 2px;
+  margin-bottom: 3.2rem;
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.75);
+}
+
+.cta{
+  display: inline-block;
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  padding: 2.4rem;
+  color: #fff;
+  background-color: rgba(255, 255, 255, .2);
+}
+
+.cta:hover{
+  background-color: rgba(255, 255, 255, .4);
+}
+
+/* GAMES */
+.games{
+  background-color: #292d33;
+  padding: 6rem 2rem;
+}
+
+.games .container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5.8rem;
+}
+
+.games .container a {
+  display: block;
+}
+
+.games .container a img{
+  max-height: 7.5rem;
+  max-width: 100%;
+}
+
+/* FOOTER */
+footer{
+  background-color: #191919;
+  padding: 4.8rem 2rem;
+}
+
+footer nav{
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.logo-footer a{
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 2.4rem;
+}
+
+.menu-footer{
+  display: flex;
+  justify-content: space-between;
+  gap: 8rem;
+}
+
+
+
+.menu-footer h4{
+  text-transform: uppercase;
+  color: #666;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  font-weight: 600;
+}
+
+.menu-footer div a{
+  display: block;
+  text-transform: capitalize;
+  color: #999;
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 2.4rem;
+}
+
+.menu-footer div a:hover{
+  color: #576b8c;
+  text-decoration: underline;
+}
+
+
+@media (max-width: 120rem){
+
+  header nav.container {
+    flex-direction: column;
+  }
+  header nav.container a {
+    line-height: 5rem;
+  }
+
+  .hero-banner h1{
+    font-size: 4.8rem;
+  }
+
+}
+
+@media (max-width: 50rem){
+
+  header nav.container ul {
+    display: none;
+  }
+
+  .cta{
+    background-color:  rgba(0, 0, 0, 0.5);
+  }
+
+  .games .container, footer nav{
+    flex-direction: column;
+  }
+
+  footer nav{
+    row-gap: 2.4rem;
+  }
+
+  .menu-footer{
+    display: flex;
+    justify-content: space-around;
+    gap: 8rem;
+  }
+  
+
+}

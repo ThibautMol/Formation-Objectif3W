@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>Flexbox</title>
+</head>
+<body>
+  <header>
+    <h1>Flexbox</h1>
+  </header>
+
+  <main>
+
+    <h2>Propriètés pour le parent (Flex-container)</h2>
+
+    <section>
+      <h3>display</h3>
+      <p>Utilisation du display</p>
+      <div class="example">
+        <h4>display: flex</h4>
+        <div class="container display-flex">
+          <div class="item">1</div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+          <div class="item">4</div>
+          <div class="item">5</div>
+          <div class="item">6</div>
+        </div>
+      </div>
+      <div class="example">
+        <h4>display: inline-flex</h4>
+        <div class="container display-inline-flex">
+          <div class="item">1</div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+          <div class="item">4</div>
+          <div class="item">5</div>
+          <div class="item">6</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h3>flex-direction</h3>
+      <p>Choix de l'axe principal</p>
+      <div class="example">
+        <h4>flex-direction: row (valeur par défault)</h4>
+        <div class="container display-flex">
+          <div class="item">1</div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+          <div class="item">4</div>
+          <div class="item">5</div>
+          <div class="item">6</div>
+        </div>
+      </div>
+      <div class="example">
+        <h4>flex-direction: row-reverse</h4>
+        <div class="container display-flex fd-row-reverse">
+          <div class="item">1</div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+          <div class="item">4</div>
+          <div class="item">5</div>
+          <div class="item">6</div>
+        </div>
+      </div>
+      <div class="example">
+        <h4>flex-direction: column </h4>
+        <div class="container display-flex fd-column">
+          <div class="item">1</div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+        </div>
+      </div>
+      <div class="example">
+        <h4>flex-direction: column-reverse</h4>
+        <div class="container display-flex  fd-column-reverse">
+          <div class="item">1</div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h3>flex-wrap</h3>
+      <p>Contient/entoure ou non les éléments s'ils n'ont pas la place de tenir sur une seule ligne.</p>
+      <div class="example">
+        <h4>flex-wrap: nowrap (valeur par défault)</h4>
+        <div class="container display-flex fw-nowrap">
+          <div class="item">1</div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+          <div class="item">4</div>
+          <div class="item">5</div>
+          <div class="item">6</div>
+        </div>
+      </div>
+      <div class="example">
+        <h4>flex-wrap: wrap</h4>
+        <div class="container display-flex fw-wrap">
+          <div class="item">1</div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+          <div class="item">4</div>
+          <div class="item">5</div>
+          <div class="item">6</div>
+        </div>
+      </div>
+      <div class="example">
+        <h4>flex-wrap: wrap-reverse</h4>
+        <div class="container display-flex fw-wrap-reverse">
+          <div class="item">1</div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+          <div class="item">4</div>
+          <div class="item">5</div>
+          <div class="item">6</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h3>flex-flow</h3>
+      <p>Super proprièté qui réuni le flex-direction et le flex wrap</p>
+      <div class="example">
+        <h4>flex-flow: row nowrap (valeur par défault)</h4>
+        <div class="container display-flex fw-nowrap">
+          <div class="item">1</div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+          <div class="item">4</div>
+          <div class="item">5</div>
+          <div class="item">6</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h3>justify-content</h3>
+      <p>Définit l'alignement sur l'axe principal. Tente de distribuer l'espace supplémentaire sur l'ace principal</p>
+      <div class="example">
+        <h4>justify-content: flex-start (valeur par défault)</h4>
+        <div class="container display-flex jc-flex-start">
+          <div class="item">1</div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+          <div class="item">4</div>
+          <div class="item">5</div>
+          <div class="item">6</div>
+        </div>
+      </div>
+
+      <div class="example">
+        <h4>justify-content: flex-end </h4>
+        <div class="container display-flex jc-flex-end">
+          <div class="item">1</div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+          <div class="item">4</div>
+          <div class="item">5</div>
+          <div class="item">6</div>
+        </div>
+      </div>
+
+      <div class="example">
+        <h4>justify-content: center </h4>
+        <div class="container display-flex jc-center">
+          <div class="item">1</div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+          <div class="item">4</div>
+          <div class="item">5</div>
+          <div class="item">6</div>
+        </div>
+      </div>
+
+      <div class="example">
+        <h4>justify-content: space-between </h4>
+        <div class="container display-flex jc-space-between">
+          <div class="item">1</div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+          <div class="item">4</div>
+          <div class="item">5</div>
+          <div class="item">6</div>
+        </div>
+      </div>
+      
+      <div class="example">
+        <h4>justify-content: space-around </h4>
+        <div class="container display-flex jc-space-around">
+          <div class="item">1</div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+          <div class="item">4</div>
+          <div class="item">5</div>
+          <div class="item">6</div>
+        </div>
+      </div>
+
+      <div class="example">
+        <h4>justify-content: space-evenly </h4>
+        <div class="container display-flex jc-space-evenly">
+          <div class="item">1</div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+          <div class="item">4</div>
+          <div class="item">5</div>
+          <div class="item">6</div>
+        </div>
+      </div>
+
+    </section>
+
+    <section>
+      <h3>align-items</h3>
+      <p>Détermine commment les éléments sont disposés sur l'axe secondaire</p>
+      <div class="example">
+        <h4>align-items: stretch (valeur par défault)</h4>
+        <div class="container display-flex ai-stretch">
+          <div class="item">1</div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+          <div class="item">4</div>
+          <div class="item">5</div>
+          <div class="item">6</div>
+        </div>
+      </div>
+
+      <div class="example">
+        <h4>align-items: flex-start</h4>
+        <div class="container display-flex ai-flex-start">
+          <div class="item">1</div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+          <div class="item">4</div>
+          <div class="item">5</div>
+          <div class="item">6</div>
+        </div>
+      </div>
+
+      <div class="example">
+        <h4>align-items: flex-end</h4>
+        <div class="container display-flex ai-flex-end">
+          <div class="item">1</div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+          <div class="item">4</div>
+          <div class="item">5</div>
+          <div class="item">6</div>
+        </div>
+      </div>
+
+      <div class="example">
+        <h4>align-items: center</h4>
+        <div class="container display-flex ai-center">
+          <div class="item">1</div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+          <div class="item">4</div>
+          <div class="item">5</div>
+          <div class="item">6</div>
+        </div>
+      </div>
+
+      <div class="example">
+        <h4>align-items: baseline</h4>
+        <div class="container display-flex ai-baseline">
+          <div class="item">1</div>
+          <div class="item f-s-50">2</div>
+          <div class="item">3</div>
+          <div class="item">4</div>
+          <div class="item">5</div>
+          <div class="item">6</div>
+        </div>
+      </div>
+    </section>
+
+
+    <section>
+      <h3>align-content</h3>
+      <p>A un effet qu'avec plus d'une ligne de contenu. Les exemples présentés ici utilisent le flex-wrap</p>
+      <div class="example">
+        <h4>align-content: stretch (valeur par défault)</h4>
+        <div class="container display-flex fw-wrap ac-stretch">
+          <div class="item">1</div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+          <div class="item">4</div>
+          <div class="item">5</div>
+          <div class="item">6</div>
+        </div>
+      </div>
+
+      <div class="example">
+        <h4>align-content: flex-start</h4>
+        <div class="container display-flex fw-wrap ac-flex-start">
+          <div class="item">1</div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+          <div class="item">4</div>
+          <div class="item">5</div>
+          <div class="item">6</div>
+        </div>
+      </div>
+
+      <div class="example">
+        <h4>align-content: flex-end</h4>
+        <div class="container display-flex fw-wrap ac-flex-end">
+          <div class="item">1</div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+          <div class="item">4</div>
+          <div class="item">5</div>
+          <div class="item">6</div>
+        </div>
+      </div>
+
+      <div class="example">
+        <h4>align-content: center</h4>
+        <div class="container display-flex fw-wrap ac-center">
+          <div class="item">1</div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+          <div class="item">4</div>
+          <div class="item">5</div>
+          <div class="item">6</div>
+        </div>
+      </div>
+
+      <div class="example">
+        <h4>align-content: space-between</h4>
+        <div class="container display-flex fw-wrap ac-space-between">
+          <div class="item">1</div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+          <div class="item">4</div>
+          <div class="item">5</div>
+          <div class="item">6</div>
+        </div>
+      </div>
+
+      <div class="example">
+        <h4>align-content: space-around</h4>
+        <div class="container display-flex fw-wrap ac-space-around">
+          <div class="item">1</div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+          <div class="item">4</div>
+          <div class="item">5</div>
+          <div class="item">6</div>
+        </div>
+      </div>
+
+      <div class="example">
+        <h4>align-content: space-evenly</h4>
+        <div class="container display-flex fw-wrap ac-space-evenly">
+          <div class="item">1</div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+          <div class="item">4</div>
+          <div class="item">5</div>
+          <div class="item">6</div>
+        </div>
+      </div>
+
+      
+    </section>
+
+
+  </main>
+</body>
+</html>

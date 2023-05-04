@@ -1,0 +1,386 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;700&display=swap');
+
+/* RESET */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: none; 
+}
+
+/* GENERAL */
+
+html {
+    font-size: 62.5%;     
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: white;
+    color: black;
+    font-family: 'Barlow';
+    line-height: 1.5;
+    text-transform: capitalize;
+}
+
+a {
+    color:rgba(255, 255, 255, 1);
+    background-color: rgba(232, 63, 67, 1);
+    ;
+    height: 6rem;
+    width: 15.9rem;
+    font-size: 2rem;
+    font-weight: 700;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 0.2rem;
+}
+
+ul, li {
+    list-style-type: none;
+}
+
+p {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 8rem;
+}
+
+h2 {
+    color: rgba(33, 52, 66, 1);
+    font-size: 5.6rem;
+    line-height: 5.8rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    margin-top: 10rem;
+}
+
+h5 {
+
+    font-weight: 700;
+    font-size: 2rem;
+    margin-top: 2.4rem;
+    margin-bottom: 2rem;
+}
+
+img {
+    margin: 0 auto;
+}
+
+.wrapper {
+    margin: 0 13.54%;
+    width: 140rem;
+    padding:0 26rem;
+}
+
+/* HEADER */
+
+header {
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    right: 0;
+    background-color: rgb(255, 255, 255);
+    
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav p {
+    margin: 0;
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: rgba(0,8,41,1);
+}
+header nav p span {
+    font-weight: 700;
+    color: rgba(232,63,67,1);
+}
+
+header nav .menu {
+    display: flex;
+    font-size: 1.8rem;
+    gap: 3.2rem;
+    color : rgba(33,52,66,1)
+}
+
+header nav div ul li a {
+    background-color: white;
+    color: black;
+    height: 6rem;
+    width: 15.9rem;
+    font-size: 2rem;
+    font-weight: 700;
+    cursor: pointer;
+    text-align: center;   
+}
+
+.active, .menu li a:hover {
+    color: rgba(232,63,67,1);
+}
+
+
+/* HERO BANNER */
+
+.hero-banner {
+    display: flex;
+    background:url(/assets/img/hero-bkg.png) no-repeat center center / cover;
+    background-image: cover;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+article {
+    max-width: 40%;
+}
+
+
+.hero-banner article {
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 0.5rem;
+    padding : 3.2rem;
+}
+
+.hero-banner article h1 {
+    font-size: 6.4rem;
+    font-weight: 700;
+    color:rgba(33, 52, 66, 1);
+}
+
+.hero-banner article p {
+    font-size: 2.4rem;
+    text-align: left;
+}
+
+.hero-banner article a {
+    color:rgba(255, 255, 255, 1);
+    background-color: rgba(232, 63, 67, 1);
+    font-size: 2rem;
+    padding: 1.5rem 3.2rem;
+    font-weight: 700;
+}
+
+.hero-banner article a:hover {
+    background-color: rgba(197, 49, 53, 1);
+}
+
+/* SECTION OUR TRIPS */
+
+.trips {
+    display: flex;
+    padding: 0%;
+    gap: 6rem;
+}
+
+.trip {
+    position: relative;
+    width: 47%;
+}
+
+.our-trips h3 {
+    position: absolute;
+    bottom: 10.8rem;
+    left: 41.2rem;
+}
+
+.our-trips a {
+    position: absolute;
+    padding: 1.5rem 3.2rem;
+    bottom: 3.2rem;
+    left: 45.7rem;
+}
+
+.our-trips .trips .trip a:hover {
+    background-color: rgba(197, 49, 53, 1);
+}
+
+
+.our-trips .trips {
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-basis: 50%; */
+}
+
+.our-trips .trips h3 {
+    color: rgba(255, 255, 255, 1);
+    font-weight: 700;
+    font-size: 3.6rem;
+}
+
+.our-trips .trips a {
+    color:rgba(255, 255, 255, 1);
+    background-color: rgba(232, 63, 67, 1);
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+/* SECTION WHERE WOULD YOU LIKE TO GO */
+
+.destinations {
+    display: flex;
+    flex-wrap: wrap;
+}
+.like-to-go .destination {
+    position: relative;
+    text-align: center;
+    max-width: 25%;
+
+}
+
+.like-to-go .destination .destination-info {
+    position: absolute;
+    display: block;
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(0, 0, 0, 0.6); 
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 7.6rem;
+}
+
+section.like-to-go a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 9rem;
+    padding: 1.5rem 3.2rem;
+}
+
+section.like-to-go  a:hover {
+    background-color: rgba(197, 49, 53, 1);
+}
+
+
+
+/* SECTION WE TAKE CARE OF EVERYTHING */
+
+.take-care-everything {
+    display: flex;
+    text-align: center;
+    gap:3.2rem;
+}
+
+.take-care-everything p {
+    font-size: 1.6rem;
+}
+
+ i {
+    font-size: 5rem;
+    display: inline-block;
+    width: 5.625rem;
+    line-height: 13rem;
+    color: rgba(232, 63, 67, 1);
+}
+
+/* SECTION WIN A FREE TRIP */
+
+.win-trip {
+    text-align: center;
+    margin: 10rem 0;
+}
+
+form {
+   display: flex;
+   justify-content: center;
+   gap: 4rem;
+}
+
+
+input {
+    background-color: rgba(233, 235, 237, 1);
+    height: 6rem;
+    width: 43.2rem;
+    line-height: 1.5;
+    font-size: 2rem;
+    padding-left: 1rem;
+}
+
+section.win-trip form a {
+    padding: 1.5rem 3.2rem;
+}
+
+section.win-trip form a:hover {
+    background-color: rgba(197, 49, 53, 1);
+}
+
+
+/* FOOTER */
+
+footer {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    background-color: rgba(33, 52, 66, 1);
+    color: rgba(255, 255, 255, 1);
+    height: 9rem;
+    padding :3.3rem 0;
+}
+
+
+/* RESPONSIVE IPHONE XR */
+@media all and (max-width:415px) {
+
+ * {
+    margin: 0 0;
+    padding: 0 0;
+ }
+
+ h2 {
+    text-align: left;
+ }
+
+ h5 {
+    text-align: left;
+ }
+
+ p {
+    text-align: left;
+ }
+
+.wrapper {
+    width: 100%;
+}
+.trips .wrapper {
+    margin: 0 auto;
+    padding: 0 auto;
+}
+
+html {
+    font-size: 0.2em;
+}
+
+img {
+    size:20%;
+}
+
+.our-trips .trips {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.destinations {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.like-to-go {
+    margin: 0 auto;
+}
+
+header {
+    padding: 0;
+    margin: 0;
+}
+}

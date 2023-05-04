@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&family=Montserrat:wght@400;700&display=swap');
+
+/* RESET */
+*,*::before, *::after{
+  box-sizing: border-box;
+}
+
+*{
+  margin: 0;
+}
+
+html, body{
+  height: 100%;
+}
+
+body{
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Montserrat', sans-serif;
+  color: #213442;
+}
+
+::selection{
+    background-color: #E83F43;
+}
+
+
+img,picture,video,canvas,svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,button, textarea, select{
+  font: inherit;
+}
+
+p, h1,h2,h3,h4,h5,h6{
+  overflow-wrap: break-word;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Barlow', sans-serif;
+    font-weight: 700;
+    text-transform: capitalize;
+    line-height: 1.2;
+}
+
+ul{
+  padding: 0;
+  list-style-type: none;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ---- UTILITIES ----  */
+html{
+  font-size: 62.5%;
+}
+
+.wrapper{
+  max-width: 140rem;
+  margin: 0 auto;
+}
+
+section{
+    padding: 10rem 4rem;
+    text-align: center;
+}
+
+.btn{
+    background-color: #E83F43;
+    display: inline-block;
+    line-height: 6rem;
+    padding: 0 3.2rem;
+    font-weight: 700;
+    color: #fff;
+    border-radius: 3px;
+    font-size: 2rem;
+    text-transform: capitalize;
+}
+
+.btn:hover{
+    background-color: #C53135;
+}
+
+.title{
+    font-size: 5.6rem;
+    margin-bottom: 2rem;
+}
+
+.sub-title{
+    font-size: 2rem;
+    margin-bottom: 8rem;
+}
+
+/* --- HEADER ----  */
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, .04);
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 100;
+    padding: 0 4rem;
+}
+
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 7rem;
+    text-transform: capitalize;
+}
+
+.logo span, .active, header nav ul li a:hover{
+    color: #E83F43;
+}
+
+header nav ul {
+    display: flex;
+    gap: 3.2rem;
+}
+
+header nav ul li a {
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 2.2rem;
+    text-transform: capitalize;
+}
+
+/* ----- HERO BANNER ---- */
+.hero-banner{
+    background: url('../img/hero-bkg.png') no-repeat center center / cover;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-banner article {
+    background-color: rgba(255, 255, 255, .7);
+    text-align: left;
+    border-radius: 6px;
+    padding: 3.2rem;
+    /* flex : flex-grow flex-shrink flex-basis */
+    flex: 0 1 46%;
+    /* width: 51%; */
+}
+
+.hero-banner article h1 {
+    font-size: 6.4rem;
+    margin-bottom: 2rem;
+}
+
+.hero-banner article p {
+    font-size: 2.4rem;
+    margin-bottom: 4rem;
+}
+
+
+/* ---- TRIPS ---- */
+.trips .wrapper{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12rem;
+}
+
+.trip{
+    position: relative;
+    text-align: right;
+}
+
+.trip img {
+    border-radius: 6px;
+}
+
+.trip div{
+    position: absolute;
+    right: 3.2rem;
+    bottom: 3.2rem;
+}
+.trip div h3{
+    font-size: 3.6rem;
+    margin-bottom: 1.6rem;
+    color: #fff;
+}
+
+/* ---- DESTINATIONS ---- */
+.destinations{
+    padding: 10rem 0;
+}
+
+.destinations .blog{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 9rem;
+}
+
+.destination {
+    flex: 0 1 25% ;
+}
+
+.destinations .blog .destination article{
+    position: relative;
+}
+
+.destinations .destination div{
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: #fff;
+    padding: 1.6rem;
+}
+
+.destinations .destination div h3{
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+.destinations .destination div h4{
+    font-size: 1.8rem;
+    font-weight: 400;
+    letter-spacing: 4px;
+}
+
+/* ---- SERVICES ---- */
+
+.services .wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3.2rem;
+}
+
+.services .wrapper .service i{
+    font-size: 5rem;
+    color: #E83F43;
+    margin-bottom: 2.4rem;
+}
+
+.services .wrapper .service h3{
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+.services .wrapper .service p{
+    font-size: 1.6rem;
+}
+
+/* ----- LOTTERY ---- */
+
+
+.lottery form {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 40%;
+}
+
+.lottery form input[type="email"]{
+    border: none;
+    margin-right: 4rem;
+    background-color: #E9EBED;
+    border-radius: 3px;
+    line-height: 6rem;
+    width: 43.2rem;
+    padding: 0 1.6rem;
+    color: #4D5D68;
+    font-size: 2rem;
+    text-transform: capitalize;
+}
+
+.lottery form input[type="email"]:focus{
+    outline-color: #E83F43!important;
+}
+
+.lottery form .btn{
+    border: none;
+    cursor: pointer;
+}
+
+/* ---- FOOTER ---- */
+footer{
+    background-color: #213442;
+    color: #fff;
+    text-align: center;
+    line-height: 9rem;
+}
+footer p {
+    font-size: 1.6rem;
+}

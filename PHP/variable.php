@@ -76,7 +76,14 @@ function toto ($p1, $p2) {};
 // Une constante peut être aussi un tableau depuis PHP7
 
 // Operateurs : 
-// + addition - calcule la somme - $a+$b 
+// + addition - calcule la somme - $a+$b
+// - soustraction - calcule la différence - $a - $b
+// * multiplication - calcule le produit - $a*$b
+// ** puissance - calcule la puissance - $a**$b
+// / division - calcule le quotient - $a/$b
+//  % modulo - calcule du reste - $a%$b
+
+
 // echo $a+$b donnera 5
 // on peut faire une somme avec une variable $B='3adae'
 // le calcul sera quand même fait, il mettra un warning en plus

@@ -1,0 +1,402 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #222;
+  font-family: 'Inter', sans-serif;
+}
+
+ul{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+html{
+  font-size: 62.5%;
+}
+
+body{
+  background-color: #eee;
+}
+
+header{
+  background-color: #fff;
+  border-bottom: 1px solid rgba(0,0,0, .1);
+}
+
+h1{
+  font-size: 4.8rem;
+  line-height: 8rem;
+  text-align: center;
+}
+
+main{
+  max-width: 160rem;
+  margin: 0 auto;
+}
+
+h2{
+  font-size: 3.2rem;
+  font-weight: bold;
+  margin: 3.2rem;
+}
+
+section{
+  background-color: #fff;
+  margin: 3.2rem;
+  padding: 2.4rem;
+  border: 1px solid rgba(0,0,0, .1);
+}
+
+h3{
+  font-size: 2.4rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 1rem;
+}
+
+p{
+  font-size: 2rem;
+  font-weight: 400;
+  margin: 1rem;
+}
+
+.example{
+  margin: 4rem 1rem;
+}
+
+h4{
+  font-size: 2.4rem;
+  font-weight: 500;
+  margin: .8rem;
+}
+
+.container{
+  padding: 1.6rem;
+  background-color: #eee;
+}
+
+.item{
+  font-size: 5rem;
+  text-shadow: 3px 3px 0 rgba(0,0,0, .2);
+  background-color: #e72264;
+  color: #fff;
+  padding: 1rem;
+  border: 5px solid rgba(0,0,0, .1);
+  text-align: center;
+}
+
+/* DISPLAY */
+.display-grid{
+  display: grid;
+}
+.display-inline-grid{
+  display: inline-grid;
+}
+
+/* GRID-TEMPLATE */
+.grid-template-columns{
+  grid-template-columns: 100px 200px 300px;
+}
+.grid-template-rows{
+  grid-template-rows: 100px 200px;
+}
+
+.grid-template{
+  grid-template-columns: 100px auto 20%;
+  grid-template-rows: auto 150px;
+}
+
+.grid-template-fr{
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.grid-template-repfr{
+  grid-template-columns: repeat(3,  1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.grid-template-minmax{
+  grid-template-columns: repeat(3, minmax(200px, 1fr));
+  grid-template-rows: minmax(100px, 1fr) 2fr;
+}
+
+/* GAP */
+.gap1{
+  column-gap: 2rem;
+  row-gap: 1rem;
+}
+
+.gap2{
+  gap: 1rem 2rem;
+  /* gap: row column; */
+}
+
+.gap3{
+  gap: 2rem;
+}
+
+/* AUTO-FIT */
+.grid-template-autofit{
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+}
+
+/* JUSTIFY-CONTENT */
+
+.justify-content-start{
+  justify-content: start;
+  grid-template-columns: repeat(3,100px);
+}
+
+.justify-content-end{
+  justify-content: end;
+  grid-template-columns: repeat(3,100px);
+}
+
+.justify-content-center{
+  justify-content: center;
+  grid-template-columns: repeat(3,100px);
+}
+
+.justify-content-space-around{
+  justify-content: space-around;
+  grid-template-columns: repeat(3,100px);
+}
+
+.justify-content-space-between{
+  justify-content: space-between;
+  grid-template-columns: repeat(3,100px);
+}
+
+.justify-content-space-evenly{
+  justify-content: space-evenly;
+  grid-template-columns: repeat(3,100px);
+}
+
+/* ALIGN-CONTENT */
+
+.align-content-start{
+  align-content: start;
+  grid-template-columns: repeat(3,100px);
+  grid-template-rows: repeat(2,100px);
+  min-height: 40rem;
+}
+
+.align-content-end{
+  align-content: end;
+  grid-template-columns: repeat(3,100px);
+  grid-template-rows: repeat(2,100px);
+  min-height: 40rem;
+}
+
+.align-content-center{
+  align-content: center;
+  grid-template-columns: repeat(3,100px);
+  grid-template-rows: repeat(2,100px);
+  min-height: 40rem;
+}
+
+.align-content-space-around{
+  align-content: space-around;
+  grid-template-columns: repeat(3,100px);
+  grid-template-rows: repeat(2,100px);
+  min-height: 40rem;
+}
+
+.align-content-space-between{
+  align-content: space-between;
+  grid-template-columns: repeat(3,100px);
+  grid-template-rows: repeat(2,100px);
+  min-height: 40rem;
+}
+
+.align-content-space-evenly{
+  align-content: space-evenly;
+  grid-template-columns: repeat(3,100px);
+  grid-template-rows: repeat(2,100px);
+  min-height: 40rem;
+}
+
+/* JUSTIFY-ITEMS */
+.justify-items-stretch{
+  justify-items: stretch;
+}
+
+.justify-items-start{
+  justify-items: start;
+}
+
+.justify-items-end{
+  justify-items: end;
+}
+
+.justify-items-center{
+  justify-items: center;
+}
+
+/* ALIGN-ITEMS */
+.align-items-stretch{
+  align-items: stretch;
+  min-height: 40rem;
+}
+
+.align-items-start{
+  align-items: start;
+  min-height: 40rem;
+}
+
+.align-items-end{
+  align-items: end;
+  min-height: 40rem;
+}
+
+.align-items-center{
+  align-items: center;
+  min-height: 40rem;
+}
+
+/* GRID AUTO FLOW */
+.grid-auto-flow-column{
+  grid-auto-flow: column;
+}
+
+.grid-auto-flow-dense{
+  grid-auto-flow: dense;
+}
+
+.item-dense1{
+  grid-column: span 2;
+}
+
+.item-dense4{
+  grid-column: 3 / 4;
+  grid-row: span 2;
+}
+
+
+/* GRID TEMPLATE AREAS */
+.grid-template-areas{
+  grid-template-columns: repeat(3, minmax(200px, 1fr));
+  grid-template-rows: 1fr 2fr 1fr;
+  grid-template-areas: "header header header"
+                       "content . aside"
+                       "footer footer footer";
+}
+
+.item-header{
+  grid-area: header;
+}
+
+.item-content{
+  grid-area: content;
+}
+
+.item-aside{
+  grid-area: aside;
+}
+
+.item-footer{
+  grid-area: footer;
+}
+
+
+
+/* ITEMS */
+
+/* ORDER */
+.order1{
+  order: 1; 
+}
+.order2{
+  order: 2; 
+}
+.order3{
+  order: 3; 
+}
+.order4{
+  order: 4; 
+}
+.order5{
+  order: 5; 
+}
+.order6{
+  order: 6; 
+}
+
+/* GRID COLUMN */
+
+.grid-column1{
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.grid-column2{
+  grid-column: 2 / 4;
+}
+
+.grid-column3{
+  /* grid-column: 1 / 4; */
+  /* grid-column: 1 / span 3; */
+  grid-column: 1 / -1;
+}
+
+/* GRID ROW */
+
+.grid-row1{
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.grid-row2{
+  grid-row: 2 / 4;
+}
+
+.grid-row3{
+  grid-row: 1 / span 3;
+
+}
+
+/* JUSTIFY-SELF */
+.justify-self-stretch {
+    justify-self: stretch;
+}
+
+.justify-self-start {
+    justify-self: start;
+}
+
+.justify-self-end {
+    justify-self: end;
+}
+
+.justify-self-center {
+    justify-self: center;
+}
+
+/* ALIGN-SELF */
+
+.grid-template-align-self{
+  grid-template-rows: 300px auto auto;
+  grid-template-columns: 200px auto auto;
+}
+
+.align-self-stretch {
+    align-self: stretch;
+}
+
+.align-self-start {
+    align-self: start;
+}
+
+.align-self-end {
+    align-self: end;
+}
+
+.align-self-center {
+    align-self: center;
+}

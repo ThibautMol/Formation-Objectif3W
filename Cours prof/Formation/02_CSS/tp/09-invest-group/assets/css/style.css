@@ -1,0 +1,314 @@
+@import url('https://fonts.cdnfonts.com/css/satoshi');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    /* Par default 1rem = 16px; */
+    /* font-size à 62.5% pour avoir 1rem = 10px */
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #fff;
+    color: #666B7F;
+    font-family: 'Satoshi', sans-serif;
+    line-height: 1.5;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style-type: none;
+}
+
+.wrapper{
+    max-width: 140rem;
+    margin: 0 auto;
+}
+
+.title{
+    font-size: 4.8rem;
+    font-weight: 700;
+    text-transform: capitalize;
+    margin-bottom: 2rem;
+}
+
+.text{
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    margin-bottom: 8rem;
+}
+
+
+/* ---- HEADER ----  */
+header{
+    background-color: #fff;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, .04);
+    padding: 0 4.8rem;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav .menu{
+    display: flex;
+    gap: 3.2rem;
+}
+
+header nav .menu a {
+    display: block;
+    line-height: 7rem;
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #666B7F;
+}
+
+header nav .menu a img{
+    display: block;
+}
+
+header nav .menu a:hover {
+    color: #000829;
+}
+
+
+/* ---- HERO BANNER ---- */
+.hero-banner{
+    background: url('../img/hero-bkg.png') no-repeat center center / cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 4.8rem;
+}
+
+.hero-banner article{
+    padding-right: 40%;
+}
+
+.hero-banner article h1{
+    font-size: 6.4rem;
+    font-weight: 700;
+    text-transform: capitalize;
+    color: #000829;
+    margin-bottom: 2rem;
+    line-height: 1.2;
+}
+
+.hero-banner article p{
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 4rem;
+    line-height: 1.2;
+}
+
+.primary-btn{
+    display: inline-block;
+    background-color: #25db87;
+    color: #fff;
+    border-radius: 3px;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 6rem;
+    padding: 0 3.2rem;
+}
+
+.primary-btn:hover{
+    background-color: #41ff6e;
+}
+
+/* ---- SERVICES ---- */
+
+.services{
+    padding: 12rem 4.8rem;
+    text-align: center;
+}
+
+.services .wrapper{
+    display: flex;
+    gap:3.5rem;
+}
+
+.service i{
+    font-size: 5rem;
+    display: inline-block;
+    width: 13rem;
+    line-height: 13rem;
+    color: #25db87;
+    background-color: #d3f8e7;
+    border-radius: 20rem;
+    margin-bottom: 2.4rem;
+}
+
+.service h3{
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.service p{
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+/* ---- ABOUT --- */
+.about{
+    display: flex;
+}
+
+.about img{
+    width: 50%;
+}
+
+.about-content{
+    padding: 14.5rem 4.8rem;
+    width: 50%;
+}
+
+
+/* ---- CLIENTS ---- */
+.clients{
+    padding: 12rem 4.8rem;
+    text-align: center;
+}
+
+.clients .wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    flex-wrap: wrap;
+    row-gap: 4rem;
+}
+
+/* ---- CONTACT ---- */
+.contact{
+    padding: 12rem 4.8rem;
+    background-color: #f6f6f6;
+    text-align: center;
+}
+
+.contact form {
+    width: 40%;
+    margin: 0 auto;
+}
+
+.form-group label{
+    display: block;
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: .4rem;
+    text-align: left;
+}
+
+.form-group input{
+    display: block;
+    background-color: #d9d9d9;
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin-bottom: 3.2rem;
+    line-height: 5.4rem;
+    padding: 0 1.6rem;
+    width: 100%;
+    border-style: none;
+}
+
+.form-group textarea{
+    display: block;
+    background-color: #d9d9d9;
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin-bottom: 3.2rem;
+    padding: 1.6rem;
+    width: 100%;
+    border-style: none;
+}
+
+.contact .primary-btn{
+    border-style: none;
+    display: block;
+    width: 100%;
+    cursor: pointer;
+}
+
+/* ---- FOOTER ---- */
+footer{
+    text-align: center;
+    background-color: #000829;
+}
+
+footer p{
+    line-height: 9rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #fff;
+}
+
+
+/* MEDIA QUERIES */
+
+
+@media (max-width: 599px){
+
+    .title{
+        font-size: 4rem;
+    }
+
+    /* header */
+
+    header {
+        display: flex;
+        height: 7rem;
+    }
+
+    header nav .menu{
+        display: none;
+    }
+
+    /* hero-banner */
+    .hero-banner article {
+        padding-right: 0;
+    }
+
+    .hero-banner article h1{
+        font-size: 4.8rem;
+    }
+
+    /* services */
+    .services .wrapper, .about, .clients .wrapper{
+        flex-direction: column;
+    }
+
+    /* about */
+    .about img, .about-content{
+        width: 100%;
+    }
+
+    /* clients */
+    .clients .wrapper{
+        row-gap: 4rem;
+    }
+    .clients .wrapper img{
+        width: 50%;
+    }
+
+    /* contact */
+
+    .contact form{
+        width: 100%;
+    }
+
+}

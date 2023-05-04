@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid Layout</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <header>
+    <h1>Grid Layout</h1>
+  </header>
+
+  <main>
+    <h2>Proprièté pour le parent(Grid containter)</h2>
+
+    <section>
+      <h3>display</h3>
+      <p>utilisation du display</p>
+      <div class="example">
+        <h4>display: grid</h4>
+        <div class="container display-grid">
+          <div class="item">1</div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+        </div>
+      </div>
+      <div class="example">
+        <h4>display: inline-grid</h4>
+        <div class="container display-inline-grid">
+          <div class="item">1</div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h3>grid-template</h3>
+      <p>Définit les lignes et les colonnes de la grille</p>
+      <div class="example">
+        <h4>grid-template-columns : 100px 200px 300px</h4>
+        <h4>grid-template-rows : 100px 200px</h4>
+        <div class="container display-grid grid-template-columns grid-template-rows">
+          <div class="item">1</div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+          <div class="item">4</div>
+          <div class="item">5</div>
+          <div class="item">6</div>
+        </div>
+      </div>
+
+      <div class="example">
+        <h4>grid-template-columns : 100px auto 20%</h4>
+        <h4>grid-template-rows : auto 150px</h4>
+        <div class="container display-grid grid-template">
+          <div class="item">1</div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+          <div class="item">4</div>
+          <div class="item">5</div>
+          <div class="item">6</div>
+        </div>
+      </div>
+
+      <div class="example">
+        <h4>grid-template-columns: 1fr 1fr 1fr</h4>
+        <h4>grid-template-rows: 1fr 1fr</h4>
+        <div class="container display-grid grid-template-fr">
+          <div class="item">1</div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+          <div class="item">4</div>
+          <div class="item">5</div>
+          <div class="item">6</div>
+        </div>
+      </div>
+
+      <div class="example">
+        <h4>grid-template-columns: repeat(3,1fr)</h4>
+        <h4>grid-template-rows: repeat(2,1fr)</h4>
+        <div class="container display-grid grid-template-repfr">
+          <div class="item">1</div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+          <div class="item">4</div>
+          <div class="item">5</div>
+          <div class="item">6</div>
+        </div>
+      </div>
+
+      <div class="example">
+        <h4>grid-template-columns: repeat(3, minmax(200px, 1fr))</h4>
+        <h4>grid-template-rows: minmax(100px, 1fr) 2fr</h4>
+        <div class="container display-grid grid-template-minmax">
+          <div class="item">1</div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+          <div class="item">4</div>
+          <div class="item">5</div>
+          <div class="item">6</div>
+        </div>
+      </div>
+
+    </section>
+
+    <section>
+      <h3>gap</h3>
+      <p>Spécifie la taille des goutières de colonnes et de lignes</p>
+
+      <div class="example">
+        <h4>column-gap: 2rem</h4>
+        <h4>row-gap: 1rem</h4>
+        <div class="container display-grid grid-template-repfr gap1">
+          <div class="item">1</div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+          <div class="item">4</div>
+          <div class="item">5</div>
+          <div class="item">6</div>
+        </div>
+      </div>
+
+      <div class="example">
+        <h4>gap: 1rem 2rem</h4>
+        <div class="container display-grid grid-template-repfr gap2">
+          <div class="item">1</div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+          <div class="item">4</div>
+          <div class="item">5</div>
+          <div class="item">6</div>
+        </div>
+      </div>
+
+      <div class="example">
+        <h4>gap: 2rem</h4>
+        <div class="container display-grid grid-template-repfr gap3">
+          <div class="item">1</div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+          <div class="item">4</div>
+          <div class="item">5</div>
+          <div class="item">6</div>
+        </div>
+      </div>
+
+    </section>
+
+    <section>
+      <h3>auto-fit</h3>
+      <p>Ajoute les colonnes actuellement disponibles à l’espace en les développant de manière à occuper tout l’espace
+      disponible. Le navigateur le fait après avoir rempli cet espace supplémentaire avec des colonnes supplémentaires (comme
+      avec le remplissage automatique), puis réduit celles qui sont vides.</p>
+
+      <div class="example">
+        <h4>grid-template-columns : repeat(auto-fit, minmax(200px, 1fr))</h4>
+        <div class="container display-grid grid-template-autofit gap3">
+          <div class="item">1</div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+          <div class="item">4</div>
+          <div class="item">5</div>
+          <div class="item">6</div>
+        </div>
+      </div>
+
+    </section>
+
+
+    <section>
+      <h3>justify-content</h3>
+      <p>Justifie tout le contenu sur l'axe des lignes lorsque la taille totale de la grille est inférieure à celle du conteneur</p>
+    
+      <div class="example">
+        <h4>justify-content: start (par défault)</h4>
+        <div class="container display-grid grid-template-repfr gap3 justify-content-start">
+          <div class="item">1</div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+          <div class="item">4</div>
+          <div class="item">5</div>
+          <div class="item">6</div>
+        </div>
+      </div>
+    
+      <div class="example">
+        <h4>justify-content: end </h4>
+        <div class="container display-grid grid-template-repfr gap3 justify-content-end">
+          <div class="item">1</div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+          <div class="item">4</div>
+          <div class="item">5</div>
+          <div class="item">6</div>
+        </div>
+      </div>
+    
+      <div class="example">
+        <h4>justify-content: center </h4>
+        <div class="container display-grid grid-template-repfr gap3 justify-content-center">
+          <div class="item">1</div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+          <div class="item">4</div>
+          <div class="item">5</div>
+          <div class="item">6</div>
+        </div>
+      </div>
+    
+      <div class="example">
+        <h4>justify-content: space-around </h4>
+        <div class="container display-grid grid-template-repfr gap3 justify-content-space-around">
+          <div class="item">1</div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+          <div class="item">4</div>
+          <div class="item">5</div>
+          <div class="item">6</div>
+        </div>
+      </div>
+    
+      <div class="example">
+        <h4>justify-content: space-between </h4>
+        <div class="container display-grid grid-template-repfr gap3 justify-content-space-between">
+          <div class="item">1</div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+          <div class="item">4</div>
+          <div class="item">5</div>
+          <div class="item">6</div>
+        </div>
+      </div>
+    
+      <div class="example">
+        <h4>justify-content: space-evenly </h4>
+        <div class="container display-grid grid-template-repfr gap3 justify-content-space-evenly">
+          <div class="item">1</div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+          <div class="item">4</div>
+          <div class="item">5</div>
+          <div class="item">6</div>
+        </div>
+      </div>
+
+    </section>
+
+    <section>
+      <h3>align-content</h3>
+      <p>Justifie tout le contenu sur l'axe des colonnes lorsque la taille totale de la grille est inférieure à celle du conteneur</p>
+    
+      <div class="example">
+        <h4>align-content: start (par défault)</h4>
+        <div class="container display-grid grid-template-repfr gap3 align-content-start">
+          <div class="item">1</div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+          <div class="item">4</div>
+          <div class="item">5</div>
+          <div class="item">6</div>
+        </div>
+      </div>
+    
+      <div class="example">
+        <h4>align-content: end </h4>
+        <div class="container display-grid grid-template-repfr gap3 align-content-end">
+          <div class="item">1</div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+          <div class="item">4</div>
+          <div class="item">5</div>
+          <div class="item">6</div>
+        </div>
+      </div>
+    
+      <div class="example">
+        <h4>align-content: center </h4>
+        <div class="container display-grid grid-template-repfr gap3 align-content-center">
+          <div class="item">1</div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+          <div class="item">4</div>
+          <div class="item">5</div>
+          <div class="item">6</div>
+        </div>
+      </div>
+    
+      <div class="example">
+        <h4>align-content: space-around </h4>
+        <div class="container display-grid grid-template-repfr gap3 align-content-space-around">
+          <div class="item">1</div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+          <div class="item">4</div>
+          <div class="item">5</div>
+          <div class="item">6</div>
+        </div>
+      </div>
+    
+      <div class="example">
+        <h4>align-content: space-between </h4>
+        <div class="container display-grid grid-template-repfr gap3 align-content-space-between">
+          <div class="item">1</div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+          <div class="item">4</div>
+          <div class="item">5</div>
+          <div class="item">6</div>
+        </div>
+      </div>
+    
+      <div class="example">
+        <h4>align-content: space-evenly </h4>
+        <div class="container display-grid grid-template-repfr gap3 align-content-space-evenly">
+          <div class="item">1</div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+          <div class="item">4</div>
+          <div class="item">5</div>
+          <div class="item">6</div>
+        </div>
+      </div>
+
+    </section>
+
+
+
+
+    <section>
+      <h3>justify-items</h3>
+      <p>Aligne le contenu d'un élément de la grille le long de l'axe des lignes</p>
+
+      <div class="example">
+        <h4>justify-items: stretch (par défault)</h4>
+        <div class="container display-grid grid-template-repfr gap3 justify-items-strecth">
+          <div class="item">1</div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+          <div class="item">4</div>
+          <div class="item">5</div>
+          <div class="item">6</div>
+        </div>
+      </div>
+
+      <div class="example">
+        <h4>justify-items: start</h4>
+        <div class="container display-grid grid-template-repfr gap3 justify-items-start">
+          <div class="item">1</div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+          <div class="item">4</div>
+          <div class="item">5</div>
+          <div class="item">6</div>
+        </div>
+      </div>
+
+      <div class="example">
+        <h4>justify-items: end</h4>
+        <div class="container display-grid grid-template-repfr gap3 justify-items-end">
+          <div class="item">1</div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+          <div class="item">4</div>
+          <div class="item">5</div>
+          <div class="item">6</div>
+        </div>
+      </div>
+
+      <div class="example">
+        <h4>justify-items: center</h4>
+        <div class="container display-grid grid-template-repfr gap3 justify-items-center">
+          <div class="item">1</div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+          <div class="item">4</div>
+          <div class="item">5</div>
+          <div class="item">6</div>
+        </div>
+      </div>
+
+    </section>
+
+    <section>
+      <h3>align-items</h3>
+      <p>Aligne le contenu d'un élément de la grille le long de l'axe des colonnes</p>
+
+      <div class="example">
+        <h4>align-items: stretch (par défault)</h4>
+        <div class="container display-grid grid-template-repfr gap3 align-items-strecth">
+          <div class="item">1</div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+          <div class="item">4</div>
+          <div class="item">5</div>
+          <div class="item">6</div>
+        </div>
+      </div>
+
+      <div class="example">
+        <h4>align-items: start</h4>
+        <div class="container display-grid grid-template-repfr gap3 align-items-start">
+          <div class="item">1</div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+          <div class="item">4</div>
+          <div class="item">5</div>
+          <div class="item">6</div>
+        </div>
+      </div>
+
+      <div class="example">
+        <h4>align-items: end</h4>
+        <div class="container display-grid grid-template-repfr gap3 align-items-end">
+          <div class="item">1</div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+          <div class="item">4</div>
+          <div class="item">5</div>
+          <div class="item">6</div>
+        </div>
+      </div>
+
+      <div class="example">
+        <h4>align-items: center</h4>
+        <div class="container display-grid grid-template-repfr gap3 align-items-center">
+          <div class="item">1</div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+          <div class="item">4</div>
+          <div class="item">5</div>
+          <div class="item">6</div>
+        </div>
+      </div>
+
+    </section>
+
+    <section>
+      <h3>grid-auto-flow</h3>
+      <p>Pour placer automatiquement des éléments de la grille qui ne sont pas explicitement placés</p>
+
+      <div class="example">
+        <h4>grid-auto-flow: row (par défault)</h4>
+        <div class="container display-grid grid-template-repfr gap3 ">
+          <div class="item">1</div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+          <div class="item">4</div>
+          <div class="item">5</div>
+          <div class="item">6</div>
+        </div>
+      </div>
+
+      <div class="example">
+        <h4>grid-auto-flow: column</h4>
+        <div class="container display-grid grid-template-repfr gap3 grid-auto-flow-column">
+          <div class="item">1</div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+          <div class="item">4</div>
+          <div class="item">5</div>
+          <div class="item">6</div>
+        </div>
+      </div>
+
+      <div class="example">
+        <h4>grid-auto-flow: dense</h4>
+        <div class="container display-grid grid-template-repfr gap3 grid-auto-flow-dense">
+          <div class="item item-dense1">1</div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+          <div class="item item-dense4">4</div>
+          <div class="item">5</div>
+          <div class="item">6</div>
+        </div>
+      </div>
+
+
+    </section>
+
+
+    <section>
+      <h3>grid-template-areas</h3>
+      <p>permet de définir des zones de grille nommé(pas oublié de définir le grid-area sur les items)</p>
+      <div class="example">
+        <h4>grid-template-areas: "header header header"
+        "content content aside"
+        "footer footer footer";</h4>
+        <div class="container display-grid gap3 grid-template-areas">
+          <div class="item item-header">header</div>
+          <div class="item item-content">content</div>
+          <div class="item item-aside">aside</div>
+          <div class="item item-footer">footer</div>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+</body>
+</html>

@@ -169,6 +169,8 @@ si au dessus de 14 afficher "Lèche-botte"
 
 // v1 Sans tableau
 
+echo 'Exercice bonus v1 sans tableau' . PHP_EOL;
+
 $i=0;
 $note=0;
 $notes=0;
@@ -209,6 +211,8 @@ else {
 
 // v1 sans tableau avec ternaire 
 
+echo 'Exercice bonus v1 sans tableau avec ternaire' . PHP_EOL;
+
 $i=0;
 $note=0;
 $notes=0;
@@ -233,6 +237,8 @@ echo $moyenne=$notes/$i;
 echo (($moyenne>=0) && ($moyenne<=10) ? (($moyenne<=6) ? ' T\'es naze' : ' Peux mieux faire') : (($moyenne<=14) ? ' Insiste encore un peu': ' Lèche-botte'));
 
 // v2 avec tableau
+
+echo 'Exercice bonus v2 avec tableau' . PHP_EOL;
 
 $i=0;
 $note=0;
@@ -272,3 +278,35 @@ elseif (($moyenne>10) && ($moyenne<=14)) {
 else {
     echo $moyenne . ' Lèche-botte' . PHP_EOL;
 }
+
+// v2 avec tableau et ternaire
+
+echo 'Exercice bonus v1 avec tableau et ternaire' . PHP_EOL;
+
+$i=0;
+$note=0;
+$notes=[];
+$moyenne=0;
+
+do {
+    $note=(float)readline('Entrez une note :');
+
+    if (($note>=0) && ($note<=20)) {
+        if  ($note!=-1) { 
+            $notes[]=$note;
+            $i++;
+        }
+    }
+
+    elseif ($note!=-1) {
+        echo "Saisie incorrecte" . PHP_EOL;
+    }
+   
+} while ($note!=-1);
+
+
+$moyenne=array_sum($notes)/$i;
+
+echo $moyenne=$notes/$i;
+
+echo (($moyenne>=0) && ($moyenne<=10) ? (($moyenne<=6) ? ' T\'es naze' : ' Peux mieux faire') : (($moyenne<=14) ? ' Insiste encore un peu': ' Lèche-botte'));

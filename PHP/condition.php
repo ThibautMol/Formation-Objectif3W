@@ -24,9 +24,10 @@
 // if (condition){
 //     //instruction si la condition est vérifiée
 // }
-// Else {
+// else {
     // Instruction si la condition n'est pas vérifiée
 // }
+// elseif {}
 
 $age=19;
 if ($age >18 && $age<35);
@@ -67,3 +68,24 @@ echo $temps=== 'ensoleillé' ? 'il fait beau' : 'il fait pas beau' . PHP_EOL;
 
 $roleUser= 'gamer';
 echo $roleUser === 'admin' ? 'accès a l\'espace admin' : 'renvoie sur la page connexion' . PHP_EOL;
+
+
+// SWITCH - SELON
+
+// Si on a plus de 3 conditions il faut utiliser un switch
+
+$coup = (int)readline('entrez votre coup : (1: lancer un sort, 2:attaquer, 3: passer son tour');
+
+switch ($coup) {
+    case 1 : 
+        echo 'Sort lancé';
+        break;
+    
+    case 2 :
+        echo 'Attaque lancée';
+        break;
+    
+    case 3 :
+        echo 'Tour passé';
+        break;
+}

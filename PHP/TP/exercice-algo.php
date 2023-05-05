@@ -160,17 +160,140 @@
 /*
 saisir utilisateur des notes tant qu'il n'a pas rentré la valeur -1 ça n'arrête pas la saisie
 stocker les valeurs dans un tableau
-calculer la moyenne des notes et en fonction de la moyenne des notes si c'est en dessous de 6 afficher message "naze", 
+calculer la moyenne des notes et en fonction de la moyenne des notes 
+si c'est en dessous de 6 afficher message "naze", 
 si en dessous de 10 afficher "peu mieux faire", 
 si en dessous de 14 afficher "insiste un peu plus", 
 si au dessus de 14 afficher "Lèche-botte"
 */
 
+// // v1 Sans tableau
 
-$notes=[];
+// $i=0;
+// $note=0;
+// $notes=0;
+// $moyenne=0;
+
+// do {
+//     $note=(float)readline('Entrez une note :');
+
+//     if (($note>=0) && ($note<=20)) {
+//         if  ($note!=-1) { 
+//             $notes=($note+$notes);
+//             $i++;
+//         }
+//         else {
+//             echo 'Fin de saisie' . PHP_EOL;
+//         }
+//     }
+
+//     else {
+//         echo "Saisie incorrecte" . PHP_EOL;
+//     }
+   
+// } while ($note!=-1);
+
+// $moyenne=$notes/$i;
+
+// if ($moyenne<=6) {
+//     echo $moyenne .' T\'es naze' . PHP_EOL;
+// }
+
+// elseif (($moyenne>6) && ($moyenne<=10)) {
+//     echo $moyenne . ' Peu mieux faire' . PHP_EOL;
+// }
+// elseif (($moyenne>10) && ($moyenne<=14)) {
+//     echo $moyenne . ' Insiste encore un peu' . PHP_EOL;
+// }
+
+// else {
+//     echo $moyenne . ' Lèche-botte' . PHP_EOL;
+// }
+
+// v1 sans tableau avec ternaire 
+
+$i=0;
+$note=0;
+$notes=0;
+$moyenne=0;
 
 do {
-$notes=[(int)readline('Entrez une note :')];
+    $note=(float)readline('Entrez une note :');
 
-print_r($notes) . PHP_EOL;
-} while ($notes[-1]=-1);
+    if (($note>=0) && ($note<=20)) {
+        if  ($note!=-1) { 
+            $notes=($note+$notes);
+            $i++;
+        }
+        else {
+            echo 'Fin de saisie' . PHP_EOL;
+        }
+    }
+
+    else {
+        echo "Saisie incorrecte" . PHP_EOL;
+    }
+   
+} while ($note!=-1);
+
+$moyenne=$notes/$i;
+
+if ($moyenne<=6) {
+    echo $moyenne .' T\'es naze' . PHP_EOL;
+}
+
+elseif (($moyenne>6) && ($moyenne<=10)) {
+    echo $moyenne . ' Peu mieux faire' . PHP_EOL;
+}
+elseif (($moyenne>10) && ($moyenne<=14)) {
+    echo $moyenne . ' Insiste encore un peu' . PHP_EOL;
+}
+
+else {
+    echo $moyenne . ' Lèche-botte' . PHP_EOL;
+
+// v2 avec tableau
+
+$i=0;
+$note=0;
+$notes=[];
+$moyenne=0;
+
+do {
+    $note=(float)readline('Entrez une note :');
+
+    if (($note>=0) && ($note<=20)) {
+        if  ($note!=-1) { 
+            $notes[]=$note;
+            $i++;
+        }
+        else {
+            echo 'Fin de saisie' . PHP_EOL;
+        }
+    }
+
+    else {
+        echo "Saisie incorrecte" . PHP_EOL;
+    }
+   
+} while ($note!=-1);
+
+
+$moyenne=array_sum($notes)/$i;
+
+if ($moyenne<=6) {
+    echo $moyenne .' T\'es naze' . PHP_EOL;
+}
+
+elseif (($moyenne>6) && ($moyenne<=10)) {
+    echo $moyenne . ' Peu mieux faire' . PHP_EOL;
+}
+elseif (($moyenne>10) && ($moyenne<=14)) {
+    echo $moyenne . ' Insiste encore un peu' . PHP_EOL;
+}
+
+else {
+    echo $moyenne . ' Lèche-botte' . PHP_EOL;
+}
+
+

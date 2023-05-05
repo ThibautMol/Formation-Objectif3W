@@ -32,9 +32,7 @@ $age=19;
 if ($age >18 && $age<35);
 
 
-
-
-$age = (int)readline ('saisissez votre age : ')
+$age = (int)readline ('saisissez votre age : ');
 
 if ($age <18) {
     echo 'Vous êtes trop jeune pour rentrer' . PHP_EOL;

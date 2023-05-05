@@ -31,3 +31,20 @@ while ($note !=-1) {
 }
 
 echo 'Vous avez saisies '. $nb_saisies .' et la somme de celles-ci est ' .$somme_notes . PHP_EOL;
+
+// SOLUTION OPTMISEE :
+
+$note=0;
+$somme_notes=0;
+$nb_saisies=0;
+
+$valeur=(float)readline('Entrez votre valeur : ');
+
+while ($note !=-1) {
+    $somme_notes += $note;
+    $nb_saisies++;
+    $note=(int)readline('Saisissez une note entière (-1 termine la saisie)' . PHP_EOL);
+}
+
+echo 'Vous avez saisies '. $nb_saisies .' et la somme de celles-ci est ' .$somme_notes . PHP_EOL;
+

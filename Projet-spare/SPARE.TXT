@@ -1,8 +1,40 @@
+
+
+
+
 page de connexion :
     modifier message d'erreur
     modifier design
     centrer éléments
     modifier text shadow
+
+page mdp oublié :
+
+Page login error : 
+
+
+Actions auto : 
+    Mail avec template remplissage automatique des informations
+    Passage d'une classe en entier à l'étape supérieure et si pas d'étape supérieure, suppression des fiches des élèves contenus dans la classe
+
+Actions sur base de donnée : 
+    Export liste d'élèves au formation csv
+
+Tableaux : 
+    Liste des élèves par classe
+    Liste des classes
+        Faire 4 blocs contenant chaque fois les différentes années.
+    Liste des élèves
+
+
+Profils : 
+    Administrateur
+    Prof
+
+
+page calendrier : 
+    calendrier générer de base, repris via une API, 
+    possibilité d'ajout ou suppression jour de congés/fériers directement dessus
 
 page admin : 
 

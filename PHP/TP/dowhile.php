@@ -11,6 +11,8 @@ do {
     $somme+=$valeur;
     $compteur++;
     echo 'La somme est de ' . $somme . PHP_EOL;
-}while ($somme<500);
+}while ($somme<=500);
 
 echo 'Le seuil était de 500, vous l\'avez atteint en ' . $compteur . ' essais';
+
+

@@ -116,10 +116,8 @@ while ($nbr>20 || $nbr<10) {
         echo 'Plus grand !' . PHP_EOL;
     }
 
-    else {
-        echo 'C\'est gagné !' . PHP_EOL;
-    }
 }
+echo 'C\'est gagné !' . PHP_EOL;
 
 // EXERCICE 2 v2
 
@@ -140,6 +138,7 @@ do {
 
 } while ($nbr>20 || $nbr<10);
 
+echo 'Bien joué !';
 
 // EXERCICE 2 v3 Ternaire
 

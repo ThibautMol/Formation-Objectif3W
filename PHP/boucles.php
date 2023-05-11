@@ -50,3 +50,53 @@ for ($i=0; $i <=count($fruits)-1; $i++) {
 for ($i=0; $i <count($fruits); $i++) {
     echo $fruits[$i] . PHP_EOL;
 }
+
+// FOREACH - POUR CHAQUE
+
+// Permet de parcourir facilement les éléments d'un tableau.
+// La valeur de chaque élément sera copié dans une variable
+// syntaxe simple
+// foreach ($tableau as $element) {
+//     instructions;
+// }
+
+$fruits=['banane', 'pomme', 'kiwi', 'tomate'];
+
+foreach ($fruits as $fruit) {
+    echo $fruit . PHP_EOL;
+}
+
+$user = [
+    'prenom' => 'Sony',
+    'métier' => 'Chômeur',
+    'passion' => 'DROP DATABASE'
+];
+
+foreach ($user as $data) {
+    echo $data . PHP_EOL;
+}
+
+// syntaxe avec clef =>
+
+// foreach($tableau as $cle => $valeur){
+    // instructions;
+// }
+
+foreach ($user as $key => $data) {
+    echo $key . ' : ' . $data . PHP_EOL;
+}
+
+// FOREACH dans un FOREACH
+
+$eleves = [
+    'cine1' => ['Sony', 'Benjamin', 'Anne'],
+    'game1' => ['Arturo', 'Olivier', 'Thibaut']
+];
+
+foreach ($eleves as $classe => $listeEleves) {
+    echo "la classe $classe : \n";
+    foreach($listeEleves as $eleve) {
+        echo "- $eleve \n";
+    }
+echo "\n";
+}

@@ -173,9 +173,10 @@
 // }
 
 
-// Tableau associatif avec recherche dans le tableau et impression tableau
+// Tableau associatif avec recherche dans le tableau et impression tableau correspondant
+// utilisation de l'élément $$ pour transformer le readline en variable
 echo PHP_EOL;
-echo 'Tableau associatif avec recherche dans le tableau et impression tableau :' . PHP_EOL;
+echo 'Tableau associatif avec recherche dans le tableau et impression tableau correspondant :' . PHP_EOL;
 
 $bob=[
     'name' => 'Bob Dylan', 
@@ -195,16 +196,23 @@ $students=[$bob,$kevin,$lorie];
 
 $student_pick=readline('Choisissez quel élève vous voulez consulter entre bob, kevin et lorie : ');
 
-// chercher fonction php transformant un string en fonction (chaine de caractère en fonction)
+// if isset($$student_pick) {
+//     continue;
+// }
 
-if (in_array($student_pick, $students)) {
-    echo 'c\'est bon';
-    print_r($student_pick);
-    foreach ($student_pick as $key => $key_value) {
+// else {
+//     echo 'Cette personne n\'est pas présente dans la liste';
+// }
+
+
+if (in_array($$student_pick, $students)) {
+    echo 'c\'est bon, l\'entrée ' .$student_pick . ' existe, voici son contenue : ' . PHP_EOL;
+
+    foreach ($$student_pick as $key => $key_value) {
     echo $key . ' : ' . $key_value . PHP_EOL;
 }
 }
 
-else {
-    echo 'c\'est pas bon';
-}
+
+
+

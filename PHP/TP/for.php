@@ -1,7 +1,7 @@
 <?php
 
-// en fonction d'un nombre d'itérations saisies, faire la somme 
-// des entiers saisis et afficher le résultat ainsi que le nombre d'itérations.
+// // en fonction d'un nombre d'itérations saisies, faire la somme 
+// // des entiers saisis et afficher le résultat ainsi que le nombre d'itérations.
 
 // echo 'Exercice Damien' . PHP_EOL;
 
@@ -196,22 +196,22 @@ $students=[$bob,$kevin,$lorie];
 
 $student_pick=readline('Choisissez quel élève vous voulez consulter entre bob, kevin et lorie : ');
 
-// if isset($$student_pick) {
-//     continue;
-// }
-
-// else {
-//     echo 'Cette personne n\'est pas présente dans la liste';
-// }
-
-
-if (in_array($$student_pick, $students)) {
-    echo 'c\'est bon, l\'entrée ' .$student_pick . ' existe, voici son contenue : ' . PHP_EOL;
-
-    foreach ($$student_pick as $key => $key_value) {
-    echo $key . ' : ' . $key_value . PHP_EOL;
+if (isset($$student_pick)) {
+    if (in_array($$student_pick, $students)) {
+        echo 'c\'est bon, l\'entrée ' .$student_pick . ' existe, voici son contenue : ' . PHP_EOL;
+    
+        foreach ($$student_pick as $key => $key_value) {
+        echo $key . ' : ' . $key_value . PHP_EOL;
+    }
+    }
 }
+
+else {
+    echo 'Cette personne n\'est pas présente dans la liste';
 }
+
+
+
 
 
 

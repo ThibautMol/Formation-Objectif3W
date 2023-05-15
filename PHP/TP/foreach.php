@@ -26,6 +26,12 @@ echo "\n";
 $note_saisie=NULL;
 $bulletin=[];
 
+// on peut également définir le -1 comme une constante :
+// const STOP = -1;
+// ou
+// define('STOP')=-1;
+// on remplacera $note_saisie!=-1 par $note_saisie!=$STOP
+
 $note_saisie=(int)readline('Saissez une note, saisissez -1 pour arrêter la saisie : ');
 
 if (($note_saisie!=-1) && ($note_saisie>=0 && $note_saisie<=20)){
@@ -73,7 +79,7 @@ foreach($bulletin as $note) {
 }
 
 if ($note_saisie!=-1) {
-    echo 'La moyenne est de ' . $total_notes/count($bulletin) . PHP_EOL;
+    echo 'La moyenne est de ' . $total_notes/count($bulletin) . '/20' . PHP_EOL;
 }
 
 else {

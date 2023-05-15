@@ -17,5 +17,24 @@
 
     <!-- on peut remplacer php echo par juste un = -->
 
+    <?php
+        $users= [
+            ['name' => ,
+            ]]
+    ?>
+
+    <?php foreach ($users as $user) {
+        echo '<li class="text"> <a href="' . $users ['portefolio'] . '">' . $users['name'] . PHP_EOL
+    } 
+    ?>
+
+    <?php foreach ($suers as$user) : ?>
+        <li class="text">
+            <a href="<?=$user['portefolio'] ?>">
+                <?=$user['name'] . ' ' . $user ['firstname'];?>
+            </a>
+        </li>
+    <?php endforeach; ?>
+
 </body>
 </html>

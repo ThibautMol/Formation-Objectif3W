@@ -19,12 +19,14 @@
 
     <?php
         $users= [
-            ['name' => ,
+            ['name' => 'bob',
+            'lastname' => 'jean',
+            'bio' => 'link'
             ]]
     ?>
 
     <?php foreach ($users as $user) {
-        echo '<li class="text"> <a href="' . $users ['portefolio'] . '">' . $users['name'] . PHP_EOL
+        echo '<li class="text"> <a href="' . $users ['portefolio'] . '">' . $users['name'] . PHP_EOL;
     } 
     ?>
 

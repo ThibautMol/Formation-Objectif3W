@@ -131,8 +131,5 @@ function find_movie_by_date_v2($movie_list) {
         echo "Choix incorrect";
     }
 }
-  
-   
-
 
 echo find_movie_by_date_v2($movie_list);

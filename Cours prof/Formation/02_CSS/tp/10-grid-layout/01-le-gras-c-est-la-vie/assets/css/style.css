@@ -1,0 +1,49 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 62.5%;
+}
+
+body{
+  background-color: #171717;
+  color: lightgray;
+  font-family: 'Open Sans';
+}
+
+section{
+  padding: 4rem;
+}
+
+h1{
+  font-size: 4.2rem;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.container{
+  max-width: 1472px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* grid-template-columns: repeat(3, minmax(30%, 1fr)); */
+  gap: 1.6rem;
+  
+  text-align: center;
+}
+
+.box{
+  padding: 2rem;
+  background-color: #333;
+  font-size: 1.6rem;
+}
+
+.box-content img{
+  max-width: 10rem;
+  margin-bottom: 1rem;
+}
+

@@ -16,7 +16,9 @@
 
   <body>
 
-    <header>
+    <?php include ('header.php');?>
+
+    <!-- <header>
     
       <nav class="navbar navbar-expand-lg bg-dark">
         <div class="container-sm">
@@ -31,6 +33,9 @@
               <li class="nav-item">
                 <a class="nav-link active text-white" aria-current="page" href="#">Dashboard</a>
               </li>
+               <li class="nav-item">
+                <a class="nav-link text-white" href="#">Cartes</a>
+              </li>
               <li class="nav-item">
                 <a class="nav-link text-white" href="#">Plateaux</a>
               </li>
@@ -40,23 +45,14 @@
               <li class="nav-item">
                 <a class="nav-link text-white" href="#">Profil</a>
               </li>
-              <!-- <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown link
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li> -->
-                </ul>
-              </li>
+              
             </ul>
           </div>
         </div>
       </nav>
  
 
-    </header>
+    </header> -->
 
 
     <main>

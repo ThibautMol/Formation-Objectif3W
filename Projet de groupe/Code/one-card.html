@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liste des cartes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
+
+    <link rel="stylesheet" href="assets/css/card-list-style.css">
+
+</head>
+
+  <body>
+
+    <!-- <?php include ('header.php');?> -->
+
+    <header>
+    
+        <nav class="navbar navbar-expand-lg bg-dark">
+            <div class="container-sm">
+              <a class="navbar-brand text-white" href="#">Navbar</a>
+              
+              <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+    
+              <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active text-white" aria-current="page" href="#">Dashboard</a>
+                  </li>
+                   <li class="nav-item">
+                    <a class="nav-link text-white" href="#">Cartes</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="#">Plateaux</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="#">Utilisateurs</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="#">Profil</a>
+                  </li>
+                  
+                </ul>
+              </div>
+            </div>
+          </nav>
+ 
+    </header>
+
+
+    
+        <div class="d-flex flex-column align-items-center">
+            <h1>Carte</h1>
+            <div class="d-flex flex-row"> 
+                <div class="d-flex flex-column m-2">
+                    <label for="ID-card">ID</label>
+                    <textarea name="ID-card" id="ID-card" cols="5" rows="1">#C1447</textarea>
+                </div>
+
+                
+                <div class="d-flex flex-column m-2">
+                    <label for="name-card">Nom</label>
+                    <textarea name="name-card" id="name-card" cols="7" rows="1">Aversio</textarea>
+                </div>
+            </div>
+        </div>
+
+
+
+      
+
+    <main  class="container d-flex flex-row">
+      
+
+        <section style="border-top: 1px solid black;">
+            <h2 class="">Caractéristiques</h2>
+
+            <div class="d-flex">
+                <div class="dropdown m-5">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    Type
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="#">Humain</a></li>
+                    <li><a class="dropdown-item" href="#">Bête</a></li>
+                    <li><a class="dropdown-item" href="#">Esprit</a></li>
+                    <li><a class="dropdown-item" href="#">Monstre</a></li>
+                    </ul>
+                </div>
+
+                <div class="dropdown m-5">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    Catérgorie
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="#">Héro</a></li>
+                    <li><a class="dropdown-item" href="#">Serviteur</a></li>
+                    <li><a class="dropdown-item" href="#">Sorts</a></li>
+                    </ul>
+                </div>
+
+                <div class="dropdown m-5">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    Rareté
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="#">Légendaire</a></li>
+                    <li><a class="dropdown-item" href="#">Epique</a></li>
+                    <li><a class="dropdown-item" href="#">Rare</a></li>
+                    <li><a class="dropdown-item" href="#">Commune</a></li>
+                    <li><a class="dropdown-item" href="#">Basique</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="d-flex flex-row" style="border-top: 1px solid black;"> 
+                <div class="d-flex flex-column m-2">
+                    <label for="health-value">Points de vie</label>
+                    <textarea name="health-value" id="health-value" cols="5" rows="1">47</textarea>
+                </div>
+            
+                
+                <div class="d-flex flex-column m-2">
+                    <label for="mana-value">Mana</label>
+                    <textarea name="mana-value" id="mana-value" cols="7" rows="1">3</textarea>
+                </div>
+
+                <div class="d-flex flex-column m-2">
+                    <label for="defense-value">Défense</label>
+                    <textarea name="defense-value" id="defense-value" cols="5" rows="1">10</textarea>
+                </div>
+            </div>
+
+
+            <div class="d-flex flex-row" style="border-top: 1px solid black;">
+                <div>
+                    <h5>Capacités</h3>
+                    <div class="d-flex flex-row m-2">
+                        
+                        <div>
+                            <label for="capacity-description">Description</label>
+                            <textarea class="form-control" placeholder="Description de la capacité" id="capacity-description"></textarea>
+                            
+                        </div>
+                        <div class="d-flex flex-column m-2">
+                            <label for="name-card">Nom</label>
+                            <textarea name="name-card" id="name-card" cols="7" rows="1">Salve</textarea>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-trash"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h5>Clan</h3>
+                    <div class="d-flex flex-column m-2">
+
+                        <div>
+                            <label for="clan-human">Humain</label>
+                            <input type="checkbox" id="clan-human" name="clan-human" checked>
+                        </div>
+
+                        <div>
+                            <label for="clan-REI">REI</label>
+                            <input type="checkbox" id="clan-REI" name="clan-REI">
+                        </div>
+
+                    </div>
+                </div>
+
+                <div>
+                    <h5>Fonction(s)</h3>
+                    <div class="d-flex flex-column m-2">
+
+                        <div>
+                            <label for="type-attack">Attaque</label>
+                            <input type="checkbox" id="type-attack" name="type-attack" checked>
+                        </div>
+
+                        <div>
+                            <label for="type-defense">Défense</label>
+                            <input type="checkbox" id="type-defense" name="type-defense">
+                        </div>
+
+                        <div>
+                            <label for="type-health">Vie</label>
+                            <input type="checkbox" id="type-health" name="type-health" checked>
+                        </div>
+
+                        <div>
+                            <label for="type-boost">Boost</label>
+                            <input type="checkbox" id="type-boost" name="type-boost">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="d-flex flex-column align-items-center" style="border-top: 1px solid black; border-left: 1px solid black;">
+            <h2>Image</h2>
+            <img src="assets/img/pngwing.com.png" alt="empty-card">
+
+            <div class="d-flex flex-column m-2 w-25">
+                <label for="img-link">Lien illustration</label>
+                <textarea name="img-link" id="img-link" cols="1" rows="1">url://</textarea>
+            </div>
+
+            <div class="d-flex flex-row justify-content-center align-items-center">
+                <div>
+                    <button type="button" class="btn btn-secondary">Parcourir</button>
+                </div>
+                
+                <div class="d-flex flex-column m-2 w-25">
+                    <label for="name-card">Changer Illustration</label>
+                    <textarea name="name-card" id="name-card" cols="7" rows="1">..............</textarea>
+                </div>
+                <div>
+                    <button type="button" class="btn btn-secondary">Ajouter</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <div class="d-flex justify-content-center gap-5 mt-4">
+        <button type="button" class="btn btn-primary justify-content-start">Modifier</button>
+
+        <button type="button" class="btn btn-primary justify-content-start">Enregistrer</button>
+    </div>
+
+
+    
+
+  </body>
+</html>

@@ -94,7 +94,6 @@ else {
 
 $note_saisie=NULL;
 $bulletin=[];
-$total_notes=NULL;
 
 $note_saisie=(int)readline('Saissez une note, saisissez -1 pour arrêter la saisie : ');
 

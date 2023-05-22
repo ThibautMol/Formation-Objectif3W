@@ -239,7 +239,6 @@ function finding_book_by_author_v2() {
 
 foreach ($books as $book) {
     if (array_search($author_pick, $book)){
-        // echo 'c\'est bon ';
         print_r($book);
         }
     }

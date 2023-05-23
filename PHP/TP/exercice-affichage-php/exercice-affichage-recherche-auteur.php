@@ -33,40 +33,43 @@
             ['name'=>'nom du livre1',
             'author'=>'Bob',
             'release_year'=> 1995,
-            'purchase_url'=>'http://example1.com'],
+            'purchase_url'=>'http://google.com'],
             ['name'=>'nom du livre2',
             'author'=>'Bob',
             'release_year'=> 1802,
-            'purchase_url'=>'http://example2.com'],
+            'purchase_url'=>'http://google.com'],
             ['name'=>'nom du livre3',
             'author'=>'Sophie',
             'release_year'=> 2023,
-            'purchase_url'=>'http://example3.com'],
+            'purchase_url'=>'http://google.com'],
             ['name'=>'nom du livre4',
             'author'=>'Sophie',
             'release_year'=> 2002,
-            'purchase_url'=>'http://example4.com'],
+            'purchase_url'=>'http://google.com'],
             ['name'=>'nom du livre5',
             'author'=>'Bob',
             'release_year'=> 1923,
-            'purchase_url'=>'http://example5.com'],
+            'purchase_url'=>'http://google.com'],
             ['name'=>'nom du livre6',
             'author'=>'Alex',
             'release_year'=> 2018,
-            'purchase_url'=>'http://example6.com']
+            'purchase_url'=>'http://google.com']
         ];
 
         // $author_pick=readline('Choisissez les oeuvres parmi les auteurs suivants Bob, Sophie et Alex : ');
 
         foreach ($books as $book) {
             if (array_search($author_pick, $book)){
-                print_r($book);
+                echo '<div>' . 'Titre : ' . $book['name'] . '</div>';
+                echo '<div>' . 'Auteur : ' . $book['author'] . '</div>';
+                echo '<div>' . 'Année d\'édition : ' . $book['release_year'] . '</div>';
+                echo '<a href="'.$book['purchase_url'].'" target="_BLANK">' . 'Achetez-moi'  . "</a>";
                 }
             }
         }
 
     $author_pick=$_POST['book_author'];
-    echo $author_pick;
+    // echo $author_pick;
 
     finding_book_by_author_v2($author_pick);
 

@@ -1,85 +1,29 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Liste des cartes</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
-
-
-    <link rel="stylesheet" href="assets/css/card-list-style.css">
-
-</head>
-
-  <body>
-
-    <!-- <?php include ('header.php');?> -->
-
-    <header>
-    
-        <nav class="navbar navbar-expand-lg bg-dark">
-            <div class="container-sm">
-              <a class="navbar-brand text-white" href="#">Navbar</a>
-              
-              <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-    
-              <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                  <li class="nav-item">
-                    <a class="nav-link active text-white" aria-current="page" href="#">Dashboard</a>
-                  </li>
-                   <li class="nav-item">
-                    <a class="nav-link text-white" href="#">Cartes</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link text-white" href="#">Plateaux</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link text-white" href="#">Utilisateurs</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link text-white" href="#">Profil</a>
-                  </li>
-                  
-                </ul>
-              </div>
-            </div>
-          </nav>
- 
-    </header>
-
+<?php include_once ('header.php');?>
 
     
         <div class="d-flex flex-column align-items-center">
             <h1>Carte</h1>
             <div class="d-flex flex-row"> 
                 <div class="d-flex flex-column m-2">
-                    <label for="ID-card">ID</label>
-                    <textarea name="ID-card" id="ID-card" cols="5" rows="1">#C1447</textarea>
+                    <label for="id-card">ID</label>
+                    <input type="text" name="id-card" id="id-card" value="#C1447">
                 </div>
 
                 
                 <div class="d-flex flex-column m-2">
                     <label for="name-card">Nom</label>
-                    <textarea name="name-card" id="name-card" cols="7" rows="1">Aversio</textarea>
+                    <input type="text" name="name-card" id="name-card" value="Aversio">
                 </div>
             </div>
         </div>
-
-
 
       
 
     <main  class="container d-flex flex-row">
       
 
-        <section style="border-top: 1px solid black;">
-            <h2 class="">Caractéristiques</h2>
+        <section style="border-top: 2px dashed black;">
+            <h2 class="d-flex justify-content-center">Caractéristiques</h2>
 
             <div class="d-flex">
                 <div class="dropdown m-5">
@@ -119,28 +63,28 @@
                 </div>
             </div>
 
-            <div class="d-flex flex-row" style="border-top: 1px solid black;"> 
-                <div class="d-flex flex-column m-2">
+            <div class="d-flex flex-row justify-content-center" style="border-top: 2px dashed black;"> 
+                <div class="d-flex flex-column justify-content-center m-2">
                     <label for="health-value">Points de vie</label>
                     <textarea name="health-value" id="health-value" cols="5" rows="1">47</textarea>
                 </div>
             
                 
-                <div class="d-flex flex-column m-2">
+                <div class="d-flex flex-column justify-content-center m-2">
                     <label for="mana-value">Mana</label>
                     <textarea name="mana-value" id="mana-value" cols="7" rows="1">3</textarea>
                 </div>
 
-                <div class="d-flex flex-column m-2">
+                <div class="d-flex flex-column justify-content-center m-2">
                     <label for="defense-value">Défense</label>
                     <textarea name="defense-value" id="defense-value" cols="5" rows="1">10</textarea>
                 </div>
             </div>
 
 
-            <div class="d-flex flex-row" style="border-top: 1px solid black;">
-                <div>
-                    <h5>Capacités</h3>
+            <div class="d-flex flex-row" style="border-top: 2px dashed black;">
+                <div >
+                    <h5 class="d-flex justify-content-center">Capacités</h5>
                     <div class="d-flex flex-row m-2">
                         
                         <div>
@@ -205,25 +149,25 @@
 
         </section>
 
-        <section class="d-flex flex-column align-items-center" style="border-top: 1px solid black; border-left: 1px solid black;">
+        <section class="d-flex flex-column align-items-center" style="border-top: 2px dashed black; border-left: 2px dashed black;">
             <h2>Image</h2>
             <img src="assets/img/pngwing.com.png" alt="empty-card">
 
             <div class="d-flex flex-column m-2 w-25">
-                <label for="img-link">Lien illustration</label>
+                <label class="d-flex justify-content-center" for="img-link">Lien illustration</label>
                 <textarea name="img-link" id="img-link" cols="1" rows="1">url://</textarea>
             </div>
 
             <div class="d-flex flex-row justify-content-center align-items-center">
-                <div>
+                <div class="mt-4">
                     <button type="button" class="btn btn-secondary">Parcourir</button>
                 </div>
                 
-                <div class="d-flex flex-column m-2 w-25">
+                <div class="d-flex flex-column m-2 w-35">
                     <label for="name-card">Changer Illustration</label>
                     <textarea name="name-card" id="name-card" cols="7" rows="1">..............</textarea>
                 </div>
-                <div>
+                <div class="mt-4">
                     <button type="button" class="btn btn-secondary">Ajouter</button>
                 </div>
             </div>
@@ -236,9 +180,5 @@
 
         <button type="button" class="btn btn-primary justify-content-start">Enregistrer</button>
     </div>
-
-
     
-
-  </body>
-</html>
+<?php include_once ('footer.php');?>

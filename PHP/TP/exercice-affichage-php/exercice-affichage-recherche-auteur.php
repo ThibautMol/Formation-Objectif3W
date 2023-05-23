@@ -51,12 +51,9 @@
                 
                 function finding_book_by_author_v2($author_pick, $books) {
 
-                    
-
                     $author_pick=strtolower($author_pick);
                     $author_pick=ucfirst($author_pick);
                     
-
                     foreach ($books as $book) {
                         if (array_search($author_pick, $book)){
                             echo '<img class="rounded mx-auto d-block w-25 h-25 mt-5" src="'.$book['cover'].'" />';
@@ -74,9 +71,6 @@
                     finding_book_by_author_v2($author_pick, $books);
                 }
             
-
-            
-
             ?>
         </p>
 

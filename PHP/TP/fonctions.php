@@ -207,7 +207,7 @@ function finding_book_by_author_v1() {
 // echo finding_book_by_author_v1();
 
 
-function finding_book_by_author_v2() {
+function finding_book_by_author_v2($author_pick) {
     $books = [
         ['name'=>'nom du livre1',
         'author'=>'Bob',
@@ -235,7 +235,7 @@ function finding_book_by_author_v2() {
         'purchase_url'=>'http://example6.com']
     ];
 
-    $author_pick=readline('Choisissez les oeuvres parmi les auteurs suivants Bob, Sophie et Alex : ');
+    // $author_pick=readline('Choisissez les oeuvres parmi les auteurs suivants Bob, Sophie et Alex : ');
 
 foreach ($books as $book) {
     if (array_search($author_pick, $book)){
@@ -243,6 +243,6 @@ foreach ($books as $book) {
         }
     }
 }
-
-echo finding_book_by_author_v2();
+$author_pick='Bob';
+finding_book_by_author_v2($author_pick);
 

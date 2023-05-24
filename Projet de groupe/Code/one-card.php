@@ -87,7 +87,7 @@ include_once ('header.php');?>
                         <h5 class="d-flex justify-content-center">Capacités</h5>
                         <div class="d-flex flex-row m-2">
                             
-                            <div >
+                            <div class="d-flex flex-column m-2">
                                 <label for="capacity-description">Description</label>
                                 <textarea class="form-control" placeholder="Description de la capacité" id="capacity-description"></textarea>
                                 
@@ -96,6 +96,7 @@ include_once ('header.php');?>
                                 <label for="name-capacity">Nom</label>
                                 <input type="text" name="name-capacity" id="name-capacity" value="Salve">
                             </div>
+
                             <div class="d-flex align-items-center">
                                 <i class="fa-solid fa-trash"></i>
                             </div>
@@ -106,7 +107,7 @@ include_once ('header.php');?>
                         <h5>Clan</h3>
                         <div class="d-flex flex-column m-2">
 
-                            <div>
+                            <div class="d-flex justify-content-between">
                                 <label for="clan-human">Humain</label>
                                 <input type="checkbox" id="clan-human" name="clan-human" checked>
                             </div>
@@ -151,7 +152,10 @@ include_once ('header.php');?>
 
             <section class="d-flex flex-column align-items-center" style="border-top: 2px dashed black; border-left: 2px dashed black;">
                 <h2>Image</h2>
-                <img class="d-md-none d-lg-block d-sm-none d-md-block d-none d-sm-block" src="assets/img/pngwing.com.png" alt="empty-card">
+
+                <div class="d-md-none d-lg-block d-sm-none d-md-block d-none d-sm-block">
+                    <img  src="assets/img/pngwing.com.png" alt="empty-card">
+                </div>
 
                 <div class="d-flex flex-column">
                     <label class="d-flex justify-content-center" for="img-link">Lien illustration</label>

@@ -1,5 +1,5 @@
-
-    <?php include_once ('header.php');?>
+<?php $title="Liste des cartes";
+include_once ('header.php');?>
 
    
 

@@ -14,13 +14,14 @@
         // setInterval(function(){location.reload(true);}, 5000);
     </script>
 
-    <title>Affichage exercices php</title>
+    <title><?= $title ?></title>
+
 </head>
 
 <body>
   <header>
   
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container-sm">
         <a class="navbar-brand" href="#">Navbar</a>
         
@@ -59,6 +60,5 @@
         </div>
       </div>
     </nav>
-
 
   </header>

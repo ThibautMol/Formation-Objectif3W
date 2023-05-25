@@ -61,7 +61,7 @@
                             echo '<div class="d-flex justify-content-center">' . 'Auteur : ' . $book['author'] . '</div>';
                             echo '<div class="d-flex justify-content-center">' . 'Année d\'édition : ' . $book['release_year'] . '</div>';
                             echo '<a class="d-flex justify-content-center" href="'.$book['purchase_url'].'" target="_BLANK">' . 'Achetez-moi'  . "</a>";
-                            }
+                        }
                     }
 
                 }

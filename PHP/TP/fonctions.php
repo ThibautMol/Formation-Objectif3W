@@ -42,6 +42,7 @@ function vowels_remplacement() {
 
 function vowels_count () {
     $word_to_count=(string)readline('Donnez votre mot : ');
+    $word_to_count=mb_strtolower($word_to_count);
     $list=[];
     $number_vowels=NULL;
     $vowels = array("a", "e", "i", "o", "u", "y", "A", "E", "I", "O", "U", "Y");
@@ -81,7 +82,7 @@ function reverse_sentence_v1 () {
 
 // echo 'votre phrase inversée est : ' . reverse_sentence_v1() . PHP_EOL;
 
-// Exercice 4 v1 : 
+// Exercice 4 v2 : 
 
 
 function reverse_sentence_v2 () {

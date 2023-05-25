@@ -3,8 +3,6 @@
 
     <div class="container d-flex flex-column ">
         
-
-
         <h5 class="d-flex justify-content-center">Choisissez parmi les auteurs suivants</h5>
         <p class="d-flex justify-content-center">Alex, Sophie et Bob</p>
 

@@ -236,14 +236,14 @@ function finding_book_by_author_v2($author_pick) {
         'purchase_url'=>'http://example6.com']
     ];
 
-    // $author_pick=readline('Choisissez les oeuvres parmi les auteurs suivants Bob, Sophie et Alex : ');
+    $author_pick=readline('Choisissez les oeuvres parmi les auteurs suivants Bob, Sophie et Alex : ');
 
-foreach ($books as $book) {
-    if (array_search($author_pick, $book)){
-        print_r($book);
+    foreach ($books as $book) {
+        if (array_search($author_pick, $book)){
+            print_r($book);
+            }
         }
-    }
 }
-$author_pick='Bob';
+
 finding_book_by_author_v2($author_pick);
 

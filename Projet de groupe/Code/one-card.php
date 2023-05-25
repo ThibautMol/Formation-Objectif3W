@@ -2,7 +2,7 @@
 include_once ('header.php');?>
 
 
-    <form action="" method="POST" >
+    <form action="" method="POST" enctype="multipart/form-data" >
         <div class="d-flex flex-column align-items-center" style="margin-top:100px;">
             <h1 >Carte</h1>
             <div class="d-flex flex-row justify-content-center flex-wrap flex-sm-nowrap"> 

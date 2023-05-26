@@ -46,6 +46,7 @@
                     'release_year'=> 2018,
                     'purchase_url'=>'http://google.com']
                 ];
+            
 
                 function finding_book_v4($element_to_search, $books) {
                     $verif=NULL;
@@ -55,18 +56,18 @@
                         unset($simple_list_books['purchase_url']);
                         unset($simple_list_books['cover']);
                         
-                        foreach ($simple_list_books as $values){
-                            
-                            if (str_contains(str_replace(" ", "",strtolower($values)),str_replace(" ", "",strtolower($element_to_search)))) {
+                            foreach ($simple_list_books as $values){
+                                
+                                if (str_contains(str_replace(" ", "",strtolower($values)),str_replace(" ", "",strtolower($element_to_search)))) {
 
-                                echo '<img class="rounded mx-auto d-block w-25 h-25 mt-5" src="'.$book['cover'].'" />';
-                                echo '<div class="d-flex justify-content-center">' . 'Titre : ' . $book['name'] . '</div>';
-                                echo '<div class="d-flex justify-content-center">' . 'Auteur : ' . $book['author'] . '</div>';
-                                echo '<div class="d-flex justify-content-center">' . 'Année d\'édition : ' . $book['release_year'] . '</div>';
-                                echo '<a class="d-flex justify-content-center" href="'.$book['purchase_url'].'" target="_BLANK">' . 'Achetez-moi'  . "</a>";
-                                $verif=1;
+                                    echo '<img class="rounded mx-auto d-block w-25 h-25 mt-5" src="'.$book['cover'].'" />';
+                                    echo '<div class="d-flex justify-content-center">' . 'Titre : ' . $book['name'] . '</div>';
+                                    echo '<div class="d-flex justify-content-center">' . 'Auteur : ' . $book['author'] . '</div>';
+                                    echo '<div class="d-flex justify-content-center">' . 'Année d\'édition : ' . $book['release_year'] . '</div>';
+                                    echo '<a class="d-flex justify-content-center" href="'.$book['purchase_url'].'" target="_BLANK">' . 'Achetez-moi'  . "</a>";
+                                    $verif=1;
+                                }
                             }
-                        }
                     }
                     if ($verif!=1) {
                         echo '<div class="d-flex justify-content-center">' . 'Elément inconnu' . '</div>';
@@ -98,8 +99,6 @@
                     echo '<div class="d-flex justify-content-center">' . 'Aucun élément à afficher' . '</div>';
                 }
             ?>
-        </p>
 
-    </div>
 
-<?php include_once ('footer.php');?>
+           

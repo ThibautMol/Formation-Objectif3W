@@ -1,4 +1,6 @@
 <?php $title="Ajouter/éditer une carte";
+$current_page="cartes";
+$secondary_menu="one_card";
 include_once ('header.php');?>
 
 

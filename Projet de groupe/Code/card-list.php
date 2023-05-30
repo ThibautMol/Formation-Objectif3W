@@ -1,4 +1,5 @@
 <?php $title="Liste des cartes";
+$current_page="cartes";
 include_once ('header.php');?>
 
    

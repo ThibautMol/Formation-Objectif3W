@@ -32,19 +32,19 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
           <ul class="navbar-nav align-items-center">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Dashboard</a>
+              <a class="nav-link <?= $current_page=='dashboard' ?  'dashboard' :'' ?>" href="#">Dashboard</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Cartes</a>
+              <a class="nav-link <?= $current_page=='cartes' ?  'cartes' :'' ?>" href="#">Cartes</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Plateaux</a>
+              <a class="nav-link <?= $current_page=='plateaux' ?  'plateaux' :'' ?>" href="#">Plateaux</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Utilisateurs</a>
+              <a class="nav-link <?= $current_page=='utilisteurs' ?  'utilisateurs' :'' ?>" href="#">Utilisateurs</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Profil</a>
+              <a class="nav-link <?= $current_page=='profil' ?  'profil' :'' ?>" href="#">Profil</a>
             </li>
             <!-- <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">

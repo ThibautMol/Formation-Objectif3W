@@ -41,13 +41,11 @@
         // if ((isset($success)) && ($success==true))
 
         if ((isset($_SESSION['LOGGED_USER']))){
-            // return 'c kool';
-            return '<div class="d-flex justify-content-center">' . 'Login success' . '</div>';
-            // return header(Location : . $monUrl, true, 301);
-            // Exit();
+            // return '<div class="d-flex justify-content-center">' . 'Login success' . '</div>';
+            return header('Location: https://www.w3schools.com');
         }
         else {
-            return '<div class="d-flex justify-content-center">' . 'Login error' . '</div>';
+            return '<div class="d-flex justify-content-center bg-danger mb-5 rounded w-25 font-italic">' . 'Login error' . '</div>';
             
         }
     }

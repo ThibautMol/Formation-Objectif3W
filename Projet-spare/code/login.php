@@ -1,5 +1,5 @@
-<?php session_start();
-include ("cookies.php") ?>
+<?php //session_start(); ?>
+<?php include ("cookies.php") ?>
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -24,7 +24,7 @@ include ("cookies.php") ?>
                         <div class="card bg-dark text-white" style="border-radius: 1rem;">
                             <div class="card-body p-5 text-center">
 
-                                <form class="mb-md-5 mt-md-4 pb-5" action="" method="post">
+                                <form class="md-5 mt-md-4 pb-5" action="" method="post">
 
                                     <h2 class="fw-bold mb-2 text-uppercase">Login</h2>
                                     <p class="text-white-50 mb-5">Please enter your login and password!</p>
@@ -50,21 +50,18 @@ include ("cookies.php") ?>
                                     </div> -->
 
                                 </form>
-
+                                <?php include ("login-function.php")?>
                                 <div>
                                     <p class="mb-0">Don't have an account? <a href="#!" class="text-white-50 fw-bold">Sign Up</a></p>
                                 </div>
 
                             </div>
+                            <?php include ("mysql-request.php")?>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
-
-        <?php include ("login-function.php")?>
-
 
     </body>
 

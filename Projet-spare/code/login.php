@@ -1,5 +1,5 @@
 <?php //session_start(); ?>
-<?php include ("cookies.php") ?>
+<?php require ("cookies.php") ?>
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -12,11 +12,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
         
-    <link rel="stylesheet" href="asset/css/exercice-affichage-recherche-auteur.css">
+    <link rel="stylesheet" href="">
 
     <body>
         
-    
         <section class="vh-100 gradient-custom">
             <div class="container py-5 h-100">
                 <div class="row d-flex justify-content-center align-items-center h-100">
@@ -50,13 +49,12 @@
                                     </div> -->
 
                                 </form>
-                                <?php include ("login-function.php")?>
+                                <?php require ("login-function.php")?>
                                 <div>
                                     <p class="mb-0">Don't have an account? <a href="#!" class="text-white-50 fw-bold">Sign Up</a></p>
                                 </div>
 
                             </div>
-                            <?php include ("mysql-request.php")?>
                         </div>
                     </div>
                 </div>

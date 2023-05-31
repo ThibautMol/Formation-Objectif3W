@@ -13,15 +13,11 @@ catch (Exception $e) {
 }
 
 
-$test=$db->prepare('SELECT email FROM users');
+$request_login=$db->prepare('SELECT email, UserPwd FROM users');
 
-$test->execute();
+$request_login->execute();
 
-$result=$test->fetchAll();
-// var_dump($result);
+$login_selection=$request_login->fetchAll();
 
-foreach ($result as $lol) {
-    // var_dump($result);
-    echo $lol['email'];
-}
+
 ?>

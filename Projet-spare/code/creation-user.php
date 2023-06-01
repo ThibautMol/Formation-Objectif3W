@@ -1,38 +1,29 @@
-<?php require (".\assets\inc\cookies.php") ?>
+<?php //session_start(); ?>
+<?php require ("./assets/inc/cookies.php") ?>
+<?php $title='Inscription'?>
+<?php require_once ("./assets/inc/head.php") ?>
+<?php require_once ("./assets/inc/nav-bar.php") ?>
 
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-        
-    <link rel="stylesheet" href="">
-
-    <body>
-
-        <form action='mysql-form-create-user.php' method="POST">
-            <div class="form-row">
-                <div class="col-md-4 mb-3">
-                    <label for="UserEmail">email</label>
+    <main class="d-flex flex-column justify-content-center align-items-center" style="margin-top:100px;">
+        <h1>Formulaire d'inscription</h1>
+        <form class="d-flex flex-column justify-content-center mt-3" action='mysql-form-create-user.php' method="POST">
+            <div class="form-row d-grid gap-3">
+                <div class="">
+                    <label for="UserEmail">Email</label>
                     <input type="email" class="form-control is-valid" name="email" id="UserEmail" placeholder="Email" value="" required>
                 </div>
 
-                <div class="col-md-4 mb-3">
+                <div class="">
                     <label for="password">Password</label>
                     <input type="password" class="form-control is-valid" name="UserPwd" id="password" value="" required>
                 </div>
 
-                <div class="col-md-4 mb-3">
+                <div class="">
                     <label for="firstname">First Name</label>
                     <input type="text" class="form-control is-valid" name="firstname" id="firstname" placeholder="firstname" value="" required>
                 </div>
                 
-                <div class="col-md-4 mb-3">
+                <div class="">
                     <label for="validationServerUsername">Last Name</label>
                     <div class="input-group">           
                         <input type="text" class="form-control is-invalid" id="lastname" name="lastname" placeholder="Last Name" aria-describedby="inputGroupPrepend3" required>
@@ -40,9 +31,9 @@
                 </div>
             </div>
 
-            <div class="form-row">
-                <div class="col-md-6 mb-3">
-                    <label for="statut">role</label>
+            <div class="form-row d-grid gap-3">
+                <div class="mt-3">
+                    <label for="statut">Rôle</label>
                     <select name="statut" id="statut">
                         <option value="">--Please choose an option--</option>
                         <option value="Administrateur">Administrateur</option>
@@ -52,7 +43,7 @@
                     </select>
                 </div>
 
-                <div class="col-md-3 mb-3">
+                <div class="">
                     <label for="classroom">Classe</label>
                     <select name="classroom" id="classroom">
                         <option value="">--Please choose an option--</option>
@@ -66,18 +57,19 @@
                     
                 </div>
 
-                <div class="col-md-3 mb-3">
+                <div class="">
                     <label for="CreationAccount">Date de création du compte</label>
                     <input type="date" class="form-control is-invalid" name="CreationAccount" id="CreationAccount" required>
                     
                 </div>
             </div>
            
-
-            <button class="btn btn-primary" type="submit">Submit form</button>
+            <div class="m-auto">
+                <button class="btn btn-primary mt-3" type="submit">Submit form</button>
+            </div>    
         </form>
         <?php var_dump($_POST);
         require (".\assets\inc\mysql-form-create-user.php");?>
+    </main>
 
-    </body>
-</html>
+<?php require_once ("./assets/inc/foot.php") ?>

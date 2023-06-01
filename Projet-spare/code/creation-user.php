@@ -5,29 +5,31 @@
 <?php require_once ("./assets/inc/head.php")?>
 <?php require_once ("./assets/inc/nav-bar.php")?>
 
+
+
 <main class="d-flex flex-column justify-content-center align-items-center mb-5" style="margin-top:100px;">
         <h1>Nouvel utilisateur</h1>
         <form class="d-flex flex-column justify-content-center mt-3" action='assets\inc\mysql-form-create-user.php' method="POST">
             <div class="form-row d-grid gap-3">
                 <div class="">
                     <label class="text-capitalize" for="UserEmail">email</label>
-                    <input type="email" class="form-control is-valid" name="email" id="UserEmail" placeholder="Email" value="" <?php require ("./assets/functions/disabled-input.php")?> required>
+                    <input type="email" class="form-control is-valid" name="email" id="UserEmail" placeholder="Email" value="" required>
                 </div>
 
                 <div class="">
                     <label class="text-capitalize" for="password">password</label>
-                    <input type="password" class="form-control is-valid" name="UserPwd" id="password" value="" <?php require ("./assets/functions/disabled-input.php")?> required>
+                    <input type="password" class="form-control is-valid" name="UserPwd" id="password" value="" required>
                 </div>
-
+                
                 <div class="">
                     <label class="text-capitalize" for="firstname">firstname</label>
-                    <input type="text" class="form-control is-valid" name="firstname" id="firstname" placeholder="firstname" value="" <?php require ("./assets/functions/disabled-input.php")?> required>
+                    <input type="text" class="form-control is-valid" name="firstname" id="firstname" placeholder="firstname" value=""  required>
                 </div>
                 
                 <div class="">
                     <label class="text-capitalize" for="validationServerUsername">lastname</label>
                     <div class="input-group">           
-                        <input type="text" class="form-control is-invalid" id="lastname" name="lastname" placeholder="Last Name" aria-describedby="inputGroupPrepend3" <?php require ("./assets/functions/disabled-input.php")?> required>
+                        <input type="text" class="form-control is-invalid" id="lastname" name="lastname" placeholder="Last Name" aria-describedby="inputGroupPrepend3" required>
                     </div>
                 </div>
             </div>
@@ -35,7 +37,7 @@
             <div class="form-row d-grid gap-3">
                 <div class="mt-3">
                     <label class="text-capitalize" for="statut">rôle</label>
-                    <select name="statut" id="statut" <?php require ("./assets/functions/disabled-input.php")?> required>
+                    <select name="statut" id="statut" required>
                         <option value="">--Please choose an option--</option>
                         <option class="text-capitalize" value="administrateur">administrateur</option>
                         <option class="text-capitalize" value="agent de traitement">agent de traitement</option>
@@ -46,7 +48,7 @@
 
                 <div class="">
                     <label class="text-capitalize" for="classroom">classe</label>
-                    <select name="classroom" id="classroom" <?php require ("./assets/functions/disabled-input.php")?> required>
+                    <select name="classroom" id="classroom" required>
                         <option value="">--Please choose an option--</option>
                         <option class="text-capitalize" value="class1">class1</option>
                         <option class="text-capitalize" value="class2">class2</option>
@@ -60,7 +62,7 @@
 
                 <div class="">
                     <label for="CreationAccount">Date de création du compte</label>
-                    <input type="date" class="form-control is-invalid" name="CreationAccount" id="CreationAccount" <?php require ("./assets/functions/disabled-input.php")?> required>
+                    <input type="date" class="form-control is-invalid" name="CreationAccount" id="CreationAccount" required>
                     
                 </div>
             </div>

@@ -8,5 +8,5 @@ function disabled($is_disabled) {
         return '';
     }
 }
-$result=disabled($is_disabled);
+$disabled_abled=disabled($is_disabled);
 ?>

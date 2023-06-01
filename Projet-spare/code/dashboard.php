@@ -7,7 +7,7 @@
 <main class="" style="margin-top:100px;">
     <h1 class="d-flex justify-content-center">Dashboard<h1>
 
-    <p> Bonjour <?= $_SESSION['LOGGED_USER']?></p>
+    <p class="d-flex justify-content-end me-5 text-capitalize font-italic fs-5"> Bonjour <?= $_SESSION['LOGGED_USER']?></p>
     
 
 

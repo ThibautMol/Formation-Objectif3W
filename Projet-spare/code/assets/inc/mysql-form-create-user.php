@@ -12,13 +12,17 @@ catch (Exception $e) {
     die('Erreur : ' . $e->getMessage());
 }
 
+date_default_timezone_set('Europe/Paris');
+$date = date("Y-m-d");
+
 $email=$_POST['email']; 
 $UserPwd=$_POST['UserPwd']; 
 $firstname=$_POST['firstname']; 
 $lastname=$_POST['lastname']; 
 $statut=$_POST['statut']; 
 $classroom=$_POST['classroom']; 
-$CreationAccount=$_POST['CreationAccount']; 
+$CreationAccount=$date; 
+
 
 $sqlQuery ='INSERT INTO users (email, UserPwd, firstname, lastname, statut, classroom, CreationAccount) VALUES (?, ?, ?, ?, ?, ?, ?)';
 

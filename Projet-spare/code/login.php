@@ -13,20 +13,20 @@
 
                             <form class="md-5 mt-md-4 pb-5" action="" method="post">
                                 <img src="assets/img/spare-logo.png" class="mb-5" title="SPARE Logo" alt="SPARE Logo">
-                                <h2 class="fw-bold mb-2 text-uppercase">Login</h2>
-                                <p class="text-white-50 mb-5">Please enter your login and password!</p>
+                                <h2 class="fw-bold mb-4 text-uppercase">Login</h2>
+                                <p class="text-white-50 mb-3">Please enter your login and password!</p>
 
                                 <div class="form-outline form-white mb-4">
-                                    <label class="form-label" for="login">Email</label>
-                                    <input type="email" name="email" id="email" class="form-control form-control-lg" />
+                                    <!-- <label class="form-label" for="login"></label> -->
+                                    <input type="email" name="email" id="email" class="form-control form-control-lg" placeholder="Email" />
                                 </div>
 
                                 <div class="form-outline form-white mb-4">
-                                    <label class="form-label" for="password">Password</label>
-                                    <input type="password" name="password" id="password" class="form-control form-control-lg" />
+                                    <!-- <label class="form-label" for="password">Password</label> -->
+                                    <input type="password" name="password" id="password" class="form-control form-control-lg" placeholder="Password" />
                                 </div>
 
-                                <p class="small mb-5 pb-lg-2"><a class="text-white-50" href="#!">Forgot password?</a></p>
+                                <p class="small mb-5 pb-lg-2"><a class="text-white-50 text-decoration-none" href="#!">Forgot password?</a></p>
 
                                 <button class="btn btn-outline-light btn-lg px-5" type="submit">Login</button>
 
@@ -39,7 +39,7 @@
                             </form>
                             <?php require ("./assets/functions/login-function.php")?>
                             <div>
-                                <p class="mb-0">Don't have an account? <a href="#!" class="text-white-50 fw-bold">Sign Up</a></p>
+                                <p class="mb-0">Don't have an account? <a href="#!" class="text-white-50 fw-bold text-decoration-none ">Sign Up</a></p>
                             </div>
 
                         </div>

@@ -8,26 +8,29 @@
             </button>
 
             <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
-            <ul class="navbar-nav align-items-center">
-                <li class="nav-item">
-                <a class="nav-link <?= $current_page=='dashboard' ?  'dashboard' :'' ?>" href="#">Dashboard</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link <?= $current_page=='cartes' ?  'cartes' :'' ?>" href="#">Cartes</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link <?= $current_page=='plateaux' ?  'plateaux' :'' ?>" href="#">Plateaux</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link <?= $current_page=='utilisteurs' ?  'utilisateurs' :'' ?>" href="#">Utilisateurs</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link <?= $current_page=='profil' ?  'profil' :'' ?>" href="#">Profil</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="assets/functions/session_end.php">Se déconnecter</a>
-                </li>
-            </ul>
+                <ul class="navbar-nav align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link <?= $current_page=='appels' ?  'active' :'' ?>" href="#">Appels</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link <?= $current_page=='classes' ?  'active' :'' ?>" href="#">Classes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link <?= $current_page=='eleves' ?  'active' :'' ?>" href="#">Élèves</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link <?= $current_page=='absences/retards' ?  'active' :'' ?>" href="#">Absences/Retards</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link <?= $current_page=='utilisateurs' ?  'active' :'' ?>" href="users-list.php">Utilisateurs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link <?= $current_page=='profil' ?  'active' :'' ?>" href="profil-user.php">Profil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="assets/functions/session_end.php">Se déconnecter</a>
+                    </li>
+                </ul>
             </div>
         </div>
     </nav>

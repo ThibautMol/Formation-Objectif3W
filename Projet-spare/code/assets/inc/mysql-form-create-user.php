@@ -12,7 +12,6 @@ catch (Exception $e) {
     die('Erreur : ' . $e->getMessage());
 }
 
-var_dump($_POST);
 $email=$_POST['email']; 
 $UserPwd=$_POST['UserPwd']; 
 $firstname=$_POST['firstname']; 
@@ -26,14 +25,14 @@ $sqlQuery ='INSERT INTO users (email, UserPwd, firstname, lastname, statut, clas
 $insert_user= $db->prepare($sqlQuery);
 
 $insert_user->execute([
-    'email'=>$email,
-    'UserPwd'=>$UserPwd,
-    'firstname'=>$firstname,
-    'lastname'=>$lastname,
-    'statut'=>$statut,
-    'classroom'=>$classroom,
-    'CreationAcount'=>$CreationAccount
+    $email,
+    $UserPwd,
+    $firstname,
+    $lastname,
+    $statut,
+    $classroom,
+    $CreationAccount
 ]);
 
-
+header('Location: http://localhost/Formation-Objectif3W/Projet-spare/code/dashboard.php');
 

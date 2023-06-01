@@ -1,15 +1,18 @@
 <?php
-
+   session_start();
     $login_form=$_POST;   
 
     function login_validation ($login_form) {
         require '.\assets\inc\mysql-login-request.php';
+
+        // var_dump($login_selection);
 
         if (isset($login_form['email']) && isset($login_form['password'])) {
             foreach ($login_selection as $user) {
                 if ($user['email']===$login_form['email'] &&
                     $user['UserPwd']===$login_form['password']) {
                     $_SESSION['LOGGED_USER']=$user['firstname'];
+                    
                 }
             }
         }
@@ -25,7 +28,7 @@
     if (isset($_POST)){
         login_validation($login_form);
     }
-
+    var_dump($_SESSION). PHP_EOL;
 
 
 

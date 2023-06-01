@@ -1,4 +1,4 @@
-<?php //session_start(); ?>
+<?php session_start(); ?>
 <?php require ("./assets/inc/cookies.php")?>
 <?php $title='Inscription'?>
 <?php require_once ("./assets/inc/head.php")?>
@@ -65,11 +65,9 @@
             </div>
            
             <div class="m-auto">
-                <button class="btn btn-primary mt-3" type="submit">Submit form</button>
+                <button class="btn btn-primary mt-3" type="submit">Enregistrer</button>
             </div>    
         </form>
-        <?php var_dump($_POST);
-        // require ("./assets/inc/mysql-form-create-user.php");?>  
     </main>
 
 <?php require_once ("./assets/inc/foot.php") ?>

@@ -16,7 +16,7 @@
               </form>
             </div>
         </div>
-       <a class="btn btn-primary justify-content-start" href="profil-user.php">Ajouter un utilisateur</a>
+       <a class="btn btn-primary justify-content-start" href="creation-user.php">Ajouter un utilisateur</a>
       </div>
 
       <h2 class="d-flex justify-content-center">Filtres</h2>

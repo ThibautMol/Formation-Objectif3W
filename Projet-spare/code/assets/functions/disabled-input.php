@@ -1,13 +1,12 @@
 <?php
 
-$is_disabled=NULL;
-
-if ($is_disabled==1) {
-    echo 'disabled';
+function disabled($is_disabled) {
+    if ($is_disabled==1) {
+        return 'disabled';
+    }
+    else {
+        return '';
+    }
 }
-else {
-    echo '';
-}
-
-
+$result=disabled($is_disabled);
 ?>

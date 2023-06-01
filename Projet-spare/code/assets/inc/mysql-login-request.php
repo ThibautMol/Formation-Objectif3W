@@ -13,7 +13,7 @@ catch (Exception $e) {
 }
 
 
-$request_login=$db->prepare('SELECT email, UserPwd FROM users');
+$request_login=$db->prepare('SELECT email, UserPwd, firstname FROM users');
 
 $request_login->execute();
 

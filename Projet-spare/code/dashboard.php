@@ -1,13 +1,14 @@
-<?php //session_start(); ?>
+<?php session_start(); ?>
 <?php require ("./assets/inc/cookies.php") ?>
 <?php $title='Dashboard'?>
 <?php require_once ("./assets/inc/head.php") ?>
 <?php require_once ("./assets/inc/nav-bar.php") ?>
-<?php $firstname='sophie';?>
+<?php var_dump($_SESSION);?>
 
 <main class="" style="margin-top:100px;">
     <h1 class="d-flex justify-content-center">Dashboard<h1>
-    <p> Bonjour <?= $firstname;?></p>
+    <p> Bonjour <?= $_SESSION['LOGGED_USER']?></p>
+    
 
 
 

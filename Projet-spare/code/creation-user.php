@@ -1,10 +1,10 @@
 <?php //session_start(); ?>
-<?php require ("./assets/inc/cookies.php") ?>
+<?php require ("./assets/inc/cookies.php")?>
 <?php $title='Inscription'?>
-<?php require_once ("./assets/inc/head.php") ?>
-<?php require_once ("./assets/inc/nav-bar.php") ?>
+<?php require_once ("./assets/inc/head.php")?>
+<?php require_once ("./assets/inc/nav-bar.php")?>
 
-    <main class="d-flex flex-column justify-content-center align-items-center" style="margin-top:100px;">
+    <main class="d-flex flex-column justify-content-center align-items-center mb-5" style="margin-top:100px;">
         <h1>Formulaire d'inscription</h1>
         <form class="d-flex flex-column justify-content-center mt-3" action='mysql-form-create-user.php' method="POST">
             <div class="form-row d-grid gap-3">
@@ -67,9 +67,10 @@
             <div class="m-auto">
                 <button class="btn btn-primary mt-3" type="submit">Submit form</button>
             </div>    
-        </form>
-        <?php var_dump($_POST);
-        require (".\assets\inc\mysql-form-create-user.php");?>
+        </form>  
     </main>
 
 <?php require_once ("./assets/inc/foot.php") ?>
+
+<?php var_dump($_POST);
+        require (".\assets\inc\mysql-form-create-user.php");?>

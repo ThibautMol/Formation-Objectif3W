@@ -9,7 +9,7 @@
             foreach ($login_selection as $user) {
                 if ($user['email']===$login_form['email'] &&
                     $user['UserPwd']===$login_form['password']) {
-                    $_SESSION['LOGGED_USER']=$user['email'];
+                    $_SESSION['LOGGED_USER']=$user['firstname'];
                 }
             }
         }

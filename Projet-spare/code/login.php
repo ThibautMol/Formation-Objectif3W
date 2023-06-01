@@ -1,4 +1,4 @@
-<?php //session_start(); ?>
+
 <?php $title='Login'?>
 <?php require_once (".\assets\inc\head.php")?>
 <?php require_once (".\assets\inc\cookies.php")?>

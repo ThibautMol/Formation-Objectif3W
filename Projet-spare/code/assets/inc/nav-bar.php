@@ -25,7 +25,7 @@
                 <a class="nav-link <?= $current_page=='profil' ?  'profil' :'' ?>" href="#">Profil</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="#">Se déconnecter</a>
+                <a class="nav-link" href="assets/functions/session_end.php">Se déconnecter</a>
                 </li>
             </ul>
             </div>

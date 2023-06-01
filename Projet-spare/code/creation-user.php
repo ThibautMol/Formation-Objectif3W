@@ -1,4 +1,4 @@
-<?php require ("cookies.php") ?>
+<?php require (".\assets\inc\cookies.php") ?>
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -40,10 +40,10 @@
                 </div>
             </div>
 
-            <!-- <div class="form-row">
+            <div class="form-row">
                 <div class="col-md-6 mb-3">
-                    <label for="role">role</label>
-                    <select name="pets" id="pet-select">
+                    <label for="statut">role</label>
+                    <select name="statut" id="statut">
                         <option value="">--Please choose an option--</option>
                         <option value="Administrateur">Administrateur</option>
                         <option value="Agent de traitement">Agent De Traitement</option>
@@ -54,7 +54,7 @@
 
                 <div class="col-md-3 mb-3">
                     <label for="classroom">Classe</label>
-                    <select name="pets" id="pet-select">
+                    <select name="classroom" id="classroom">
                         <option value="">--Please choose an option--</option>
                         <option value="class1">class1</option>
                         <option value="class2">class2</option>
@@ -64,7 +64,7 @@
                     </select>
                    
                     
-                </div> -->
+                </div>
 
                 <div class="col-md-3 mb-3">
                     <label for="CreationAccount">Date de création du compte</label>
@@ -77,7 +77,7 @@
             <button class="btn btn-primary" type="submit">Submit form</button>
         </form>
         <?php var_dump($_POST);
-        require ("mysql-form-create-user.php");?>
+        require (".\assets\inc\mysql-form-create-user.php");?>
 
     </body>
 </html>

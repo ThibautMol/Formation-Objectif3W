@@ -17,21 +17,21 @@ $email=$_POST['email'];
 $UserPwd=$_POST['UserPwd']; 
 $firstname=$_POST['firstname']; 
 $lastname=$_POST['lastname']; 
-// $statu=$_POST['statu']; 
-// $classroom=$_POST['classroom']; 
+$statut=$_POST['statut']; 
+$classroom=$_POST['classroom']; 
 $CreationAccount=$_POST['CreationAccount']; 
 
-$sqlQuery ='INSERT INTO users (email, UserPwd, firstname, lastname, statu, classroom, CreationAccount,LastOnline) VALUES (:email, :UserPwd, :firstname, :lastname, :statu, :classroom, :CreationAccount,?)';
+$sqlQuery ='INSERT INTO users (email, UserPwd, firstname, lastname, statut, classroom, CreationAccount) VALUES (?, ?, ?, ?, ?, ?, ?)';
 
-$insert_user= $db ->prepare($sqlQuery);
+$insert_user= $db->prepare($sqlQuery);
 
 $insert_user->execute([
     'email'=>$email,
     'UserPwd'=>$UserPwd,
     'firstname'=>$firstname,
     'lastname'=>$lastname,
-    // 'statu'=>$classroom,
-    // 'classroom'=>$CreationAccount,
+    'statut'=>$statut,
+    'classroom'=>$classroom,
     'CreationAcount'=>$CreationAccount
 ]);
 

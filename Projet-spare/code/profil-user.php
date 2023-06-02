@@ -44,7 +44,7 @@
                 <div class="mt-3">
                     <label class="text-capitalize" for="statut">rôle</label>
                     <select name="statut" id="statut" <?=$disabled_abled;?> required>
-                        <option value=""><?=$user_profil['statut'];?></option>
+                        <option value="<?=$user_profil['statut'];?>"><?=$user_profil['statut'];?></option>
                         <option class="text-capitalize" value="administrateur">administrateur</option>
                         <option class="text-capitalize" value="agent de traitement">agent de traitement</option>
                         <option class="text-capitalize" value="professeur">professeur</option>
@@ -55,7 +55,7 @@
                 <div class="">
                     <label class="text-capitalize" for="classroom">classe</label>
                     <select name="classroom" id="classroom" <?=$disabled_abled;?> required>
-                        <option value=""><?=$user_profil['classroom'];?></option>
+                        <option value="<?=$user_profil['classroom'];?>"><?=$user_profil['classroom'];?></option>
                         <option class="text-capitalize" value="class1">class1</option>
                         <option class="text-capitalize" value="class2">class2</option>
                         <option class="text-capitalize" value="class3">class3</option>
@@ -69,15 +69,13 @@
                 <!-- <div class="">
                     <label for="CreationAccount">Date de création du compte</label>
                     <input type="date" class="form-control is-invalid" name="CreationAccount" id="CreationAccount" required>
-                    
                 </div> -->
             </div>
            
             <div class="m-auto">
                 <button class="btn btn-primary mt-3 text-capitalize" type="submit" <?=$disabled_abled;?> onclick="disable()">enregistrer</button>
             
-                <button class="btn btn-primary mt-3 text-capitalize" class="btn btn-primary mt-3 text-capitalize" onclick="enable()">modifier</button>
-
+                
                 
                     <!-- <input type="submit" name="button1" class="button" value="button1"/>
                     
@@ -87,6 +85,7 @@
 
             
         </form>
+        <button class="btn btn-primary mt-3 text-capitalize" class="btn btn-primary mt-3 text-capitalize" onclick="enable()">modifier</button>
     </main>
 
     <?php //if(array_key_exists('button1', $_POST)) {disable($is_disabled);}elseif(array_key_exists('button2', $_POST)) {enable($is_disabled);}?>

@@ -4,8 +4,6 @@
 <?php $current_page="profil"?>
 <?php require_once ("./assets/inc/head.php");?>
 <?php require_once ("./assets/inc/nav-bar.php");?>
-<?php require_once ("./assets/functions/action-save-modification.php");?>
-<?php require_once ("./assets/functions/action-modify.php");?>
 <?php require_once ("./assets/functions/add-element-form-profil-user.php");?>
 
 

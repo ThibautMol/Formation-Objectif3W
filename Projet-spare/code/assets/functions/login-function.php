@@ -20,9 +20,6 @@
         if ((isset($_SESSION['USER_FIRSTNAME']))){
             return header('Location: http://localhost/Formation-Objectif3W/Projet-spare/code/dashboard.php');
         }
-        else {
-            // echo '<div class="d-flex justify-content-center bg-danger mb-5 rounded w-25 font-italic">' . 'Login error' . '</div>';
-        }
     }
 
     if (isset($_POST)){

@@ -37,6 +37,7 @@
                                 </div> -->
 
                             </form>
+                            
                             <?php require ("./assets/functions/login-function.php")?>
                             <div>
                                 <p class="mb-0">Don't have an account? <a href="#!" class="text-white-50 fw-bold text-decoration-none ">Sign Up</a></p>

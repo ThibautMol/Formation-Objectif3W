@@ -18,7 +18,7 @@ $firstname=$_POST['firstname'];
 $lastname=$_POST['lastname']; 
 $statut=$_POST['statut']; 
 $classroom=$_POST['classroom']; 
-$CreationAccount=$date; 
+
 
 
 $sqlQuery ='INSERT INTO users (email, UserPwd, firstname, lastname, statut, classroom, CreationAccount) VALUES (?, ?, ?, ?, ?, ?, ?)';
@@ -32,5 +32,5 @@ $insert_user->execute([
     $lastname,
     $statut,
     $classroom,
-    $CreationAccount
+   
 ]);

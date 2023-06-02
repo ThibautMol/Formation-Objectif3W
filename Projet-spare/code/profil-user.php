@@ -44,7 +44,7 @@
                 <div class="mt-3">
                     <label class="text-capitalize" for="statut">rôle</label>
                     <select name="statut" id="statut" <?=$disabled_abled;?> required>
-                        <option value="">--Please choose an option--</option>
+                        <option value=""><?=$user_profil['statut'];?></option>
                         <option class="text-capitalize" value="administrateur">administrateur</option>
                         <option class="text-capitalize" value="agent de traitement">agent de traitement</option>
                         <option class="text-capitalize" value="professeur">professeur</option>
@@ -55,14 +55,14 @@
                 <div class="">
                     <label class="text-capitalize" for="classroom">classe</label>
                     <select name="classroom" id="classroom" <?=$disabled_abled;?> required>
-                        <option value="">--Please choose an option--</option>
+                        <option value=""><?=$user_profil['classroom'];?></option>
                         <option class="text-capitalize" value="class1">class1</option>
                         <option class="text-capitalize" value="class2">class2</option>
                         <option class="text-capitalize" value="class3">class3</option>
                         <option class="text-capitalize" value="class4">class4</option>
                         <option class="text-capitalize" value="class5">class5</option>
                     </select>
-                   
+                  
                     
                 </div>
 

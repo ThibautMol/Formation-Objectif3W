@@ -7,7 +7,7 @@
    
 
     <main class="d-flex flex-column justify-content-center align-items-center mb-5" style="margin-top:100px;">
-
+      <h1> POUR CHAQUE FILTRES CREER UNE PAGE QUI DONNERA LA LISTE FILTREE DE TOUS LES ELEMENTS PAREIL POUR LE SEARCH RESULT (avec fonction get)<h1>
       <div class="container-fluid mt-3">
         <div class="row">
             <div class="span12 d-flex justify-content-end">

@@ -13,23 +13,23 @@
             <div class="form-row d-grid gap-3">
                 <div class="">
                     <label class="text-capitalize" for="UserEmail">email</label>
-                    <input type="email" class="form-control is-valid" name="email" id="UserEmail" placeholder="Email" value="" required>
+                    <input type="email" class="form-control" name="email" id="UserEmail" placeholder="Email" value="" required>
                 </div>
 
                 <div class="">
                     <label class="text-capitalize" for="password">password</label>
-                    <input type="password" class="form-control is-valid" name="UserPwd" id="password" value="" required>
+                    <input type="password" class="form-control" name="UserPwd" id="password" value="" required>
                 </div>
                 
                 <div class="">
                     <label class="text-capitalize" for="firstname">firstname</label>
-                    <input type="text" class="form-control is-valid" name="firstname" id="firstname" placeholder="firstname" value=""  required>
+                    <input type="text" class="form-control" name="firstname" id="firstname" placeholder="firstname" value=""  required>
                 </div>
                 
                 <div class="">
                     <label class="text-capitalize" for="validationServerUsername">lastname</label>
                     <div class="input-group">           
-                        <input type="text" class="form-control is-invalid" id="lastname" name="lastname" placeholder="Last Name" aria-describedby="inputGroupPrepend3" required>
+                        <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Last Name" aria-describedby="inputGroupPrepend3" required>
                     </div>
                 </div>
             </div>

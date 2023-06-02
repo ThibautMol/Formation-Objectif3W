@@ -60,17 +60,15 @@
                     
                 </div>
 
-                <div class="">
+                <!-- <div class="">
                     <label for="CreationAccount">Date de création du compte</label>
                     <input type="date" class="form-control is-invalid" name="CreationAccount" id="CreationAccount" required>
                     
-                </div>
+                </div> -->
             </div>
            
             <div class="m-auto">
                 <button class="btn btn-primary mt-3 text-capitalize" type="submit">enregistrer</button>
-            
-                <button class="btn btn-primary mt-3 text-capitalize" type="submit">modifier</button>
             </div> 
                
         </form>

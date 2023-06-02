@@ -10,13 +10,14 @@
             foreach ($login_selection as $user) {
                 if ($user['email']===$login_form['email'] &&
                     $user['UserPwd']===$login_form['password']) {
-                    $_SESSION['LOGGED_USER']=$user['firstname'];
-                    
+                    $_SESSION['USER_FIRSTNAME']=$user['firstname'];
+                    $_SESSION['USER_ID']=$user['id'];
+                    $_SESSION['USER_LASTNAME']=$user['lastname'];
                 }
             }
         }
 
-        if ((isset($_SESSION['LOGGED_USER']))){
+        if ((isset($_SESSION['USER_FIRSTNAME']))){
             return header('Location: http://localhost/Formation-Objectif3W/Projet-spare/code/dashboard.php');
         }
         else {

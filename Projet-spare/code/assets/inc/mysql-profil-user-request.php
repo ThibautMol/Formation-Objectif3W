@@ -1,5 +1,4 @@
 <?php
-
 try {
     $db= new PDO (
         'mysql:host=localhost;dbname=spare;charset=UTF8',
@@ -13,10 +12,10 @@ catch (Exception $e) {
 }
 
 
-$request_login=$db->prepare('SELECT id, email, UserPwd, firstname, lastname FROM users');
+$request_profil_user=$db->prepare('SELECT id, email, UserPwd, firstname, lastname, statut, classroom FROM users');
 
-$request_login->execute();
+$request_profil_user->execute();
 
-$login_selection=$request_login->fetchAll();
+$all_profil_user=$request_profil_user->fetchAll();
 
 ?>

@@ -1,13 +1,14 @@
 <?php session_start(); ?>
-<?php require ("./assets/inc/cookies.php")?>
+<?php require ("./assets/inc/cookies.php");?>
 <?php $title='Profil'?>
 <?php $current_page="profil"?>
-<?php require_once ("./assets/inc/head.php")?>
+<?php require_once ("./assets/inc/head.php");?>
 <?php require_once ("./assets/inc/nav-bar.php");?>
 <?php $is_disabled=1;?> 
-<?php require_once ("./assets/functions/disabled-input.php")?> <!--vérif si pas de conflits avec require once après modificatoin de la valeur is disabled-->
-<?php require_once ("./assets/functions/action-save-modification.php")?>
-<?php require_once ("./assets/functions/action-modify.php")?>
+<?php require_once ("./assets/functions/disabled-input.php")?> <!--vérif si pas de conflits avec require once après modification de la valeur is disabled-->
+<?php require_once ("./assets/functions/action-save-modification.php");?>
+<?php require_once ("./assets/functions/action-modify.php");?>
+<?php require_once ("./assets/functions/add-element-form-profil-user.php");?>
 
 
 
@@ -18,23 +19,23 @@
             <div class="form-row d-grid gap-3">
                 <div class="">
                     <label class="text-capitalize" for="UserEmail">email</label>
-                    <input type="email" class="form-control is-valid" name="email" id="UserEmail" placeholder="Email" value="" <?=$disabled_abled;?> required>
+                    <input type="email" class="form-control is-valid" name="email" id="UserEmail" placeholder="Email" value="<?=$user_profil['email'];?>" <?=$disabled_abled;?> required>
                 </div>
                 
                 <div class="">
                     <label class="text-capitalize" for="password">password</label>
-                    <input type="password" class="form-control is-valid" name="UserPwd" id="password" value="" <?=$disabled_abled;?> required>
+                    <input type="password" class="form-control is-valid" name="UserPwd" id="password" value="<?=$user_profil['UserPwd'];?>" <?=$disabled_abled;?> required>
                 </div>
            
                 <div class="">
                     <label class="text-capitalize" for="firstname">firstname</label>
-                    <input type="text" class="form-control is-valid" name="firstname" id="firstname" placeholder="firstname" value="" <?=$disabled_abled;?> required>
+                    <input type="text" class="form-control is-valid" name="firstname" id="firstname" placeholder="firstname" value="<?=$user_profil['firstname'];?>" <?=$disabled_abled;?> required>
                 </div>
                 
                 <div class="">
                     <label class="text-capitalize" for="validationServerUsername">lastname</label>
                     <div class="input-group">           
-                        <input type="text" class="form-control is-invalid" id="lastname" name="lastname" placeholder="Last Name" aria-describedby="inputGroupPrepend3" <?=$disabled_abled;?> required>
+                        <input type="text" class="form-control is-invalid" id="lastname" name="lastname" placeholder="LastName" value="<?=$user_profil['lastname'];?>" aria-describedby="inputGroupPrepend3" <?=$disabled_abled;?> required>
                     </div>
                 </div>
             </div>
@@ -98,4 +99,3 @@
 
 
 <?php require_once ("./assets/inc/foot.php") ?>
-

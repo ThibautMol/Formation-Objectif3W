@@ -1,7 +1,7 @@
 <?php 
   $title = 'Utilisateurs';
   $currentPage = 'users';
-  $pageCourante=NULL;
+ 
   
 
   require 'inc/head.php'; 
@@ -123,9 +123,11 @@
     
 $count=NULL;
 $USER_PER_PAGE=5;
+
 $total_users=count($users);
 $pageCourante=isset($_GET['page']) ? $_GET['page'] : 1;
 $number_of_pages=ceil($total_users/$USER_PER_PAGE);
+
 // $pageCourante=(isset($_GET['page']));
 
 // if(isset($_GET['page'])){
@@ -154,7 +156,10 @@ $number_of_pages=ceil($total_users/$USER_PER_PAGE);
     <br>
     <?='Nombre total de pages : ' . $number_of_pages;?>
 </div>
-    
+
+<?php var_dump($USER_PER_PAGE);?>
+<?php var_dump($pageCourante);?>
+
 <?php $start_index=($pageCourante-1)*$USER_PER_PAGE;?>
 <?php $users_on_page=array_slice($users,$start_index,$USER_PER_PAGE);?>
 <table class="table">
@@ -176,6 +181,7 @@ $number_of_pages=ceil($total_users/$USER_PER_PAGE);
             </tr>
         <?php endforeach ;?>
     </tbody>
+    <p>Utilisateurs <?= $USER_PER_PAGE*$currentPage ?> - <?= $total_users ?> </p> #corriger le conflit de int sur currentpage
 </table>
 
 
@@ -198,7 +204,7 @@ $number_of_pages=ceil($total_users/$USER_PER_PAGE);
 
 
 
-<?php require 'inc/foot.php'; ?>
+<?php require 'inc/foot.php';?>
 
 
 

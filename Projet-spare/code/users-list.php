@@ -103,18 +103,20 @@
     </tbody>
   </table>
   <p>Utilisateurs <?= $USER_PER_PAGE*$pageCourante ?> - <?= $total_users ?></p>
-  <?php //faire une fonction qui va récup la valeur dans $_post et la réutiliser pour afficher le bon nombre de gens?>
-  <form action="" method="POST">  
-    <div class="mx-1">
-      <select class="form-select" aria-label="Default select example">
-        <option selected></option>
-        <option class="text-capitalize" value="5" selected>5</option>
-        <option class="text-capitalize" value="15">15</option>
-        <option class="text-capitalize" value="30">30</option>
-        <option class="text-capitalize" value="">Tous</option>
-      </select>
-    </div>
-  </form>
+  <?php //if ((isset($_POST)) && ($_POST['user_per_page']!=NULL)) {$user_per_page=$_POST['user_per_page'];} // stocker resultat dans $_SESSION?>
+  <div class="d-flex">
+    <form action="" method="POST">  
+      <div class="mx-1">
+        <select class="form-select" name="user_per_page" aria-label="Default select example">
+          <option class="text-capitalize" value="5" selected>5</option>
+          <option class="text-capitalize" value="15">15</option>
+          <option class="text-capitalize" value="30">30</option>
+          <option class="text-capitalize" value="">Tous</option>
+        </select>
+      </div>
+    </form>
+    <button type="submit" class="btn btn-primary">choisir</button>
+  </div>
 
 </main>
 

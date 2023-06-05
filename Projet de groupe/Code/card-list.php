@@ -4,173 +4,223 @@ include_once ('header.php');?>
 
    
 
-    <main>
+<?php
+  $users = [
+      [
+        'id' => 1,
+        'name' => 'Sony',
+        'job' => 'Chômeur',
+        'hobby' => 'DROP DATABASE'
+      ],
+      [
+        'id'=> 2,
+        'name' => 'Olivier',
+        'job' => 'Homme de joie',
+        'hobby' => 'Croziflette'
+      ],
+      [
+        'id'=> 3,
+        'name' => 'Adrien',
+        'job' => 'En prison',
+        'hobby' => 'savonette peau sensible'
+      ],
+      [
+        'id' => 4,
+        'name' => 'Arturo',
+        'job' => 'Designer(bientot Dev)',
+        'hobby' => 'Bootstrap'
+      ],
+      [
+        'id'=> 5,
+        'name' => 'Guillaume',
+        'job' => 'Ninja',
+        'hobby' => 'PHP'
+      ],
+      [
+        'id'=> 6,
+        'name' => 'Thibaut',
+        'job' => 'Pythoniste',
+        'hobby' => 'Mets Adrien en prison'
+      ],
+      [
+        'id'=> 7,
+        'name' => 'Fabrice',
+        'job' => 'éparpilleur',
+        'hobby' => 'Se perdre'
+      ],
+      [
+        'id' => 8,
+        'name' => 'Boubacar',
+        'job' => 'Documentaliste',
+        'hobby' => 'La DOC'
+      ],
+      [
+        'id'=> 9,
+        'name' => 'Virginie',
+        'job' => 'Epicier',
+        'hobby' => 'Cherche son ordi'
+      ],
+      [
+        'id'=> 10,
+        'name' => 'Anne',
+        'job' => 'Dealer de bonbon',
+        'hobby' => 'Les arlequins et les bétises'
+      ],
+      [
+        'id'=> 11,
+        'name' => 'Benjamin',
+        'job' => 'Casper',
+        'hobby' => 'Absent, j\'ai mécanique'
+      ],
+      [
+        'id'=> 12,
+        'name' => 'Mickael',
+        'job' => 'Le chineur',
+        'hobby' => 'Les bons tuyaux'
+      ],
+      [
+        'id'=> 13,
+        'name' => 'Ryan',
+        'job' => 'Le jeunot',
+        'hobby' => 'Découvre la vie'
+      ],
+      [
+        'id' => 14,
+        'name' => 'Désirée',
+        'job' => 'Reine des ternaires',
+        'hobby' => 'Les ternaires c\'est la vie'
+      ],
+      [
+        'id'=> 15,
+        'name' => 'Dhéya',
+        'job' => 'Nimois',
+        'hobby' => 'J\'adore les pauses'
+      ],
+    
+    ];
+?>
+   
 
-      <div class="container-fluid mt-3">
-        <div class="row">
-            <div class="span12 d-flex justify-content-end">
-              <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
-                <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
-              </form>
-            </div>
+<main class="d-flex flex-column justify-content-center align-items-center mb-5" style="margin-top:100px;">
+
+  <h1 class="display-1 text-center my-5">Liste des Utilisateurs</h1>
+  <div class="container-fluid mt-3">
+    <div class="row">
+        <div class="span12 d-flex justify-content-end">
+          <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+            <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+          </form>
         </div>
-        <button type="button" class="btn btn-primary justify-content-start">Ajouter une carte</button>
-      </div>
+    </div>
+  <a class="btn btn-primary justify-content-start" href="creation-user.php">Ajouter un utilisateur</a>
+  </div>
 
-      <h2 class="d-flex justify-content-center">Filtres</h2>
+  <h2 class="d-flex justify-content-center">Filtres</h2>
 
-      <div class="d-flex justify-content-center">
+  <form action="" method="GET" class="d-flex justify-content-center">
 
-        <div class="dropdown m-1">
-          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-            Clan
-          </button>
-          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-            <li><a class="dropdown-item" href="#">Humain</a></li>
-            <li><a class="dropdown-item" href="#">REI</a></li>
-          </ul>
-        </div>
+    <div>
+      <select class="form-select" aria-label="Default select example">
+        <option selected>Clan</option>
+        <option value="humain">Humain</option>
+        <option value="REI">REI</option>
+      </select>
+    </div>
 
-        <div class="dropdown m-1">
-          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-            Type
-          </button>
-          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-            <li><a class="dropdown-item" href="#">Bête</a></li>
-            <li><a class="dropdown-item" href="#">Esprit</a></li>
-            <li><a class="dropdown-item" href="#">Humain</a></li>
-            <li><a class="dropdown-item" href="#">Monstre</a></li>
-          </ul>
-        </div>
+    <div>
+      <select class="form-select" aria-label="Default select example">
+        <option selected>Type</option>
+        <option value="bete">Bête</option>
+        <option value="esprit">Esprit</option>
+        <option value="humain">Humain</option>
+        <option value="monstre">Monstre</option>
+      </select>
+    </div>
 
-        <div class="dropdown m-1">
-          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-          Catégorie
-          </button>
-          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-            <li><a class="dropdown-item" href="#">Serviteur</a></li>
-            <li><a class="dropdown-item" href="#">Sort</a></li>
-            <li><a class="dropdown-item" href="#">Héro</a></li>
-          </ul>
-        </div>
+    <div>
+      <select class="form-select" aria-label="Default select example">
+        <option selected>Catégorie</option>
+        <option value="serviteur">Serviteur</option>
+        <option value="sort">Sort</option>
+        <option value="hero">Héro</option>
+      </select>
+    </div>
 
-        <div class="dropdown m-1">
-          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">Fonction</button>
-          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-            <li><a class="dropdown-item" href="#">Attaque</a></li>
-            <li><a class="dropdown-item" href="#">Défense</a></li>
-            <li><a class="dropdown-item" href="#">Vie</a></li>
-            <li><a class="dropdown-item" href="#">Boost</a></li>
-          </ul>
-        </div>
+    <div>
+      <select class="form-select" aria-label="Default select example">
+        <option selected>Fonction</option>
+        <option value="attaque">Attaque</option>
+        <option value="defense">Défense</option>
+        <option value="vie">Vie</option>
+        <option value="boost">Boost</option>
+      </select>
+    </div>
+    
+    <div>
+      <select class="form-select" aria-label="Default select example">
+        <option selected>Rareté</option>
+        <option value="legendaire">Légendaire</option>
+        <option value="epique">Épique</option>
+        <option value="rare">Rare</option>
+        <option value="commune">Commune</option>
+        <option value="basique">Basique</option>
+      </select>
+    </div>
 
-        <div class="dropdown m-1">
-          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-            Rareté
-          </button>
-          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-            <li><a class="dropdown-item" href="#">Légendaire</a></li>
-            <li><a class="dropdown-item" href="#">Epique</a></li>
-            <li><a class="dropdown-item" href="#">Rare</a></li>
-            <li><a class="dropdown-item" href="#">Commune</a></li>
-            <li><a class="dropdown-item" href="#">Basique</a></li>
-          </ul>
-        </div>
-
-      </div>
-
-      <h1 class=" row justify-content-center">Cartes</h1>
-      <div class="table-responsive">
-        <table class="table table-striped table-sm">
-          <thead>
-            <tr>
-              <th scope="col">ID</th>
-              <th scope="col">Clan</th>
-              <th scope="col">Nom</th>
-              <th scope="col">Type</th>
-              <th scope="col">Catégorie</th>
-              <th scope="col">Fonction</th>
-              <th scope="col">Rareté</th>
-              <th scope="col">Actions</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>#C1447</td>
-              <td>Humain</td>
-              <td>Aversio</td>
-              <td>Bête</td>
-              <td>Serviteur</td>
-              <td>Attaque</td>
-              <td>Epique</td>
-              <td>**</td>
-            </tr>
-            <tr>
-              <td>#C0081</td>
-              <td>Humain</td>
-              <td>Kick Drum</td>
-              <td>Esprit</td>
-              <td>Sort</td>
-              <td>Défense</td>
-              <td>Légendaire</td>
-              <td>**</td>
-            </tr>
-            <tr>
-              <td>#C1321</td>
-              <td>Humain</td>
-              <td>Fao</td>
-              <td>Humain</td>
-              <td>Héro</td>
-              <td>Vie</td>
-              <td>Rare</td>
-              <td>**</td>
-            </tr>
-            <tr>
-              <td>#C0247</td>
-              <td>REI</td>
-              <td>Sanmao</td>
-              <td>Monstre</td>
-              <td>Serviteur</td>
-              <td>Boost</td>
-              <td>Commune</td>
-              <td>**</td>
-            </tr>
-            <tr>
-              <td>#C0007</td>
-              <td>REI</td>
-              <td>Muladhara</td>
-              <td>Esprit</td>
-              <td>Sort</td>
-              <td>Attaque/boost</td>
-              <td>Basique</td>
-              <td>**</td>
-            </tr>
-            <tr>
-              <td>#C1447</td>
-              <td>Humain</td>
-              <td>Aversio</td>
-              <td>Bête</td>
-              <td>Serviteur</td>
-              <td>Attaque</td>
-              <td>Epique</td>
-              <td>**</td>
-            </tr>
-            
-          </tbody>
-        </table>
-      </div>
-
-    </main>
+  </form>
 
 
-    <nav aria-label="Page navigation example">
-        <ul class="pagination justify-content-center">
-          <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-          <li class="page-item active"><a class="page-link" href="#">1</a></li>
-          <li class="page-item"><a class="page-link" href="#">2</a></li>
-          <li class="page-item"><a class="page-link" href="#">3</a></li>
-          <li class="page-item"><a class="page-link" href="#">Next</a></li>
-        </ul>
-    </nav>
+      
+
+
+  <?php
+    $USER_PER_PAGE=5;
+    $total_users=count($users);
+    $pageCourante=isset($_GET['page']) ? $_GET['page'] : 1;
+    $number_of_pages=ceil($total_users/$USER_PER_PAGE);
+  ?>
+  <?php $start_index=($pageCourante-1)*$USER_PER_PAGE;?>
+  <?php $users_on_page=array_slice($users,$start_index,$USER_PER_PAGE);?>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Job</th>
+        <th scope="col">Hobby</th>
+      </tr>
+    </thead>
+    <tbody>
+      <?php foreach ($users_on_page as $user) :?>
+          <tr>
+              <th scope="row"><?=$user['id']?></th>
+              <td><?=$user['name']?></td>
+              <td><?=$user['job']?></td>
+              <td><?=$user['hobby']?></td>  
+          </tr>
+      <?php endforeach ;?>
+    </tbody>
+  </table>
+  <p>Utilisateurs <?= $USER_PER_PAGE*$pageCourante ?> - <?= $total_users ?> </p>
+
+</main>
+
+
+<nav class="d-flex justify-content-center" aria-label="...">
+  <ul class="pagination">
+    <li class="mx-1">
+      <a class="page-link <?= $pageCourante == 1 ? 'disabled' : '' ?>" href="?page=<?=($pageCourante-1);?>">Previous</a>
+      
+    </li>
+    <?php for ($i=1; $i<=$number_of_pages;$i++): ?>
+        <li class="page-item mx-1 <?= $pageCourante == $i ? 'active' : '' ?>"><a class="page-link" href="?page=<?= $i?>"><?=$i?></a></li>
+    <?php endfor?>
+    <li class="mx-1">
+        <a class="page-link <?= $pageCourante==$number_of_pages  ? 'disabled' : '' ?>" href="?page=<?=($pageCourante+1);?>">Next</a>
+        
+    </li>
+  </ul>
+</nav>
 
 <?php include_once ('footer.php');?>

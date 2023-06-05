@@ -1,16 +1,6 @@
 <?php
 
-try {
-    $db= new PDO (
-        'mysql:host=localhost;dbname=spare;charset=UTF8',
-        'root', //identifiant connexion BDD
-        '' //mdp par défaut BDD
-    );
-}
-
-catch (Exception $e) {
-    die('Erreur : ' . $e->getMessage());
-}
+require_once ("sql-data-base-connexion.php");
 
 
 $request_login=$db->prepare('SELECT id, email, UserPwd, firstname, lastname FROM users');

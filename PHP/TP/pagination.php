@@ -157,9 +157,6 @@ $number_of_pages=ceil($total_users/$USER_PER_PAGE);
     <?='Nombre total de pages : ' . $number_of_pages;?>
 </div>
 
-<?php var_dump($USER_PER_PAGE);?>
-<?php var_dump($pageCourante);?>
-
 <?php $start_index=($pageCourante-1)*$USER_PER_PAGE;?>
 <?php $users_on_page=array_slice($users,$start_index,$USER_PER_PAGE);?>
 <table class="table">
@@ -172,30 +169,30 @@ $number_of_pages=ceil($total_users/$USER_PER_PAGE);
     </tr>
   </thead>
   <tbody>
-        <?php foreach ($users_on_page as $user) :?>
-            <tr>
-                <th scope="row"><?=$user['id']?></th>
-                <td><?=$user['name']?></td>
-                <td><?=$user['job']?></td>
-                <td><?=$user['hobby']?></td>  
-            </tr>
-        <?php endforeach ;?>
-    </tbody>
-    <p>Utilisateurs <?= $USER_PER_PAGE*$currentPage ?> - <?= $total_users ?> </p> #corriger le conflit de int sur currentpage
+    <?php foreach ($users_on_page as $user) :?>
+        <tr>
+            <th scope="row"><?=$user['id']?></th>
+            <td><?=$user['name']?></td>
+            <td><?=$user['job']?></td>
+            <td><?=$user['hobby']?></td>  
+        </tr>
+    <?php endforeach ;?>
+  </tbody>
 </table>
+<p>Utilisateurs <?= $USER_PER_PAGE*$pageCourante ?> - <?= $total_users ?> </p>
 
 
 
 <nav class="d-flex justify-content-center" aria-label="...">
   <ul class="pagination">
-    <li>
+    <li class="mx-1">
       <a class="page-link <?= $pageCourante == 1 ? 'disabled' : '' ?>" href="?page=<?=($pageCourante-1);?>">Previous</a>
       
     </li>
     <?php for ($i=1; $i<=$number_of_pages;$i++): ?>
-        <li class="page-item <?= $pageCourante == $i ? 'active' : '' ?>"><a class="page-link" href="?page=<?= $i?>"><?=$i?></a></li>
+        <li class="page-item mx-1 <?= $pageCourante == $i ? 'active' : '' ?>"><a class="page-link" href="?page=<?= $i?>"><?=$i?></a></li>
     <?php endfor?>
-    <li>
+    <li class="mx-1">
         <a class="page-link <?= $pageCourante==$number_of_pages  ? 'disabled' : '' ?>" href="?page=<?=($pageCourante+1);?>">Next</a>
         
     </li>

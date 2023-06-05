@@ -1,7 +1,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container-fluid me-5 ms-5">
-            <a class="navbar-brand" href="dashboard.php"><img src="assets/img/spare-logo-small.png" title="SPARE Logo" alt="SPARE Logo"></a>
+            <a class="navbar-brand" href="dashboard.php"><img src="https://www.objectif3d.com/wp-content/uploads/2023/01/O3D_blanc_flat-1.png" alt="Objectif 3D" id="logo" class="img-fluid me-3" style="max-height:50px;"><img src="assets/img/spare-logo-small.png" title="SPARE Logo" alt="SPARE Logo"></a>
             
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>

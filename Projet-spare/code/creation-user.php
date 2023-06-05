@@ -56,22 +56,16 @@
                         <option class="text-capitalize" value="class4">class4</option>
                         <option class="text-capitalize" value="class5">class5</option>
                     </select>
-                   
-                    
                 </div>
-
-                <!-- <div class="">
-                    <label for="CreationAccount">Date de création du compte</label>
-                    <input type="date" class="form-control is-invalid" name="CreationAccount" id="CreationAccount" required>
-                    
-                </div> -->
             </div>
-           
             <div class="m-auto">
-                <button class="btn btn-primary mt-3 text-capitalize" type="submit">enregistrer</button>
-            </div> 
-               
+                <button class="btn btn-primary mt-3 text-capitalize" type="submit" href="creation-user.php">enregistrer</button>
+            </div>
         </form>
+        
+        <div class="m-auto">
+            <?= ((isset($_POST)) && $_POST!=NULL) ? 'Utilisateur bien enregistré' : '' ?>
+        </div>
     </main>
 
 <?php require_once ("./assets/inc/foot.php") ?>

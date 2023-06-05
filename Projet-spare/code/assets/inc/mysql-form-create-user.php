@@ -7,7 +7,10 @@ $UserPwd=$_POST['UserPwd'];
 $firstname=$_POST['firstname']; 
 $lastname=$_POST['lastname']; 
 $statut=$_POST['statut']; 
-$classroom=$_POST['classroom']; 
+$classroom=$_POST['classroom'];
+
+date_default_timezone_set('Europe/Paris');
+$date = date("Y-m-d");
 
 
 
@@ -22,7 +25,7 @@ $insert_user->execute([
     $lastname,
     $statut,
     $classroom,
-    $CreationAccount
+    $CreationAccount=$date 
 ]);
 
 header('Location: http://localhost/Formation-Objectif3W/Projet-spare/code/dashboard.php');

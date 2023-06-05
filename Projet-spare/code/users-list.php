@@ -74,7 +74,7 @@
   <?php $start_index=($pageCourante-1)*$USER_PER_PAGE;?>
   <?php $users_on_page=array_slice($all_profil_user,$start_index,$USER_PER_PAGE);?>
 
-  <table class="table">
+  <table class="table container-xxl">
     <thead>
       <tr>
         <th scope="col">ID</th>
@@ -102,7 +102,19 @@
       <?php endforeach ;?>
     </tbody>
   </table>
-  <p>Utilisateurs <?= $USER_PER_PAGE*$pageCourante ?> - <?= $total_users ?> </p>
+  <p>Utilisateurs <?= $USER_PER_PAGE*$pageCourante ?> - <?= $total_users ?></p>
+  <?php //faire une fonction qui va récup la valeur dans $_post et la réutiliser pour afficher le bon nombre de gens?>
+  <form action="" method="POST">  
+    <div class="mx-1">
+      <select class="form-select" aria-label="Default select example">
+        <option selected></option>
+        <option class="text-capitalize" value="5" selected>5</option>
+        <option class="text-capitalize" value="15">15</option>
+        <option class="text-capitalize" value="30">30</option>
+        <option class="text-capitalize" value="">Tous</option>
+      </select>
+    </div>
+  </form>
 
 </main>
 

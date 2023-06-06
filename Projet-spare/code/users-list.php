@@ -97,7 +97,8 @@
               <td class="text-capitalize"><?=$user['lastname']?></td>
               <td class="text-capitalize"><?=$user['statut']?></td>  
               <td class="text-capitalize"><?=$user['classroom']?></td>
-              <td><?=$user['CreationAccount']?></td>    
+              <td><?=$user['CreationAccount']?></td>
+              <td><a href="view-user.php?id=<?=$user['id']?>">Voir profil <a></td>    
           </tr>
       <?php endforeach ;?>
     </tbody>
@@ -124,26 +125,26 @@
 <nav class="d-flex justify-content-center" aria-label="...">
   <ul class="pagination">
     <li class="mx-1">
-      <a class="page-link <?= $pageCourante == 1 ? 'disabled' : '' ?>" href="?page=<?=(1);?>">|<</a>
+      <a class="page-link btn <?= $pageCourante == 1 ? 'disabled' : '' ?>" href="?page=<?=(1);?>">|<</a>
     </li>
     <li class="mx-1">
-      <a class="page-link <?= $pageCourante == 1 ? 'disabled' : '' ?>" href="?page=<?=($pageCourante-1);?>"><</a>
+      <a class="page-link btn <?= $pageCourante == 1 ? 'disabled' : '' ?>" href="?page=<?=($pageCourante-1);?>"><</a>
     </li>
-    <li class="mx-1<?= $pageCourante <= ($i+2) ? 'd-none' : '' ?>">
-      <a class="page-link disabled" href="?page=<?=($pageCourante-1);?>">...</a>
+    <li class="mx-1 <?= $pageCourante <= ($i+2) ? 'd-none' : '' ?>">
+      <a class="page-link disabled btn" href="?page=<?=($pageCourante-1);?>">...</a>
     </li>
     <?php for ($i=1; $i<=$number_of_pages;$i++): ?>
-      <li class="page-item mx-1 <?= $pageCourante == $i ? 'active' : ''?> <?= ($i < $pageCourante-1) || ($i > $pageCourante+1) ?'d-none' : '' ;?>"><a class="page-link" href="?page=<?= $i?>"><?=$i?></a></li>
+      <li class="page-item mx-1 <?= $pageCourante == $i ? 'active' : ''?> <?= ($i < $pageCourante-1) || ($i > $pageCourante+1) ?'d-none' : '' ;?>"><a class="page-link btn" href="?page=<?= $i?>"><?=$i?></a></li>
     <?php endfor?>
     
     <li class="mx-1 <?= ( $pageCourante < $number_of_pages-1) ? '' : 'd-none' ?>">
-      <a class="page-link disabled" href="?page=<?=($pageCourante+1);?>">...</a>
+      <a class="page-link disabled btn" href="?page=<?=($pageCourante+1);?>">...</a>
     </li>
     <li class="mx-1">
-      <a class="page-link <?= $pageCourante==$number_of_pages  ? 'disabled' : '' ?>" href="?page=<?=($pageCourante+1);?>">></a>
+      <a class="page-link btn <?= $pageCourante==$number_of_pages  ? 'disabled' : '' ?>" href="?page=<?=($pageCourante+1);?>">></a>
     </li>
     <li class="mx-1">
-      <a class="page-link <?= $pageCourante==$number_of_pages  ? 'disabled' : '' ?>" href="?page=<?=($number_of_pages);?>">>|</a>
+      <a class="page-link btn <?= $pageCourante==$number_of_pages  ? 'disabled' : '' ?>" href="?page=<?=($number_of_pages);?>">>|</a>
     </li>
   </ul>
 </nav>

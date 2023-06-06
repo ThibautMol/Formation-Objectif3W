@@ -3,9 +3,15 @@
 <?php $title='Édition profil'?>
 <?php $current_page="profil"?>
 <?php require_once ("./assets/inc/head.php");?>
-<?php require_once ("./assets/inc/nav-bar.php");?>
+<?php //require_once ("./assets/inc/nav-bar.php");?>
 <?php //require_once ("./assets/functions/add-element-form-profil-user.php");?>
+<?php require_once ("./assets/functions/view-user-profil-from-list.php");?>
 
+<?php $user_profil=$_POST;?>
+<br>
+<?php var_dump($user_profil);?>
+<br>
+<?php var_dump($_POST);?>
 
 
 

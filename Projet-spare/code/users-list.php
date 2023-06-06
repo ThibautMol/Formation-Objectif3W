@@ -87,20 +87,20 @@
     </thead>
     <tbody>
       <?php foreach ($users_on_page as $user) :?>
-        
-          <tr>
-            <form action="view-user.php" method="post">
-              <th scope="row"><input type="text" id="id" name="id" value="<?=$user['id']?>"></th>
-              <td><input type="text" id="email" name="email" value="<?=$user['email']?>"></td>
-              <td><input type="text" id="UserPwd" name="UserPwd" value="<?=$user['UserPwd']?>"></td>
-              <td><input type="text" id="firstname" name="firstname" value="<?=$user['firstname']?>"></td>
-              <td><input type="text" id="lastname" name="lastname" value="<?=$user['lastname']?>"></td>
-              <td><input type="text" id="statut" name="statut" value="<?=$user['statut']?>"></td>
-              <td><input type="text" id="classroom" name="classroom" value="<?=$user['classroom']?>"></td>
-              <td><?=$user['CreationAccount']?></td>
-              <td><button type="submit">Voir profil</button></td> 
-            </form>   
-          </tr>
+      
+        <tr>
+          <div>
+            <th><?=$user['id']?></th>
+            <td><?=$user['email']?></td>
+            <td><?=$user['UserPwd']?></td>
+            <td><?=$user['firstname']?></td>
+            <td><?=$user['lastname']?></td>
+            <td><?=$user['statut']?></td>
+            <td><?=$user['classroom']?></td>
+            <td><?=$user['CreationAccount']?></td>
+            <td><a class="btn btn-primary" href="view-user.php?id=<?=$user['id']?>">Voir profil</a></td> <!-- problème dans la récupération de l'id dans l'url -->
+          </div>   
+        </tr>
         
       <?php endforeach ;?>
     </tbody>

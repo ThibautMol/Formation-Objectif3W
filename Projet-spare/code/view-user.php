@@ -1,18 +1,19 @@
 <?php session_start(); ?>
 <?php require ("./assets/inc/cookies.php");?>
-<?php $title='Profil'?>
+<?php $title='Profil utilisateur'?>
 <?php $current_page="profil"?>
 <?php require_once ("./assets/inc/head.php");?>
-<?php require_once ("./assets/inc/nav-bar.php");?>
+<?php //require_once ("./assets/inc/nav-bar.php");?>
 <?php $is_disabled=1;?> <!-- a virer -->
 <?php require_once ("./assets/functions/disabled-input.php")?> <!--vérif si pas de conflits avec require once après modification de la valeur is disabled-->
-<?php require_once ("./assets/functions/add-element-form-profil-user.php");?>
+<?php require_once ("./assets/functions/view-user-profil-from-list.php");?>
 
+<?php $user_profil=$_POST;?>
 
 
 
     <main class="d-flex flex-column justify-content-center align-items-center mb-5" style="margin-top:100px;">
-        <h1>Profil</h1>
+        <h1>Profil de <?=ucfirst($user_profil['firstname']);?> <?=ucfirst($user_profil['lastname']);?></h1>
         <form class="d-flex flex-column justify-content-center mt-3" action='assets\inc\mysql-form-create-user.php' method="POST">
             <div class="form-row d-grid gap-3">
                 <div class="">
@@ -27,13 +28,13 @@
            
                 <div class="">
                     <label class="text-capitalize" for="firstname">firstname</label>
-                    <input type="text" class="form-control" name="firstname" id="firstname" placeholder="firstname" value="<?=$user_profil['firstname'];?>" <?=$disabled_abled;?> required>
+                    <input type="text" class="form-control text-capitalize" name="firstname" id="firstname" placeholder="firstname" value="<?=$user_profil['firstname'];?>" <?=$disabled_abled;?> required>
                 </div>
                 
                 <div class="">
                     <label class="text-capitalize" for="validationServerUsername">lastname</label>
                     <div class="input-group">           
-                        <input type="text" class="form-control" id="lastname" name="lastname" placeholder="LastName" value="<?=$user_profil['lastname'];?>" aria-describedby="inputGroupPrepend3" <?=$disabled_abled;?> required>
+                        <input type="text" class="form-control text-capitalize" id="lastname" name="lastname" placeholder="LastName" value="<?=$user_profil['lastname'];?>" aria-describedby="inputGroupPrepend3" <?=$disabled_abled;?> required>
                     </div>
                 </div>
             </div>
@@ -64,10 +65,6 @@
                     
                 </div>
 
-                <!-- <div class="">
-                    <label for="CreationAccount">Date de création du compte</label>
-                    <input type="date" class="form-control is-invalid" name="CreationAccount" id="CreationAccount" required>
-                </div> -->
             </div>
                        
         </form>

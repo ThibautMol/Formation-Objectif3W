@@ -22,10 +22,7 @@
       <button type="submit" class="btn btn-primary">Search</button>
     </div>
   </div>
-
-
   
-
   <h2 class="d-flex justify-content-center">Filtres</h2>
 
   <form action="" method="GET" class="d-flex">
@@ -85,21 +82,26 @@
         <th scope="col">Statut</th>
         <th scope="col">Classroom</th>
         <th scope="col">CreationAccount</th>
+        <th scope="col">Actions</th>
       </tr>
     </thead>
     <tbody>
       <?php foreach ($users_on_page as $user) :?>
+        
           <tr>
-              <th scope="row"><?=$user['id']?></th>
-              <td><?=$user['email']?></td>
-              <td><?=$user['UserPwd']?></td>
-              <td class="text-capitalize"><?=$user['firstname']?></td>
-              <td class="text-capitalize"><?=$user['lastname']?></td>
-              <td class="text-capitalize"><?=$user['statut']?></td>  
-              <td class="text-capitalize"><?=$user['classroom']?></td>
+            <form action="view-user.php" method="post">
+              <th scope="row"><input type="text" id="id" name="id" value="<?=$user['id']?>"></th>
+              <td><input type="text" id="email" name="email" value="<?=$user['email']?>"></td>
+              <td><input type="text" id="UserPwd" name="UserPwd" value="<?=$user['UserPwd']?>"></td>
+              <td><input type="text" id="firstname" name="firstname" value="<?=$user['firstname']?>"></td>
+              <td><input type="text" id="lastname" name="lastname" value="<?=$user['lastname']?>"></td>
+              <td><input type="text" id="statut" name="statut" value="<?=$user['statut']?>"></td>
+              <td><input type="text" id="classroom" name="classroom" value="<?=$user['classroom']?>"></td>
               <td><?=$user['CreationAccount']?></td>
-              <td><a href="view-user.php?id=<?=$user['id']?>">Voir profil <a></td>    
+              <td><button type="submit">Voir profil</button></td> 
+            </form>   
           </tr>
+        
       <?php endforeach ;?>
     </tbody>
   </table>
@@ -120,6 +122,8 @@
   </div>
 
 </main>
+
+<?php var_dump($_POST)?>
 
 
 <nav class="d-flex justify-content-center" aria-label="...">

@@ -4,7 +4,7 @@
 <?php $current_page="profil"?>
 <?php require_once ("./assets/inc/head.php");?>
 <?php require_once ("./assets/inc/nav-bar.php");?>
-<?php require_once ("./assets/functions/add-element-form-profil-user.php");?>
+<?php //require_once ("./assets/functions/add-element-form-profil-user.php");?>
 
 
 
@@ -20,18 +20,18 @@
                 
                 <div class="">
                     <label class="text-capitalize" for="password">password</label>
-                    <input type="password" class="form-control" name="UserPwd" id="password" value="<?=$user_profil['UserPwd'];?>" required>
+                    <input type="password" class="form-control text-capitalize" name="UserPwd" id="password" value="<?=$user_profil['UserPwd'];?>" required>
                 </div>
            
                 <div class="">
                     <label class="text-capitalize" for="firstname">firstname</label>
-                    <input type="text" class="form-control" name="firstname" id="firstname" placeholder="firstname" value="<?=$user_profil['firstname'];?>" required>
+                    <input type="text" class="form-control text-capitalize" name="firstname" id="firstname" placeholder="firstname" value="<?=$user_profil['firstname'];?>" required>
                 </div>
                 
                 <div class="">
                     <label class="text-capitalize" for="validationServerUsername">lastname</label>
                     <div class="input-group">           
-                        <input type="text" class="form-control" id="lastname" name="lastname" placeholder="LastName" value="<?=$user_profil['lastname'];?>" aria-describedby="inputGroupPrepend3" required>
+                        <input type="text" class="form-control text-capitalize" id="lastname" name="lastname" placeholder="LastName" value="<?=$user_profil['lastname'];?>" aria-describedby="inputGroupPrepend3" required>
                     </div>
                 </div>
             </div>

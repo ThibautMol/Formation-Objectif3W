@@ -29,13 +29,13 @@
            
                 <div class="">
                     <label class="text-capitalize" for="firstname">firstname</label>
-                    <input type="text" class="form-control" name="firstname" id="firstname" placeholder="firstname" value="<?=$user_profil['firstname'];?>" <?=$disabled_abled;?> required>
+                    <input type="text" class="form-control text-capitalize" name="firstname" id="firstname" placeholder="firstname" value="<?=$user_profil['firstname'];?>" <?=$disabled_abled;?> required>
                 </div>
                 
                 <div class="">
                     <label class="text-capitalize" for="validationServerUsername">lastname</label>
                     <div class="input-group">           
-                        <input type="text" class="form-control" id="lastname" name="lastname" placeholder="LastName" value="<?=$user_profil['lastname'];?>" aria-describedby="inputGroupPrepend3" <?=$disabled_abled;?> required>
+                        <input type="text" class="form-control text-capitalize" id="lastname" name="lastname" placeholder="LastName" value="<?=$user_profil['lastname'];?>" aria-describedby="inputGroupPrepend3" <?=$disabled_abled;?> required>
                     </div>
                 </div>
             </div>

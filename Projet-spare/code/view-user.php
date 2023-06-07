@@ -4,7 +4,6 @@
 <?php $current_page="utilisateurs"?>
 <?php require_once ("./assets/inc/head.php");?>
 <?php require_once ("./assets/inc/nav-bar.php");?>
-
 <?php require_once ("./assets/functions/add-element-form-profil-user-from-list.php")?>
 
 

@@ -12,7 +12,7 @@
 
     <main class="d-flex flex-column justify-content-center align-items-center mb-5" style="margin-top:100px;">
         <h1>Profil <?=(isset($_GET['id'])) ? "de " . ucfirst($user_profil['firstname']) . " " . ucfirst($user_profil['lastname']) : "";?></h1>
-        <form class="d-flex flex-column justify-content-center mt-3" action='assets\inc\mysql-form-create-user.php' method="POST">
+        <form class="d-flex flex-column justify-content-center mt-3" action='' method="POST">
             <div class="form-row d-grid gap-3">
                 <div class="">
                     <label class="text-capitalize" for="UserEmail">email</label>
@@ -69,16 +69,14 @@
                 </div> -->
             </div>
            
-            
-
-           
-            
+            <div class="m-auto">
+                <input class="btn btn-primary mt-3 text-capitalize" name="submit" type="submit" value="enregistrer">
+            </div> 
         </form>
         
-        <div class="m-auto">
-            <button class="btn btn-primary mt-3 text-capitalize" type="submit" onclick="disable()">enregistrer</button>
-                
-        </div> 
+        
+
+        <?php require_once ("./assets/inc/mysql-update-user-data.php") ?>
 
     </main>
 

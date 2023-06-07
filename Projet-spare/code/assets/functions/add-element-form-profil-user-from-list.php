@@ -1,12 +1,11 @@
 <?php
 
-function profil_completion () {
+function profil_completion_user_picked () {
     require '.\assets\inc\mysql-profil-user-request.php';
-
-
-    if (isset($_SESSION['USER_ID'])) {
+    
         foreach ($all_profil_user as $user) {
-            if ($_SESSION['USER_ID']==$user['id']){
+            if ($_GET['id']==$user['id']){
+                $user_profil['id']=$user['id'];
                 $user_profil['email']=$user['email'];
                 $user_profil['UserPwd']=$user['UserPwd'];
                 $user_profil['firstname']=$user['firstname'];
@@ -16,12 +15,13 @@ function profil_completion () {
                 return $user_profil;
             }
         }
-    }
+    
+    
 }
 
-if (isset($_SESSION['USER_ID'])){
-    $user_profil=profil_completion();
+if (isset($_GET['id'])){
+    $user_profil=profil_completion_user_picked();
+    
 }
 
-echo "lol";
 ?>

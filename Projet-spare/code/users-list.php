@@ -98,7 +98,7 @@
             <td><?=$user['statut']?></td>
             <td><?=$user['classroom']?></td>
             <td><?=$user['CreationAccount']?></td>
-            <td><a class="btn btn-primary" href="view-user.php?id=<?=$user['id']?>">Voir profil</a></td> <!-- problème dans la récupération de l'id dans l'url -->
+            <td><a class="btn btn-primary" href="view-user.php?id=<?=$user['id']?>">Voir profil</a></td>
           </div>   
         </tr>
         
@@ -122,8 +122,6 @@
   </div>
 
 </main>
-
-<?php var_dump($_POST)?>
 
 
 <nav class="d-flex justify-content-center" aria-label="...">

@@ -6,8 +6,6 @@
 <?php require_once ("./assets/inc/nav-bar.php");?>
 <?php $is_disabled=1;?> <!-- a virer -->
 <?php require_once ("./assets/functions/disabled-input.php")?> <!--vérif si pas de conflits avec require once après modification de la valeur is disabled-->
-<?php require_once ("./assets/functions/action-save-modification.php");?> <!-- a virer -->
-<?php require_once ("./assets/functions/action-modify.php");?> <!-- a virer -->
 <?php require_once ("./assets/functions/add-element-form-profil-user.php");?>
 
 

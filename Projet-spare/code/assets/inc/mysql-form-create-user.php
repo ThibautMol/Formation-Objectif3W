@@ -9,16 +9,19 @@ $lastname=$_POST['lastname'];
 $statut=$_POST['statut']; 
 $classroom=$_POST['classroom'];
 
+$id=uniqid();
+
 date_default_timezone_set('Europe/Paris');
 $date = date("Y-m-d");
 
 
 
-$sqlQuery ='INSERT INTO users (email, UserPwd, firstname, lastname, statut, classroom, CreationAccount) VALUES (?, ?, ?, ?, ?, ?, ?)';
+$sqlQuery ='INSERT INTO users (id, email, UserPwd, firstname, lastname, statut, classroom, CreationAccount) VALUES (?, ?, ?, ?, ?, ?, ?, ?)';
 
 $insert_user= $db->prepare($sqlQuery);
 
 $insert_user->execute([
+    $id,
     $email,
     $UserPwd,
     $firstname,

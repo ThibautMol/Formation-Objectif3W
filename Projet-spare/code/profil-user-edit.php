@@ -80,13 +80,4 @@
 
     </main>
 
-    <?php //if(array_key_exists('button1', $_POST)) {disable($is_disabled);}elseif(array_key_exists('button2', $_POST)) {enable($is_disabled);}?>
-
-<?php //function disabled($is_disabled) {if ($is_disabled==1) {return 'disabled';}else{return '';}} $disabled_abled=disabled($is_disabled);?>
-
-
-
-<?php //function enable() {return $is_disabled=NULL;}$is_disabled=enable();?>
-
-
 <?php require_once ("./assets/inc/foot.php") ?>

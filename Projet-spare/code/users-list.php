@@ -3,8 +3,35 @@
 <?php $title='liste des utilisateurs'?>
 <?php $current_page="utilisateurs"?>
 <?php require_once ("./assets/inc/head.php")?>
-<?php require_once ("./assets/inc/nav-bar.php")?>
+<?php //require_once ("./assets/inc/nav-bar.php")?>
 <?php require_once ("./assets/functions/all-user-list-generation.php")?>
+
+<?php 
+
+  if (isset($_POST['user_per_page'])) {
+    $_SESSION['user_per_page']=$_POST['user_per_page'];
+  }
+  
+  if (isset($_SESSION['user_per_page'])) {
+    if ($_SESSION['user_per_page']=='') {
+      $user_per_page=99999;
+    }
+    else {
+    $user_per_page=$_SESSION['user_per_page'];
+    settype($user_per_page, 'integer');
+    }
+  } 
+  else {$user_per_page=5;}
+  
+  $total_users=count($all_profil_user);
+  $pageCourante=isset($_GET['page']) ? $_GET['page'] : 1;
+  $number_of_pages=ceil($total_users/$user_per_page);
+ 
+  $start_index=($pageCourante-1)*$user_per_page;
+  $users_on_page=array_slice($all_profil_user,$start_index,$user_per_page);
+?>
+
+
 
 
 <main class="d-flex flex-column justify-content-center align-items-center mb-5" style="margin-top:100px;">
@@ -62,15 +89,6 @@
   </form>
   <button type="submit" class="btn btn-primary mt-3">Filtrer</button>
 
-  <?php
-    $USER_PER_PAGE=5;
-    $total_users=count($all_profil_user);
-    $pageCourante=isset($_GET['page']) ? $_GET['page'] : 1;
-    $number_of_pages=ceil($total_users/$USER_PER_PAGE);
-  ?>
-  <?php $start_index=($pageCourante-1)*$USER_PER_PAGE;?>
-  <?php $users_on_page=array_slice($all_profil_user,$start_index,$USER_PER_PAGE);?>
-
   <table class="table container-xxl">
     <thead>
       <tr>
@@ -98,27 +116,34 @@
             <td><?=$user['statut']?></td>
             <td><?=$user['classroom']?></td>
             <td><?=$user['CreationAccount']?></td>
-            <td><a class="btn btn-primary" href="view-user.php?id=<?=$user['id']?>">Voir profil</a></td>
+            <td><a class="btn btn-primary" href="view-user.php?id=<?=$user['id']?>"><i class="bi bi-eye-fill"></i></a> 
+            <a class="btn btn-secondary" href="profil-user-edit.php?id=<?=$user['id']?>"><i class="bi bi-pencil-square"></i></a> 
+            <a class="btn btn-danger" href="profil-user-edit.php?id=<?=$user['id']?>"><i class="bi bi-trash3-fill"></i></a></td>
           </div>   
         </tr>
         
       <?php endforeach ;?>
     </tbody>
-  </table>
-  <p>Utilisateurs <?= $USER_PER_PAGE*$pageCourante ?> - <?= $total_users ?></p>
-  <?php //if ((isset($_POST)) && ($_POST['user_per_page']!=NULL)) {$user_per_page=$_POST['user_per_page'];} // stocker resultat dans $_SESSION?>
+  </table> 
+ 
+  <p>Utilisateurs <?=($total_users<=$user_per_page) ? $total_users . " - " . $total_users : $user_per_page*$pageCourante . " - " . $total_users; ?></p>
+  
+
+
   <div class="d-flex">
-    <form action="" method="POST">  
+    <form action="users-list.php" method="POST">  
       <div class="mx-1">
         <select class="form-select" name="user_per_page" aria-label="Default select example">
-          <option class="text-capitalize" value="5" selected>5</option>
-          <option class="text-capitalize" value="15">15</option>
-          <option class="text-capitalize" value="30">30</option>
-          <option class="text-capitalize" value="">Tous</option>
+          
+          <option class="text-capitalize" value="5" <?=($user_per_page==5)?"selected":""?>>5</option>
+          <option class="text-capitalize" value="15" <?=($user_per_page==15)?"selected":""?>>15</option>
+          <option class="text-capitalize" value="30" <?=($user_per_page==30)?"selected":""?>>30</option>
+          <option class="text-capitalize" value="" <?=($user_per_page==99999)?"selected":""?>>Tous</option>
         </select>
       </div>
+      <button type="submit" class="btn btn-primary">choisir</button>
     </form>
-    <button type="submit" class="btn btn-primary">choisir</button>
+    
   </div>
 
 </main>

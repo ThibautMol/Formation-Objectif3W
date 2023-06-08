@@ -1,10 +1,6 @@
 <?php
 try {
-    $db= new PDO (
-        'mysql:host=localhost;dbname=spare;charset=UTF8',
-        'root', //identifiant connexion BDD
-        '' //mdp par défaut BDD
-    );
+    $db= new PDO ("mysql:host=localhost;dbname=spare;charset=UTF8","root","");
 }
 
 catch (Exception $e) {

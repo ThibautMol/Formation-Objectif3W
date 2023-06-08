@@ -4,10 +4,7 @@
 <?php $current_page="profil"?>
 <?php require_once ("./assets/inc/head.php");?>
 <?php require_once ("./assets/inc/nav-bar.php");?>
-
 <?php require_once ("./assets/functions/add-element-form-profil-user.php");?>
-
-
 
 
     <main class="d-flex flex-column justify-content-center align-items-center mb-5" style="margin-top:100px;">
@@ -45,8 +42,14 @@
                     <p class="text-capitalize" >Classe</p>
                     <p class="form-control text-capitalize"><?=$user_profil['classroom'];?></p>
                 </div>
+
+                <div class="mt-3 <?=(($user_profil['ClassSpe'])=="0") ? "" : "d-none"?>">
+                    <p class="text-capitalize">classe spécialité</p>
+                    <p class="form-control text-capitalize"><?=$user_profil['ClassSpe'];?></p>
+                </div>
+                
             </div>
-              
+
         </div>
 
         <div class="m-auto">

@@ -3,7 +3,7 @@
 <?php $title='liste des utilisateurs'?>
 <?php $current_page="utilisateurs"?>
 <?php require_once ("./assets/inc/head.php")?>
-<?php //require_once ("./assets/inc/nav-bar.php")?>
+<?php require_once ("./assets/inc/nav-bar.php")?>
 <?php require_once ("./assets/functions/all-user-list-generation.php")?>
 
 <?php 
@@ -52,42 +52,41 @@
   
   <h2 class="d-flex justify-content-center">Filtres</h2>
 
-  <form action="" method="GET" class="d-flex">
+  <form class="d-flex flex-column" action="" method="GET" class="d-flex">
+    <div class="d-flex flex-row justify-content-center">
+      <div class="mx-1">
+        <select class="form-select" aria-label="Default select example">
+          <option selected>Rôle</option>
+          <option class="text-capitalize" value="administrateur">administrateur</option>
+          <option class="text-capitalize" value="agent de traitement">agent de traitement</option>
+          <option class="text-capitalize" value="professeur">professeur</option>
+          <option class="text-capitalize" value="eleve">élève</option>
+        </select>
+      </div>
 
-    <div class="mx-1">
-      <select class="form-select" aria-label="Default select example">
-        <option selected>Rôle</option>
-        <option class="text-capitalize" value="administrateur">administrateur</option>
-        <option class="text-capitalize" value="agent de traitement">agent de traitement</option>
-        <option class="text-capitalize" value="professeur">professeur</option>
-        <option class="text-capitalize" value="eleve">élève</option>
-      </select>
+      <div class="mx-1">
+        <select class="form-select" aria-label="Default select example">
+          <option selected>Classe principale</option>
+          <option class="text-capitalize" value="class1">class1</option>
+          <option class="text-capitalize" value="class2">class2</option>
+          <option class="text-capitalize" value="class3">class3</option>
+          <option class="text-capitalize" value="class4">class4</option>
+          <option class="text-capitalize" value="class5">class5</option>
+        </select>
+      </div>
+
+      <div class="mx-1">
+        <select class="form-select" aria-label="Default select example">
+          <option selected>Classe secondaire</option>
+          <option class="text-capitalize" value="class1-1">class1-1</option>
+          <option class="text-capitalize" value="class1-2">class1-2</option>
+          <option class="text-capitalize" value="class1-3">class1-3</option>
+        </select>
+      </div>
     </div>
-
-    <div class="mx-1">
-      <select class="form-select" aria-label="Default select example">
-        <option selected>Classe principale</option>
-        <option class="text-capitalize" value="class1">class1</option>
-        <option class="text-capitalize" value="class2">class2</option>
-        <option class="text-capitalize" value="class3">class3</option>
-        <option class="text-capitalize" value="class4">class4</option>
-        <option class="text-capitalize" value="class5">class5</option>
-      </select>
-    </div>
-
-    <div class="mx-1">
-      <select class="form-select" aria-label="Default select example">
-        <option selected>Classe secondaire</option>
-        <option class="text-capitalize" value="class1">class1</option>
-        <option class="text-capitalize" value="class2">class2</option>
-        <option class="text-capitalize" value="class3">class3</option>
-        <option class="text-capitalize" value="class4">class4</option>
-        <option class="text-capitalize" value="class5">class5</option>
-      </select>
-    </div>
-
+    <button type="submit" class="btn btn-primary mt-3 mx-auto">Filtrer</button>
   </form>
-  <button type="submit" class="btn btn-primary mt-3">Filtrer</button>
+  
 
   <table class="table container-xxl">
     <thead>
@@ -99,6 +98,7 @@
         <th scope="col">Lastname</th>
         <th scope="col">Statut</th>
         <th scope="col">Classroom</th>
+        <th scope="col">Classe Spécialité</th>
         <th scope="col">CreationAccount</th>
         <th scope="col">Actions</th>
       </tr>
@@ -115,6 +115,7 @@
             <td><?=$user['lastname']?></td>
             <td><?=$user['statut']?></td>
             <td><?=$user['classroom']?></td>
+            <td><?=$user['ClassSpe'];?></td>
             <td><?=$user['CreationAccount']?></td>
             <td><a class="btn btn-primary" href="view-user.php?id=<?=$user['id']?>"><i class="bi bi-eye-fill"></i></a> 
             <a class="btn btn-secondary" href="profil-user-edit.php?id=<?=$user['id']?>"><i class="bi bi-pencil-square"></i></a> 

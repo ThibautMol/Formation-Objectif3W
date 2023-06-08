@@ -57,6 +57,18 @@
                         <option class="text-capitalize" value="class5">class5</option>
                     </select>
                 </div>
+
+                <div class="">
+                    <label class="text-capitalize" for="ClassSpe">classe spécialité</label>
+                    <select name="ClassSpe" id="ClassSpe" required>
+                        <option value="NULL">--Please choose an option--</option>
+                        <option class="text-capitalize" value="class1-1">class1-1</option>
+                        <option class="text-capitalize" value="class1-2">class1-2</option>
+                        <option class="text-capitalize" value="class1-3">class1-3</option>
+                    </select>
+                </div>
+
+
             </div>
             <div class="m-auto">
                 <button class="btn btn-primary mt-3 text-capitalize" type="submit" href="creation-user.php">enregistrer</button>

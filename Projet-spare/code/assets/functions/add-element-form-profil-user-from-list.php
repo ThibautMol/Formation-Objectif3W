@@ -12,6 +12,7 @@ function profil_completion_user_picked () {
                 $user_profil['lastname']=$user['lastname'];
                 $user_profil['statut']=$user['statut'];
                 $user_profil['classroom']=$user['classroom'];
+                $user_profil['ClassSpe']=$user['ClassSpe'];
                 return $user_profil;
             }
         }

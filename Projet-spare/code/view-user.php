@@ -44,9 +44,17 @@
                     <p class="text-capitalize" >Classe</p>
                     <p class="form-control text-capitalize"><?=$user_profil['classroom'];?></p>
                 </div>
+
+                <div class="mt-3 <?=(is_null($user_profil['ClassSpe'])) ? "" : "d-none"?>">
+                    <p class="text-capitalize">classe spécialité</p>
+                    <p class="form-control text-capitalize"><?=$user_profil['ClassSpe'];?></p>
+                </div>
+
             </div>
               
         </div>
+
+        <?php var_dump($user_profil['ClassSpe'])?>
 
         <div class="m-auto btn btn-primary mt-3 text-capitalize">
             <a class="btn btn-primary text-capitalize" href="profil-user-edit.php?id=<?=$user_profil['id']?>">modifier</a>     

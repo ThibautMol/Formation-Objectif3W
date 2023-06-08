@@ -8,10 +8,11 @@ $firstname=$_POST['firstname'];
 $lastname=$_POST['lastname']; 
 $statut=$_POST['statut']; 
 $classroom=$_POST['classroom']; 
+$ClassSpe=$_POST['ClassSpe']; 
 
 
 
-$sqlQuery ='INSERT INTO users (email, UserPwd, firstname, lastname, statut, classroom, CreationAccount) VALUES (?, ?, ?, ?, ?, ?, ?)';
+$sqlQuery ='INSERT INTO users (email, UserPwd, firstname, lastname, statut, classroom, ClassSpe, CreationAccount) VALUES (?, ?, ?, ?, ?, ?, ?, ?)';
 
 $insert_user= $db->prepare($sqlQuery);
 
@@ -22,5 +23,6 @@ $insert_user->execute([
     $lastname,
     $statut,
     $classroom,
+    $ClassSpe,
    
 ]);

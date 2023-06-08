@@ -14,9 +14,9 @@ function profil_completion_user_from_user_list () {
         }
     }
 
-if ((isset(($_POST['id'])) && ($_POST!=NULL))){
-    $user_profil=profil_completion_user_from_user_list();
-}
+//if ((isset(($_POST['id'])) && ($_POST!=NULL))){
+    //$user_profil=profil_completion_user_from_user_list();
+//}
 
 
 

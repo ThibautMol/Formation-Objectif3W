@@ -5,24 +5,8 @@
 <?php require_once ("./assets/inc/head.php")?>
 <?php require_once ("./assets/inc/nav-bar.php")?>
 <?php require_once ("./assets/functions/all-user-list-generation.php")?>
-
-<?php 
-
-  if (isset($_POST['user_per_page'])) {
-    $_SESSION['user_per_page']=$_POST['user_per_page'];
-  }
-  
-  if (isset($_SESSION['user_per_page'])) {
-    if ($_SESSION['user_per_page']=='') {
-      $user_per_page=99999;
-    }
-    else {
-    $user_per_page=$_SESSION['user_per_page'];
-    settype($user_per_page, 'integer');
-    }
-  } 
-  else {$user_per_page=5;}
-  
+<?php require_once ("./assets/functions/user-per-page-list.php");?>
+<?php   
   $total_users=count($all_profil_user);
   $pageCourante=isset($_GET['page']) ? $_GET['page'] : 1;
   $number_of_pages=ceil($total_users/$user_per_page);

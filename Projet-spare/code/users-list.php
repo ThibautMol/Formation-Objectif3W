@@ -114,8 +114,8 @@
             <td><?=$user['firstname']?></td>
             <td><?=$user['lastname']?></td>
             <td><?=$user['statut']?></td>
-            <td><?=$user['classroom']?></td>
-            <td><?=$user['ClassSpe'];?></td>
+            <td><?=(empty($user['classroom'])) ? "" : $user['classroom']?></td>
+            <td><?=(empty($user['ClassSpe'])) ? "" : $user['ClassSpe']?></td>
             <td><?=$user['CreationAccount']?></td>
             <td><a class="btn btn-primary" href="view-user.php?id=<?=$user['id']?>"><i class="bi bi-eye-fill"></i></a> 
             <a class="btn btn-secondary" href="profil-user-edit.php?id=<?=$user['id']?>"><i class="bi bi-pencil-square"></i></a> 

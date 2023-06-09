@@ -40,12 +40,12 @@
                     <p class="form-control text-capitalize"><?=$user_profil['statut'];?></p>
                 </div>
 
-                <div class="mt-3">
+                <div class="mt-3 <?=(empty($user_profil['classroom'])) ? "d-none" : ""?>">
                     <p class="text-capitalize" >Classe</p>
                     <p class="form-control text-capitalize"><?=$user_profil['classroom'];?></p>
                 </div>
 
-                <div class="mt-3 <?=(is_null($user_profil['ClassSpe'])) ? "" : "d-none"?>">
+                <div class="mt-3 <?=(empty($user_profil['ClassSpe'])) ? "d-none" : ""?>">
                     <p class="text-capitalize">classe spécialité</p>
                     <p class="form-control text-capitalize"><?=$user_profil['ClassSpe'];?></p>
                 </div>
@@ -53,8 +53,6 @@
             </div>
               
         </div>
-
-        <?php var_dump($user_profil['ClassSpe'])?>
 
         <div class="m-auto btn btn-primary mt-3 text-capitalize">
             <a class="btn btn-primary text-capitalize" href="profil-user-edit.php?id=<?=$user_profil['id']?>">modifier</a>     

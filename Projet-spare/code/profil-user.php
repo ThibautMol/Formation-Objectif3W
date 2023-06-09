@@ -43,7 +43,7 @@
                     <p class="form-control text-capitalize"><?=$user_profil['classroom'];?></p>
                 </div>
 
-                <div class="mt-3 <?=(($user_profil['ClassSpe'])=="0") ? "" : "d-none"?>">
+                <div class="mt-3 <?=(is_null($user_profil['ClassSpe'])) ? "" : "d-none"?>">
                     <p class="text-capitalize">classe spécialité</p>
                     <p class="form-control text-capitalize"><?=$user_profil['ClassSpe'];?></p>
                 </div>

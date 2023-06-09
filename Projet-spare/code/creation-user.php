@@ -48,7 +48,7 @@
 
                 <div class="">
                     <label class="text-capitalize" for="classroom">classe</label>
-                    <select name="classroom" id="classroom" required>
+                    <select name="classroom" id="classroom">
                         <option value="">--Please choose an option--</option>
                         <option class="text-capitalize" value="class1">class1</option>
                         <option class="text-capitalize" value="class2">class2</option>
@@ -60,8 +60,8 @@
 
                 <div class="">
                     <label class="text-capitalize" for="ClassSpe">classe spécialité</label>
-                    <select name="ClassSpe" id="ClassSpe" required>
-                        <option value="NULL">--Please choose an option--</option>
+                    <select name="ClassSpe" id="ClassSpe">
+                        <option value="">--Please choose an option--</option>
                         <option class="text-capitalize" value="class1-1">class1-1</option>
                         <option class="text-capitalize" value="class1-2">class1-2</option>
                         <option class="text-capitalize" value="class1-3">class1-3</option>

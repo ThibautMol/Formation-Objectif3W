@@ -25,7 +25,7 @@
                         <a class="nav-link <?= $current_page=='utilisateurs' ?  'active' :'' ?>" href="users-list.php">Utilisateurs</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link <?= $current_page=='profil' ?  'active' :'' ?>" href="profil-user.php">Profil</a>
+                        <a class="nav-link <?= $current_page=='profil' ?  'active' :'' ?>" href="view-user.php">Profil</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="assets/functions/session_end.php">Se déconnecter</a>

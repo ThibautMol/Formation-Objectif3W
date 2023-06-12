@@ -1,4 +1,5 @@
 
+<?php session_start()?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,6 +22,7 @@
 //  require 'C:\xampp\htdocs\Formation-Objectif3W\PHP\TP\inc\navbar.php';
 
 
+
 function verif () {
     if (($_POST['formule']=="/") && ((($_POST['nbr1']==0) && ($_POST['nbr2']==0)) || ($_POST['nbr2']==0))) {
     return "Division par 0 impossible petit coquin";
@@ -31,7 +33,7 @@ function verif () {
 }
 
 function calcul() {
-
+    $_SESSION=[];
     $nbr1=$_POST['nbr1'];
     $nbr2=$_POST['nbr2'];
     $formule=$_POST['formule'];
@@ -39,35 +41,35 @@ function calcul() {
     str_replace(',' , '.',$nbr1);
     str_replace(',' , '.',$nbr2);
 
+ 
 
     if ((is_numeric($nbr1)) && (is_numeric($nbr2))) {
 
         (int)$nbr1=$nbr1;
         (int)$nbr2=$nbr2;
 
-    
-
         switch($formule) {
-            case "*" :
-                $result=$nbr1*$nbr2;
-                break;
-            
-            case "/" :
-                $result=$nbr1/$nbr2;
-                break;
+        case "*" :
+            $result=$nbr1*$nbr2;
+            break;
+        
+        case "/" :
+            $result=$nbr1/$nbr2;
+            break;
 
-            case "-" :
-                $result=$nbr1-$nbr2;
-                break;
+        case "-" :
+            $result=$nbr1-$nbr2;
+            break;
 
-            case "%" :
-                $result=$nbr1%$nbr2;
-                break;
+        case "%" :
+            $result=$nbr1%$nbr2;
+            break;
 
-            case "+" :
-                $result=$nbr1+$nbr2;
-                break;
+        case "+" :
+            $result=$nbr1+$nbr2;
+            break;
         }
+
         return $result;
     }
 
@@ -78,6 +80,8 @@ function calcul() {
 }
 
 ?>
+
+
 
 <form action="" method="post" class="m-auto">
     <input type="text" name="nbr1" value="<?=(isset($_POST) && ($_POST!=NULL)) ? $_POST['nbr1'] : ""?>"/>
@@ -94,9 +98,11 @@ function calcul() {
 </form>
 <div class="d-flex justify-content-center">
     <?php if (isset($_POST) && ($_POST!=NULL)) {
-        echo 'Le résultat est : '.(verif());
+        echo 'Le résultat est : '.($result=verif());
     }?>
 </div>
+
+
 
 </body>
 </html>

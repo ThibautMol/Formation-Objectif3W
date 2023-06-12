@@ -1,16 +1,13 @@
 <?php
-
-$_GET['classroom']='';
-$_GET['role']=NULL;
-
-if (!isset($_GET['classroom'])) {
-    echo "c est bon";
+function valid_donnees($donnees){
+    $donnees = trim($donnees);
+    $donnees = stripslashes($donnees);
+    $donnees = htmlentities($donnees);
+    $donnees = htmlspecialchars($donnees);
+    return $donnees;
 }
-else {
-    echo "t'as merdé";
-}
-?>
 
 
+$donnees = "a\dza47!!!!<php>";
 
-<?=(isset($_GET['role'])) ? "&role=$_GET[role]" : '';?>
+echo valid_donnees($donnees);

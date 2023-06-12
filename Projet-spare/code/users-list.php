@@ -15,6 +15,11 @@
  
   $start_index=($pageCourante-1)*$user_per_page;
   $users_on_page=array_slice($all_profil_user,$start_index,$user_per_page);
+
+  $role = (isset($_GET['role'])) ? "&role=".$_GET['role'] : '';
+  $classroom = (isset($_GET['classroom'])) ? "&classroom=".$_GET['classroom'] : '';
+  $ClassSpe = (isset($_GET['ClassSpe'])) ? "&ClassSpe=".$_GET['ClassSpe'] : '';
+
 ?>
 
 
@@ -139,28 +144,33 @@
 <nav class="d-flex justify-content-center" aria-label="...">
   <ul class="pagination">
     <li class="mx-1">
-      <a class="page-link btn <?= $pageCourante == 1 ? 'disabled' : '' ?>" href="?role=<?=$_GET['role']?>&classroom=<?=$_GET['classeroom']?>&ClassSpe=<?=$_GET['ClassSpe']?>&page=<?=(1);?>">|<</a>
+      <a class="page-link btn <?= $pageCourante == 1 ? 'disabled' : '' ?>" href="?page=<?=1;?><?=$role?><?=$classroom?><?=$ClassSpe?>">|<</a>
     </li>
     <li class="mx-1">
-      <a class="page-link btn <?= $pageCourante == 1 ? 'disabled' : '' ?>" href="?role=<?=$_GET['role']?>&classroom=<?=$_GET['classeroom']?>&ClassSpe=<?=$_GET['ClassSpe']?>&page=<?=($pageCourante-1);?>"><</a>
+      <a class="page-link btn <?= $pageCourante == 1 ? 'disabled' : '' ?>" 
+        href="?page=<?=($pageCourante-1);?><?=$role?><?=$classroom?><?=$ClassSpe?>"><</a>
     </li>
     <li class="mx-1 <?= $pageCourante <= ($i+2) ? 'd-none' : '' ?>">
-      <a class="page-link disabled btn" href="?role=<?=$_GET['role']?>&classroom=<?=$_GET['classeroom']?>&ClassSpe=<?=$_GET['ClassSpe']?>&page=<?=($pageCourante-1);?>">...</a>
+      <a class="page-link disabled btn" href="?page=<?=($pageCourante-1)?>">...</a>
     </li>
     <?php for ($i=1; $i<=$number_of_pages;$i++): ?>
-      <li class="page-item mx-1 <?= $pageCourante == $i ? 'active' : ''?> <?= ($i < $pageCourante-1) || ($i > $pageCourante+1) ?'d-none' : '' ;?>"><a class="page-link btn" href="?role=<?=$_GET['role']?>&classroom=<?=$_GET['classeroom']?>&ClassSpe=<?=$_GET['ClassSpe']?>&page=<?= $i?>"><?=$i?></a></li>
+      <li class="page-item mx-1 <?= $pageCourante == $i ? 'active' : ''?> <?= ($i < $pageCourante-1) || ($i > $pageCourante+1) ?'d-none' : '' ;?>"><a class="page-link btn" 
+        href="?page=<?=$i?><?=$role?><?=$classroom?><?=$ClassSpe?>"><?=$i?></a></li>
     <?php endfor?>
     
     <li class="mx-1 <?= ( $pageCourante < $number_of_pages-1) ? '' : 'd-none' ?>">
-      <a class="page-link disabled btn" href="?role=<?=$_GET['role']?>&classroom=<?=$_GET['classeroom']?>&ClassSpe=<?=$_GET['ClassSpe']?>&page=<?=($pageCourante+1);?>">...</a>
+      <a class="page-link disabled btn" href="?page=<?=($pageCourante+1)?>">...</a>
     </li>
     <li class="mx-1">
-      <a class="page-link btn <?= $pageCourante==$number_of_pages  ? 'disabled' : '' ?>" href="?role=<?=$_GET['role']?>&classroom=<?=$_GET['classeroom']?>&ClassSpe=<?=$_GET['ClassSpe']?>&page=<?=($pageCourante+1);?>">></a>
+      <a class="page-link btn <?= $pageCourante==$number_of_pages  ? 'disabled' : '' ?>" 
+        href="?page=<?=($pageCourante+1);?><?=$role?><?=$classroom?><?=$ClassSpe?>">></a>
     </li>
     <li class="mx-1">
-      <a class="page-link btn <?= $pageCourante==$number_of_pages  ? 'disabled' : '' ?>" href="?role=<?=$_GET['role']?>&classroom=<?=$_GET['classeroom']?>&ClassSpe=<?=$_GET['ClassSpe']?>&page=<?=($number_of_pages);?>">>|</a>
+      <a class="page-link btn <?= $pageCourante==$number_of_pages  ? 'disabled' : '' ?>" 
+        href="?page=<?=($number_of_pages);?><?=$role?><?=$classroom?><?=$ClassSpe?>">>|</a>
     </li>
   </ul>
 </nav>
 
 <?php require_once ("./assets/inc/foot.php") ?>
+

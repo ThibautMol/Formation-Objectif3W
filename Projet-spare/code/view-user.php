@@ -1,10 +1,10 @@
 <?php session_start(); ?>
 <?php require ("./assets/inc/cookies.php");?>
 <?php $title='Profil utilisateur'?>
-<?php $current_page="utilisateurs"?>
+<?php $current_page=(isset($_GET['id'])) ? "utilisateurs" : "profil"?>
 <?php require_once ("./assets/inc/head.php");?>
 <?php require_once ("./assets/inc/nav-bar.php");?>
-<?php require_once ("./assets/functions/add-element-form-profil-user-from-list.php")?>
+<?php (isset($_GET['id'])) ? require_once ("./assets/functions/add-element-form-profil-user-from-list.php") : require_once ("./assets/functions/add-element-form-profil-user.php");?>
 
 
 
@@ -55,7 +55,7 @@
         </div>
 
         <div class="m-auto btn btn-primary mt-3 text-capitalize">
-            <a class="btn btn-primary text-capitalize" href="profil-user-edit.php?id=<?=$user_profil['id']?>">modifier</a>     
+            <a class="btn btn-primary text-capitalize" href="profil-user-edit.php<?=(isset($_GET['id'])) ? "?id=".$user_profil['id'] : ""?>">modifier</a>     
         </div> 
         
     </main>

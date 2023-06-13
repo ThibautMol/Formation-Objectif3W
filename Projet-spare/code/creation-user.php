@@ -24,10 +24,10 @@
                     <?=$emailErr?>
                 </div>
 
-                <div class="">
+                <!-- <div class="">
                     <label class="text-capitalize" for="password">password</label>
                     <input type="password" class="form-control" name="UserPwd" id="password" value="" required>
-                </div>
+                </div> -->
 
                               
                 <div class="">

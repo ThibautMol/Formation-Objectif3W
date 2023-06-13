@@ -24,5 +24,4 @@ if (isset($_SESSION['USER_ID'])){
     $user_profil=profil_completion();
 }
 
-echo "lol";
 ?>

@@ -13,12 +13,18 @@
                     $_SESSION['USER_FIRSTNAME']=$user['firstname'];
                     $_SESSION['USER_ID']=$user['id'];
                     $_SESSION['USER_LASTNAME']=$user['lastname'];
+                    $_SESSION['FIRST_VISIT']=$user['first_visit'];
                 }
             }
         }
 
-        if ((isset($_SESSION['USER_FIRSTNAME']))){
-            return header('Location: http://localhost/Formation-Objectif3W/Projet-spare/code/dashboard.php');
+        if (isset($_SESSION['USER_FIRSTNAME'])) {
+            if (($user['first_visit']==1)){
+                return header('Location: http://localhost/Formation-Objectif3W/Projet-spare/code/dashboard.php');
+            }
+            else {
+                return header('Location: http://localhost/Formation-Objectif3W/Projet-spare/code/profil-user-edit.php');
+            }
         }
     }
 

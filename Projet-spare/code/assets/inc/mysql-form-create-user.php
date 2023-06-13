@@ -8,7 +8,7 @@ require_once("mysql-profil-user-id-request.php");
 if (isset($_POST['email'])) {
 
     $email=$_POST['email']; 
-    $UserPwd=$_POST['UserPwd']; 
+    // $UserPwd=$_POST['UserPwd']; 
     $firstname=$_POST['firstname']; 
     $lastname=$_POST['lastname']; 
     $statut=$_POST['statut']; 
@@ -16,7 +16,6 @@ if (isset($_POST['email'])) {
     $ClassSpe=$_POST['ClassSpe']; 
     
    
-
     
     function generating_id($data = null) {
         // Generate 16 bytes (128 bits) of random data or use the data passed into the function.
@@ -39,10 +38,19 @@ if (isset($_POST['email'])) {
     }while(in_array($id,$all_user_id));
 
 
+    function mdp_generator ($firstname, $lastname) {
+        $UserPwd=substr($firstname, 0 , 1).$lastname; 
+        return $UserPwd;
+    }
+
+    $UserPwd=mdp_generator($firstname,$lastname);
+    
+    $first_visit=NULL;
+
     date_default_timezone_set('Europe/Paris');
     $CreationAccount = date("Y-m-d");
 
-    $sqlQuery ='INSERT INTO users (id, email, UserPwd, firstname, lastname, statut, classroom, ClassSpe, CreationAccount) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)';
+    $sqlQuery ='INSERT INTO users (id, email, UserPwd, firstname, lastname, statut, classroom, ClassSpe, first_visit, CreationAccount) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)';
 
     $insert_user= $db->prepare($sqlQuery);
 
@@ -54,7 +62,8 @@ if (isset($_POST['email'])) {
         $lastname,
         $statut,
         $classroom,
-        $ClassSpe, 
+        $ClassSpe,
+        $first_visit, 
         $CreationAccount,
     ]);
 }

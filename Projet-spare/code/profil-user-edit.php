@@ -3,11 +3,12 @@
 <?php $title='Édition profil'?>
 <?php $current_page=(isset($_GET['id'])) ? "utilisateurs" : "profil"?>
 <?php require_once ("./assets/inc/head.php");?>
-<?php require_once ("./assets/inc/nav-bar.php");?>
+<?php //require_once ("./assets/inc/nav-bar.php");?>
 <?php //require_once ("./assets/functions/add-element-form-profil-user.php");?>
 <?php //require_once ("./assets/functions/view-user-profil-from-list.php");?>
 <?php (isset($_GET['id'])) ? require_once ("./assets/functions/add-element-form-profil-user-from-list.php") : require_once ("./assets/functions/add-element-form-profil-user.php");?>
 
+<?= var_dump($_SESSION['FIRST_VISIT'])?>
 
 
     <main class="d-flex flex-column justify-content-center align-items-center mb-5" style="margin-top:100px;">

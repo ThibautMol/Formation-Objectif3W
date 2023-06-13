@@ -4,6 +4,7 @@
 <?php $current_page="utilisateurs"?>
 <?php require_once ("./assets/inc/head.php")?>
 <?php require_once ("./assets/inc/nav-bar.php")?>
+<?php //require_once ("./assets/functions/valid-data-form.php")?>
 
 
 
@@ -15,23 +16,37 @@
                     <label class="text-capitalize" for="UserEmail">email</label>
                     <input type="email" class="form-control" name="email" id="UserEmail" placeholder="Email" value="" required>
                 </div>
+                
+                <div class="alert alert-danger <?=(!empty($emailErr)) ? '' : 'd-none'?>" role="alert">
+                    <?=$emailErr?>
+                </div>
 
                 <div class="">
                     <label class="text-capitalize" for="password">password</label>
                     <input type="password" class="form-control" name="UserPwd" id="password" value="" required>
                 </div>
-                
+
+                              
                 <div class="">
                     <label class="text-capitalize" for="firstname">firstname</label>
                     <input type="text" class="form-control" name="firstname" id="firstname" placeholder="firstname" value=""  required>
                 </div>
                 
+                <div class="alert alert-danger <?=(!empty($firstnameErr)) ? '' : 'd-none'?>" role="alert">
+                    <?=$firstnameErr?>
+                </div>
+
                 <div class="">
                     <label class="text-capitalize" for="validationServerUsername">lastname</label>
                     <div class="input-group">           
                         <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Last Name" aria-describedby="inputGroupPrepend3" required>
                     </div>
                 </div>
+
+                <div class="alert alert-danger <?=(!empty($lastnameErr)) ? '' : 'd-none'?>" role="alert">
+                    <?=$lastnameErr?>
+                </div>
+
             </div>
 
             <div class="form-row d-grid gap-3">
@@ -46,6 +61,10 @@
                     </select>
                 </div>
 
+                <div class="alert alert-danger <?=(!empty($roleErr)) ? '' : 'd-none'?>" role="alert">
+                    <?=$roleErr?>
+                </div>
+
                 <div class="">
                     <label class="text-capitalize" for="classroom">classe</label>
                     <select name="classroom" id="classroom">
@@ -58,6 +77,10 @@
                     </select>
                 </div>
 
+                <div class="alert alert-danger <?=(!empty($classroomErr)) ? '' : 'd-none'?>" role="alert">
+                    <?=$classroomErr?>
+                </div>
+
                 <div class="">
                     <label class="text-capitalize" for="ClassSpe">classe spécialité</label>
                     <select name="ClassSpe" id="ClassSpe">
@@ -68,6 +91,9 @@
                     </select>
                 </div>
 
+                <div class="alert alert-danger <?=(!empty($ClassSpeErr)) ? '' : 'd-none'?>" role="alert">
+                    <?=$ClassSpeErr?>
+                </div>
 
             </div>
             <div class="m-auto">

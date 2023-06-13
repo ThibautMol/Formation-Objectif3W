@@ -7,6 +7,6 @@ $request_login=$db->prepare('SELECT id, email, UserPwd, firstname, lastname FROM
 
 $request_login->execute();
 
-$login_selection=$request_login->fetchAll();
+$login_selection=$request_login->fetchAll(PDO::FETCH_ASSOC);
 
 ?>

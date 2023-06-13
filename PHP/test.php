@@ -8,6 +8,6 @@ function valid_donnees($donnees){
 }
 
 
-$donnees = "a\dza47!!!!<php>";
+$donnees = "agent de traitement";
 
 echo valid_donnees($donnees);

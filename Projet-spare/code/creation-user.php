@@ -3,14 +3,17 @@
 <?php $title='Ajouter un utilisateur'?>
 <?php $current_page="utilisateurs"?>
 <?php require_once ("./assets/inc/head.php")?>
-<?php require_once ("./assets/inc/nav-bar.php")?>
+<?php //require_once ("./assets/inc/nav-bar.php")?>
 <?php //require_once ("./assets/functions/valid-data-form.php")?>
-
+<?php require_once ("./assets/inc/mysql-form-create-user.php")?>
+<?php require_once ("./assets/inc/mysql-all-spe-classes-request.php")?>
+<?php require_once ("./assets/inc/mysql-all-main-classes-request.php")?>
+<?php require_once ("./assets/inc/mysql-all-roles-request.php")?>
 
 
 <main class="d-flex flex-column justify-content-center align-items-center mb-5" style="margin-top:100px;">
         <h1>Nouvel utilisateur</h1>
-        <form class="d-flex flex-column justify-content-center mt-3" action='assets\inc\mysql-form-create-user.php' method="POST">
+        <form class="d-flex flex-column justify-content-center mt-3" action='' method="POST">
             <div class="form-row d-grid gap-3">
                 <div class="">
                     <label class="text-capitalize" for="UserEmail">email</label>
@@ -54,10 +57,9 @@
                     <label class="text-capitalize" for="statut">rôle</label>
                     <select name="statut" id="statut" required>
                         <option value="">--Please choose an option--</option>
-                        <option class="text-capitalize" value="administrateur">administrateur</option>
-                        <option class="text-capitalize" value="agent de traitement">agent de traitement</option>
-                        <option class="text-capitalize" value="professeur">professeur</option>
-                        <option class="text-capitalize" value="eleve">élève</option>
+                        <?php foreach ($all_roles as $role) :?>
+                            <option class="text-capitalize" value="<?=$role['name']?>"><?=$role['name']?></option>
+                        <?php endforeach ;?>
                     </select>
                 </div>
 
@@ -69,11 +71,9 @@
                     <label class="text-capitalize" for="classroom">classe</label>
                     <select name="classroom" id="classroom">
                         <option value="">--Please choose an option--</option>
-                        <option class="text-capitalize" value="class1">class1</option>
-                        <option class="text-capitalize" value="class2">class2</option>
-                        <option class="text-capitalize" value="class3">class3</option>
-                        <option class="text-capitalize" value="class4">class4</option>
-                        <option class="text-capitalize" value="class5">class5</option>
+                        <?php foreach ($all_main_classes as $main_class) :?>
+                            <option class="text-capitalize" value="<?=$main_class['name']?>"><?=$main_class['name']?></option>
+                        <?php endforeach ;?>
                     </select>
                 </div>
 
@@ -85,9 +85,9 @@
                     <label class="text-capitalize" for="ClassSpe">classe spécialité</label>
                     <select name="ClassSpe" id="ClassSpe">
                         <option value="">--Please choose an option--</option>
-                        <option class="text-capitalize" value="class1-1">class1-1</option>
-                        <option class="text-capitalize" value="class1-2">class1-2</option>
-                        <option class="text-capitalize" value="class1-3">class1-3</option>
+                        <?php foreach ($all_spe_classes as $spe_class) :?>
+                            <option class="text-capitalize" value="<?=$spe_class['name']?>"><?=$spe_class['name']?></option>
+                        <?php endforeach ;?>
                     </select>
                 </div>
 
@@ -97,7 +97,7 @@
 
             </div>
             <div class="m-auto">
-                <button class="btn btn-primary mt-3 text-capitalize" type="submit" href="creation-user.php">enregistrer</button>
+                <button class="btn btn-primary mt-3 text-capitalize" type="submit" href="#">enregistrer</button>
             </div>
         </form>
         

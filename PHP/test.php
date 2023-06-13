@@ -1,4 +1,6 @@
 <?php
+
+
 function valid_donnees($donnees){
     $donnees = trim($donnees);
     $donnees = stripslashes($donnees);
@@ -10,4 +12,5 @@ function valid_donnees($donnees){
 
 $donnees = "agent de traitement";
 
-echo valid_donnees($donnees);
+//echo valid_donnees($donnees);
+

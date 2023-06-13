@@ -7,6 +7,9 @@
 <?php require_once (".\assets\inc\mysql-profil-user-request.php")?>
 <?php require_once ("./assets/functions/user-per-page-list.php");?>
 <?php require_once ("./assets/functions/user-list-filter.php");?>
+<?php require_once ("./assets/inc/mysql-all-spe-classes-request.php")?>
+<?php require_once ("./assets/inc/mysql-all-main-classes-request.php")?>
+<?php require_once ("./assets/inc/mysql-all-roles-request.php")?>
 <?php  
 
   $total_users=count($all_profil_user);
@@ -47,30 +50,29 @@
       <div class="mx-1">
         <select name="role" class="form-select" aria-label="Default select example">
           <option value="0" selected>Rôle</option>
-          <option class="text-capitalize" value="administrateur" <?=((!empty($_GET['role'])) && ($_GET['role']=="administrateur")) ? 'selected' : ''?>>administrateur</option>
-          <option class="text-capitalize" value="agent de traitement" <?=((!empty($_GET['role'])) && ($_GET['role']=="agent de traitement")) ? 'selected' : ''?>>agent de traitement</option>
-          <option class="text-capitalize" value="professeur" <?=((!empty($_GET['role'])) && ($_GET['role']=="professeur")) ? 'selected' : ''?>>professeur</option>
-          <option class="text-capitalize" value="eleve" <?=((!empty($_GET['role'])) && ($_GET['role']=="eleve")) ? 'selected' : ''?>>élève</option>
+          <?php foreach ($all_roles as $role) :?>
+            <option class="text-capitalize" value="<?=$role['name']?>" <?=((!empty($_GET['role'])) && ($_GET['role']==$role['name'])) ? 'selected' : ''?>><?=$role['name']?></option>
+          <?php endforeach ;?>
         </select>
       </div>
+
+                          
 
       <div class="mx-1">
         <select name="classroom" class="form-select" aria-label="Default select example">
           <option value="0" selected>Classe principale</option>
-          <option class="text-capitalize" value="class1" <?=((!empty($_GET['classroom'])) && ($_GET['classroom']=="class1")) ? 'selected' : ''?>>class1</option>
-          <option class="text-capitalize" value="class2" <?=((!empty($_GET['classroom'])) && ($_GET['classroom']=="class2")) ? 'selected' : ''?>>class2</option>
-          <option class="text-capitalize" value="class3" <?=((!empty($_GET['classroom'])) && ($_GET['classroom']=="class3")) ? 'selected' : ''?>>class3</option>
-          <option class="text-capitalize" value="class4" <?=((!empty($_GET['classroom'])) && ($_GET['classroom']=="class4")) ? 'selected' : ''?>>class4</option>
-          <option class="text-capitalize" value="class5" <?=((!empty($_GET['classroom'])) && ($_GET['classroom']=="class5")) ? 'selected' : ''?>>class5</option>
+          <?php foreach ($all_main_classes as $main_class) :?>
+            <option class="text-capitalize" value="<?=$main_class['name']?>"><?=$main_class['name']?></option>
+          <?php endforeach ;?>      
         </select>
       </div>
 
       <div class="mx-1 mb-2">
         <select name="ClassSpe" class="form-select" aria-label="Default select example">
           <option value="0" selected>Classe secondaire</option>
-          <option class="text-capitalize" value="class1-1" <?=((!empty($_GET['ClassSpe'])) && ($_GET['ClassSpe']=="class1-1")) ? 'selected' : ''?>>class1-1</option>
-          <option class="text-capitalize" value="class1-2" <?=((!empty($_GET['ClassSpe'])) && ($_GET['ClassSpe']=="class1-2")) ? 'selected' : ''?>>class1-2</option>
-          <option class="text-capitalize" value="class1-3" <?=((!empty($_GET['ClassSpe'])) && ($_GET['ClassSpe']=="class1-3")) ? 'selected' : ''?>>class1-3</option>
+          <?php foreach ($all_spe_classes as $spe_class) :?>
+            <option class="text-capitalize" value="<?=$spe_class['name']?>"><?=$spe_class['name']?></option>
+          <?php endforeach ;?>        
         </select>
       </div>
     </div>

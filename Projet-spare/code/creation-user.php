@@ -3,9 +3,9 @@
 <?php $title='Ajouter un utilisateur'?>
 <?php $current_page="utilisateurs"?>
 <?php require_once ("./assets/inc/head.php")?>
-<?php //require_once ("./assets/inc/nav-bar.php")?>
+<?php require_once ("./assets/inc/nav-bar.php")?>
 <?php //require_once ("./assets/functions/valid-data-form.php")?>
-<?php require_once ("./assets/inc/mysql-form-create-user.php")?>
+<?php //require_once ("./assets/inc/mysql-form-create-user.php")?>
 <?php require_once ("./assets/inc/mysql-all-spe-classes-request.php")?>
 <?php require_once ("./assets/inc/mysql-all-main-classes-request.php")?>
 <?php require_once ("./assets/inc/mysql-all-roles-request.php")?>
@@ -13,7 +13,7 @@
 
 <main class="d-flex flex-column justify-content-center align-items-center mb-5" style="margin-top:100px;">
         <h1>Nouvel utilisateur</h1>
-        <form class="d-flex flex-column justify-content-center mt-3" action='' method="POST">
+        <form class="d-flex flex-column justify-content-center mt-3" action='./assets/inc/mysql-form-create-user.php' method="POST">
             <div class="form-row d-grid gap-3">
                 <div class="">
                     <label class="text-capitalize" for="UserEmail">email</label>
@@ -89,21 +89,29 @@
                             <option class="text-capitalize" value="<?=$spe_class['name']?>"><?=$spe_class['name']?></option>
                         <?php endforeach ;?>
                     </select>
-                </div>
-
+                </div>              
+                
                 <div class="alert alert-danger <?=(!empty($ClassSpeErr)) ? '' : 'd-none'?>" role="alert">
-                    <?=$ClassSpeErr?>
+                    <p class="alert alert-danger"><?=$ClassSpeErr?></p>
                 </div>
-
+               
             </div>
+
             <div class="m-auto">
                 <button class="btn btn-primary mt-3 text-capitalize" type="submit" href="#">enregistrer</button>
             </div>
         </form>
         
-        <div class="m-auto">
-            <?= ((isset($_POST)) && $_POST!=NULL) ? 'Utilisateur bien enregistré' : '' ?>
+        <div class="alert alert-success m-auto mt-3 <?= ((isset($_SESSION['confirm_creation_user'])) &&  $_SESSION['confirm_creation_user']!=NULL) ? '' : 'd-none' ?>" role="alert">
+            <?=$_SESSION['confirm_creation_user']?>
         </div>
+
+        <div class="alert alert-danger m-auto mt-3 <?= ((isset($_SESSION['error_creation_user'])) && $_SESSION['error_creation_user']!=NULL) ? '' : 'd-none' ?>" role="alert">
+            <?=$_SESSION['error_creation_user']?>
+        </div>
+    
+
+        <p>TROUVER UNE SOLUTION POUR CLEAR LA SESSION (CHECKBOX POUR VALIDER LE MESSAGE PAR EXEMPLE)</p>
     </main>
 
 <?php require_once ("./assets/inc/foot.php") ?>

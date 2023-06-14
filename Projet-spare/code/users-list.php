@@ -62,7 +62,7 @@
         <select name="classroom" class="form-select" aria-label="Default select example">
           <option value="0" selected>Classe principale</option>
           <?php foreach ($all_main_classes as $main_class) :?>
-            <option class="text-capitalize" value="<?=$main_class['name']?>"><?=$main_class['name']?></option>
+            <option class="text-capitalize" value="<?=$main_class['name']?>" <?=((!empty($_GET['classroom'])) && ($_GET['classroom']==$main_class['name'])) ? 'selected' : ''?>><?=$main_class['name']?></option>
           <?php endforeach ;?>      
         </select>
       </div>
@@ -71,7 +71,7 @@
         <select name="ClassSpe" class="form-select" aria-label="Default select example">
           <option value="0" selected>Classe secondaire</option>
           <?php foreach ($all_spe_classes as $spe_class) :?>
-            <option class="text-capitalize" value="<?=$spe_class['name']?>"><?=$spe_class['name']?></option>
+            <option class="text-capitalize" value="<?=$spe_class['name']?>" <?=((!empty($_GET['ClassSpe'])) && ($_GET['ClassSpe']==$spe_class['name'])) ? 'selected' : ''?>><?=$spe_class['name']?></option>
           <?php endforeach ;?>        
         </select>
       </div>

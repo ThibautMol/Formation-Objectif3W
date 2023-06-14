@@ -8,7 +8,8 @@ if (isset($_POST['submit'])){
         $lastname = $_POST['lastname'];
         $statut = $_POST['statut'];
         $classroom = $_POST['classroom'];
-        $ClassSpe=$_POST['ClassSpe']; 
+        $ClassSpe=$_POST['ClassSpe'];
+        $first_visit=1; 
     }
     else {
         $userId = $_POST['user_id'];
@@ -18,7 +19,8 @@ if (isset($_POST['submit'])){
         $lastname = $_POST['lastname'];
         $statut = $_POST['statut'];
         $classroom = $_POST['classroom'];
-        $ClassSpe=$_POST['ClassSpe']; 
+        $ClassSpe=$_POST['ClassSpe'];
+        $first_visit=1; 
     }
 
     require_once 'sql-data-base-connexion.php';
@@ -34,6 +36,7 @@ if (isset($_POST['submit'])){
     $updateQuery->bindParam(':statut', $statut);
     $updateQuery->bindParam(':classroom', $classroom);
     $updateQuery->bindParam(':ClassSpe', $ClassSpe); 
+    $updateQuery->bindParam(':first_visit', $first_visit);
     }
         
     catch (Exception $e) {

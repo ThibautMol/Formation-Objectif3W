@@ -3,12 +3,9 @@
 <?php $title='Édition profil'?>
 <?php $current_page=(isset($_GET['id'])) ? "utilisateurs" : "profil"?>
 <?php require_once ("./assets/inc/head.php");?>
-<?php //require_once ("./assets/inc/nav-bar.php");?>
-<?php //require_once ("./assets/functions/add-element-form-profil-user.php");?>
-<?php //require_once ("./assets/functions/view-user-profil-from-list.php");?>
+<?php require_once ("./assets/inc/nav-bar.php");?>
 <?php (isset($_GET['id'])) ? require_once ("./assets/functions/add-element-form-profil-user-from-list.php") : require_once ("./assets/functions/add-element-form-profil-user.php");?>
 
-<?= var_dump($_SESSION['FIRST_VISIT'])?>
 
 
     <main class="d-flex flex-column justify-content-center align-items-center mb-5" style="margin-top:100px;">
@@ -20,9 +17,11 @@
                     <input type="email" class="form-control" name="email" id="UserEmail" placeholder="Email" value="<?=$user_profil['email'];?>" required>
                 </div>
                 
-                <div class="">
+                <div class="<?=($_SESSION['FIRST_VISIT']!=1) ? '' : 'd-none' ?>">
                     <label class="text-capitalize" for="password">password</label>
-                    <input type="password" class="form-control text-capitalize" name="UserPwd" id="password" value="<?=$user_profil['UserPwd'];?>" required>
+                    <input type="password" class="form-control text-capitalize" name="UserPwd" id="password" <?=($_SESSION['FIRST_VISIT']!=1) ? 'required' : '' ?>>
+                    <div class="alert alert-danger mt-2" role="alert">Veuillez entrer votre nouveau mot de passe</div>
+                </div>
                 </div>
            
                 <div class="">

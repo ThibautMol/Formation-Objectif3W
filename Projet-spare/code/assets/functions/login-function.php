@@ -18,8 +18,8 @@
             }
         }
 
-        if (isset($_SESSION['USER_FIRSTNAME'])) {
-            if (($user['first_visit']==1)){
+        if (isset($_SESSION['FIRST_VISIT'])) {
+            if (($_SESSION['FIRST_VISIT']==1)){
                 return header('Location: http://localhost/Formation-Objectif3W/Projet-spare/code/dashboard.php');
             }
             else {

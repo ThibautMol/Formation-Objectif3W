@@ -10,6 +10,8 @@
 <?php require_once ("./assets/inc/mysql-all-main-classes-request.php")?>
 <?php require_once ("./assets/inc/mysql-all-roles-request.php")?>
 
+<?php $test=1;?>
+
 
 <main class="d-flex flex-column justify-content-center align-items-center mb-5" style="margin-top:100px;">
     <h1>Nouvel utilisateur</h1>
@@ -17,45 +19,39 @@
         <div class="form-row d-grid gap-3">
             <div class="">
                 <label class="text-capitalize" for="UserEmail">email</label>
-                <input type="email" class="form-control" name="email" id="UserEmail" placeholder="Email" value="" required>
+                <input type="email" class="form-control" name="email" id="UserEmail" placeholder="Email" value="" <?=($test=1) ? "" : 'required'?>> 
             </div>
             
-            <div class="alert alert-danger <?=(!empty($emailErr)) ? '' : 'd-none'?>" role="alert">
-                <?=$emailErr?>
+            <div class="alert alert-danger <?=(!empty($_SESSION['emailErr'])) ? '' : 'd-none'?>" role="alert">
+                <?=($_SESSION['emailErr'])?>
             </div>
-
-            <!-- <div class="">
-                <label class="text-capitalize" for="password">password</label>
-                <input type="password" class="form-control" name="UserPwd" id="password" value="" required>
-            </div> -->
-
                             
             <div class="">
                 <label class="text-capitalize" for="firstname">firstname</label>
-                <input type="text" class="form-control" name="firstname" id="firstname" placeholder="firstname" value=""  required>
+                <input type="text" class="form-control" name="firstname" id="firstname" placeholder="firstname" value=""  <?=($test=1) ? "" : 'required'?>>
             </div>
             
-            <div class="alert alert-danger <?=(!empty($firstnameErr)) ? '' : 'd-none'?>" role="alert">
-                <?=$firstnameErr?>
+            <div class="alert alert-danger <?=(!empty($_SESSION['firstnameErr'])) ? '' : 'd-none'?>" role="alert">
+                <?=($_SESSION['firstnameErr'])?>
             </div>
 
             <div class="">
                 <label class="text-capitalize" for="validationServerUsername">lastname</label>
                 <div class="input-group">           
-                    <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Last Name" aria-describedby="inputGroupPrepend3" required>
+                    <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Last Name" aria-describedby="inputGroupPrepend3" <?=($test=1) ? "" : 'required'?>>
                 </div>
             </div>
 
-            <div class="alert alert-danger <?=(!empty($lastnameErr)) ? '' : 'd-none'?>" role="alert">
-                <?=$lastnameErr?>
+            <div class="alert alert-danger <?=(!empty($_SESSION['lastnameErr'])) ? '' : 'd-none'?>" role="alert">
+                <?=($_SESSION['lastnameErr'])?>
             </div>
 
         </div>
-
+      
         <div class="form-row d-grid gap-3">
             <div class="mt-3">
                 <label class="text-capitalize" for="statut">rôle</label>
-                <select name="statut" id="statut" required>
+                <select name="statut" id="statut" <?=($test=1) ? "" : 'required'?>>
                     <option value="">--Please choose an option--</option>
                     <?php foreach ($all_roles as $role) :?>
                         <option class="text-capitalize" value="<?=$role['name']?>"><?=$role['name']?></option>
@@ -63,8 +59,8 @@
                 </select>
             </div>
 
-            <div class="alert alert-danger <?=(!empty($roleErr)) ? '' : 'd-none'?>" role="alert">
-                <?=$roleErr?>
+            <div class="alert alert-danger <?=(!empty($_SESSION['statutErr'])) ? '' : 'd-none'?>" role="alert">
+                <?=($_SESSION['statutErr'])?>
             </div>
 
             <div class="">
@@ -77,8 +73,8 @@
                 </select>
             </div>
 
-            <div class="alert alert-danger <?=(!empty($classroomErr)) ? '' : 'd-none'?>" role="alert">
-                <?=$classroomErr?>
+            <div class="alert alert-danger <?=(!empty($_SESSION['classroomErr'])) ? '' : 'd-none'?>" role="alert">
+                <?=($_SESSION['classroomErr'])?>
             </div>
 
             <div class="">
@@ -91,8 +87,8 @@
                 </select>
             </div>              
             
-            <div class="alert alert-danger <?=(!empty($ClassSpeErr)) ? '' : 'd-none'?>" role="alert">
-                <p class="alert alert-danger"><?=$ClassSpeErr?></p>
+            <div class="alert alert-danger <?=(!empty($_SESSION['ClassSpeErr'])) ? '' : 'd-none'?>" role="alert">
+                <?=($_SESSION['ClassSpeErr'])?>
             </div>
             
         </div>

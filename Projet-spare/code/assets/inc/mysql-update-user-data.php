@@ -3,7 +3,7 @@ if (isset($_POST['submit'])){
     if (isset($_GET['id'])) {
         $userId = $_GET['id'];
         $email = $_POST['email'];
-        $userPwd = $_POST['password'];
+        $UserPwd = $_POST['password'];
         $firstname = $_POST['firstname'];
         $lastname = $_POST['lastname'];
         $statut = $_POST['statut'];
@@ -12,9 +12,9 @@ if (isset($_POST['submit'])){
         $first_visit=1; 
     }
     else {
-        $userId = $_POST['user_id'];
+        $userId = $_SESSION['USER_ID'];
         $email = $_POST['email'];
-        $userPwd = $_POST['password'];
+        $UserPwd = $_POST['password'];
         $firstname = $_POST['firstname'];
         $lastname = $_POST['lastname'];
         $statut = $_POST['statut'];
@@ -25,12 +25,12 @@ if (isset($_POST['submit'])){
 
     require_once 'sql-data-base-connexion.php';
     try {
-    $query = 'UPDATE users SET email = :email, UserPwd = :userPwd, firstname = :firstname, lastname = :lastname, statut = :statut, classroom = :classroom, ClassSpe = :classSpe WHERE id = :userId';
+    $query = 'UPDATE users SET email = :email, UserPwd = :UserPwd, firstname = :firstname, lastname = :lastname, statut = :statut, classroom = :classroom, ClassSpe = :ClassSpe, fist_visit = :first_visit WHERE id = :userId';
     $updateQuery = $db->prepare($query);
     
     $updateQuery->bindParam(':userId', $userId);
     $updateQuery->bindParam(':email', $email);
-    $updateQuery->bindParam(':userPwd', $userPwd);
+    $updateQuery->bindParam(':UserPwd', $UserPwd);
     $updateQuery->bindParam(':firstname', $firstname);
     $updateQuery->bindParam(':lastname', $lastname);
     $updateQuery->bindParam(':statut', $statut);

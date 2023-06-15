@@ -7,25 +7,26 @@ require_once("mysql-profil-user-id-email-request.php");
 
 if (!empty($_POST['email'])) {
     // echo "etape un ";
-    $email=$_POST['email']; 
+    $email=strtolower($_POST['email']); 
     $firstname=strtolower($_POST['firstname']); 
     $lastname=strtolower($_POST['lastname']); 
     $statut=strtolower($_POST['statut']); 
     $classroom=strtolower($_POST['classroom']);
     $ClassSpe=strtolower($_POST['ClassSpe']); 
 
-    // var_dump(in_array($email,$all_user_id_email,true));
-    // var_dump($email);
-    // foreach ($all_user_id_email as $element) {
-    //     if ($email===$element['email']) {
-    //         echo $email;
-    //     }
-    //     else {
-    //         echo "pas trouvé ";
-    //     }
-    // }
+    var_dump(!in_array($email,$all_user_id_email));
+    var_dump($email);
+    // var_dump($all_user_id_email);
+    foreach ($all_user_id_email as $element) {
+        if ($email===$element['email']) {
+            echo $email;
+        }
+        else {
+            echo "pas trouvé ";
+        }
+    }
         
-    if (in_array($email,$all_user_id_email)) { #ATTENTION FONCTION INVERSEE SINON NE DONNE PAS LE BON RESULTAT BOOL
+    if (!in_array($email,$all_user_id_email)) { #ATTENTION FONCTION INVERSEE SINON NE DONNE PAS LE BON RESULTAT BOOL
         //echo "on enregistre ";
         function generating_id($data = null) {
             // Generate 16 bytes (128 bits) of random data or use the data passed into the function.
@@ -76,6 +77,14 @@ if (!empty($_POST['email'])) {
             $first_visit, 
             $CreationAccount,
         ]);
+
+        unset($_SESSION['roleErr']);
+        unset($_SESSION['classroomErr']);
+        unset($_SESSION['ClassSpeErr']);
+        unset($_SESSION['firstnameErr']);
+        unset($_SESSION['lastnameErr']);
+        unset($_SESSION['emailErr']);
+        
     
         $_SESSION['confirm_creation_user']="Utilisateur bien enregistré";
         //echo "etape 1.5 ";
@@ -88,8 +97,8 @@ if (!empty($_POST['email'])) {
     }
    ;
     
-    header('Location: http://localhost/Formation-Objectif3W/Projet-spare/code/creation-user.php');
-    exit;
+    // header('Location: http://localhost/Formation-Objectif3W/Projet-spare/code/creation-user.php');
+    // exit;
  //echo "etape3 ";
 }
 //echo "etape4 ";

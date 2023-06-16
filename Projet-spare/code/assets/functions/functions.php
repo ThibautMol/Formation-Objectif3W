@@ -35,9 +35,9 @@ function profil_completion () {
     require '.\assets\inc\mysql-profil-user-request.php';
 
 
-    if (isset($_SESSION['USER_ID'])) {
+    if (isset($_SESSION['SPARE']['USER_ID'])) {
         foreach ($all_profil_user as $user) {
-            if ($_SESSION['USER_ID']===$user['id']){
+            if ($_SESSION['SPARE']['USER_ID']===$user['id']){
                 $user_profil['email']=$user['email'];
                 $user_profil['UserPwd']=$user['UserPwd'];
                 $user_profil['firstname']=$user['firstname'];
@@ -51,7 +51,7 @@ function profil_completion () {
     }
 }
 
-if (isset($_SESSION['USER_ID'])){
+if (isset($_SESSION['SPARE']['USER_ID'])){
     $user_profil=profil_completion();
 }
 
@@ -89,14 +89,14 @@ function login_validation ($login_form) {
         foreach ($login_selection as $user) {
             if ($user['email']===$login_form['email'] &&
                 $user['UserPwd']===$login_form['password']) {
-                $_SESSION['USER_FIRSTNAME']=$user['firstname'];
-                $_SESSION['USER_ID']=$user['id'];
-                $_SESSION['USER_LASTNAME']=$user['lastname'];
+                $_SESSION['SPARE']['USER_FIRSTNAME']=$user['firstname'];
+                $_SESSION['SPARE']['USER_ID']=$user['id'];
+                $_SESSION['SPARE']['USER_LASTNAME']=$user['lastname'];
             }
         }
     }
 
-    if ((isset($_SESSION['USER_FIRSTNAME']))){
+    if ((isset($_SESSION['SPARE']['USER_FIRSTNAME']))){
         return header('Location: http://localhost/Formation-Objectif3W/Projet-spare/code/dashboard.php');
     }
 }

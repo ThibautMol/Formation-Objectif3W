@@ -17,9 +17,9 @@
                     <input type="email" class="form-control" name="email" id="UserEmail" placeholder="Email" value="<?=$user_profil['email'];?>" required>
                 </div>
                 
-                <div class="<?=($_SESSION['FIRST_VISIT']!=1) ? '' : 'd-none' ?>">
+                <div class="<?=($_SESSION['SPARE']['FIRST_VISIT']!=1) ? '' : 'd-none' ?>">
                     <label class="text-capitalize" for="password">password</label>
-                    <input type="password" class="form-control text-capitalize" name="UserPwd" id="password" <?=($_SESSION['FIRST_VISIT']!=1) ? 'required' : '' ?>>
+                    <input type="password" class="form-control text-capitalize" name="UserPwd" id="password" <?=($_SESSION['SPARE']['FIRST_VISIT']!=1) ? 'required' : '' ?>>
                     <div class="alert alert-danger mt-2" role="alert">Veuillez entrer votre nouveau mot de passe</div>
                 </div>
                 </div>

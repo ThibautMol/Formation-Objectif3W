@@ -49,7 +49,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $classroom=strtolower($_POST['classroom']);
     $ClassSpe=strtolower($_POST['ClassSpe']); 
 
-    echo 'passer toutes mes vérifs en dynamiques via les éléments contenus dans mes tables (penser à faire un foreach)';
+    echo 'passer toutes mes vérifs en dynamiques via les éléments contenus dans mes tables (penser à faire un foreach) +';
 
     if (isset($_POST['statut'])){
 
@@ -57,18 +57,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $statut = valid_donnees($_POST['statut']);
         
         if (empty($_POST['statut'])) {
-            $_SESSION['statutErr'] = "Statut is required"; 
+            $_SESSION['SPARE']['statutErr'] = "Statut is required"; 
             echo "étape 2.1 ";
         }
         else {
             
             if (($statut!='administrateur') || ($statut!='agent de traitement') || ($statut!='professeur') || ($statut!='eleve')) {
-                $_SESSION['statutErr'] = "Merci de choisir un des statuts prédéfinis";
+                $_SESSION['SPARE']['statutErr'] = "Merci de choisir un des statuts prédéfinis";
                 echo "étape 2.2 "; 
                 
             }
             else {
-                unset($_SESSION['statutErr']);
+                unset($_SESSION['SPARE']['statutErr']);
                 echo "étape unset ";
             }
         }
@@ -79,15 +79,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "étape 3 ";
         $classroom = valid_donnees($_POST["classroom"]); 
     
+        foreach ($all_spe_classes as $spe_class) { //retransformer all_spe_classes en array
+                
+          if (($classroom!=="class1") || ($classroom!=="class2") || ($classroom!=="class3") || ($classroom!=="class4") || ($classroom!=="class5")) {
+              echo "étape 3.1 ";
+              $_SESSION['SPARE']['classroomErr'] = "Merci de choisir une des classes prédéfinis";
+          }
 
-        if (($classroom!=="class1") || ($classroom!=="class2") || ($classroom!=="class3") || ($classroom!=="class4") || ($classroom!=="class5")) {
-            echo "étape 3.1 ";
-            $_SESSION['classroomErr'] = "Merci de choisir une des classes prédéfinis";
-        }
-
-        else {
-            unset($_SESSION['classroomErr']);
-            echo "étape unset ";
+          else {
+              unset($_SESSION['SPARE']['classroomErr']);
+              echo "étape unset ";
+          }
         }
     }
     
@@ -100,10 +102,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       
       if (($ClassSpe!=="class1-1") || ($ClassSpe!=="class1-2") || ($ClassSpe!=="class1-3")) {
         echo "étape 4.2 ";
-        $_SESSION['ClassSpeErr'] = "Merci de choisir une des classes prédéfinis";        
+        $_SESSION['SPARE']['ClassSpeErr'] = "Merci de choisir une des classes prédéfinis";        
       }
       else {
-        unset($_SESSION['ClassSpeErr']);
+        unset($_SESSION['SPARE']['ClassSpeErr']);
         echo "étape unset ";
       }
     }
@@ -113,18 +115,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo "étape 5 ";
 
     if (empty($_POST["firstname"])) {
-      $_SESSION['firstnameErr'] = "Firstname is required";
+      $_SESSION['SPARE']['firstnameErr'] = "Firstname is required";
       echo "étape 5.1 ";
     } else {
       $firstname = valid_donnees($_POST["firstname"]);
       // check if name only contains letters and whitespace
       echo "étape 5.2 ";
         if (!preg_match("/^[a-zA-Z-' ]*$/",$firstname)) {
-            $_SESSION['firstnameErr'] = "Only letters and white space allowed";
+            $_SESSION['SPARE']['firstnameErr'] = "Only letters and white space allowed";
             echo "étape 5.3 ";
         }
         else {
-            unset($_SESSION['firstnameErr']);
+            unset($_SESSION['SPARE']['firstnameErr']);
             echo "étape unset ";
         }
     }
@@ -134,18 +136,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo "étape 6 ";
 
     if (empty($_POST["lastname"])) {
-      $_SESSION['lastnameErr'] = "lastname is required";
+      $_SESSION['SPARE']['lastnameErr'] = "lastname is required";
       echo "étape 6.1 ";
     } else {
       $firstname = valid_donnees($_POST["lastname"]);
       echo "étape 6.2 ";
       // check if name only contains letters and whitespace
       if (!preg_match("/^[a-zA-Z-' ]*$/",$lastname)) {
-        $_SESSION['lastnameErr'] = "Only letters and white space allowed";
+        $_SESSION['SPARE']['lastnameErr'] = "Only letters and white space allowed";
         echo "étape 6.3 ";
       }
       else {
-        unset($_SESSION['lastnameErr']);
+        unset($_SESSION['SPARE']['lastnameErr']);
         echo "étape unset ";
       }
     }
@@ -155,37 +157,37 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo "étape 7 ";
 
         if (empty($_POST["email"])) {
-        $_SESSION['emailErr'] = "Email is required";
+        $_SESSION['SPARE']['emailErr'] = "Email is required";
         echo "étape 7.1 ";
         } else {
         $email = valid_donnees($_POST["email"]);
         // check if e-mail address is well-formed
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            $_SESSION['emailErr'] = "Invalid email format";
+            $_SESSION['SPARE']['emailErr'] = "Invalid email format";
             echo "étape 7.2 ";
         }
         else {
-            unset($_SESSION['emailErr']);
+            unset($_SESSION['SPARE']['emailErr']);
             echo "étape unset ";
           }
         }
     }
 
     if ((!in_array($email,$all_user_email)) && 
-    (((!isset($_SESSION['statutErr'])) && (empty($_SESSION['statutErr']))) 
-    && ((!isset($_SESSION['statutErr'])) && (empty($_SESSION['statutErr']))) 
-    && ((!isset($_SESSION['classroomErr'])) && (empty($_SESSION['classroomErr']))) 
-    && ((!isset($_SESSION['ClassSpeErr'])) && (empty($_SESSION['ClassSpeErr']))) 
-    && ((!isset($_SESSION['firstnameErr'])) && (empty($_SESSION['firstnameErr']))) 
-    && ((!isset($_SESSION['lastnameErr'])) && (empty($_SESSION['lastnameErr']))) 
-    && ((!isset($_SESSION['emailErr'])) && (empty($_SESSION['emailErr']))))) 
+    (((!isset($_SESSION['SPARE']['statutErr'])) && (empty($_SESSION['SPARE']['statutErr']))) 
+    && ((!isset($_SESSION['SPARE']['statutErr'])) && (empty($_SESSION['SPARE']['statutErr']))) 
+    && ((!isset($_SESSION['SPARE']['classroomErr'])) && (empty($_SESSION['SPARE']['classroomErr']))) 
+    && ((!isset($_SESSION['SPARE']['ClassSpeErr'])) && (empty($_SESSION['SPARE']['ClassSpeErr']))) 
+    && ((!isset($_SESSION['SPARE']['firstnameErr'])) && (empty($_SESSION['SPARE']['firstnameErr']))) 
+    && ((!isset($_SESSION['SPARE']['lastnameErr'])) && (empty($_SESSION['SPARE']['lastnameErr']))) 
+    && ((!isset($_SESSION['SPARE']['emailErr'])) && (empty($_SESSION['SPARE']['emailErr']))))) 
     {
-        unset($_SESSION['roleErr']);
-        unset($_SESSION['classroomErr']);
-        unset($_SESSION['ClassSpeErr']);
-        unset($_SESSION['firstnameErr']);
-        unset($_SESSION['lastnameErr']);
-        unset($_SESSION['emailErr']);
+        unset($_SESSION['SPARE']['roleErr']);
+        unset($_SESSION['SPARE']['classroomErr']);
+        unset($_SESSION['SPARE']['ClassSpeErr']);
+        unset($_SESSION['SPARE']['firstnameErr']);
+        unset($_SESSION['SPARE']['lastnameErr']);
+        unset($_SESSION['SPARE']['emailErr']);
 
         echo "etape 8 ";
         
@@ -219,13 +221,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $CreationAccount,
         ]);      
     
-        $_SESSION['confirm_creation_user']="Utilisateur bien enregistré";
+        $_SESSION['SPARE']['confirm_creation_user']="Utilisateur bien enregistré";
         echo "etape 8.1 ";
     }
 
     else {
         
-        $_SESSION['error_creation_user']="Email déjà utilisé";
+        $_SESSION['SPARE']['error_creation_user']="Email déjà utilisé";
         echo "etape 9 ";
     }
    ;

@@ -22,8 +22,8 @@
                 <input type="email" class="form-control" name="email" id="UserEmail" placeholder="Email" value="" <?=($test=1) ? "" : 'required'?>> 
             </div>
             
-            <div class="alert alert-danger <?=(!empty($_SESSION['emailErr'])) ? '' : 'd-none'?>" role="alert">
-                <?=($_SESSION['emailErr'])?>
+            <div class="alert alert-danger <?=(!empty($_SESSION['SPARE']['emailErr'])) ? '' : 'd-none'?>" role="alert">
+                <?=($_SESSION['SPARE']['emailErr'])?>
             </div>
                             
             <div class="">
@@ -31,8 +31,8 @@
                 <input type="text" class="form-control" name="firstname" id="firstname" placeholder="firstname" value=""  <?=($test=1) ? "" : 'required'?>>
             </div>
             
-            <div class="alert alert-danger <?=(!empty($_SESSION['firstnameErr'])) ? '' : 'd-none'?>" role="alert">
-                <?=($_SESSION['firstnameErr'])?>
+            <div class="alert alert-danger <?=(!empty($_SESSION['SPARE']['firstnameErr'])) ? '' : 'd-none'?>" role="alert">
+                <?=($_SESSION['SPARE']['firstnameErr'])?>
             </div>
 
             <div class="">
@@ -42,8 +42,8 @@
                 </div>
             </div>
 
-            <div class="alert alert-danger <?=(!empty($_SESSION['lastnameErr'])) ? '' : 'd-none'?>" role="alert">
-                <?=($_SESSION['lastnameErr'])?>
+            <div class="alert alert-danger <?=(!empty($_SESSION['SPARE']['lastnameErr'])) ? '' : 'd-none'?>" role="alert">
+                <?=($_SESSION['SPARE']['lastnameErr'])?>
             </div>
 
         </div>
@@ -59,8 +59,8 @@
                 </select>
             </div>
 
-            <div class="alert alert-danger <?=(!empty($_SESSION['statutErr'])) ? '' : 'd-none'?>" role="alert">
-                <?=($_SESSION['statutErr'])?>
+            <div class="alert alert-danger <?=(!empty($_SESSION['SPARE']['statutErr'])) ? '' : 'd-none'?>" role="alert">
+                <?=($_SESSION['SPARE']['statutErr'])?>
             </div>
 
             <div class="">
@@ -73,8 +73,8 @@
                 </select>
             </div>
 
-            <div class="alert alert-danger <?=(!empty($_SESSION['classroomErr'])) ? '' : 'd-none'?>" role="alert">
-                <?=($_SESSION['classroomErr'])?>
+            <div class="alert alert-danger <?=(!empty($_SESSION['SPARE']['classroomErr'])) ? '' : 'd-none'?>" role="alert">
+                <?=($_SESSION['SPARE']['classroomErr'])?>
             </div>
 
             <div class="">
@@ -87,8 +87,8 @@
                 </select>
             </div>              
             
-            <div class="alert alert-danger <?=(!empty($_SESSION['ClassSpeErr'])) ? '' : 'd-none'?>" role="alert">
-                <?=($_SESSION['ClassSpeErr'])?>
+            <div class="alert alert-danger <?=(!empty($_SESSION['SPARE']['ClassSpeErr'])) ? '' : 'd-none'?>" role="alert">
+                <?=($_SESSION['SPARE']['ClassSpeErr'])?>
             </div>
             
         </div>
@@ -98,21 +98,21 @@
         </div>
     </form>
     
-    <!-- <div class="alert alert-success m-auto mt-3 <?= ((isset($_SESSION['confirm_creation_user'])) &&  $_SESSION['confirm_creation_user']!=NULL) ? '' : 'd-none' ?>" role="alert">
-        <a class="text-decoration-none text-success" href="./assets/functions/clearing-session-error-messages.php"><?=$_SESSION['confirm_creation_user']?> <i class="bi bi-x-circle"></i></a>
+    <!-- <div class="alert alert-success m-auto mt-3 <?= ((isset($_SESSION['SPARE']['confirm_creation_user'])) &&  $_SESSION['SPARE']['confirm_creation_user']!=NULL) ? '' : 'd-none' ?>" role="alert">
+        <a class="text-decoration-none text-success" href="./assets/functions/clearing-session-error-messages.php"><?=$_SESSION['SPARE']['confirm_creation_user']?> <i class="bi bi-x-circle"></i></a>
     </div> -->
 
-    <a class="alert alert-success m-auto mt-3 text-decoration-none text-success position-relative <?= ((isset($_SESSION['confirm_creation_user'])) &&  $_SESSION['confirm_creation_user']!=NULL) ? '' : 'd-none' ?>" href="./assets/functions/clearing-session-error-messages.php" role="alert">
-        <div class="me-2"><?=$_SESSION['confirm_creation_user']?> 
+    <a class="alert alert-success m-auto mt-3 text-decoration-none text-success position-relative <?= ((isset($_SESSION['SPARE']['confirm_creation_user'])) &&  $_SESSION['SPARE']['confirm_creation_user']!=NULL) ? '' : 'd-none' ?>" href="./assets/functions/clearing-session-error-messages.php" role="alert">
+        <div class="me-2"><?=$_SESSION['SPARE']['confirm_creation_user']?> 
         <i class="bi bi-x-circle position-absolute top-0 ms-1"></i></div>
     </a>
 
-    <!-- <div class="alert alert-danger m-auto mt-3 <?= ((isset($_SESSION['error_creation_user'])) && $_SESSION['error_creation_user']!=NULL) ? '' : 'd-none' ?>" role="alert">
-        <a class="text-decoration-none text-danger" href="./assets/functions/clearing-session-error-messages.php"><?=$_SESSION['error_creation_user']?> <i class="bi bi-x-circle mb-3"></i></a>
+    <!-- <div class="alert alert-danger m-auto mt-3 <?= ((isset($_SESSION['SPARE']['error_creation_user'])) && $_SESSION['SPARE']['error_creation_user']!=NULL) ? '' : 'd-none' ?>" role="alert">
+        <a class="text-decoration-none text-danger" href="./assets/functions/clearing-session-error-messages.php"><?=$_SESSION['SPARE']['error_creation_user']?> <i class="bi bi-x-circle mb-3"></i></a>
     </div> -->
 
-    <a class="alert alert-danger m-auto mt-3 text-decoration-none text-danger position-relative <?= ((isset($_SESSION['error_creation_user'])) && $_SESSION['error_creation_user']!=NULL) ? '' : 'd-none' ?>" href="./assets/functions/clearing-session-error-messages.php" role="alert">
-        <div class="me-2"><?=$_SESSION['error_creation_user']?> 
+    <a class="alert alert-danger m-auto mt-3 text-decoration-none text-danger position-relative <?= ((isset($_SESSION['SPARE']['error_creation_user'])) && $_SESSION['SPARE']['error_creation_user']!=NULL) ? '' : 'd-none' ?>" href="./assets/functions/clearing-session-error-messages.php" role="alert">
+        <div class="me-2"><?=$_SESSION['SPARE']['error_creation_user']?> 
         <i class="bi bi-x-circle position-absolute top-0 ms-1"></i></div>
     </a>
     

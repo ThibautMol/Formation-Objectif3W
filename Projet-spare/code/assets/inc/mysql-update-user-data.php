@@ -12,7 +12,7 @@ if (isset($_POST['submit'])){
         $first_visit=1; 
     }
     else {
-        $userId = $_SESSION['USER_ID'];
+        $userId = $_SESSION['SPARE']['USER_ID'];
         $email = $_POST['email'];
         $UserPwd = $_POST['password'];
         $firstname = $_POST['firstname'];

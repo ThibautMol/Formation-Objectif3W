@@ -4,9 +4,9 @@ function profil_completion () {
     require '.\assets\inc\mysql-profil-user-request.php';
 
 
-    if (isset($_SESSION['USER_ID'])) {
+    if (isset($_SESSION['SPARE']['USER_ID'])) {
         foreach ($all_profil_user as $user) {
-            if ($_SESSION['USER_ID']==$user['id']){
+            if ($_SESSION['SPARE']['USER_ID']==$user['id']){
                 $user_profil['email']=$user['email'];
                 $user_profil['UserPwd']=$user['UserPwd'];
                 $user_profil['firstname']=$user['firstname'];
@@ -20,7 +20,7 @@ function profil_completion () {
     }
 }
 
-if (isset($_SESSION['USER_ID'])){
+if (isset($_SESSION['SPARE']['USER_ID'])){
     $user_profil=profil_completion();
 }
 

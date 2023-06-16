@@ -13,10 +13,9 @@
 
     <title>liste de courses</title>
 </head>
-<pre><?=var_dump($_data['id'])?></pre>
-<pre><?=var_dump($_SESSION['course'])?></pre>
+
     
-    <body class="d-flex flex-column justify-content-center mt-5">
+    <body class="d-flex flex-column justify-content-center mt-5 container-xl">
 
         <form class="d-flex flex-column justify-content-center mt-3" action='processing-post.php' method="POST">
             <div class="form-row d-grid gap-3">
@@ -25,11 +24,11 @@
                 </div>
                 <div class="m-auto">
                     <label class="text-capitalize" for="product_name">Produit</label>
-                    <input type="text" class="form-control" name="product_name" id="product_name" > 
+                    <input type="text" class="form-control" name="product_name" id="product_name" required > 
                 </div>
                 <div class="m-auto">
                     <label class="text-capitalize" for="quantity">Quantité</label>
-                    <input type="number" class="form-control" name="quantity" id="quantity" > 
+                    <input type="number" class="form-control" name="quantity" id="quantity" required> 
                 </div>
             </div>
 
@@ -48,23 +47,24 @@
                     <th scope="col" class="text-center">Index</th>
                     <th scope="col" class="text-center">Produit</th>
                     <th scope="col" class="text-center">Quantité</th>
-                    <th scope="col" class="text-center">Selectionner</th>
+                    <th scope="col" class="text-center">Sélectionner</th>
                 </tr>
                 </thead>
                 <tbody>
                     
-                    <?php if (isset($_SESSION['course'])): ?>
+                    <?php if (isset($_SESSION['course'])): 
+                        $i= 0;?>
                         <?php foreach ($_SESSION['course'] as $data) :?>
                                                     
                             <tr>
                                 <div>
-                                    <td class="text-center"><?=$data['id']?></td>
+                                    <td class="text-center"><?=$i?></td>
                                     <td class="text-center"><?=$data['product_name']?></td>
                                     <td class="text-center"><?=$data['quantity']?></td>
-                                    <td class="text-center"><input class="form-check-input" type="checkbox" name="id<?=$data['id'];?>" value="<?=$data['id'];?>"></td>
+                                    <td class="text-center"><input class="form-check-input" type="checkbox" name="id<?=$i?>" value="<?=$i?>"></td>
                                 </div>   
                             </tr>
-                        <?php endforeach;?>
+                        <?php $i++ ; endforeach;?>
                     <?php endif;?>
                     
                 </tbody>

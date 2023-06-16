@@ -43,13 +43,14 @@
         <form class="d-flex flex-column justify-content-center mt-3" action="delete-element.php" method="POST">
             <table class="table table-striped container-fluid">
                 <thead>
-                <tr>
-                    <th scope="col" class="text-center">Index</th>
-                    <th scope="col" class="text-center">Produit</th>
-                    <th scope="col" class="text-center">Quantité</th>
-                    <th scope="col" class="text-center">Sélectionner</th>
-                </tr>
+                    <tr>
+                        <th scope="col" class="text-center">Index</th>
+                        <th scope="col" class="text-center">Produit</th>
+                        <th scope="col" class="text-center">Quantité</th>
+                        <th scope="col" class="text-center">Sélectionner</th>
+                    </tr>
                 </thead>
+                
                 <tbody>
                     
                     <?php if (isset($_SESSION['course'])): 

@@ -13,8 +13,8 @@
 
     <title>liste de courses</title>
 </head>
-<pre><?=var_dump($_data['id'])?><pre>
-<pre><?=var_dump($_SESSION['course'])?><pre>
+<pre><?=var_dump($_data['id'])?></pre>
+<pre><?=var_dump($_SESSION['course'])?></pre>
     
     <body class="d-flex flex-column justify-content-center mt-5">
 

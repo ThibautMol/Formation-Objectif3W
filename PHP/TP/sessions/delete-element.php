@@ -19,6 +19,6 @@ foreach ($_POST as $data) {
 ?>
 <pre><?=var_dump($_SESSION['course']);?></pre>
 
-<?php //header('Location: http://localhost/Formation-Objectif3W/PHP/TP/sessions/liste-de-courses.php');
-  //exit;
+<?php header('Location: http://localhost/Formation-Objectif3W/PHP/TP/sessions/liste-de-courses.php');
+  exit;
 ?>

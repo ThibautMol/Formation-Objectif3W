@@ -3,7 +3,7 @@
 <?php $title='liste des utilisateurs'?>
 <?php $current_page="utilisateurs"?>
 <?php require_once ("./assets/inc/head.php")?>
-<?php require_once ("./assets/inc/nav-bar.php")?>
+<?php //require_once ("./assets/inc/nav-bar.php")?>
 <?php require_once (".\assets\inc\mysql-profil-user-request.php")?>
 <?php require_once ("./assets/functions/user-per-page-list.php");?>
 <?php require_once ("./assets/functions/user-list-filter.php");?>
@@ -18,10 +18,6 @@
  
   $start_index=($pageCourante-1)*$user_per_page;
   $users_on_page=array_slice($all_profil_user,$start_index,$user_per_page);
-
-  $role = (isset($_GET['role'])) ? "&role=".$_GET['role'] : '';
-  $classroom = (isset($_GET['classroom'])) ? "&classroom=".$_GET['classroom'] : '';
-  $ClassSpe = (isset($_GET['ClassSpe'])) ? "&ClassSpe=".$_GET['ClassSpe'] : '';
 
 ?>
 
@@ -42,7 +38,7 @@
       <button type="submit" class="btn btn-primary">Search</button>
     </div>
   </div>
-  
+
   <h2 class="d-flex justify-content-center">Filtres</h2>
   
   <form class="d-flex flex-column my-3" action="" method="GET" class="d-flex">
@@ -56,7 +52,7 @@
         </select>
       </div>
 
-                          
+                              
 
       <div class="mx-1">
         <select name="classroom" class="form-select" aria-label="Default select example">
@@ -88,7 +84,6 @@
       <tr>
         <th scope="col">ID</th>
         <th scope="col">Email</th>
-        <th scope="col">UserPwd</th>
         <th scope="col">Firstname</th>
         <th scope="col">Lastname</th>
         <th scope="col">Statut</th>
@@ -105,7 +100,6 @@
           <div>
             <th><?=$user['id']?></th>
             <td><?=$user['email']?></td>
-            <td><?=$user['UserPwd']?></td>
             <td><?=$user['firstname']?></td>
             <td><?=$user['lastname']?></td>
             <td><?=$user['statut']?></td>
@@ -128,7 +122,7 @@
     <form class="d-flex" action="users-list.php" method="POST">  
       <div class="mx-1">
         <select class="form-select" name="user_per_page" aria-label="Default select example">
-          
+          <p>passer le nombre d'utilisateurs choisis via $_session</p>
           <option class="text-capitalize" value="5" <?=($user_per_page==5)?"selected":""?>>5</option>
           <option class="text-capitalize" value="15" <?=($user_per_page==15)?"selected":""?>>15</option>
           <option class="text-capitalize" value="30" <?=($user_per_page==30)?"selected":""?>>30</option>
@@ -142,8 +136,13 @@
 
 </main>
 
+<?php 
+  $role = (isset($_GET['role'])) ? "&role=".$_GET['role'] : '';
+  $classroom = (isset($_GET['classroom'])) ? "&classroom=".$_GET['classroom'] : '';
+  $ClassSpe = (isset($_GET['ClassSpe'])) ? "&ClassSpe=".$_GET['ClassSpe'] : '';
+  ?>
 
-<nav class="d-flex justify-content-center" aria-label="...">
+<nav class="d-flex justify-content-center" aria-label="..." style="margin-bottom:100px;">
   <ul class="pagination">
     <li class="mx-1">
       <a class="page-link btn <?= $pageCourante == 1 ? 'disabled' : '' ?>" href="?page=<?=1;?><?=$role?><?=$classroom?><?=$ClassSpe?>">|<</a>
@@ -173,6 +172,8 @@
     </li>
   </ul>
 </nav>
+
+
 
 <?php require_once ("./assets/inc/foot.php") ?>
 

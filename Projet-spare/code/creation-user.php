@@ -20,8 +20,8 @@
                 <input type="email" class="form-control" name="email" id="UserEmail" placeholder="Email" value="" required> 
             </div>
             
-            <div class="alert alert-danger text-danger text-center mx-auto <?=(!empty($_SESSION['SPARE']['emailErr'])) ? '' : 'd-none'?>" role="alert">
-                <?=((isset($_SESSION['SPARE']['emailErr']) ? ($_SESSION['SPARE']['emailErr']) : ""))?></div>
+            <div class="alert alert-danger text-danger text-center mx-auto <?=(!empty($_SESSION['SPARE']['errors']['emailErr'])) ? '' : 'd-none'?>" role="alert">
+                <?=((isset($_SESSION['SPARE']['errors']['emailErr']) ? ($_SESSION['SPARE']['errors']['emailErr']) : ""))?></div>
             </div>
                             
             <div class="">
@@ -29,8 +29,8 @@
                 <input type="text" class="form-control" name="firstname" id="firstname" placeholder="firstname" value=""  required>
             </div>
             
-            <div class="alert alert-danger text-danger text-center mx-auto mt-3 <?=(!empty($_SESSION['SPARE']['firstnameErr'])) ? '' : 'd-none'?>" role="alert">
-                <?=(isset($_SESSION['SPARE']['firstnameErr']) ? ($_SESSION['SPARE']['firstnameErr']) : "" )?>
+            <div class="alert alert-danger text-danger text-center mx-auto mt-3 <?=(!empty($_SESSION['SPARE']['errors']['firstnameErr'])) ? '' : 'd-none'?>" role="alert">
+                <?=(isset($_SESSION['SPARE']['errors']['firstnameErr']) ? ($_SESSION['SPARE']['errors']['firstnameErr']) : "" )?>
             </div>
 
             <div class="">
@@ -40,8 +40,8 @@
                 </div>
             </div>
 
-            <div class="alert alert-danger text-danger text-center mx-auto mt-3 <?=(!empty($_SESSION['SPARE']['lastnameErr'])) ? '' : 'd-none'?>" role="alert">
-                <?=(isset($_SESSION['SPARE']['lastnameErr']) ? ($_SESSION['SPARE']['lastnameErr']) : "") ?>
+            <div class="alert alert-danger text-danger text-center mx-auto mt-3 <?=(!empty($_SESSION['SPARE']['errors']['lastnameErr'])) ? '' : 'd-none'?>" role="alert">
+                <?=(isset($_SESSION['SPARE']['errors']['lastnameErr']) ? ($_SESSION['SPARE']['errors']['lastnameErr']) : "") ?>
             </div>
 
         </div>
@@ -57,8 +57,8 @@
                 </select>
             </div>
 
-            <div class="alert alert-danger text-danger text-center mx-auto <?=(!empty($_SESSION['SPARE']['statutErr'])) ? '' : 'd-none'?>" role="alert">
-                <?=(isset($_SESSION['SPARE']['statutErr']) ? ($_SESSION['SPARE']['statutErr']) : "")?>
+            <div class="alert alert-danger text-danger text-center mx-auto <?=(!empty($_SESSION['SPARE']['errors']['statutErr'])) ? '' : 'd-none'?>" role="alert">
+                <?=(isset($_SESSION['SPARE']['errors']['statutErr']) ? ($_SESSION['SPARE']['errors']['statutErr']) : "")?>
             </div>
 
             <div class="">
@@ -71,8 +71,8 @@
                 </select>
             </div>
 
-            <div class="alert alert-danger text-danger text-center mx-auto <?=(!empty($_SESSION['SPARE']['classroomErr'])) ? '' : 'd-none'?>" role="alert">
-                <?=(isset($_SESSION['SPARE']['classroomErr']) ? ($_SESSION['SPARE']['classroomErr']) : "")?>
+            <div class="alert alert-danger text-danger text-center mx-auto <?=(!empty($_SESSION['SPARE']['errors']['classroomErr'])) ? '' : 'd-none'?>" role="alert">
+                <?=(isset($_SESSION['SPARE']['errors']['classroomErr']) ? ($_SESSION['SPARE']['errors']['classroomErr']) : "")?>
             </div>
 
             <div class="">
@@ -85,8 +85,8 @@
                 </select>
             </div>              
             
-            <div class="alert alert-danger text-danger text-center mx-auto <?=(!empty($_SESSION['SPARE']['ClassSpeErr'])) ? '' : 'd-none'?>" role="alert">
-                <?=(isset($_SESSION['SPARE']['ClassSpeErr']) ? ($_SESSION['SPARE']['ClassSpeErr']) : "")?>
+            <div class="alert alert-danger text-danger text-center mx-auto <?=(!empty($_SESSION['SPARE']['errors']['ClassSpeErr'])) ? '' : 'd-none'?>" role="alert">
+                <?=(isset($_SESSION['SPARE']['errors']['ClassSpeErr']) ? ($_SESSION['SPARE']['errors']['ClassSpeErr']) : "")?>
             </div>
             
         </div>
@@ -97,14 +97,14 @@
     </form>
     
     
-    <a class="alert alert-success m-auto mt-3 text-decoration-none text-success position-relative <?= ((isset($_SESSION['SPARE']['confirm_creation_user'])) &&  $_SESSION['SPARE']['confirm_creation_user']!=NULL) ? '' : 'd-none' ?>" href="./assets/functions/clearing-session-error-messages.php" role="alert">
-        <div class="me-2"><?=(isset($_SESSION['SPARE']['confirm_creation_user']) ? $_SESSION['SPARE']['confirm_creation_user'] : "")?> 
+    <a class="alert alert-success m-auto mt-3 text-decoration-none text-success position-relative <?= ((isset($_SESSION['SPARE']['errors']['confirm_creation_user'])) &&  $_SESSION['SPARE']['errors']['confirm_creation_user']!=NULL) ? '' : 'd-none' ?>" href="./assets/functions/clearing-session-error-messages.php" role="alert">
+        <div class="me-2"><?=(isset($_SESSION['SPARE']['errors']['confirm_creation_user']) ? $_SESSION['SPARE']['errors']['confirm_creation_user'] : "")?> 
         <i class="bi bi-x-circle position-absolute top-0 ms-1"></i></div>
     </a>
 
 
-    <a class="alert alert-danger m-auto mt-3 text-decoration-none text-danger position-relative <?= ((isset($_SESSION['SPARE']['error_creation_user'])) && $_SESSION['SPARE']['error_creation_user']!=NULL) ? '' : 'd-none' ?>" href="./assets/functions/clearing-session-error-messages.php" role="alert">
-        <div class="me-2"><?=(isset($_SESSION['SPARE']['error_creation_user']) ? $_SESSION['SPARE']['error_creation_user'] : "") ?> 
+    <a class="alert alert-danger m-auto mt-3 text-decoration-none text-danger position-relative <?= ((isset($_SESSION['SPARE']['errors']['error_creation_user'])) && $_SESSION['SPARE']['errors']['error_creation_user']!=NULL) ? '' : 'd-none' ?>" href="./assets/functions/clearing-session-error-messages.php" role="alert">
+        <div class="me-2"><?=(isset($_SESSION['SPARE']['errors']['error_creation_user']) ? $_SESSION['SPARE']['errors']['error_creation_user'] : "") ?> 
         <i class="bi bi-x-circle position-absolute top-0 ms-1"></i></div>
     </a>
     

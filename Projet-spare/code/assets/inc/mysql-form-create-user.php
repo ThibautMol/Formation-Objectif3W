@@ -148,11 +148,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } 
     
     else {
-      echo $firstname . " " ;
+      
     $firstname = valid_donnees($_POST["firstname"]);
       // check if name only contains letters and whitespace
-      echo "étape 5.2 ";
-      echo $firstname . " " ;
+      // echo "étape 5.2 ";
+     
 
       if (!preg_match("/^[a-zA-Z-' ]*$/",$firstname)) {
         $_SESSION['SPARE']['firstnameErr'] = "Seulement des lettres et des espaces sont acceptés";
@@ -230,7 +230,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     unset($_SESSION['SPARE']['lastnameErr']);
     unset($_SESSION['SPARE']['emailErr']);
 
-    echo "etape 8 ";
+    // echo "etape 8 ";
         
     do{
 
@@ -238,11 +238,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     }while(in_array($id,$all_user_id));
 
-    echo $firstname . " " ;
 
     $UserPwd=mdp_generator($firstname,$lastname);
 
-    echo $firstname . " " ;
 
     $first_visit=0;
 
@@ -253,7 +251,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $insert_user= $db->prepare($sqlQuery);
 
-    echo $firstname. " " ;
 
     $insert_user->execute([
       $id,
@@ -276,10 +273,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $_SESSION['SPARE']['error_creation_user']="Utilisateur non-enregistré";
     //echo "etape 9 ";
   }
-  ;
   
-  // header('Location: http://localhost/Formation-Objectif3W/Projet-spare/code/creation-user.php');
-  // exit;
+  
+  header('Location: http://localhost/Formation-Objectif3W/Projet-spare/code/creation-user.php');
+  exit;
   //echo "etape 10 ";
 }
 

@@ -23,7 +23,7 @@ function generating_id($data = null) {
 function mdp_generator ($firstname, $lastname) {
     $UserPwd=substr($firstname, 0 , 1).$lastname; 
 
-    password_hash($UserPwd,PASSWORD_BCRYPT);
+    $UserPwd=password_hash($UserPwd,PASSWORD_BCRYPT);
     return $UserPwd;
 }
 
@@ -140,6 +140,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
   if (isset($_POST['firstname'])){
     //echo "étape 5 ";
+    echo ($_POST['firstname']);
 
     if (empty($_POST["firstname"])) {
       $_SESSION['SPARE']['firstnameErr'] = "Veuillez spécifier un prénom";
@@ -147,9 +148,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } 
     
     else {
+      echo $firstname . " " ;
     $firstname = valid_donnees($_POST["firstname"]);
       // check if name only contains letters and whitespace
-      //echo "étape 5.2 ";
+      echo "étape 5.2 ";
+      echo $firstname . " " ;
 
       if (!preg_match("/^[a-zA-Z-' ]*$/",$firstname)) {
         $_SESSION['SPARE']['firstnameErr'] = "Seulement des lettres et des espaces sont acceptés";
@@ -171,9 +174,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } 
     
     else {
-      $firstname = valid_donnees($_POST["lastname"]);
+      $lastname = valid_donnees($_POST["lastname"]);
       //echo "étape 6.2 ";
       // check if name only contains letters and whitespace
+      
       if (!preg_match("/^[a-zA-Z-' ]*$/",$lastname)) {
         $_SESSION['SPARE']['lastnameErr'] = "Seulement des lettres et des espaces sont acceptés";
         //echo "étape 6.3 ";
@@ -226,7 +230,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     unset($_SESSION['SPARE']['lastnameErr']);
     unset($_SESSION['SPARE']['emailErr']);
 
-    //echo "etape 8 ";
+    echo "etape 8 ";
         
     do{
 
@@ -234,7 +238,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     }while(in_array($id,$all_user_id));
 
+    echo $firstname . " " ;
+
     $UserPwd=mdp_generator($firstname,$lastname);
+
+    echo $firstname . " " ;
 
     $first_visit=0;
 
@@ -244,6 +252,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sqlQuery ='INSERT INTO users (id, email, UserPwd, firstname, lastname, statut, classroom, ClassSpe, first_visit, CreationAccount) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)';
 
     $insert_user= $db->prepare($sqlQuery);
+
+    echo $firstname. " " ;
 
     $insert_user->execute([
       $id,
@@ -268,8 +278,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   }
   ;
   
-  header('Location: http://localhost/Formation-Objectif3W/Projet-spare/code/creation-user.php');
-  exit;
+  // header('Location: http://localhost/Formation-Objectif3W/Projet-spare/code/creation-user.php');
+  // exit;
   //echo "etape 10 ";
 }
 

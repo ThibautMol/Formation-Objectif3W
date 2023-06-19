@@ -2,14 +2,30 @@
    session_start();
     $login_form=$_POST;   
 
+    
+
+
     function login_validation ($login_form) {
         require '.\assets\inc\mysql-login-request.php';
+
+    //     if (isset($login_form['email']) && isset($login_form['password'])) {
+    //     foreach ($login_selection as $user) {
+    //         if ($user['email']===$login_form['email'] &&
+    //             $user['UserPwd']===$login_form['password']) {
+    //             $_SESSION['SPARE']['USER_FIRSTNAME']=$user['firstname'];
+    //             $_SESSION['SPARE']['USER_ID']=$user['id'];
+    //             $_SESSION['SPARE']['USER_LASTNAME']=$user['lastname'];
+    //             $_SESSION['SPARE']['FIRST_VISIT']=$user['first_visit'];
+    //         }
+    //     }
+    // }
+       
 
 
         if (isset($login_form['email']) && isset($login_form['password'])) {
             foreach ($login_selection as $user) {
-                if ($user['email']===$login_form['email'] &&
-                    $user['UserPwd']===$login_form['password']) {
+                if (($user['email']===$login_form['email']) &&
+                    (password_verify($login_form['password'],$user['UserPwd']))) {
                     $_SESSION['SPARE']['USER_FIRSTNAME']=$user['firstname'];
                     $_SESSION['SPARE']['USER_ID']=$user['id'];
                     $_SESSION['SPARE']['USER_LASTNAME']=$user['lastname'];

@@ -10,20 +10,13 @@
 
     <main class="d-flex flex-column justify-content-center align-items-center mb-5" style="margin-top:100px;">
         <h1>Profil <?=(isset($_GET['id'])) ? "de " . ucfirst($user_profil['firstname']) . " " . ucfirst($user_profil['lastname']) : "";?></h1>
-        <form class="d-flex flex-column justify-content-center mt-3" action='' method="POST">
+        <form class="d-flex flex-column justify-content-center mt-3" action='./assets/inc/mysql-update-user-data.php' method="POST">
             <div class="form-row d-grid gap-3">
                 <div class="">
                     <label class="text-capitalize" for="UserEmail">email</label>
                     <input type="email" class="form-control" name="email" id="UserEmail" placeholder="Email" value="<?=$user_profil['email'];?>" required>
                 </div>
-                
-                <div class="<?=($_SESSION['SPARE']['FIRST_VISIT']!=1) ? '' : 'd-none' ?>">
-                    <label class="text-capitalize" for="password">password</label>
-                    <input type="password" class="form-control text-capitalize" name="UserPwd" id="password" <?=($_SESSION['SPARE']['FIRST_VISIT']!=1) ? 'required' : '' ?>>
-                    <div class="alert alert-danger mt-2" role="alert">Veuillez entrer votre nouveau mot de passe</div>
-                </div>
-                </div>
-           
+                          
                 <div class="">
                     <label class="text-capitalize" for="firstname">firstname</label>
                     <input type="text" class="form-control text-capitalize" name="firstname" id="firstname" placeholder="firstname" value="<?=$user_profil['firstname'];?>" required>
@@ -81,10 +74,12 @@
                 <input class="btn btn-primary mt-3 text-capitalize" name="submit" type="submit" value="enregistrer">
             </div> 
         </form>
+
+        <a href="./assets/inc/mysql-update-user-data copy.php">click reuf</a>
         
         
 
-        <?php require_once ("./assets/inc/mysql-update-user-data.php") ?>
+
 
     </main>
 

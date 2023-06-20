@@ -1,7 +1,9 @@
 <?php
-if (isset($_POST['submit'])){
+session_start();
+
+
     if (isset($_GET['id'])) {
-        $userId = $_GET['id'];
+        $id = $_GET['id'];
         $email = $_POST['email'];
         $UserPwd = $_POST['password'];
         $firstname = $_POST['firstname'];
@@ -12,7 +14,7 @@ if (isset($_POST['submit'])){
         $first_visit=1; 
     }
     else {
-        $userId = $_SESSION['SPARE']['USER_ID'];
+        $id = $_SESSION['SPARE']['USER_ID'];
         $email = $_POST['email'];
         $UserPwd = $_POST['password'];
         $firstname = $_POST['firstname'];
@@ -25,10 +27,10 @@ if (isset($_POST['submit'])){
 
     require_once 'sql-data-base-connexion.php';
     try {
-    $query = 'UPDATE users SET email = :email, UserPwd = :UserPwd, firstname = :firstname, lastname = :lastname, statut = :statut, classroom = :classroom, ClassSpe = :ClassSpe, fist_visit = :first_visit WHERE id = :userId';
+    $query = 'UPDATE users SET email = :email, UserPwd = :UserPwd, firstname = :firstname, lastname = :lastname, statut = :statut, classroom = :classroom, ClassSpe = :ClassSpe, first_visit = :first_visit WHERE id = :id';
     $updateQuery = $db->prepare($query);
     
-    $updateQuery->bindParam(':userId', $userId);
+    $updateQuery->bindParam(':id', $id);
     $updateQuery->bindParam(':email', $email);
     $updateQuery->bindParam(':UserPwd', $UserPwd);
     $updateQuery->bindParam(':firstname', $firstname);
@@ -43,11 +45,6 @@ if (isset($_POST['submit'])){
         die('Erreur : ' . $e->getMessage());
     }
 
-    if ($updateQuery->execute()) {
-        echo "Les données de l'utilisateur ont été mises à jour avec succès.";
-    } else {
-        echo "Une erreur s'est produite lors de la mise à jour des données de l'utilisateur.";
-    }
-    
-}
+    $updateQuery->execute();
+
 ?>

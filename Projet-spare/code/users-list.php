@@ -3,7 +3,7 @@
 <?php $title='liste des utilisateurs'?>
 <?php $current_page="utilisateurs"?>
 <?php require_once ("./assets/inc/head.php")?>
-<?php //require_once ("./assets/inc/nav-bar.php")?>
+<?php require_once ("./assets/inc/nav-bar.php")?>
 <?php require_once (".\assets\inc\mysql-profil-user-request.php")?>
 <?php require_once ("./assets/functions/user-per-page-list.php");?>
 <?php require_once ("./assets/functions/user-list-filter.php");?>
@@ -12,6 +12,7 @@
 <?php require_once ("./assets/inc/mysql-all-roles-request.php")?>
 <?php  
 
+  isset($_SESSION['SPARE']['user_on_page']) ? $user_per_page=$_SESSION['SPARE']['user_on_page']=$_POST['user_per_page'] : "5";
   $total_users=count($all_profil_user);
   $pageCourante=isset($_GET['page']) ? $_GET['page'] : 1;
   $number_of_pages=ceil($total_users/$user_per_page);
@@ -119,10 +120,9 @@
   <p>Utilisateurs <?=($total_users<=$user_per_page) ? $total_users . " - " . $total_users : $user_per_page*$pageCourante . " - " . $total_users; ?></p>
   
   <div class="d-flex">
-    <form class="d-flex" action="users-list.php" method="POST">  
+    <form class="d-flex" action="users-list.php" method="POST">
       <div class="mx-1">
         <select class="form-select" name="user_per_page" aria-label="Default select example">
-          <p>passer le nombre d'utilisateurs choisis via $_session</p>
           <option class="text-capitalize" value="5" <?=($user_per_page==5)?"selected":""?>>5</option>
           <option class="text-capitalize" value="15" <?=($user_per_page==15)?"selected":""?>>15</option>
           <option class="text-capitalize" value="30" <?=($user_per_page==30)?"selected":""?>>30</option>

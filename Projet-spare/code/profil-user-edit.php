@@ -12,6 +12,9 @@
         <h1>Profil <?=(isset($_GET['id'])) ? "de " . ucfirst($user_profil['firstname']) . " " . ucfirst($user_profil['lastname']) : "";?></h1>
         <form class="d-flex flex-column justify-content-center mt-3" action='./assets/inc/mysql-update-user-data.php' method="POST">
             <div class="form-row d-grid gap-3">
+                <div class="d-none">
+                    <input type="text" class="form-control" name="id" id="id" value="<?=$user_profil['id'];?>" required>
+                </div>
                 <div class="">
                     <label class="text-capitalize" for="UserEmail">email</label>
                     <input type="email" class="form-control" name="email" id="UserEmail" placeholder="Email" value="<?=$user_profil['email'];?>" required>

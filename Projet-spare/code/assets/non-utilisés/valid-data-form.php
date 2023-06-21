@@ -1,13 +1,6 @@
 <?php
 
-function valid_donnees($donnees){
-  $donnees = trim($donnees);
-  $donnees= strtolower($donnees);
-  $donnees = stripslashes($donnees);
-  $donnees = htmlentities($donnees);
-  $donnees = htmlspecialchars($donnees);
-  return $donnees;
-}
+require_once ('valid-donnees.php');
 
 $firstname = $lastname = $email = $role = $ClassSpe = $classroom = "";
 

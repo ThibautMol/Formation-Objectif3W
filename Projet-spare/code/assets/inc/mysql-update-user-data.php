@@ -2,8 +2,9 @@
 session_start();
 
 
-    if (isset($_GET['id'])) {
-        $id = $_GET['id'];
+
+    if ($_POST['id']===$_SESSION['SPARE']['USER_ID']) {
+        $id = $_SESSION['SPARE']['USER_ID'];
         $email = $_POST['email'];
         $UserPwd = $_POST['password'];
         $firstname = $_POST['firstname'];
@@ -13,8 +14,10 @@ session_start();
         $ClassSpe=$_POST['ClassSpe'];
         $first_visit=1; 
     }
+    
     else {
-        $id = $_SESSION['SPARE']['USER_ID'];
+        
+        $id = $_POST['id'];
         $email = $_POST['email'];
         $UserPwd = $_POST['password'];
         $firstname = $_POST['firstname'];

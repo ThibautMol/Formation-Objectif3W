@@ -25,7 +25,7 @@
 //     echo 'try again';
 // }
 
-$UserPwd='carol';
+$UserPwd='test';
 $UserPwd=password_hash($UserPwd,PASSWORD_BCRYPT);
 echo $UserPwd;
 

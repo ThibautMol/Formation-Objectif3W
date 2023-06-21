@@ -39,7 +39,7 @@
                 return header('Location: http://localhost/Formation-Objectif3W/Projet-spare/code/dashboard.php');
             }
             else {
-                return header('Location: http://localhost/Formation-Objectif3W/Projet-spare/code/profil-user-edit.php');
+                return header('Location: http://localhost/Formation-Objectif3W/Projet-spare/code/reset-password.php');
             }
         }
     }

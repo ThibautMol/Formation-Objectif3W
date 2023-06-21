@@ -6,6 +6,7 @@ require_once("mysql-profil-user-id-email-request.php");
 require_once ("mysql-all-spe-classes-request.php");
 require_once ("mysql-all-roles-request.php");
 require_once("mysql-all-main-classes-request.php");
+require_once("valild-donnees.php");
 
 function generating_id($data = null) {
     // Generate 16 bytes (128 bits) of random data or use the data passed into the function.
@@ -26,15 +27,6 @@ function mdp_generator ($firstname, $lastname) {
     $UserPwd=password_hash($UserPwd,PASSWORD_BCRYPT);
     return $UserPwd;
 }
-
-function valid_donnees($donnees){
-    $donnees = trim($donnees);
-    $donnees = stripslashes($donnees);
-    $donnees = htmlentities($donnees);
-    $donnees = htmlspecialchars($donnees);
-    return $donnees;
-}
-
 
 foreach ($all_user_id_email_request as $data) {
   $all_user_email[]=$data['email'];

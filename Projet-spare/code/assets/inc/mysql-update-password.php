@@ -4,7 +4,13 @@ session_start();
 
     
     $id = $_SESSION['SPARE']['USER_ID'];
-    $UserPwd = $_POST['password'];
+  
+    if (isset($_POST['password']) && (!empty($_POST['password']))) {
+        $UserPwd = $_POST['password'];
+       
+    }
+  
+
     $first_visit=1; 
     
 

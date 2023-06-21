@@ -1,5 +1,11 @@
 <?php
-require_once ("sql-data-base-connexion.php");
+try {
+    $db= new PDO ("mysql:host=localhost;dbname=spare;charset=UTF8","root","");
+}
+
+catch (Exception $e) {
+    die('Erreur : ' . $e->getMessage());
+}
 
 
 $request_main_classes = $db->prepare('SELECT * FROM classes_principales');

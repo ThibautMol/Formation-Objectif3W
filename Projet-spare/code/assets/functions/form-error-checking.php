@@ -1,4 +1,26 @@
 <?php 
+require_once ("mysql-profil-user-id-email-request.php");
+require_once ("mysql-all-spe-classes-request.php");
+require_once ("mysql-all-roles-request.php");
+require_once ("mysql-all-main-classes-request.php");
+
+foreach ($all_user_id_email_request as $data) {
+  $all_user_email[]=$data['email'];
+  $all_user_id[]=$data['id'];
+}
+
+foreach ($all_spe_classes as $data) {
+  $all_spe_classes_formated[]=$data['name'];
+}
+
+foreach ($all_main_classes as $data) {
+  $all_main_classes_formated[]=$data['name'];
+}
+
+foreach ($all_roles as $data) {
+  $all_roles_formated[]=$data['name'];
+}
+
  $firstname = $lastname = $email = $role = $ClassSpe = $classroom = "";
 
  $email=strtolower($_POST['email']); 
@@ -34,7 +56,7 @@
 
  
  if (isset($_POST['ClassSpe'])){
-   echo "étape 3 ";
+  //  echo "étape 3 ";
 
    $classroom = valid_donnees($_POST["classroom"]); 
 
@@ -81,7 +103,7 @@
 
  if (isset($_POST['firstname'])){
    //echo "étape 5 ";
-   echo ($_POST['firstname']);
+   
 
    if (empty($_POST["firstname"])) {
      $_SESSION['SPARE']['errors']['firstnameErr'] = "Veuillez spécifier un prénom";

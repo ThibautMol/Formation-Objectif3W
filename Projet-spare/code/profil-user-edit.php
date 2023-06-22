@@ -101,7 +101,16 @@
             </div> 
         </form>
 
-        
+        <a class="alert alert-success m-auto mt-3 text-decoration-none text-success position-relative <?= ((isset( $_SESSION['SPARE']['errors']['update_success'])) &&   $_SESSION['SPARE']['errors']['update_success']!=NULL) ? '' : 'd-none' ?>" href="./assets/functions/clearing-session-error-messages.php" role="alert">
+            <div class="me-2"><?=(isset( $_SESSION['SPARE']['errors']['update_success']) ?  $_SESSION['SPARE']['errors']['update_success'] : "")?> 
+            <i class="bi bi-x-circle position-absolute top-0 ms-1"></i></div>
+        </a>
+
+
+    <a class="alert alert-danger m-auto mt-3 text-decoration-none text-danger position-relative <?= ((isset($_SESSION['SPARE']['errors']['update_failed'])) && $_SESSION['SPARE']['errors']['update_failed']!=NULL) ? '' : 'd-none' ?>" href="./assets/functions/clearing-session-error-messages.php" role="alert">
+        <div class="me-2"><?=(isset($_SESSION['SPARE']['errors']['update_failed']) ? $_SESSION['SPARE']['errors']['update_failed'] : "") ?> 
+        <i class="bi bi-x-circle position-absolute top-0 ms-1"></i></div>
+    </a>
         
 
 

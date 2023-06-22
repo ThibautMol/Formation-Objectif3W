@@ -72,11 +72,15 @@ session_start();
         // echo'etape 4 ';
         $updateQuery->execute();
 
+        $_SESSION['SPARE']['errors']['update_success']='Modification(s) bien enregistrée(s)';
+
         header('Location: http://localhost/Formation-Objectif3W/Projet-spare/code/profil-user-edit.php');
         exit;
         // echo'etape 5 ';
     }
     else {
+        $_SESSION['SPARE']['errors']['update_failed']='Modification(s) non prises en compte';
+        
         header('Location: http://localhost/Formation-Objectif3W/Projet-spare/code/profil-user-edit.php');
         exit;
         // echo'etape 6 ';

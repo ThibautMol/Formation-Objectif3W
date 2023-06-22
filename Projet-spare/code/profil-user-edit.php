@@ -52,8 +52,8 @@
             <div class="form-row d-grid gap-3">
                 <div class="mt-3">
                     <label class="text-capitalize" for="statut">rôle</label>
-                    <select name="statut" id="statut" required>
-                        <option value="<?=$user_profil['statut'];?>"><?=$user_profil['statut'];?></option>
+                    <select name="statut" id="statut" required>                        
+                        <option value="<?=$user_profil['statut'];?>"><?=$user_profil['statut'];?></option>            
                         <?php foreach ($all_roles as $role) :?>
                             <option class="text-capitalize <?=($role['name']==$user_profil['statut']) ? 'd-none' : ''?>" value="<?=$role['name']?>"><?=$role['name']?></option>
                         <?php endforeach ;?>
@@ -67,7 +67,8 @@
                 <div class="">
                     <label class="text-capitalize" for="classroom">classe</label>
                     <select name="classroom" id="classroom">
-                        <option value="<?=$user_profil['classroom'];?>"><?=$user_profil['classroom'];?></option>
+                        <option class="<?=(empty($user_profil['classroom'])) ? "d-none" : ""?>" value="<?=$user_profil['classroom'];?>"><?=$user_profil['classroom'];?></option>
+                        <option value=""></option>
                         <?php foreach ($all_main_classes as $main_class) :?>
                             <option class="text-capitalize <?=($main_class['name']==$user_profil['classroom']) ? 'd-none' : ''?>" value="<?=$main_class['name']?>"><?=$main_class['name']?></option>
                         <?php endforeach ;?>
@@ -80,8 +81,9 @@
 
                 <div class="">
                     <label class="text-capitalize" for="ClassSpe">classe spécialité</label>
-                    <select name="ClassSpe" id="ClassSpe">
-                        <<option value="<?=$user_profil['ClassSpe'];?>"><?=$user_profil['ClassSpe'];?></option>
+                    <select name="ClassSpe" id="ClassSpe">                        
+                        <option class="<?=(empty($user_profil['ClassSpe'])) ? "d-none" : ""?>" value="<?=$user_profil['ClassSpe'];?>"><?=$user_profil['ClassSpe'];?></option>
+                        <option value=""></option>
                         <?php foreach ($all_spe_classes as $spe_class) :?>
                             <option class="text-capitalize <?=($spe_class['name']==$user_profil['ClassSpe']) ? 'd-none' : ''?>" value="<?=$spe_class['name']?>"><?=$spe_class['name']?></option>
                         <?php endforeach ;?>

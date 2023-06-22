@@ -14,6 +14,20 @@
     <main class="d-flex flex-column justify-content-center align-items-center mb-5" style="margin-top:100px;">
         <h1>Profil <?=(isset($_SESSION['SPARE']['user_id_checking'])) ? "de " . ucfirst($user_profil['firstname']) . " " . ucfirst($user_profil['lastname']) : "";?></h1>
 
+        <form class="card-body" action="./assets/functions/reset-password-and-update.php" method="POST">
+                    
+            <div class="alert alert-danger mt-3 <?=(isset($_SESSION['SPARE']['errors']['reset_password_err'])) ? "": "d-none"?>" role="alert">
+                <?=(isset($_SESSION['SPARE']['errors']['reset_password_err'])) ? $_SESSION['SPARE']['errors']['reset_password_err'] : ""?>
+            </div>
+            <div class="alert alert-danger mt-3 <?=(isset($_SESSION['SPARE']['errors']['reset_password_success'])) ? "": "d-none"?>" role="alert">
+                <?=(isset($_SESSION['SPARE']['errors']['reset_password_success'])) ? $_SESSION['SPARE']['errors']['reset_password_success'] : ""?>
+            </div>
+            <input class="d-none" type="password" id="confirm_pwd" name="reset_password" value=1>
+                                    
+            <button class="btn btn-lg btn-primary btn-block mt-3" type="submit">Réinitialiser le mot de passe</button>
+        </form> 
+        
+        
         <div class="d-flex flex-column justify-content-center mt-3" action="view-user.php" method="post">
             <div class="form-row d-grid gap-3">
                 <div class="">

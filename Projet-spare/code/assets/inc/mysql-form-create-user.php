@@ -7,6 +7,7 @@ require_once ("mysql-all-spe-classes-request.php");
 require_once ("mysql-all-roles-request.php");
 require_once ("mysql-all-main-classes-request.php");
 require_once ("../functions/valid-donnees.php");
+require_once ("../functions/password-generator.php");
 
 function generating_id($data = null) {
     // Generate 16 bytes (128 bits) of random data or use the data passed into the function.
@@ -21,12 +22,7 @@ function generating_id($data = null) {
     // Output the 36 character UUID.
     return vsprintf('%s%s-%s-%s-%s-%s%s%s', str_split(bin2hex($data), 4));
 }
-function mdp_generator ($firstname, $lastname) {
-    $UserPwd=substr($firstname, 0 , 1).$lastname; 
 
-    $UserPwd=password_hash($UserPwd,PASSWORD_BCRYPT);
-    return $UserPwd;
-}
 
 foreach ($all_user_id_email_request as $data) {
   $all_user_email[]=$data['email'];

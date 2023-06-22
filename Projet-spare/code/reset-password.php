@@ -10,7 +10,7 @@
 
         <div class="card bg-dark mt-5" style="width: 20rem;">
                 <img class="card-img-top mx-auto mt-5" src="https://www.objectif3d.com/wp-content/uploads/2023/01/O3D_blanc_flat-1.png" style="max-height:50px; max-width: 100px;" alt="Objectif 3D" id="logo">
-                <form class="card-body" action="./assets/functions/reset-password-and-update.php" method="POST">
+                <form class="card-body" action="./assets/functions/first-connexion-reset-password-and-update.php" method="POST">
                         <label for="new_pwd" class="sr-only">Nouveau mot de passe</label>
                         <input type="password" id="inputEmail" class="form-control mt-3" name="new_pwd" placeholder="Nouveau mot de passe" required >
                        

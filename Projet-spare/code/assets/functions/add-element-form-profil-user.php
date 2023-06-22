@@ -5,6 +5,7 @@ function profil_completion () {
 
 
     if (isset($_SESSION['SPARE']['USER_ID'])) {
+        unset($_SESSION['SPARE']['user_id_checking']);
         foreach ($all_profil_user as $user) {
             if ($_SESSION['SPARE']['USER_ID']==$user['id']){
                 $user_profil['id']=$user['id'];

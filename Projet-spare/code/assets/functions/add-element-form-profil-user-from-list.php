@@ -4,7 +4,7 @@ function profil_completion_user_picked () {
     require '.\assets\inc\mysql-profil-user-request.php';
     
         foreach ($all_profil_user as $user) {
-            if ($_GET['id']==$user['id']){
+            if ($_SESSION['SPARE']['user_id_checking']==$user['id']){
                 $user_profil['id']=$user['id'];
                 $user_profil['email']=$user['email'];
                 $user_profil['UserPwd']=$user['UserPwd'];
@@ -20,7 +20,7 @@ function profil_completion_user_picked () {
     
 }
 
-if (isset($_GET['id'])){
+if (isset($_SESSION['SPARE']['user_id_checking'])){
     $user_profil=profil_completion_user_picked();
     
 }

@@ -1,4 +1,5 @@
 <?php session_start(); ?>
+<?php require_once ("./assets/functions/auto-return-login-if-not-logged.php") ?>
 <?php require ("./assets/inc/cookies.php")?>
 <?php $title='Ajouter un utilisateur'?>
 <?php $current_page="utilisateurs"?>

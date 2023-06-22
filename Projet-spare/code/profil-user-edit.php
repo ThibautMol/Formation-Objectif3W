@@ -3,16 +3,16 @@
 <?php $title='Édition profil'?>
 <?php $current_page=(isset($_GET['id'])) ? "utilisateurs" : "profil"?>
 <?php require_once ("./assets/inc/head.php");?>
-<?php //require_once ("./assets/inc/nav-bar.php");?>
+<?php require_once ("./assets/inc/nav-bar.php");?>
 <?php require_once ("./assets/inc/mysql-all-spe-classes-request.php")?>
 <?php require_once ("./assets/inc/mysql-all-main-classes-request.php")?>
 <?php require_once ("./assets/inc/mysql-all-roles-request.php")?>
-<?php (isset($_GET['id'])) ? require_once ("./assets/functions/add-element-form-profil-user-from-list.php") : require_once ("./assets/functions/add-element-form-profil-user.php");?>
+<?php (isset($_SESSION['SPARE']['user_id_checking'])) ? require_once ("./assets/functions/add-element-form-profil-user-from-list.php") : require_once ("./assets/functions/add-element-form-profil-user.php");?>
 
 
 
     <main class="d-flex flex-column justify-content-center align-items-center mb-5" style="margin-top:100px;">
-        <h1>Profil <?=(isset($_GET['id'])) ? "de " . ucfirst($user_profil['firstname']) . " " . ucfirst($user_profil['lastname']) : "";?></h1>
+        <h1>Profil <?=(isset($_SESSION['SPARE']['user_id_checking'])) ? "de " . ucfirst($user_profil['firstname']) . " " . ucfirst($user_profil['lastname']) : "";?></h1>
         <form class="d-flex flex-column justify-content-center mt-3" action='./assets/inc/mysql-update-user-data.php' method="POST">
             <div class="form-row d-grid gap-3">
 

@@ -1,27 +1,25 @@
 <?php session_start(); ?>
+<?php require_once ("./assets/functions/auto-return-login-if-not-logged.php") ?>
 <?php require ("./assets/inc/cookies.php");?>
 <?php $title='Profil utilisateur'?>
 <?php $current_page=(isset($_GET['id'])) ? "utilisateurs" : "profil"?>
 <?php require_once ("./assets/inc/head.php");?>
 <?php require_once ("./assets/inc/nav-bar.php");?>
-<?php (isset($_GET['id'])) ? require_once ("./assets/functions/add-element-form-profil-user-from-list.php") : require_once ("./assets/functions/add-element-form-profil-user.php");?>
+<?php (isset($_GET['id'])) ? $_SESSION['SPARE']['user_id_checking']=$_GET['id'] : ""; //this variable will be unset if you check your own profil and will be set again when you consult a user profil.?> 
+<?php (isset($_SESSION['SPARE']['user_id_checking'])) ? require_once ("./assets/functions/add-element-form-profil-user-from-list.php") : require_once ("./assets/functions/add-element-form-profil-user.php");?>
 
 
 
 
     <main class="d-flex flex-column justify-content-center align-items-center mb-5" style="margin-top:100px;">
-        <h1>Profil <?=(isset($_GET['id'])) ? "de " . ucfirst($user_profil['firstname']) . " " . ucfirst($user_profil['lastname']) : "";?></h1>
+        <h1>Profil <?=(isset($_SESSION['SPARE']['user_id_checking'])) ? "de " . ucfirst($user_profil['firstname']) . " " . ucfirst($user_profil['lastname']) : "";?></h1>
+
         <div class="d-flex flex-column justify-content-center mt-3" action="view-user.php" method="post">
             <div class="form-row d-grid gap-3">
                 <div class="">
                     <p class="text-capitalize" for="UserEmail">email</p>
                     <p class="form-control"><?=$user_profil['email'];?></p>
                 </div>
-                
-                <!-- <div class="">
-                    <p class="text-capitalize">password</p>
-                    <p><?//=$user_profil['UserPwd'];?><p>
-                </div> -->
            
                 <div class="">
                     <p class="text-capitalize">firstname</p>

@@ -1,7 +1,7 @@
-
 <?php $title='Login';?>
 <?php require_once (".\assets\inc\head.php")?>
 <?php require_once (".\assets\inc\cookies.php")?>
+<?php require ("./assets/functions/login-function.php")?>
 
         
     <section class="vh-100 gradient-custom">
@@ -11,8 +11,8 @@
                     <div class="card bg-dark text-white" style="border-radius: 1rem;">
                         <div class="card-body p-5 text-center">
 
-                            <form class="md-5 mt-md-4 pb-5" action="" method="post">
-                                <img src="assets/img/spare-logo.png" class="mb-5" title="SPARE Logo" alt="SPARE Logo">
+                            <form class="md-5 mt-md-3" action="" method="post">
+                                <img src="assets/img/spare-logo.png" class="mb-3" title="SPARE Logo" alt="SPARE Logo">
                                 <h2 class="fw-bold mb-4 text-uppercase">Login</h2>
                                 <p class="text-white-50 mb-3">Please enter your login and password!</p>
 
@@ -26,21 +26,19 @@
                                     <input type="password" name="password" id="password" class="form-control form-control-lg" placeholder="Password" />
                                 </div>
 
-                                <p class="small mb-5 pb-lg-2"><a class="text-white-50 text-decoration-none" href="#!">Forgot password?</a></p>
-
+                                <p class="small mb-4 pb-lg-2"><a class="text-white-50 text-decoration-none" href="#!">Forgot password?</a></p>
+                            
                                 <button class="btn btn-outline-light btn-lg px-5" type="submit">Login</button>
 
-                                <!-- <div class="d-flex justify-content-center text-center mt-4 pt-1">
-                                    <a href="#!" class="text-white"><i class="fab fa-facebook-f fa-lg"></i></a>
-                                    <a href="#!" class="text-white"><i class="fab fa-twitter fa-lg mx-4 px-2"></i></a>
-                                    <a href="#!" class="text-white"><i class="fab fa-google fa-lg"></i></a>
-                                </div> -->
+                                <div class="alert alert-danger text-danger text-center mx-auto mt-4 <?=((isset($_SESSION['SPARE']['errors']['login_error']))&&(!empty($_SESSION['SPARE']['errors']['login_error']))) ? '' : 'd-none'?>" role="alert">
+                                    <?=(((isset($_SESSION['SPARE']['errors']['login_error'])) ? $_SESSION['SPARE']['errors']['login_error'] : ""))?></div>
+                                </div>
 
                             </form>
                             
-                            <?php require ("./assets/functions/login-function.php")?>
-                            <div>
-                                <p class="mb-0">Don't have an account? <a href="#!" class="text-white-50 fw-bold text-decoration-none ">Sign Up</a></p>
+                            
+                            <div class="mx-auto">
+                                <p class="mb-1">Don't have an account? <a href="#!" class="text-white-50 fw-bold text-decoration-none ">Sign Up</a></p>
                             </div>
 
                             

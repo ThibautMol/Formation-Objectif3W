@@ -1,4 +1,5 @@
 <?php session_start(); ?>
+<?php require_once ("./assets/functions/auto-return-login-if-not-logged.php") ?>
 <?php $title='Dashboard'?>
 <?php require_once ("./assets/inc/head.php") ?>
 <?php require_once ("./assets/inc/nav-bar.php") ?>

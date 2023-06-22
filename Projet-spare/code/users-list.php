@@ -1,10 +1,11 @@
 <?php session_start(); ?>
+<?php require_once ("./assets/functions/auto-return-login-if-not-logged.php") ?>
 <?php require ("./assets/inc/cookies.php")?>
 <?php $title='liste des utilisateurs'?>
 <?php $current_page="utilisateurs"?>
 <?php require_once ("./assets/inc/head.php")?>
 <?php require_once ("./assets/inc/nav-bar.php")?>
-<?php require_once (".\assets\inc\mysql-profil-user-request.php")?>
+<?php require_once ("./assets/inc/mysql-profil-user-request.php")?>
 <?php require_once ("./assets/functions/user-per-page-list.php");?>
 <?php require_once ("./assets/functions/user-list-filter.php");?>
 <?php require_once ("./assets/inc/mysql-all-spe-classes-request.php")?>

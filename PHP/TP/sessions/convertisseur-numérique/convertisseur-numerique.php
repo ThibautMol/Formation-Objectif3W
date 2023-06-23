@@ -23,14 +23,14 @@ if (isset($_POST['number_to_cover'])) {
         array('letter'=>'x', 'number'=>10),
         array('letter'=>'v', 'number'=>5),
         array('letter'=>'i', 'number'=>1)
-    )
+    );
 
-    if (is_numeric()) {
+    // if (is_numeric()) {
 
-    }
-    else {
+    // }
+    // else {
 
-    }
+    // }
 
 }
 ?>

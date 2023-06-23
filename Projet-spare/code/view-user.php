@@ -1,6 +1,5 @@
 <?php session_start(); ?>
 <?php require_once ("./assets/functions/auto-return-login-if-not-logged.php") ?>
-<?php require_once ("./assets/functions/auto-return-and-logoff-if-first-visit.php") ?>
 <?php require ("./assets/inc/cookies.php");?>
 <?php $title='Profil utilisateur'?>
 <?php $current_page=(isset($_GET['id'])) ? "utilisateurs" : "profil"?>

@@ -1,6 +1,5 @@
 <?php session_start(); ?>
 <?php require_once ("./assets/functions/auto-return-login-if-not-logged.php") ?>
-<?php require_once ("./assets/functions/auto-return-and-logoff-if-first-visit.php") ?>
 <?php require ("./assets/inc/cookies.php")?>
 <?php $title='liste des utilisateurs'?>
 <?php $current_page="utilisateurs"?>

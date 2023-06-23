@@ -1,6 +1,6 @@
 <?php $title='Login';?>
-<?php require_once (".\assets\inc\head.php")?>
-<?php require_once (".\assets\inc\cookies.php")?>
+<?php require_once ("./assets/inc/head.php")?>
+<?php require_once ("./assets/inc/cookies.php")?>
 <?php require ("./assets/functions/login-function.php")?>
 
         

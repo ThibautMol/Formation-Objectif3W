@@ -30,8 +30,10 @@
                             
                                 <button class="btn btn-outline-light btn-lg px-5" type="submit">Login</button>
 
-                                <div class="alert alert-danger text-danger text-center mx-auto mt-4 <?=((isset($_SESSION['SPARE']['errors']['login_error']))&&(!empty($_SESSION['SPARE']['errors']['login_error']))) ? '' : 'd-none'?>" role="alert">
-                                    <?=(((isset($_SESSION['SPARE']['errors']['login_error'])) ? $_SESSION['SPARE']['errors']['login_error'] : ""))?></div>
+                                <div class="alert alert-danger text-danger text-center mx-auto mt-4 <?=((isset($_SESSION['SPARE']['errors']['login_error']))&&(!empty($_SESSION['SPARE']['errors']['login_error']))) ? '' : 'd-none'?>" style="max-width:20rem;" role="alert">
+                                    <div>
+                                        <?=(((isset($_SESSION['SPARE']['errors']['login_error'])) ? $_SESSION['SPARE']['errors']['login_error'] : ""))?>
+                                    </div>
                                 </div>
 
                             </form>

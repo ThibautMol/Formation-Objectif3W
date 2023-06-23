@@ -25,7 +25,8 @@
             }
         }
 
-        if (isset($_SESSION['SPARE']['FIRST_VISIT'])) {
+        if ((isset($_SESSION['SPARE']['FIRST_VISIT'])) &&
+            ((isset($_SESSION['SPARE']['USER_ID'])) && (!empty($_SESSION['SPARE']['USER_ID'])))) {
             if (($_SESSION['SPARE']['FIRST_VISIT']==1)){
                 return header('Location: http://localhost/Formation-Objectif3W/Projet-spare/code/dashboard.php');
             }

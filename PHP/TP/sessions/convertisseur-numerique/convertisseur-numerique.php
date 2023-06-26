@@ -1,39 +1,5 @@
 <?php session_start();?>
 
-<?php
-
-$_SESSION['calcul']=0;
-
-if (isset($_POST['number_to_cover'])) {
-    
-    $elements=str_split($_POST['number_to_cover']);
-
-    foreach($elements as $element) {
-        foreach ($letters_to_numbers as $letter) {
-            if ($element===$letter['letter']) {
-                $_SESSION['calcul']+=$letter['number'];
-            }
-        }
-    }
-    $letters_to_numbers= array(
-        array('letter'=>'m', 'number'=>1000),
-        array('letter'=>'d','number'=>500),
-        array('letter'=>'c', 'number'=>100),
-        array('letter'=>'l', 'number'=>50),
-        array('letter'=>'x', 'number'=>10),
-        array('letter'=>'v', 'number'=>5),
-        array('letter'=>'i', 'number'=>1)
-    );
-
-    // if (is_numeric()) {
-
-    // }
-    // else {
-
-    // }
-
-}
-?>
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -53,21 +19,37 @@ if (isset($_POST['number_to_cover'])) {
     
     <body class="d-flex flex-column justify-content-center mt-5 container-sm">
         <div class="d-flex gap-5 justify-content-center">
-        <spe><?=var_dump($_POST['number_to_cover'])?></spe>
-        <spe><?=var_dump($elements)?></spe>
-        <spe><?=var_dump($letters_to_numbers)?></spe>
+        
 
         </div>
       
 
-        <form class="mx-auto" action="" method="POST">
+        <form class="mx-auto" action="convert-page.php" method="POST">
             
-            <input type="text" name="number_to_cover" placeholder="Elément à convertir">
+            <input type="text" name="element_to_convert" placeholder="Elément à convertir">
             <button class="btn btn-primary" type="submit">Convertir</button>
 
         </form>
 
         <button class="btn btn-danger mx-auto"><a class="text-primary text-decoration-none" href="session-killer.php">Reset</a></button>
+
+        <div class=" <?=((isset($_SESSION['result'])) && (!empty($_SESSION['result']))) ? "" : "d-none" ?> ">
+            <p>Le résultat est : <?=((isset($_SESSION['result'])) && (!empty($_SESSION['result']))) ? $_SESSION['result'] : "" ?></p>
+        </div>
+
+
+        <div>
+           <h2>Historique</h2>
+           <?php if (isset($_SESSION['historic'])) :?>
+                <?php foreach ($_SESSION['historic'] as $history) :?>
+                    <p>L'élement envoyé était <?=$history?> et le résultat était  <?=$history?></p>
+                <?php endforeach?>
+            <?php endif?>
+        </div>
+
+        
+        <spe><?=var_dump($_SESSION['historic'])?></spe>
+
 
     </body>
 

@@ -25,9 +25,10 @@
 //     echo 'try again';
 // }
 
-$UserPwd='bob';
-$UserPwd=password_hash($UserPwd,PASSWORD_BCRYPT);
-echo $UserPwd;
+// $UserPwd='bob';
+// $UserPwd=password_hash($UserPwd,PASSWORD_BCRYPT);
+// echo $UserPwd;
 
-
+$test= str_repeat("m",5);
+echo $test;
 ?>

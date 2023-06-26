@@ -18,39 +18,41 @@
     
     
     <body class="d-flex flex-column justify-content-center mt-5 container-sm">
-        <div class="d-flex gap-5 justify-content-center">
         
+        <div class="d-flex">
+            <div class="card me-5 mx-auto h-25" style="width: 18rem;">
+                <img class="card-img-top img-thumbnail" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1-Z1ZWhfDDr3FsheN4dyJadiPTGMfsvXDpw&usqp=CAU" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title mb-3">Convertisseur chiffre romains/chiffres arabes</h5>
+                    <form class="d-flex flex-column justify-content-center" action="convert-page.php" method="POST">
+                
+                        <input class="form-control" type="text" name="element_to_convert" placeholder="Elément à convertir">
+                        <button class="btn btn-primary mt-3 mx-auto" type="submit">Convertir</button>
 
+                    </form>
+                </div>
+            </div>
+
+            <div class="card ms-5 mx-auto" style="width: 18rem;">
+                <img class="card-img-top img-thumbnail" src="https://upload.wikimedia.org/wikipedia/commons/2/28/Rome-_Ruins_of_the_Forum%2C_Looking_towards_the_Capitol.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h2>Historique</h2>
+                    <?php if (isset($_SESSION['historic'])) :?>
+                        <?php $i=-1?>
+                        <?php foreach ($_SESSION['historic'] as $history) :?>
+                            <p class="card-text">L'élement envoyé était <?=$history?>  et le résultat était <?=$history?> </p>
+                        <?php endforeach?>
+                    <?php endif?>
+                </div>
+            </div>
         </div>
-      
-
-        <form class="mx-auto" action="convert-page.php" method="POST">
-            
-            <input type="text" name="element_to_convert" placeholder="Elément à convertir">
-            <button class="btn btn-primary" type="submit">Convertir</button>
-
-        </form>
-
-        <button class="btn btn-danger mx-auto"><a class="text-primary text-decoration-none" href="session-killer.php">Reset</a></button>
-
-        <div class=" <?=((isset($_SESSION['result'])) && (!empty($_SESSION['result']))) ? "" : "d-none" ?> ">
-            <p>Le résultat est : <?=((isset($_SESSION['result'])) && (!empty($_SESSION['result']))) ? $_SESSION['result'] : "" ?></p>
+    
+        <div class="d-flex justify-content-center mt-3">
+            <a class="btn btn-danger mt-3 text-decoration-none" href="session-killer.php">Reset</a>
         </div>
-
-
-        <div>
-           <h2>Historique</h2>
-           <?php if (isset($_SESSION['historic'])) :?>
-                <?php foreach ($_SESSION['historic'] as $history) :?>
-                    <p>L'élement envoyé était <?=$history?> et le résultat était  <?=$history?></p>
-                <?php endforeach?>
-            <?php endif?>
-        </div>
-
-        
+       
         <spe><?=var_dump($_SESSION['historic'])?></spe>
-
-
+    
     </body>
 
 

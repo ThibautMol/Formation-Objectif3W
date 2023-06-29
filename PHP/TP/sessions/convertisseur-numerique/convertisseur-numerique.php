@@ -37,10 +37,9 @@
                 <img class="card-img-top img-thumbnail" src="https://upload.wikimedia.org/wikipedia/commons/2/28/Rome-_Ruins_of_the_Forum%2C_Looking_towards_the_Capitol.jpg" alt="Card image cap">
                 <div class="card-body">
                     <h2>Historique</h2>
-                    <?php if (isset($_SESSION['historic'])) :?>
-                        <?php $i=-1?>
-                        <?php foreach ($_SESSION['historic'] as $history) :?>
-                            <p class="card-text">L'élement envoyé était <?=$history?>  et le résultat était <?=$history?> </p>
+                    <?php if (isset($_SESSION['convertisseur'])) :?>
+                        <?php foreach ($_SESSION['convertisseur']['historic'] as $history) :?>
+                            <p class="card-text">L'élement envoyé était <?=$history[1]?> et le résultat était <?=$history[0]?> </p>
                         <?php endforeach?>
                     <?php endif?>
                 </div>
@@ -50,8 +49,6 @@
         <div class="d-flex justify-content-center mt-3">
             <a class="btn btn-danger mt-3 text-decoration-none" href="session-killer.php">Reset</a>
         </div>
-       
-        <spe><?=var_dump($_SESSION['historic'])?></spe>
     
     </body>
 

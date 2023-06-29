@@ -5,8 +5,18 @@ session_start();
 if (isset($_POST['element_to_convert'])) {
     $element_to_convert=$_POST['element_to_convert'];
     $_SESSION['result']=strtoupper(roman_numbers_and_letters($element_to_convert));
-    $_SESSION['historic'][]=$_SESSION['result'];
-    $_SESSION['historic'][]=$element_to_convert;
+
+    $temp[]=$_SESSION['result'];
+
+    
+    if (!is_numeric($element_to_convert)) {
+        $element_to_convert=strtoupper($element_to_convert);
+    }
+    $temp[]=$element_to_convert;
+    $_SESSION['convertisseur']['historic'][]=$temp;
+
+    // $_SESSION['convertisseur']['historic'][]=$_SESSION['result'];
+    // $_SESSION['convertisseur']['historic'][]=$element_to_convert;
 
 }
 
@@ -38,8 +48,6 @@ function roman_numbers_and_letters ($element_to_convert) {
 
             // var_dump($elements);
             $result_letters_to_number=NULL;
-            
-           
             
             foreach($elements as $element) {
                 // echo " ". " foreach1" . $preview_valor;
@@ -107,7 +115,7 @@ function roman_numbers_and_letters ($element_to_convert) {
                         $element_to_convert -= $value;
                     }
                 }
-            
+                
                 return $result_number_to_letters;
             }
               

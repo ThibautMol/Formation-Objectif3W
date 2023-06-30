@@ -27,16 +27,16 @@
                     <form class="d-flex flex-column justify-content-center" action="calcul-nombre-jours-v2.php" method="POST">
                         
                     <label for="start">Date de départ</label>
-                        <input type="date" id="start" name="trip-start">
-
+                        <input type="date" id="start" name="trip-start" value="<?=(isset($_SESSION['calendar']['date_start'])) ? $_SESSION['calendar']['date_start'] : ""?>">
+                       
                         <label for="end">Date de fin</label>
-                        <input type="date" id="end" name="trip-end">
+                        <input type="date" id="end" name="trip-end" value="<?=(isset($_SESSION['calendar']['date_end'])) ? $_SESSION['calendar']['date_end'] : ""?>">
                         <button class="btn btn-primary mt-3 mx-auto" type="submit">Calculer</button>
 
                     </form>
 
-                    <?php if (isset($_SESSION['convertisseur'])) :?>
-                            <p class="card-text">Le nombre de jours est de : <?='';?> </p>
+                    <?php if (isset($_SESSION['calendar']['number_of_days'])) :?>
+                            <p class="card-text">Le nombre de jours est de : <?=$_SESSION['calendar']['number_of_days'];?> </p>
                     <?php endif?>
                 </div>
             </div>

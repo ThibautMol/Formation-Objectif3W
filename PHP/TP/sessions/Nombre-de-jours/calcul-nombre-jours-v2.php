@@ -7,6 +7,8 @@ var_dump($_POST);
 $trip_start=explode("-",$_POST["trip-start"]);
 $trip_end=explode("-",$_POST["trip-end"]);
 
+$_SESSION['calendar']['date_start']=$_POST["trip-start"];
+$_SESSION['calendar']['date_end']=$_POST["trip-end"];
 
 
 function calcul_of_years ($date_start,$date_end,$month) {
@@ -32,8 +34,14 @@ function calcul_of_years ($date_start,$date_end,$month) {
 
         echo $number_of_years;
 
-        if ($number_of_years>1) {
+        if ($number_of_years>=1) {
             echo " etape 3.3 ";
+
+            if ($date_start['month']==$date_end['month']) {
+
+                $number_of_days=365*$number_of_years;
+                return $number_of_days;
+            }
           
             $number_of_days=($number_of_years-1)*365;
 
@@ -62,19 +70,28 @@ function calcul_of_years ($date_start,$date_end,$month) {
                 return $number_of_days;
 
 
-            }else {
+            }
+            
+            else {
                 echo " etape 3.6 ";
-                //($date_start['year']>$date_end['year'])
 
-                for ($i=0; $i<$date_start['month']-1; $i++) {
-                    $number_of_days+=($month[$i]['number_of_days']);
-                }
+                // if ($date_start['month']==$date_end['month']) {
 
-                for ($i=11; $i>$date_end['month']-1; $i--) {
-                    $number_of_days+=($month[$i]['number_of_days']);
-                }
+                //     $number_of_days=365*$number_of_years;
+                //     return $number_of_days;
+                // }
+                // //($date_start['year']>$date_end['year'])
+                // else {
+                    for ($i=0; $i<$date_start['month']-1; $i++) {
+                        $number_of_days+=($month[$i]['number_of_days']);
+                    }
 
-                return $number_of_days;
+                    for ($i=11; $i>$date_end['month']-1; $i--) {
+                        $number_of_days+=($month[$i]['number_of_days']);
+                    }
+
+                    return $number_of_days;
+                // }
             }
         }
     }
@@ -86,56 +103,110 @@ function calcul_of_days_between_two_date($date_start,$date_end,$month){
 
     $number_of_days=NULL;
 
-    if ($date_start['month']<$date_end['month']) {
-        
+    if ($date_end['year']==$date_start['year']) {
+
         echo " etape 4.1 ";
 
-        $number_of_days=(($month[($date_end['month']-1)]['number_of_days'])-($date_end['day']))+($date_start['day']);
-        
-        // for ($i=$date_start['month']-1; $i<$date_end['month']-1; $i++) {
-        //     $number_of_days+=($month[$i]['number_of_days']);
-        // }
+        if ($date_start['month']<$date_end['month']){
+            
+            echo " etape 4.2 ";
 
-        return $number_of_days;
-    }
+            $number_of_days=(($month[($date_start['month']-1)]['number_of_days'])-($date_start['day']))+($date_end['day']);
+            
+            echo " " . $date_start['month'];
 
-    else { 
-        echo " etape 4.2 ";
+            for ($i=$date_start['month']; $i<$date_end['month']-1; $i++) {
+                $number_of_days+=($month[$i]['number_of_days']);
+                echo " " . $number_of_days;
+            }
+            
+            return $number_of_days;
 
-        if ($date_end['month']==$date_start['month']) {
+        }
+        elseif ($date_start['month']>$date_end['month']){
+
+            echo " etape 4.3 ";
+
+            $number_of_days=(($month[($date_end['month']-1)]['number_of_days'])-($date_end['day']))+($date_start['day']);
+            
+            echo " " . $date_start['month'];
+            echo " " . $date_end['month'];
+
+            for ($i=$date_start['month']-2; $i>$date_end['month']-1; $i--) {
+                $number_of_days+=($month[$i]['number_of_days']);
+                echo " boucle " .$number_of_days . " ";
+            }
+
+            return $number_of_days;
+
+        }
+        else {
+            // month=month
+
+            echo " etape 4.4 ";
 
             $number_of_days=$date_end['day']-$date_start['day'];
 
             if ($number_of_days<0) {
                 $number_of_days=$number_of_days*-1;
             }
+            return $number_of_days;
+        }
+    }
+    
+    else {
 
-        }else{
+        if ($date_start['month']<$date_end['month']) {
+            
+            echo " etape 4.5 ";
 
-        //($date_start['month']>$date_end['month']) 
+            $number_of_days=(($month[($date_end['month']-1)]['number_of_days'])-($date_end['day']))+($date_start['day']);
+            
+            // for ($i=$date_start['month']-1; $i<$date_end['month']-1; $i++) {
+            //     $number_of_days+=($month[$i]['number_of_days']);
+            // }
 
-        echo " date end " . ($date_end['day']);
-
-        $value1=$month[($date_end['month']-1)]['number_of_days']-($date_end['day']);
-
-        echo " " . $value1;
-
-
-
-        $number_of_days=(($month[($date_start['month']-1)]['number_of_days'])-($date_start['day']))+($date_end['day']);
-        
-        echo " avant le for " . $number_of_days;
-
-        // for ($i=$date_end['month']-1; $i<$date_start['month']-1; $i++) {
-        //     $number_of_days+=($month[$i]['number_of_days']);
-        // }
-
-        echo "  après le for " . $number_of_days . " ";
-
+            return $number_of_days;
         }
 
-        return $number_of_days;
+        else { 
+            echo " etape 4.6 ";
 
+            if ($date_end['month']==$date_start['month']) {
+
+                $number_of_days=$date_end['day']-$date_start['day'];
+
+                if ($number_of_days<0) {
+                    $number_of_days=$number_of_days*-1;
+                }
+
+            }else{
+
+            //($date_start['month']>$date_end['month']) 
+
+            echo " date end " . ($date_end['day']);
+
+            $value1=$month[($date_end['month']-1)]['number_of_days']-($date_end['day']);
+
+            echo " " . $value1;
+
+
+
+            $number_of_days=(($month[($date_start['month']-1)]['number_of_days'])-($date_start['day']))+($date_end['day']);
+            
+            echo " avant le for " . $number_of_days;
+
+            // for ($i=$date_end['month']-1; $i<$date_start['month']-1; $i++) {
+            //     $number_of_days+=($month[$i]['number_of_days']);
+            // }
+
+            echo "  après le for " . $number_of_days . " ";
+
+            }
+
+            return $number_of_days;
+
+        }
     }
 }
 
@@ -208,4 +279,10 @@ function date_calcul($trip_start,$trip_end) {
 
 $number_of_days=date_calcul($trip_start,$trip_end);
 
+$_SESSION['calendar']['number_of_days']=$number_of_days;
+
 echo " " . $number_of_days;
+
+header("Location: http://localhost/Formation-Objectif3W/PHP/TP/sessions/Nombre-de-jours/nombre-de-jours.php");
+exit;
+

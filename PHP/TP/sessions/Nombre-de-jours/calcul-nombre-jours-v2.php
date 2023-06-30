@@ -102,6 +102,16 @@ function calcul_of_days_between_two_date($date_start,$date_end,$month){
     else { 
         echo " etape 4.2 ";
 
+        if ($date_end['month']==$date_start['month']) {
+
+            $number_of_days=$date_end['day']-$date_start['day'];
+
+            if ($number_of_days<0) {
+                $number_of_days=$number_of_days*-1;
+            }
+
+        }else{
+
         //($date_start['month']>$date_end['month']) 
 
         echo " date end " . ($date_end['day']);
@@ -121,6 +131,8 @@ function calcul_of_days_between_two_date($date_start,$date_end,$month){
         // }
 
         echo "  après le for " . $number_of_days . " ";
+
+        }
 
         return $number_of_days;
 

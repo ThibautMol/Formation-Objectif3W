@@ -14,18 +14,9 @@ require_once "functions/functions.php";
     <div class="d-flex justify-content-center">
         <img id="details-enlarged-image" class="img-thumbnail" src="https://as1.ftcdn.net/v2/jpg/02/41/97/54/1000_F_241975440_QIlN2sSPiJ8l2vs8v8cdNfP2Tr2BQnPh.jpg" alt="Test yourself" style="max-width:50rem">
     </div>
-    <!-- <div class=" d-flex justify-content-end me-3">
-        <button class="btn btn-danger"><a class="btn btn-danger" href="inc/session-killer.php">Recommencer le test</a></button>
-    </div> -->
+
 </div>
 
-<pre>
-    <h5>DEBUG</h5>
-    <?=var_dump($_SESSION['quiz']['errors']);?>
-    <?=var_dump($_SESSION['quiz']['answers_counting']);?>
-    <?=var_dump($user_answer);?>
-
-</pre>
 
 
 <div class="d-flex justify-content-center mt-3 <?=(!isset($question_number) && (empty($question_number))) ? "" : "d-none"?>" >
@@ -75,6 +66,16 @@ require_once "functions/functions.php";
                                         "btn-success" : "btn-warning")) : "btn-primary"?> "
                                          
                             href="?page=<?=$question_number?>&user_answers=<?=$choice?>"><?=$choice?></a>
+
+                            <!-- la ternaire ci-dessus contient les éléments suivants : --
+                                - si $_GET['user_answers existe et s'il n'est pas vide]
+                                    - Alors le bouton aura la couleur secondary  
+                                    - Sinon :
+                                        - Si le choix (nom du champ présent dans le $questions) est égal à la valeur de answers du tableau $questions à l'index $question_number (voir page functions)
+                                        - alors  la couleur du bouton sera success 
+                                        - Sinon la couleur sera warning
+                                - Sinon la couleur sera primary-->
+
                     <?php endforeach?>
                 </div>
 

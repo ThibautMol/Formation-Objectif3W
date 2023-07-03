@@ -68,20 +68,33 @@ $questions = [
 ];
 
 
-$user_answer='Sera éxécutée 3 fois';
+$donnees='Sera éxécutée 3 fois';
 
 
-for ($i=0; $i<count($questions); $i++)
-    foreach ($questions[$i]['options'] as $choice)
+function valid_donnees($donnees){
+    
+    // Cette fonction utilise la variable $donnes qui récupère à chaque get la valeur de la réponse de l'utilisateur.
+    // Cette fonction va vérifier, contrôler, et formater les données pour éviter les injections de code. 
 
-    if ($user_answer==$choice) {
-        $test=1;
-        echo $test . " ";
-    }
-    else {
-        $test1=0;
-    }
 
-echo $test . " ";
-echo $test1 . " ";
+    $donnees = trim($donnees);
+    $donnees = stripslashes($donnees);
+    $donnees = htmlspecialchars($donnees);
+    return $donnees;
+}
+
+echo valid_donnees($donnees);
+// for ($i=0; $i<count($questions); $i++)
+//     foreach ($questions[$i]['options'] as $choice)
+
+//     if ($user_answer==$choice) {
+//         $test=1;
+//         echo $test . " ";
+//     }
+//     else {
+//         $test1=0;
+//     }
+
+// echo $test . " ";
+// echo $test1 . " ";
 ?>

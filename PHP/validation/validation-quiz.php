@@ -1,11 +1,19 @@
 <?php
 session_start();
 
+const NUMBER_OF_QUESTIONS=4; #this constante is based on the number of questions in the $questions array.
 
 var_dump($_POST);
 
+$_SESSION['quiz']['user_answers'][]=$_POST['user_answers'];
+
+
+
 if ((isset($_POST)) && (!empty($_POST))) {
-    $_SESSION['quiz']['number_of_question_answered']++;
+
+    if ($_SESSION['quiz']['number_of_question_answered']<NUMBER_OF_QUESTIONS) {
+        $_SESSION['quiz']['number_of_question_answered']++;
+    }
 }
 
 $questions = [
@@ -42,34 +50,33 @@ $questions = [
 ];
 
 
-$_SESSION['quiz']['number_of_questions_answered']=4;
-
-
-    // for ($i=0; $i<=$_SESSION['quiz']['number_of_questions_answered'];$i++) {
-
-    //     $_SESSION['quiz']['answered_questions'][]=$questions[$i];
-    //     var_dump($questions[$i]);
-    // }
-
 ?>
-<pre><?=var_dump($_SESSION['quiz']['answered_questions']);?></pre>
-<pre><?=var_dump($_POST);?></pre>
+<pre><?=var_dump($_SESSION['quiz']['user_answers']);?></pre>
+<pre></pre>
 
 
 <?php 
-// foreach ($_SESSION['quiz']['answered_questions'] as $choice) {
-//     var_dump($choice['option']) . " " . PHP_EOL;
-//     // var_dump($choice['option']) . " ";
-//     // foreach ($choice as $element) {
-//     //     var_dump($element); echo " zzzzzzzzzzzzzzzzzzzzzzz ";
-//     // }
-// }
+
+for ($i=0; $i<($_SESSION['quiz']['number_of_question_answered']);$i++)
+    var_dump($questions[$i]['answer']);
+    var_dump($_SESSION['quiz']['user_answers']);
+
+   if ($_SESSION['quiz']['user_answers'][$i]==$questions[$i]['answer']) {
+    $_SESSION['quiz']['user_answer_result'][]="good";
+   } else {
+    $_SESSION['quiz']['user_answer_result'][]="bad";
+   }
+
+
+   var_dump($_SESSION['quiz']['user_answer_result']);
+
+
 ?>
 <br>
 <hr>
 <br>
 <?php
-for ($i=0; $i<(count($_SESSION['quiz']['answered_questions']));$i++) {
+for ($i=0; $i<(count($_SESSION['quiz']['number_of_question_answered']));$i++) {
     // var_dump($_SESSION['quiz']['answered_questions'][$i]);
     // echo $_SESSION['quiz']['answered_questions'][$i]['question'];
 

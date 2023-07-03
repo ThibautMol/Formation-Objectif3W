@@ -51,7 +51,9 @@ $questions = [
 
 <pre>
     <h5>DEBUG</h5>
-    <?=var_dump($_SESSION['quiz']['answered_questions']);?>
+    <?=var_dump($_SESSION['quiz']['number_of_question_answered']);?>
+    <?=var_dump($_SESSION['quiz']['user_answer_result']);?>
+
 </pre>
 
 
@@ -66,20 +68,20 @@ $questions = [
     </div>
 
 
-    <div class="d-flex flex-column justify-content-center gap-5">
+    <div class="d-flex flex-column justify-content-center mb-5 gap-5">
         
-        <?php for ($i=0; $i<(count($_SESSION['quiz']['answered_questions']));$i++):?>
+        <?php for ($i=0; $i<=($_SESSION['quiz']['number_of_question_answered']);$i++):?>
             <div class="card mx-auto" style="width: 35rem;">
 
                 <div class="card-body">
                     <h5 class="card-title text-center">Question <?=$i?> : </h5>
-                    <p class="card-text text-center"><?=$_SESSION['quiz']['answered_questions'][$i]['question']?></p>
+                    <p class="card-text text-center"><?=$questions[$i]['question']?></p>
                 </div>
 
                 <div class="d-flex flex-wrap" >
-                    <?php foreach ($_SESSION['quiz']['answered_questions'][$i]['options'] as $choice) :?>
+                    <?php foreach ($questions[$i]['options'] as $choice) :?>
                         <form action="validation-quiz.php" method="POST" class="mx-auto">
-                            <input type="hidden" name="answer-question<?=$i?>" value="<?=$choice?>">
+                            <input type="hidden" name="user_answers" value="<?=$choice?>">
                             <button type='submit' class="btn btn-primary my-2 mx-auto" ><?=$choice?></button>
                         </form>
                     <?php endforeach?>

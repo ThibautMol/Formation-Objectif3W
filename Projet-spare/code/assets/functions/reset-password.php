@@ -2,9 +2,6 @@
 session_start();
 require_once ("password-generator.php");
 require_once("../inc/mysql-profil-user-request.php");
-require_once("password-generator.php");
-
-(isset($_SESSION['SPARE']['user_id_checking']));
 
 if (((isset($_SESSION['SPARE']['user_id_checking'])) && (!empty($_SESSION['SPARE']['user_id_checking'])))  || 
 ((isset($_SESSION['SPARE']['USER_ID'])) && (!empty($_SESSION['SPARE']['USER_ID'])))) {
@@ -46,7 +43,7 @@ if (((isset($_SESSION['SPARE']['user_id_checking'])) && (!empty($_SESSION['SPARE
 
         $_SESSION['SPARE']['errors']['reset_password_success']='Mot de passe réinitialisé';
 
-        header('Location: http://localhost/Formation-Objectif3W/Projet-spare/code/view-user.php');
+        header('Location: ../../view-user.php');
         exit;
         // echo'etape 5 ';
         
@@ -86,7 +83,7 @@ if (((isset($_SESSION['SPARE']['user_id_checking'])) && (!empty($_SESSION['SPARE
 
         $_SESSION['SPARE']['errors']['reset_password_success']='Mot de passe réinitialisé';
 
-        header('Location: http://localhost/Formation-Objectif3W/Projet-spare/code/view-user.php');
+        header('Location: ../../view-user.php');
         exit;
         // echo'etape 6 ';
         
@@ -96,7 +93,7 @@ if (((isset($_SESSION['SPARE']['user_id_checking'])) && (!empty($_SESSION['SPARE
 else {
     $_SESSION['SPARE']['errors']['reset_password_err']='Modification(s) non prises en compte';
     
-    header('Location: http://localhost/Formation-Objectif3W/Projet-spare/code/view-user.php');
+    header('Location: ../../view-user.php');
     exit;
     // echo'etape 7 ';
 }

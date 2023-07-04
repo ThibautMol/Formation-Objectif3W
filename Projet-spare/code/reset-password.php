@@ -1,7 +1,7 @@
 <?php session_start(); ?>
 <?php $title='Changez votre mot de passe'?>
 <?php require_once ("./assets/inc/head.php") ?>
-<?php //require_once ("./assets/inc/nav-bar.php") ?>
+
 
 
 <main class="text-center d-flex justify-content-center ">

@@ -17,7 +17,7 @@ if ($confirm_pwd===$UserPwd) {
         
     }
 
-    header('Location: http://localhost/Formation-Objectif3W/Projet-spare/code/dashboard.php');
+    header('Location: ../../dashboard.php');
     exit;
 
 } 
@@ -25,7 +25,7 @@ if ($confirm_pwd===$UserPwd) {
 else {
     $_SESSION['SPARE']['errors']['confirm_pwd_err']="Les mots de passe ne correspondent pas";
     
-    header('Location: http://localhost/Formation-Objectif3W/Projet-spare/code/reset-password.php');
+    header('Location: ../../reset-password.php');
     exit;
 }
 

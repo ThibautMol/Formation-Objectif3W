@@ -1,9 +1,5 @@
 <?php
 
-require_once "all-user-list-generation.php";
-
-
-
 function userFilter($all_profil_user, $role, $classRoom, $classSpe){
 
     $okFilter = [];

@@ -1,6 +1,7 @@
 <?php
   session_start();
   unset($_SESSION['quiz']);
+  
 
   // @Damien pense à modifier le chemin pour que ça fonctionne.
   

@@ -31,6 +31,16 @@
   <div>
     <a class="btn btn-primary justify-content-start" href="creation-user.php">Ajouter un utilisateur</a>
   </div>
+
+  <a class="alert alert-success m-auto mt-3 text-decoration-none text-success position-relative <?= ((isset($_SESSION['SPARE']['errors']['delete_success'])) &&  $_SESSION['SPARE']['errors']['delete_success']!=NULL) ? '' : 'd-none' ?>" href="./assets/functions/clearing-session-error-messages.php" role="alert">
+    <div class="me-2"><?=(isset($_SESSION['SPARE']['errors']['delete_success']) ? $_SESSION['SPARE']['errors']['delete_success'] : "")?> 
+    <i class="bi bi-x-circle position-absolute top-0 ms-1"></i></div>
+  </a>
+
+  <a class="alert alert-danger m-auto mt-3 text-decoration-none text-danger position-relative <?= ((isset($_SESSION['SPARE']['errors']['delete_fail'])) && $_SESSION['SPARE']['errors']['delete_fail']!=NULL) ? '' : 'd-none' ?>" href="./assets/functions/clearing-session-error-messages.php" role="alert">
+    <div class="me-2"><?=(isset($_SESSION['SPARE']['errors']['delete_fail']) ? $_SESSION['SPARE']['errors']['delete_fail'] : "") ?> 
+    <i class="bi bi-x-circle position-absolute top-0 ms-1"></i></div>
+  </a>
   
   <div class="d-flex container-fluid justify-content-end mt-4">    
     <div class="d-flex justify-content-end">
@@ -110,7 +120,8 @@
             <td><?=$user['CreationAccount']?></td>
             <td class="d-flex justify-content-around mw-25"><a class="btn btn-primary" href="view-user.php?id=<?=$user['id']?>"><i class="bi bi-eye-fill"></i></a> 
             <a class="btn btn-secondary" href="profil-user-edit.php?id=<?=$user['id']?>"><i class="bi bi-pencil-square"></i></a> 
-            <a class="btn btn-danger" href="profil-user-edit.php?id=<?=$user['id']?>"><i class="bi bi-trash3-fill"></i></a></td>
+            <a class="btn btn-danger <?=($user['id']==$_SESSION['SPARE']['USER_ID']) ? "disabled" : ""?>" href="<?=($user['id']==$_SESSION['SPARE']['USER_ID']) ? "" : "assets/inc/mysql-delete-user-from-user-list.php?id=".$user['id']?>"><i class="bi bi-trash3-fill"></i></a></td>
+            
           </div>   
         </tr>
         

@@ -3,7 +3,8 @@
 function valid_donnees($donnees){
     
     // Cette fonction utilise la variable $donnes qui récupère à chaque get la valeur de la réponse de l'utilisateur.
-    // Cette fonction va vérifier, contrôler, et formater les données pour éviter les injections de code. 
+    // Cette fonction va vérifier, contrôler, et formater les données pour éviter les injections de code.
+    // La variable $donnees sera de type string ou int
 
 
     $donnees = trim($donnees);
@@ -17,17 +18,28 @@ function confirm_user_answer ($user_answer, $questions) {
     // Cette fonction va vérifier si la réponse donnée par l'utilisateur est bien contenue dans la tableau $questions.
     // La variable $user_answer va être le résultat de la donnée récupérée par le GET et vérifiée par la fonction valid_donnees
     // Si cette dernière n'est pas dedans, un message d'erreur est renvoyé.
-
+    // La variable $user_answer sera de type string ou int
+    // La variable $questions est un tableau indexé 
+    
     for ($i=0; $i<count($questions); $i++) {
+        
         foreach ($questions[$i]['options'] as $choice) {
 
             if ($user_answer==$choice) {
-                
+
+                unset($_SESSION['quiz']['good_answer']);
+
+                unset($_SESSION['quiz']['errors']);
+
+                $_SESSION['quiz']['good_answer']=1;
+
                 return;
             }
             else {
-                if ($i==count($questions)) {
-                $error_choice="choix inexistant parmi la liste";
+
+                if (($i==(count($questions)-1)) && ($_SESSION['quiz']['good_answer']!=1)) {
+                    $error_choice="Choix inexistant parmi la liste, veuillez recommencer";
+            
                 return $error_choice;
                 }
             }
@@ -40,10 +52,14 @@ function returning_home_because_error($error){
 
     // Cette fonction va recevoir le message d'erreur généré par la fonction confirm_user_answer.
     // Si ce dernier existe, une redirection sera faite vers la page de principale du quizz.
+    // La variable $error sera de type string 
 
     if ((isset($_GET['user_answers'])) && (!empty($_GET['user_answers']))) {
+
+        unset($_SESSION['quiz']['answers_counting']);
+        unset($_SESSION['quiz']['user_score']);
         
-        return header('Location: http://localhost/Formation-Objectif3W/PHP/validation/v2/home-quiz.php');
+        return header('Location: http://localhost/Formation-Objectif3W/PHP/validation/Quiz-Thibaut-Valid/home-quiz.php');
         
     }
 
@@ -60,9 +76,13 @@ function checking_user_answer ($user_answer,&$counting_answers,$questions,$quest
     $counting_answers++;
 
     if ($user_answer==$questions[$question_number]['answer']) {
+
         $user_score++;
+
         return "Bonne réponse";
+
     }else {
+
         return "Mauvaise réponse";
     } 
 }
@@ -78,6 +98,14 @@ if (isset($_GET['page'])) {
 
 if ((isset($_GET['user_answers'])) && (!empty($_GET['user_answers']))) {
   
+    if ((!isset($_SESSION['quiz']['answers_counting'])) && (empty($_SESSION['quiz']['answers_counting']))){
+        $_SESSION['quiz']['answers_counting']=NULL;
+    }
+
+    if ((!isset($_SESSION['quiz']['user_score'])) && (empty($_SESSION['quiz']['user_score']))) {
+        $_SESSION['quiz']['user_score']=NULL;
+    }
+
     $donnees=$_GET['user_answers'];
     $user_answer=valid_donnees($donnees);
 
@@ -101,7 +129,7 @@ if (isset($_SESSION['quiz']['errors']) && (!empty($_SESSION['quiz']['errors'])))
     
     $error=$_SESSION['quiz']['errors'];
 
-    if ($_SESSION['quiz']['errors']=="choix inexistant parmi la liste") {
+    if ($_SESSION['quiz']['errors']=="Choix inexistant parmi la liste, veuillez recommencer") {
     returning_home_because_error($error);}
 }
 

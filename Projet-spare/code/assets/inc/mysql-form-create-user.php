@@ -99,7 +99,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   }
   
   
-  header('Location: http://localhost/Formation-Objectif3W/Projet-spare/code/creation-user.php');
+  header('Location: ../../creation-user.php');
   exit;
   //echo "etape 10 ";
 }

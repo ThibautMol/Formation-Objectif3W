@@ -12,7 +12,7 @@ require_once "functions/functions.php";
 
 <div class="mt-1">
     <div class="d-flex justify-content-center">
-        <img id="details-enlarged-image" class="img-thumbnail" src="https://as1.ftcdn.net/v2/jpg/02/41/97/54/1000_F_241975440_QIlN2sSPiJ8l2vs8v8cdNfP2Tr2BQnPh.jpg" alt="Test yourself" style="max-width:50rem">
+        <img id="details-enlarged-image" class="img-thumbnail" src="https://as1.ftcdn.net/v2/jpg/02/41/97/54/1000_F_241975440_QIlN2sSPiJ8l2vs8v8cdNfP2Tr2BQnPh.jpg" alt="Test yourself" style="max-width:40rem">
     </div>
 
 </div>
@@ -22,7 +22,13 @@ require_once "functions/functions.php";
 <div class="d-flex justify-content-center mt-3 <?=(!isset($question_number) && (empty($question_number))) ? "" : "d-none"?>" >
     <button class="btn btn-primary mx-auto"><a class="text-decoration-none text-white" href="?page=<?=0?>">Débuter le quizz</a></button>
 </div>
-    
+
+
+<div class="d-flex justify-content-center mt-3 <?=((isset($_SESSION['quiz']['errors']) && (!empty($_SESSION['quiz']['errors']))) && (!isset($_GET['page']) && (empty($_GET['page'])))) ? "" : "d-none"?>" >
+    <div class="alert alert-danger" role="alert">
+        <?=$_SESSION['quiz']['errors']?>
+    </div>
+</div>  
 
 <main class="<?=(!isset($_GET['page']) && (empty($_GET['page']))) ? "d-none" : ""?>">
     
@@ -63,8 +69,7 @@ require_once "functions/functions.php";
                             <?=((isset($_GET['user_answers'])) && (!empty($_GET['user_answers']))) ? 
                                 ((($choice==$_GET['user_answers'])&& $_GET['user_answers']!=$questions[$question_number]['answer']) ? 
                                     "btn-secondary"  : (($choice==$questions[$question_number]['answer']) ? 
-                                        "btn-success" : "btn-warning")) : "btn-primary"?> "
-                                         
+                                        "btn-success" : "btn-warning")) : "btn-primary"?> <?=(isset($_GET['user_answers'])) && (!empty($_GET['user_answers'])) ? "disabled" : "" ?> " 
                             href="?page=<?=$question_number?>&user_answers=<?=$choice?>"><?=$choice?></a>
 
                             <!-- la ternaire ci-dessus contient les éléments suivants : --
@@ -83,8 +88,8 @@ require_once "functions/functions.php";
             </div>
 
 
-            <div class="d-flex justify-content-center" >                    
-                <a class="btn btn-primary my-2 <?=($_GET['page']==4) ? "disabled" : "";?>" href="?page=<?=($_GET['page']<4) ? $question_number+1 : $question_number?>">Question suivante</a>
+            <div class="d-flex justify-content-center <?=(isset($_GET['user_answers'])) ? "" : "d-none";?> ">                    
+                <a class="btn btn-primary my-2 <?=($_GET['page']==4) ? "d-none" : "";?>" href="?page=<?=($_GET['page']<4) ? $question_number+1 : $question_number?>">Question suivante</a>
             </div>
      
         </div>

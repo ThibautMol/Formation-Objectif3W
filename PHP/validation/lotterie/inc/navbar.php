@@ -7,7 +7,10 @@
     <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
       <ul class="navbar-nav align-items-center">
         <li class="nav-item">
-          <a class="nav-link text-danger" href="inc/session-killer.php">Rejouer</a>
+          <a class="nav-link text-warning" href="inc/session-cleaner.php">Relancer une partie</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-danger" href="inc/session-killer.php">Recommencer à 0</a>
         </li>
       </ul>
     </div>

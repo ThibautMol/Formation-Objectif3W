@@ -120,8 +120,28 @@
             <td><?=$user['CreationAccount']?></td>
             <td class="d-flex justify-content-around mw-25"><a class="btn btn-primary" href="view-user.php?id=<?=$user['id']?>"><i class="bi bi-eye-fill"></i></a> 
             <a class="btn btn-secondary" href="profil-user-edit.php?id=<?=$user['id']?>"><i class="bi bi-pencil-square"></i></a> 
-            <a class="btn btn-danger <?=($user['id']==$_SESSION['SPARE']['USER_ID']) ? "disabled" : ""?>" href="<?=($user['id']==$_SESSION['SPARE']['USER_ID']) ? "" : "assets/inc/mysql-delete-user-from-user-list.php?id=".$user['id']?>"><i class="bi bi-trash3-fill"></i></a></td>
-            
+            <button type="button" class="btn btn-danger <?=($user['id']==$_SESSION['SPARE']['USER_ID']) ? "disabled" : ""?>" data-bs-toggle="modal" data-bs-target="#deletemodal"><i class="bi bi-trash3-fill"></i></button></td>
+
+            <div class="modal fade" id="deletemodal" tabindex="-1" role="dialog" aria-labelledby="deletemodalCenterTitle" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="deletemodalLongTitle">Suppression</h5>
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                  Êtes-vous sur de vouloir supprimer l'utilisateur <strong><?=$user['firstname']?></strong> ?
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">Non</button>
+                    <a class="btn btn-danger" href="<?=($user['id']==$_SESSION['SPARE']['USER_ID']) ? "" : "assets/inc/mysql-delete-user-from-user-list.php?id=".$user['id']?>">Oui</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>   
         </tr>
         

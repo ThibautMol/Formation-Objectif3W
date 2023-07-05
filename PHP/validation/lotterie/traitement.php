@@ -1,6 +1,8 @@
 <?php
 session_start();
 
+;
+
 require_once "functions.php";
 
 
@@ -19,6 +21,15 @@ if ((isset($_POST['buying_tickets'])) && (!empty($_POST['buying_tickets'])) && (
 
     $user_tickets=buying_tickets();
 
+    if ((!isset($_SESSION['loterie']['user_tickets'])) && (empty($_SESSION['loterie']['user_tickets']))) {
+        $_SESSION['loterie']['user_tickets']=$user_tickets;
+    } elseif ((isset($user_tickets)) && (!empty($user_tickets))) {
+        $_SESSION['loterie']['user_tickets'] = array_merge($_SESSION['loterie']['user_tickets'],$user_tickets);
+    }
+    
+    header("Location: interface-loterie.php");
+    exit;
+
 }
 
 
@@ -28,13 +39,17 @@ if ((isset($_POST['tirage'])) && (!empty($_POST['tirage']))) {
 
     $_SESSION['loterie']['tirage']=tirage($tirage=[]);
 
+    result();
+
     header("Location: interface-loterie.php");
     exit;
 
 }
 
 
-// faire deux valeurs pour les tickets, une valeur temporaire pour afficher ceux qu'on vient d'acheter, et la totalité des tickets avec un merge des deux array
+
+
+
 
 
 

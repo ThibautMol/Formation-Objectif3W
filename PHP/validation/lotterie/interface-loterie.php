@@ -7,11 +7,13 @@ require_once "inc/navbar.php";
 // require_once "";
 // require_once "";
 
-(!isset($_SESSION['loterie']['game'])) && (empty($_SESSION['loterie']['game'])) ? ($_SESSION['loterie']['game']['tickets_available']=100) . ($_SESSION['loterie']['game']['gains']=[100,50,20]) : "";
 
-((!isset($_SESSION['loterie']['user_money'])) && (empty($_SESSION['loterie']['user_money']))) ? $_SESSION['loterie']['user_money']=50  : "";
+(!isset($_SESSION['loterie']['game'])) && (empty($_SESSION['loterie']['game'])) ? (($_SESSION['loterie']['game']['tickets_available']=100) && ($_SESSION['loterie']['game']['gains']=[100,50,20])) : "";
+
+((!isset($_SESSION['loterie']['user_money'])) && (empty($_SESSION['loterie']['user_money']))) ? $_SESSION['loterie']['user_money']=500  : "";
 
 ?>
+
 
 <div class="mt-1">
     <div class="d-flex justify-content-center">

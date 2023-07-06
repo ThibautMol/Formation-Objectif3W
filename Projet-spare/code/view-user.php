@@ -5,10 +5,9 @@
 <?php $current_page=(isset($_GET['id'])) ? "utilisateurs" : "profil"?>
 <?php require_once ("./assets/inc/head.php");?>
 <?php require_once ("./assets/inc/nav-bar.php");?>
-<?php (isset($_GET['id'])) ? $_SESSION['SPARE']['user_id_checking']=$_GET['id'] : ""; //this variable will be unset if you check your own profil and will be set again when you consult a user profil.?> 
-<?php (isset($_SESSION['SPARE']['user_id_checking'])) ? require_once ("./assets/functions/add-element-form-profil-user-from-list.php") : require_once ("./assets/functions/add-element-form-profil-user.php");?>
-
-
+<?php (isset($_GET['id'])) ? $_SESSION['SPARE']['user_id_checking']=$_GET['id'] : ""; //this variable will be unset if you check your own profil and will be set again when you consult a user profil.?>
+<?php if ((!isset($_GET['id'])) || (empty($_GET['id']))) {unset($_SESSION['SPARE']['user_id_checking']);} //will unset $_SESSION['SPARE']['user_id_checking'] if $_GET is not set to avoid conflict by consulting the own profil of the user?> 
+<?php (isset($_GET['id'])) ? require_once ("./assets/functions/add-element-form-profil-user-from-list.php") : require_once ("./assets/functions/add-element-form-profil-user.php");?>
 
 
     <main class="d-flex flex-column justify-content-center align-items-center mb-5" style="margin-top:100px;">
@@ -16,9 +15,9 @@
         
         <form class="card-body" action="./assets/functions/reset-password.php" method="POST">
 
-            <input class="d-none" type="password" id="confirm_pwd" name="reset_password" value=1>
+            <input class="d-none" type="hidden" id="reset_password" name="reset_password" value=1>
                                     
-            <button class="btn btn-lg btn-primary btn-block mt-3" type="submit">Reset le mot de passe</button>
+            <button class="btn btn-lg btn-danger btn-block mt-3" type="submit">Reset le mot de passe</button>
         </form> 
        
 
@@ -76,6 +75,5 @@
         </div> 
         
     </main>
-
 
 <?php require_once ("./assets/inc/foot.php") ?>

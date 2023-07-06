@@ -20,7 +20,7 @@ function buying_tickets () {
         return;
     }
 
-    if ($_SESSION['loterie']['user_money']-($_POST['buying_tickets']*2)<0){
+    if ($_SESSION['loterie']['user_money']-($_POST['buying_tickets']*2)>=0){
 
         while (count($user_tickets)<$_POST['buying_tickets']) {
             $tickets_rand=random_int(1,100);
@@ -68,26 +68,29 @@ function result() {
 
     $_SESSION['loterie']['game']['user_gains']=null;    
         
-        foreach ($_SESSION['loterie']['game']['user_tickets'] as $ticket) {
+        // foreach ($_SESSION['loterie']['game']['user_tickets'] as $ticket) {
 
-            if (in_array($ticket,$_SESSION['loterie']['game']['tirage'])) {
+        //     if (in_array($ticket,$_SESSION['loterie']['game']['tirage'])) {
                 
                 for ($i=0;$i<count($_SESSION['loterie']['game']['tirage']);$i++) {
 
-                    $_SESSION['loterie']['game']['user_gains']=$_SESSION['loterie']['game']['user_gains']+$_SESSION['loterie']['game']['gains'][$i];
+                    
+
+                    if (in_array($_SESSION['loterie']['game']['tirage'][$i],$_SESSION['loterie']['game']['user_tickets'])) {
+
+                        $_SESSION['loterie']['game']['user_gains']=$_SESSION['loterie']['game']['user_gains']+$_SESSION['loterie']['game']['gains'][$i];
+                    }
                 } 
-            }
+            // }
            
             if ($_SESSION['loterie']['game']['user_gains']==NULL || (empty($_SESSION['loterie']['game']['user_gains']))) {
                 
                 $_SESSION['loterie']['game']['user_gains']=0;
             }
         
-        }
+        // }
 
     
-    $_SESSION['loterie']['game']['user_gains']=$_SESSION['loterie']['game']['user_gains']/3;
-
     $_SESSION['loterie']['user_money']=$_SESSION['loterie']['user_money']+$_SESSION['loterie']['game']['user_gains'];
 
     return;

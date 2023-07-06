@@ -9,7 +9,7 @@
 <?php require_once ("./assets/inc/mysql-all-main-classes-request.php")?>
 <?php require_once ("./assets/inc/mysql-all-roles-request.php")?>
 <?php (isset($_SESSION['SPARE']['user_id_checking'])) ? require_once ("./assets/functions/add-element-form-profil-user-from-list.php") : require_once ("./assets/functions/add-element-form-profil-user.php");?>
-
+<?php if ((!isset($_GET['id'])) || (empty($_GET['id']))) {unset($_SESSION['SPARE']['user_id_checking']);} //will unset $_SESSION['SPARE']['user_id_checking'] if $_GET is not set to avoid conflict by consulting the own profil of the user?> 
 
 
     <main class="d-flex flex-column justify-content-center align-items-center mb-5" style="margin-top:100px;">

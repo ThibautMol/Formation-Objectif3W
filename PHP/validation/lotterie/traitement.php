@@ -2,6 +2,8 @@
 session_start();
 
 ;
+var_dump($_POST['buying_tickets']);
+echo $_SESSION['loterie']['user_money']-($_POST['buying_tickets']*2);
 
 require_once "functions.php";
 

@@ -9,7 +9,8 @@
     <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
       <ul class="navbar-nav mb-2 mb-sm-0 align-items-end">
         <li class="nav-item">
-          <a class="nav-link <?= $current_page === 'score' ? 'active' : '' ?>" href="score.php">Votre score</a>
+          <a class="nav-link <?= $current_page === 'score' ? 'active' : '' ?>" href="score.php">Votre score</a> 
+          <!-- rajouter une ternaire pour passer en vert le mot score si la personne à terminé un des mini-jeux -->
         </li>
         <li class="nav-item">
           <a class="nav-link <?= $current_page === 'mini-jeux' ? 'active' : '' ?>" href="mini-games.php">Mini-jeux</a>
@@ -21,7 +22,7 @@
           <a class="nav-link <?= $current_page === 'autres' ? 'active' : '' ?>" href="other.php">Autres</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="assets/session-killer.php">Reset</a>
+          <a class="nav-link text-danger" href="assets/session-killer.php">Reset</a>
         </li>
       </ul>
     </div>

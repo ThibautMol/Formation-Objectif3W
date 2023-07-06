@@ -1,11 +1,13 @@
 <?php
 session_start();
-$current_page='mini-jeux';
-$title='Mini-jeux';
+$current_page='score';
+$title='Votre Score';
 require_once ('assets/inc/head.php');
 require_once ('assets/inc/navbar.php');
 
+
 ?>
+
 
 <main class="d-flex flex-wrap justify-content-evenly mt-5">
 
@@ -13,8 +15,8 @@ require_once ('assets/inc/navbar.php');
         <img class="card-img-top" src="..." alt="Card image cap">
         <div class="card-body">
             <h5 class="card-title text-center">Loterie</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Play!</a>
+            <p class="card-text">Votre score est de : </p>
+            <a href="#" class="btn btn-primary">J'y retourne!</a>
         </div>
     </div>
 
@@ -22,8 +24,8 @@ require_once ('assets/inc/navbar.php');
         <img class="card-img-top" src="..." alt="Card image cap">
         <div class="card-body">
             <h5 class="card-title text-center">Devinette</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Play!</a>
+            <p class="card-text">Votre score est de : </p>
+            <a href="#" class="btn btn-primary">J'y retourne!</a>
         </div>
     </div>
 
@@ -31,8 +33,8 @@ require_once ('assets/inc/navbar.php');
         <img class="card-img-top" src="..." alt="Card image cap">
         <div class="card-body">
             <h5 class="card-title text-center">Quiz Développeur</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Play!</a>
+            <p class="card-text">Votre score est de : </p>
+            <a href="#" class="btn btn-primary">J'y retourne!</a>
         </div>
     </div>
 
@@ -40,8 +42,8 @@ require_once ('assets/inc/navbar.php');
         <img class="card-img-top" src="..." alt="Card image cap">
         <div class="card-body">
             <h5 class="card-title text-center">Le livre dont vous êtes le héro</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Play!</a>
+            <p class="card-text">Votre score est de : </p>
+            <a href="#" class="btn btn-primary">J'y retourne!</a>
         </div>
     </div>
 
@@ -54,18 +56,4 @@ require_once ('assets/inc/navbar.php');
 
 
 
-
-
-
-
-
-
-
-
-
-
 <?php require_once ('assets/inc/foot.php');?>
-
-
-
-

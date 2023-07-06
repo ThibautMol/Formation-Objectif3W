@@ -9,6 +9,9 @@
     <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
       <ul class="navbar-nav mb-2 mb-sm-0 align-items-end">
         <li class="nav-item">
+          <a class="nav-link <?= $current_page === 'score' ? 'active' : '' ?>" href="score.php">Votre score</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link <?= $current_page === 'mini-jeux' ? 'active' : '' ?>" href="mini-games.php">Mini-jeux</a>
         </li>
         <li class="nav-item">

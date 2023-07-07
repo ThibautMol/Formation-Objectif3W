@@ -16,6 +16,7 @@ require_once ('assets/inc/navbar.php');
     voir pour l'affichage dynamique de la liste d'utilisateurs et de leur score. ranger l'array au clic. mettre en bleu nom du user.
     Mettre une petite couronne de 3 couleurs pour les 3 premiers.
     randomiser le quizz en ne posant que 5 questions sur 30 dispo en BDD, laisser le choix à l'utilisateur du type de qcm.
+    refaire programme de sport avec un historique gardé des 30 dernières séances.
 </p>
 
     <div class="card" style="width: 18rem;">

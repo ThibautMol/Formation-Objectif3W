@@ -75,36 +75,37 @@ require_once ('assets/inc/navbar.php');
                 <h3 class="text-center">Présent</h3>
             </div>
 
-        <div class="d-flex justify-content-evenly">
-            <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="..." alt="Card image cap">
-                <div class="card-body">
-                    <h4 class="card-title text-center">Parcour de formation</h4>
-                    <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit, atque. Nam tempore provident commodi! Commodi voluptates consequatur culpa, exercitationem, saepe soluta, quo assumenda nesciunt aut iure accusamus id in fuga!</p>
+            <div class="d-flex justify-content-evenly">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="..." alt="Card image cap">
+                    <div class="card-body">
+                        <h4 class="card-title text-center">Parcour de formation</h4>
+                        <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit, atque. Nam tempore provident commodi! Commodi voluptates consequatur culpa, exercitationem, saepe soluta, quo assumenda nesciunt aut iure accusamus id in fuga!</p>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="..." alt="Card image cap">
+                    <div class="card-body">
+                        <h4 class="card-title text-center">En institut de formation</h4>
+                        <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit, atque. Nam tempore provident commodi! Commodi voluptates consequatur culpa, exercitationem, saepe soluta, quo assumenda nesciunt aut iure accusamus id in fuga!</p>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="..." alt="Card image cap">
+                    <div class="card-body">
+                        <h4 class="card-title text-center">En autonomie</h4>
+                        <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit, atque. Nam tempore provident commodi! Commodi voluptates consequatur culpa, exercitationem, saepe soluta, quo assumenda nesciunt aut iure accusamus id in fuga!</p>
+                    </div>
                 </div>
             </div>
-            <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="..." alt="Card image cap">
-                <div class="card-body">
-                    <h4 class="card-title text-center">En institut de formation</h4>
-                    <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit, atque. Nam tempore provident commodi! Commodi voluptates consequatur culpa, exercitationem, saepe soluta, quo assumenda nesciunt aut iure accusamus id in fuga!</p>
-                </div>
-            </div>
-            <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="..." alt="Card image cap">
-                <div class="card-body">
-                    <h4 class="card-title text-center">En autonomie</h4>
-                    <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit, atque. Nam tempore provident commodi! Commodi voluptates consequatur culpa, exercitationem, saepe soluta, quo assumenda nesciunt aut iure accusamus id in fuga!</p>
-                </div>
-            </div>
-        </div>
 
-        <div class="d-flex justify-content-center mt-5">
-            <div class="card" style="width: 50rem;">
-                <img class="card-img-top" src="..." alt="Card image cap">
-                <div class="card-body">
-                    <h4 class="card-title text-center">Parcour professionnel</h4>
-                    <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit, atque. Nam tempore provident commodi! Commodi voluptates consequatur culpa, exercitationem, saepe soluta, quo assumenda nesciunt aut iure accusamus id in fuga!</p>
+            <div class="d-flex justify-content-center mt-5">
+                <div class="card" style="width: 50rem;">
+                    <img class="card-img-top" src="..." alt="Card image cap">
+                    <div class="card-body">
+                        <h4 class="card-title text-center">Parcour professionnel</h4>
+                        <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit, atque. Nam tempore provident commodi! Commodi voluptates consequatur culpa, exercitationem, saepe soluta, quo assumenda nesciunt aut iure accusamus id in fuga!</p>
+                    </div>
                 </div>
             </div>
         </div>

@@ -11,6 +11,12 @@ require_once ('assets/inc/navbar.php');
 
 <section class="d-flex flex-wrap justify-content-evenly mt-5">
 
+<p>Créer une bdd dans laquelle l'utilisateur pourra s'enregistrer, consulter son profil, mettre une photo de profil, voir pour sauvegarder son score et faire un classement général entre utilisateurs.
+    sauvegarder le score lors du log out en bdd? uniquement si les scores sont set, possibilité de reboot les scores du coup. 
+    voir pour l'affichage dynamique de la liste d'utilisateurs et de leur score. ranger l'array au clic. mettre en bleu nom du user.
+    Mettre une petite couronne de 3 couleurs pour les 3 premiers.
+</p>
+
     <div class="card" style="width: 18rem;">
         <img class="card-img-top" src="..." alt="Card image cap">
         <div class="card-body">

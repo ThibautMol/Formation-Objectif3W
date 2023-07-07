@@ -15,6 +15,7 @@ require_once ('assets/inc/navbar.php');
     sauvegarder le score lors du log out en bdd? uniquement si les scores sont set, possibilité de reboot les scores du coup. 
     voir pour l'affichage dynamique de la liste d'utilisateurs et de leur score. ranger l'array au clic. mettre en bleu nom du user.
     Mettre une petite couronne de 3 couleurs pour les 3 premiers.
+    randomiser le quizz en ne posant que 5 questions sur 30 dispo en BDD, laisser le choix à l'utilisateur du type de qcm.
 </p>
 
     <div class="card" style="width: 18rem;">

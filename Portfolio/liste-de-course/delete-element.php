@@ -14,10 +14,8 @@ foreach ($_POST as $data) {
 }
 
 
-
 $_SESSION['course'] = array_merge($_SESSION['course']);
 ?>
 
-<?php header('Location: http://localhost/Formation-Objectif3W/PHP/TP/sessions/liste-de-courses.php');
-  exit;
+<?php header('Location: '.$_SERVER['HTTP_REFERER']); exit;
 ?>

@@ -4,6 +4,6 @@
   $_SESSION['course'][]=$_POST;
  
 
-  header('Location: http://localhost/Formation-Objectif3W/PHP/TP/sessions/liste-de-courses.php');
+  header('Location: '.$_SERVER['HTTP_REFERER']);
   exit;
 ?>

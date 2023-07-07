@@ -16,7 +16,7 @@ require_once ('assets/inc/navbar.php');
         <div class="card-body">
             <h5 class="card-title text-center">Calcul de TVA</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Play!</a>
+            <a href="calcul-de-taxe/calcul-de-taxe.php" class="btn btn-primary">Play!</a>
         </div>
     </div>
 

@@ -22,7 +22,7 @@
           <a class="nav-link <?= $current_page === 'autres' ? 'active' : '' ?>" href="http://localhost/Formation-Objectif3W/Portfolio/other.php">Autres</a>
         </li>
         <li class="nav-item">
-          <a href="assets/session-killer.php" class="btn btn-outline-danger ms-3" type="submit" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Reset les scores"><i class="fa-solid fa-skull"></i></a>
+          <a href="http://localhost/Formation-Objectif3W/Portfolio/assets/session-killer.php" class="btn btn-outline-danger ms-3" type="submit" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Reset les scores"><i class="fa-solid fa-skull"></i></a>
         </li>
 
         <div class="d-flex" role="search">

@@ -6,9 +6,7 @@
     </button>
     <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
       <ul class="navbar-nav align-items-center">
-        <li class="nav-item">
-          <a class="nav-link text-danger" href="inc/session-killer.php">Relancer le test</a>
-        </li>
+        
       </ul>
     </div>
   </div>

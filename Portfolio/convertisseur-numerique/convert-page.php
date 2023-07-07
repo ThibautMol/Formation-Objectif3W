@@ -129,7 +129,7 @@ function roman_numbers_and_letters ($element_to_convert) {
     
 
 
-header('Location: http://localhost/Formation-Objectif3W/PHP/TP/sessions/convertisseur-numerique/convertisseur-numerique.php');
+header('Location: convertisseur-numerique.php');
 exit;
 
 

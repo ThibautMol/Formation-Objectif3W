@@ -48,5 +48,5 @@ if (isset($_POST['player_number']) && !empty($_POST['player_number'])) {
    
 }
 
-header('Location: http://localhost/Formation-Objectif3W/PHP/TP/sessions/mini-jeu/mini-jeu.php');
+header('Location: devinette.php');
 exit;

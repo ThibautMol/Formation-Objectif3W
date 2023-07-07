@@ -7,7 +7,7 @@ require_once ('assets/inc/navbar.php');
 
 ?>
 
-<main class="mt-5">
+<section class="mt-5">
 
 
     <div class="container-sm p-5 mb-4 bg-light rounded-3">
@@ -165,7 +165,7 @@ require_once ('assets/inc/navbar.php');
 
 
 
-</main>
+</section>
 
 
 

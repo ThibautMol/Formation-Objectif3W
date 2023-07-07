@@ -1,11 +1,9 @@
-<?php 
+<?php
 session_start();
+$current_page='mini-jeux';
 $title='Loterie';
-
-require_once "inc/head.php";
-require_once "inc/navbar.php";
-// require_once "";
-// require_once "";
+require_once ('../assets/inc/head.php');
+require_once ('../assets/inc/navbar.php');
 
 
 (!isset($_SESSION['loterie']['game'])) && (empty($_SESSION['loterie']['game'])) ? (($_SESSION['loterie']['game']['tickets_available']=100) && ($_SESSION['loterie']['game']['gains']=[100,50,20])) : "";
@@ -20,6 +18,15 @@ require_once "inc/navbar.php";
         <img id="details-enlarged-image" class="img-thumbnail" src="https://media.istockphoto.com/id/1314972402/fr/vectoriel/fond-multicolore-de-vecteur-de-boules-de-loterie.jpg?s=612x612&amp;w=0&amp;k=20&amp;c=ASqORsbqy7BFc9-UJoOZug2EYaUFimaLRjdVdpmZRKs=" alt="Test yourself" style="max-width:40rem">
     </div>
 
+</div>
+
+<div class="d-flex my-2 justify-content-evenly">
+    <button class="btn btn-warning <?=(!isset($_SESSION['loterie']['game']['tirage'])) ? "d-none" : ""?>">
+        <a class="nav-link text-white" href="<?=(!isset($_SESSION['loterie']['game']['tirage'])) ? "" : "inc/session-cleaner.php"?>">Relancer une partie</a>
+    </button>
+    <button class="btn btn-danger <?=(!isset($_SESSION['loterie']['game']['starting_game'])) ? "d-none" : ""?>">
+        <a class="nav-link text-white" href="<?=(!isset($_SESSION['loterie']['game']['starting_game'])) ? "" : "../assets/session-killer.php"?>">Recommencer à 0</a>
+    </button>
 </div>
 
 
@@ -140,6 +147,7 @@ require_once "inc/navbar.php";
 
 
     </div>
-</main>
+
+<?php require_once ('../assets/inc/foot.php');?>
 
 

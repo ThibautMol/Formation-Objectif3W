@@ -1,14 +1,11 @@
-<?php 
-session_start();
+<?php session_start();
+$current_page='mini-jeux';
 $title='Quiz';
-
-require_once "inc/head.php";
-require_once "inc/navbar.php";
+require_once ('../assets/inc/head.php');
+require_once ('../assets/inc/navbar.php');
 require_once "inc/data.php";
-require_once "functions/functions.php";
+require_once "functions/functions.php";?>
 
-
-?>
 
 <div class="mt-1">
     <div class="d-flex justify-content-center">
@@ -17,10 +14,14 @@ require_once "functions/functions.php";
 
 </div>
 
-
-
 <div class="d-flex justify-content-center mt-3 <?=(!isset($question_number) && (empty($question_number))) ? "" : "d-none"?>" >
     <button class="btn btn-primary mx-auto"><a class="text-decoration-none text-white" href="?page=<?=0?>">Débuter le quizz</a></button>
+</div>
+
+<div class="d-flex justify-content-center mt-3">
+    <button class="mx-auto btn btn-danger <?=((isset($_SESSION['quiz']['answers_counting'])) && ($_SESSION['quiz']['answers_counting']==5)) ? "" : "d-none"?>">
+        <a class="nav-link text-white" href="../assets/session-killer.php">Relancer le test</a>
+    </button>
 </div>
 
 
@@ -30,7 +31,7 @@ require_once "functions/functions.php";
     </div>
 </div>  
 
-<main class="<?=(!isset($_GET['page']) && (empty($_GET['page']))) ? "d-none" : ""?>">
+<section class="<?=(!isset($_GET['page']) && (empty($_GET['page']))) ? "d-none" : ""?>">
     
     <div class="d-flex flex-column justify-content-center mt-3 mb-3">
 
@@ -94,18 +95,9 @@ require_once "functions/functions.php";
      
         </div>
     <div>
-</main>
+</section>
 
 
 
 
-
-
-
-
-
-
-
-
-
-<?php require_once "inc/foot.php"?>
+<?php require_once ('../assets/inc/foot.php');?>

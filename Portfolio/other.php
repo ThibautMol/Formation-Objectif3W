@@ -10,7 +10,7 @@ require_once ('assets/inc/navbar.php');
 ?>
 
 
-<main class="d-flex flex-wrap justify-content-evenly mt-5">
+<section class="d-flex flex-wrap justify-content-evenly mt-5">
 
     <div class="card" style="width: 18rem;">
         <img class="card-img-top" src="..." alt="Card image cap">
@@ -30,7 +30,7 @@ require_once ('assets/inc/navbar.php');
         </div>
     </div>
 
-</main>
+</section>
 
 
 

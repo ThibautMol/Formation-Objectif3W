@@ -1,6 +1,7 @@
 <?php session_start();
 $current_page='mini-jeux';
 $title='Devinette';
+require_once ('../assets/functions.php');
 require_once ('../assets/inc/head.php');
 require_once ('../assets/inc/navbar.php');?>
 

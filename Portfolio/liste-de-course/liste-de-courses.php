@@ -1,5 +1,6 @@
 <?php session_start();?>
 <?php $current_page='autres'; $title='Liste de course';?>
+<?php require_once ('../assets/functions.php');?>
 <?php require_once ('../assets/inc/head.php');?>
 <?php require_once ('../assets/inc/navbar.php');?>
 

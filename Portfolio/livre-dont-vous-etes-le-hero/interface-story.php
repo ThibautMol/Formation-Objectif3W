@@ -2,6 +2,7 @@
 session_start();
 $current_page='mini-jeux';
 $title='Le livre dont vous êtes le héro';
+require_once ('../assets/functions.php');
 require_once ('../assets/inc/head.php');
 require_once ('../assets/inc/navbar.php');
 require_once('story.php');

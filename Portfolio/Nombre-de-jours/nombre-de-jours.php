@@ -2,6 +2,7 @@
 session_start();
 $current_page='calculateurs';
 $title='Calcul du nombre de jours';
+require_once ('../assets/functions.php');
 require_once ('../assets/inc/head.php');
 require_once ('../assets/inc/navbar.php');
 

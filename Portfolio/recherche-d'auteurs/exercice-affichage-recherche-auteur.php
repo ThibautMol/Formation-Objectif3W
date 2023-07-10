@@ -1,5 +1,6 @@
 <?php session_start();?>
-<?php $current_page='autres'; $title='Recherche d\'auteurs';?>
+<?php $current_page='autres'; $title="Recherche d'auteurs";?>
+<?php require_once ('../assets/functions.php');?>
 <?php require_once ('../assets/inc/head.php');?>
 <?php require_once ('../assets/inc/navbar.php');?>
 

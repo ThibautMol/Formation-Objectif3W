@@ -13,18 +13,27 @@ require_once ('../assets/inc/navbar.php');?>
         <h1 class="text-center">Jeu du pendu</h1>
 
         <p class="text-center">Devinez un mot</p>
+
+        <p>rajouter images + affichage résultat partie</p>
+
+        <div class="d-flex justify-content-center mt-3 <?=((isset($_SESSION['pendu']['error']))) ? "" : "d-none"?>" >
+            <div class="alert alert-danger" role="alert">
+                <?=$_SESSION['pendu']['error']?>
+            </div>
+        </div> 
         
         <div class="d-flex justify-content-center my-3 gap-3">
-            <?php if (isset($_SESSION['pendu']['word_to_guess_split'])):?>
-                <?php foreach ($_SESSION['pendu']['word_to_guess_split'] as $key => $value) :?> 
-                <div class="border-bottom border-dark">
+            <?php if ((isset($_SESSION['pendu']['word'])) && (!empty($_SESSION['pendu']['word'])) && (isset($_SESSION['pendu']['letter_guessed'])) && (!empty($_SESSION['pendu']['letter_guessed'])))  :?>
+                <?php $i=0?>
+                <?php foreach ($_SESSION['pendu']['word'][1] as $key => $value) :?> 
+                <div class="<?=(($value==" ") || ($value=="-")) ? "" : "border-bottom border-dark"?>">
                     <p class="text-capitalize text-center" style="width:10px">
-                        <?=(in_array($value,$_SESSION['pendu']['letter_guessed']) || ($value==" ") || ($value=="-")) ? $value : " "?>
+                        <?=(in_array($value,$_SESSION['pendu']['letter_guessed']) || ($value=="-")) ? $_SESSION['pendu']['word'][0][$i] : (($value==" ") ? "" : " ")?>
+                        <?php $i++?>
                     </p>
                 </div>
                 <?php endforeach?>
             <?php endif?>
-            rajouter si y'a un espace de ne pas mettre un élément dessous à deviner
         </div> 
     
 

@@ -75,7 +75,7 @@ require_once ('../assets/inc/navbar.php');?>
                     <?php $j=0?>
                     <?php foreach ($_SESSION['pendu']['game']['word'][1] as $key => $value) :?>
                         <div class="<?=(($value==" ") || ($value=="-")) ? "" : "border-bottom border-dark"?> ">
-                        <p class="text-capitalize text-center <?=(in_array($value,$_SESSION['pendu']['game']['letter_guessed'])) ? "bg-success" . " " . "text-white" : ""?> border" style="width:15px">
+                        <p class="text-capitalize text-center rounded <?=(in_array($value,$_SESSION['pendu']['game']['letter_guessed'])) ? "bg-success" . " " . "text-white" : ""?> border" style="width:15px">
                             <?=(isset($_SESSION['pendu']['game']['result'])) || ($value=="-") ? $_SESSION['pendu']['game']['word'][0][$j] : "" ?>
                         <?php $j++?>
                         </p>

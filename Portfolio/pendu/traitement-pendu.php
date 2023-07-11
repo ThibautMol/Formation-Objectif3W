@@ -126,14 +126,23 @@ if ((isset($_POST['player_letter'])) && (!empty($_POST['player_letter'])) || (is
 
         echo " étape 4 ";
 
+
         if ((isset($_SESSION['pendu']['game']['all_letter_proposed_without_spe_char'])) && (in_array($_POST['player_letter'], $_SESSION['pendu']['game']['all_letter_proposed_without_spe_char']))) {
 
             $_SESSION['pendu']['game']['error']='Lettre déjà proposée';
 
         }
-        elseif ($_SESSION['pendu']['game']['tentatives']<=MAX_TRY) {
+        elseif ($_SESSION['pendu']['game']['tentatives']<MAX_TRY) {
 
             $_SESSION['pendu']['game']['all_letter_proposed_without_spe_char'][]=special_char_remplacement($_POST['player_letter']);
+            
+            var_dump($_SESSION['pendu']['game']['all_letter_proposed_without_spe_char']);
+            
+            echo " étape 4.5 ";
+
+            var_dump($_POST);
+
+          
             
             if ((in_array($_POST['player_letter'], $_SESSION['pendu']['game']['word'][1])) && ($_SESSION['pendu']['game']['tentatives']<=MAX_TRY)) {
 
@@ -176,7 +185,7 @@ if ((isset($_POST['player_letter'])) && (!empty($_POST['player_letter'])) || (is
                 // exit;
             }
 
-            elseif ($_SESSION['pendu']['game']['tentatives']<=MAX_TRY){
+            elseif ($_SESSION['pendu']['game']['tentatives']<MAX_TRY){
                 
                 $_SESSION['pendu']['game']['tentatives']++;
                 
@@ -191,6 +200,8 @@ if ((isset($_POST['player_letter'])) && (!empty($_POST['player_letter'])) || (is
         }else{
 
             echo " étape 7 ";
+
+            $_SESSION['pendu']['game']['all_letter_proposed_without_spe_char'][]=special_char_remplacement($_POST['player_letter']);
 
             $_SESSION['pendu']['game']['result']='Vous avez perdu';
 

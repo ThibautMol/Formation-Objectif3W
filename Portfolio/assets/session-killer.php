@@ -33,6 +33,9 @@
     }
     elseif (stristr($_SERVER['HTTP_REFERER'],'interface-pendu.php')){ 
         unset($_SESSION['pendu']['game']);
+        
+        header('Location: http://localhost/Formation-Objectif3W/Portfolio/pendu/interface-pendu.php');
+        exit;
     }
     else {
     session_destroy();}

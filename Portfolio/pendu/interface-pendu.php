@@ -17,9 +17,14 @@ require_once ('../assets/inc/navbar.php');?>
         <pre><?=var_dump($_SESSION)?></pre>
 
         <p>
-            faire l'affichage victoire/échec + blocage possibilité de jouer quand nombre de tentatives dépassées
-            créer la variable qui ne sera pas unset pour les victoires
+            créer un moyen pour proposer un mot complet (qui reprends les lettres déjà affichées?)
         </p>
+
+        <div class="d-flex my-2 justify-content-evenly">
+            <button class="btn btn-primary <?=(!isset($_SESSION['pendu']['game']['result'])) ? "d-none" : ""?>">
+                <a class="nav-link text-white" href="<?=(!isset($_SESSION['pendu']['game']['result'])) ? "" : "../assets/session-killer.php"?>">Relancer une partie</a>
+            </button>
+        </div>
 
         <div class="d-flex flex-column my-2 mx-auto <?=(!isset($_SESSION['pendu']['game']['result'])) ? "d-none" : ""?>">
             <div class="text-center <?=($_SESSION['pendu']['game']['result']=='Vous avez gagné') ? "text-success" : "text-danger"?>"><?=$_SESSION['pendu']['game']['result']?></div>
@@ -37,16 +42,10 @@ require_once ('../assets/inc/navbar.php');?>
         </div>
 
         <div class="d-flex justify-content-center mt-3 <?=((isset($_SESSION['pendu']['game']['error']))) ? "" : "d-none"?>" >
-            <div class="alert alert-danger" role="alert">
+            <div class="alert <?=($_SESSION['pendu']['game']['error']=="La lettre n'est pas dans le mot") ? "alert-warning" : "alert-danger"?>" role="alert">
                 <?=$_SESSION['pendu']['game']['error']?>
             </div>
         </div> 
-
-        <div class="d-flex my-2 justify-content-evenly">
-            <button class="btn btn-warning <?=(!isset($_SESSION['loterie']['game']['result'])) ? "d-none" : ""?>">
-                <a class="nav-link text-white" href="<?=(!isset($_SESSION['pendu']['game']['result'])) ? "" : "../assets/inc/session-cleaner.php"?>">Relancer une partie</a>
-            </button>
-        </div>
 
         <div class="d-flex justify-content-center mt-3 <?=((!isset($_SESSION['pendu']['game'])) && (empty($_SESSION['loterie']['game']))) ? "" : "d-none"?>" >
             <form action="traitement-pendu.php" method="post">

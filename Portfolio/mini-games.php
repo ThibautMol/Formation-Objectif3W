@@ -50,7 +50,9 @@ require_once ('assets/inc/navbar.php');
         <img class="card-img-top" src="..." alt="Card image cap">
         <div class="card-body">
             <h5 class="card-title text-center">Le pendu</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <p class="card-text"> $_SESSION['pendu']['loose'] $_SESSION['pendu']['win']
+                
+            Some quick example text to build on the card title and make up the bulk of the card's content.</p>
             <a href="pendu/interface-pendu.php" class="btn btn-primary">Play!</a>
         </div>
     </div>

@@ -7,8 +7,7 @@
         unset($_SESSION['course']);
     }
     elseif (stristr($_SERVER['HTTP_REFERER'],'calcul-de-taxe.php')){ 
-        unset($_SESSION['calcul-taxe']);
-        
+        unset($_SESSION['calcul-taxe']);  
     }
     elseif (stristr($_SERVER['HTTP_REFERER'],'convertisseur-numerique.php')){ 
         unset($_SESSION['convertisseur']);
@@ -31,6 +30,9 @@
             exit;
         }
     
+    }
+    elseif (stristr($_SERVER['HTTP_REFERER'],'interface-pendu.php')){ 
+        unset($_SESSION['pendu']['game']);
     }
     else {
     session_destroy();}

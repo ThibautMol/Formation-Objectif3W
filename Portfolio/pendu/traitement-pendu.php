@@ -160,7 +160,6 @@ if ((isset($_POST['player_letter'])) && (!empty($_POST['player_letter']))) {
 
                     //     echo " étape 5.2 ";
                     // }
-
                     
                     foreach ($_SESSION['pendu']['game']['word_split_without_spe_char'] as $value) {
                         if (in_array($value,$_SESSION['pendu']['game']['letter_guessed'])) {

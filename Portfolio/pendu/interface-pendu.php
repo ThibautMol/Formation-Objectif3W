@@ -17,7 +17,7 @@ require_once ('../assets/inc/navbar.php');?>
         <pre><?=var_dump($_SESSION)?></pre>
 
         <p>
-            créer un moyen pour proposer un mot complet (qui reprends les lettres déjà affichées?)
+            ajouter images + faire marcher bouton refaire une partie
         </p>
 
         <div class="d-flex my-2 justify-content-evenly">

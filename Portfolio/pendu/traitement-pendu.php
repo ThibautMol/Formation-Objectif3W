@@ -141,7 +141,7 @@ if ((isset($_POST['player_letter'])) && (!empty($_POST['player_letter'])) || (is
 
                 $_SESSION['pendu']['game']['letter_guessed'][]=$_POST['player_letter'];
 
-                $_SESSION['pendu']['game']['letter_guessed_string'].=$_POST['player_letter'];
+                // $_SESSION['pendu']['game']['letter_guessed_string'].=$_POST['player_letter'];
                 
                 $_SESSION['pendu']['game']['tentatives']++;
 
@@ -200,48 +200,69 @@ if ((isset($_POST['player_letter'])) && (!empty($_POST['player_letter'])) || (is
             // exit;
         }
     }
-    elseif (((strlen($_POST['player_word']))>1) && (isset($_POST['player_word'])) && (!empty($_POST['player_word'])) && ($_SESSION['pendu']['game']['tentatives']<=MAX_TRY)) {
-
-        echo " étape 8 "; 
-        $_SESSION['pendu']['game']['tentatives']++;
-
+    elseif (((strlen($_POST['player_word']))>3) && (isset($_POST['player_word'])) && (!empty($_POST['player_word']))) {
+        
+        
         $_player_word=special_char_remplacement($_POST['player_word']);
         $_player_word=str_ireplace("-", "", $_player_word);
         $_SESSION['pendu']['game']['player_word']=str_ireplace(" ", "", $_player_word);
 
-        if ($_SESSION['pendu']['game']['word_to_guess_string']==$_SESSION['pendu']['game']['player_word']) {
+        if ($_SESSION['pendu']['game']['tentatives']>MAX_TRY) {
 
-            echo " étape 9 "; 
-
-            $_SESSION['pendu']['game']['result']='Vous avez gagné';
-            $_SESSION['pendu']['win']++;
-            // header('Location: interface-pendu.php');
-            // exit;
-
-        }else {
-
-            echo " étape 10 "; 
+            echo " étape 8 ";
 
             $_SESSION['pendu']['game']['try_words'][]=$_SESSION['pendu']['game']['player_word'];
 
-            $_SESSION['pendu']['game']['tentatives']++;
-                
-        
+            $_SESSION['pendu']['game']['result']='Vous avez perdu';
 
+            $_SESSION['pendu']['loose']++;
+
+        }else {
             $_SESSION['pendu']['game']['error']="Ce n'est pas le bon mot";
-            // header('Location: interface-pendu.php');
-            // exit;
+            echo " étape 9 "; 
+            $_SESSION['pendu']['game']['tentatives']++;
 
+
+            if ($_SESSION['pendu']['game']['word_to_guess_string']==$_SESSION['pendu']['game']['player_word']) {
+
+                echo " étape 10 "; 
+
+                $_SESSION['pendu']['game']['result']='Vous avez gagné';
+                $_SESSION['pendu']['game']['try_words'][]=$_SESSION['pendu']['game']['player_word'];
+                $_SESSION['pendu']['win']++;
+                // header('Location: interface-pendu.php');
+                // exit;
+
+            }elseif ((isset($_SESSION['pendu']['game']['try_words'])) && (in_array($_SESSION['pendu']['game']['player_word'],$_SESSION['pendu']['game']['try_words']))) {
+
+                $_SESSION['pendu']['game']['error']="Mot déjà proposé";
+
+            }
+            else {
+
+                echo " étape 11 "; 
+
+                $_SESSION['pendu']['game']['try_words'][]=$_SESSION['pendu']['game']['player_word'];
+
+                $_SESSION['pendu']['game']['tentatives']++;
+                    
+            
+
+                $_SESSION['pendu']['game']['error']="Ce n'est pas le bon mot";
+                // header('Location: interface-pendu.php');
+                // exit;
+
+            }
         }
 
     }
     else{
-        echo " étape 11 ";
+        echo " étape 12 ";
         $_SESSION['pendu']['game']['error']="saisie incorrecte";
     }
 }
 
-echo " étape 12 ";
+echo " étape 13 ";
 header('Location: interface-pendu.php');
 exit;
 

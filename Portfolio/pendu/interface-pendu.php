@@ -82,12 +82,27 @@ require_once ('../assets/inc/navbar.php');?>
             <div class="mx-auto w-25 <?=((!isset($_SESSION['pendu']['game']['result'])) && (empty($_SESSION['pendu']['game']['result']))) ? "" : "d-none"?>">
                 <label class="text-capitalize" for="player_number">Lettre</label>
                 <input type="text" class="form-control" name="player_letter" id="player_letter" minlength="1" maxlength="1" required> 
-                <button class="btn btn-primary mt-2" type="submit">Valider</button>
+                <button class="btn btn-primary my-2" type="submit">Valider</button>
             </div>
-        
+
         </form>
-        
-        
+
+        <form class="<?=((!isset($_SESSION['pendu']['game']['launch_game'])) && 
+            (empty($_SESSION['pendu']['game']['launch_game'])) && 
+            (!isset($_SESSION['pendu']['game']['result'])) && 
+            (empty($_SESSION['pendu']['game']['result']))) ? "d-none" : ""?>" action="<?=((!isset($_SESSION['pendu']['game']['launch_game'])) && 
+            (empty($_SESSION['pendu']['game']['launch_game'])) && 
+            (!isset($_SESSION['pendu']['game']['result'])) && 
+            (empty($_SESSION['pendu']['game']['result']))) ? "" : "traitement-pendu.php"?>" method="POST">
+
+            <div class="mx-auto w-25 <?=((!isset($_SESSION['pendu']['game']['result'])) && (empty($_SESSION['pendu']['game']['result'])) && ($_SESSION['pendu']['game']['tentatives']>3)) ? "" : "d-none"?>">
+                <input type="text" class="form-control" name="player_word" id="player_word" placeholder="Proposez votre mot" required> 
+                <button class="btn btn-primary my-2" type="submit">Valider</button>
+            </div>
+            
+        </form>
+
+
         <h4 class="mx-auto">Lettres proposées</h4>
         <div class="d-flex justify-content-center my-3 gap-3">
            
@@ -101,9 +116,24 @@ require_once ('../assets/inc/navbar.php');?>
                 <?php endforeach?>
             <?php endif?>
         </div> 
-       
         
+        <div class=" d-flex flex-column justify-content-center <?=((isset($_SESSION['pendu']['game']['tentatives']) && ($_SESSION['pendu']['game']['tentatives']>3))) ? "" : "d-none" ?>">
+            <h4 class="mx-auto">Mot proposées</h4>
+                <div class="d-flex justify-content-center my-3 gap-3">
+                
+                    <?php if ((isset($_SESSION['pendu']['game']['try_words'])) && (!empty($_SESSION['pendu']['game']['try_words'])))  :?>
+                        <?php foreach ($_SESSION['pendu']['game']['try_words'] as $key => $value) :?> 
+                        
+                            <div class=" my-2 text-capitalize border rounded border-dark rounded text-center <?=(($value==$_SESSION['pendu']['game']['word_to_guess_string'])) ? "bg-success" . " " . "text-white" : ""?>">
+                                <?=$value?>
+                            </div>
+                        
+                        <?php endforeach?>
+                    <?php endif?>
+                </div>         
+            </div>
         </div>
+
     </section>
 
 

@@ -61,6 +61,7 @@ function special_char_remplacement ($donnee) {
 }
 
 
+var_dump($_POST);
 
 
 
@@ -86,18 +87,21 @@ if ((!isset($_SESSION['pendu']['game']['word'])) && (empty($_SESSION['pendu']['g
 
     $_SESSION['pendu']['game']['word'][]=str_split($_SESSION['pendu']['game']['word_to_guess_without_special_char']);
 
-    $_SESSION['pendu']['game']['word_to_guess_string']=str_ireplace("-", "",$word_to_guess);
+    $word_without_spe_char=special_char_remplacement($word_to_guess);
+
+    $_SESSION['pendu']['game']['word_to_guess_string']=str_ireplace("-", "",$word_without_spe_char);
+
     $_SESSION['pendu']['game']['word_to_guess_string']=str_ireplace(" ", "",$_SESSION['pendu']['game']['word_to_guess_string']);
 
 
-    $word_without_spe_char=special_char_remplacement($_SESSION['pendu']['game']['word_to_guess_string']);
+    
 
     $_SESSION['pendu']['game']['word_split_without_spe_char']=mb_str_split($word_without_spe_char,$length = 1, $encoding = null);
 
 
 }
 
-if ((isset($_POST['player_letter'])) && (!empty($_POST['player_letter']))) {
+if ((isset($_POST['player_letter'])) && (!empty($_POST['player_letter'])) || (isset($_POST['player_word'])) && (!empty($_POST['player_word'])) ) {
 
     if (!isset($_SESSION['pendu']['game']['tentatives']) && (empty($_SESSION['pendu']['game']['tentatives']))) {
         $_SESSION['pendu']['game']['tentatives']=0;
@@ -113,11 +117,6 @@ if ((isset($_POST['player_letter'])) && (!empty($_POST['player_letter']))) {
     $_POST['player_letter']=special_char_remplacement($_POST['player_letter']);
 
     echo " étape 3.2 ";
-
-    
-
-
-    echo " étape 3.3 ";
 
 
     if ((isset($_POST['player_letter']) && 
@@ -173,8 +172,8 @@ if ((isset($_POST['player_letter'])) && (!empty($_POST['player_letter']))) {
                 
                 echo " étape 5.3 ";
 
-                header('Location: interface-pendu.php');
-                exit;
+                // header('Location: interface-pendu.php');
+                // exit;
             }
 
             elseif ($_SESSION['pendu']['game']['tentatives']<=MAX_TRY){
@@ -184,8 +183,9 @@ if ((isset($_POST['player_letter'])) && (!empty($_POST['player_letter']))) {
                 echo " étape 6 ";
 
                 $_SESSION['pendu']['game']['error']="La lettre n'est pas dans le mot";
-                header('Location: interface-pendu.php');
-                exit;
+
+                // header('Location: interface-pendu.php');
+                // exit;
             }
             
         }else{
@@ -196,16 +196,52 @@ if ((isset($_POST['player_letter'])) && (!empty($_POST['player_letter']))) {
 
             $_SESSION['pendu']['loose']++;
 
-            header('Location: interface-pendu.php');
-            exit;
+            // header('Location: interface-pendu.php');
+            // exit;
         }
-    }else{
-        echo " étape 8 ";
+    }
+    elseif (((strlen($_POST['player_word']))>1) && (isset($_POST['player_word'])) && (!empty($_POST['player_word'])) && ($_SESSION['pendu']['game']['tentatives']<=MAX_TRY)) {
+
+        echo " étape 8 "; 
+        $_SESSION['pendu']['game']['tentatives']++;
+
+        $_player_word=special_char_remplacement($_POST['player_word']);
+        $_player_word=str_ireplace("-", "", $_player_word);
+        $_SESSION['pendu']['game']['player_word']=str_ireplace(" ", "", $_player_word);
+
+        if ($_SESSION['pendu']['game']['word_to_guess_string']==$_SESSION['pendu']['game']['player_word']) {
+
+            echo " étape 9 "; 
+
+            $_SESSION['pendu']['game']['result']='Vous avez gagné';
+            $_SESSION['pendu']['win']++;
+            // header('Location: interface-pendu.php');
+            // exit;
+
+        }else {
+
+            echo " étape 10 "; 
+
+            $_SESSION['pendu']['game']['try_words'][]=$_SESSION['pendu']['game']['player_word'];
+
+            $_SESSION['pendu']['game']['tentatives']++;
+                
+        
+
+            $_SESSION['pendu']['game']['error']="Ce n'est pas le bon mot";
+            // header('Location: interface-pendu.php');
+            // exit;
+
+        }
+
+    }
+    else{
+        echo " étape 11 ";
         $_SESSION['pendu']['game']['error']="saisie incorrecte";
     }
 }
 
-echo " étape 9 ";
+echo " étape 12 ";
 header('Location: interface-pendu.php');
 exit;
 

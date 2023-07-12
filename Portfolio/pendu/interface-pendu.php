@@ -102,7 +102,7 @@ require_once ('../assets/inc/navbar.php');?>
                 </form>
 
 
-                <div class=" d-flex flex-column justify-content-center<?=((isset($_SESSION['pendu']['game']['tentatives']))) ? "" : "d-none" ?>">
+                <div class=" d-flex flex-column justify-content-center <?=((isset($_SESSION['pendu']['game']['tentatives']))) ? "" : "d-none" ?>">
                     <h4 class="mx-auto">Lettres proposées</h4>
                     <div class="d-flex justify-content-center my-3 gap-3">
                     
@@ -137,7 +137,7 @@ require_once ('../assets/inc/navbar.php');?>
                     
                 </form>
 
-                <div class=" d-flex flex-column<?=((isset($_SESSION['pendu']['game']['tentatives'])) && ($_SESSION['pendu']['game']['tentatives']>3) && (isset($_SESSION['pendu']['game']['try_words'])) && (!empty($_SESSION['pendu']['game']['try_words']))) ? "" : "d-none" ?>">
+                <div class=" d-flex flex-column <?=((isset($_SESSION['pendu']['game']['tentatives'])) && ($_SESSION['pendu']['game']['tentatives']>3) && (isset($_SESSION['pendu']['game']['try_words'])) && (!empty($_SESSION['pendu']['game']['try_words']))) ? "" : "d-none" ?>">
                     <h4 class="mx-auto">Mot proposées</h4>
                         <div class="d-flex justify-content-center my-3 gap-3">
                         

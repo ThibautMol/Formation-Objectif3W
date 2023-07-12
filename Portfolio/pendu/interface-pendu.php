@@ -83,6 +83,8 @@ require_once ('../assets/inc/navbar.php');?>
         </div> 
     
         <div class="d-flex justify-content-center">
+
+
             <form class="<?=((!isset($_SESSION['pendu']['game']['launch_game'])) && 
                 (empty($_SESSION['pendu']['game']['launch_game'])) && 
                 (!isset($_SESSION['pendu']['game']['result'])) && 
@@ -114,7 +116,12 @@ require_once ('../assets/inc/navbar.php');?>
                 </div>
                 
             </form>
+
+
+            
         </div>
+
+
 
         <div class="d-flex justify-content-evenly">
             <div class=" d-flex flex-column justify-content-center <?=((isset($_SESSION['pendu']['game']['tentatives']))) ? "" : "d-none" ?>">

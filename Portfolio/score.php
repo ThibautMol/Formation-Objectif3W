@@ -56,12 +56,18 @@ require_once ('assets/inc/navbar.php');
         </div>
     </div>
 
-    <div class="card" style="width: 18rem;">
+    <div class="card  <?=((isset($_SESSION['pendu']['win'])) || (isset($_SESSION['pendu']['loose']))) ? "" : "d-none"?>" style="width: 18rem;">
         <img class="card-img-top" src="..." alt="Card image cap">
         <div class="card-body">
             <h5 class="card-title text-center">Le pendu</h5>
             <p class="card-text">Votre score est de : </p>
-            <a href="#" class="btn btn-primary">J'y retourne!</a>
+            <div class="d-flex">
+                <p class="card-text text-success me-1"><strong><?=(isset($_SESSION['pendu']['win'])) ? $_SESSION['pendu']['win'] : "0"?></strong></p><p> Partie<?=((isset($_SESSION['pendu']['win'])) && ($_SESSION['pendu']['win']>1)) ? "s" : ""?> gagnée<?=((isset($_SESSION['pendu']['win'])) && ($_SESSION['pendu']['win']>1)) ? "s" : ""?> </p> 
+            </div>
+            <div class="d-flex">
+            <p class="card-text text-warning me-1"><strong><?=(isset($_SESSION['pendu']['loose'])) ? $_SESSION['pendu']['loose'] : "0"?></strong></p><p>Partie<?=((isset($_SESSION['pendu']['loose'])) && ($_SESSION['pendu']['loose']>1)) ? "s" : ""?> perdu<?=((isset($_SESSION['pendu']['loose'])) && ($_SESSION['pendu']['loose']>1)) ? "s" : ""?></p> 
+            </div>
+            <a href="pendu/interface-pendu.php" class="btn btn-primary">J'y retourne!</a>
         </div>
     </div>
 
